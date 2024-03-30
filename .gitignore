@@ -1,0 +1,25 @@
+## Frontend ##
+# Logs
+PortfolioFrontend/logs
+PortfolioFrontend/*.log
+PortfolioFrontend/npm-debug.log*
+PortfolioFrontend/yarn-debug.log*
+PortfolioFrontend/yarn-error.log*
+PortfolioFrontend/pnpm-debug.log*
+PortfolioFrontend/lerna-debug.log*
+
+PortfolioFrontend/node_modules
+PortfolioFrontend/dist
+PortfolioFrontend/dist-ssr
+PortfolioFrontend/*.local
+
+# Editor directories and files
+PortfolioFrontend/.vscode/*
+PortfolioFrontend/!.vscode/extensions.json
+PortfolioFrontend/.idea
+PortfolioFrontend/.DS_Store
+PortfolioFrontend/*.suo
+PortfolioFrontend/*.ntvs*
+PortfolioFrontend/*.njsproj
+PortfolioFrontend/*.sln
+PortfolioFrontend/*.sw?
