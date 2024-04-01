@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 const StyledBranding = styled.div.attrs({ className: 'branding' })`
-  /* Basic styles for Branding (optional) */
+    font-family: ${props => props.theme.fonts.branding};
 `;
 
 function Branding() {

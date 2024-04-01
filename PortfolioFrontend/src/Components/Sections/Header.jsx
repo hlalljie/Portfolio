@@ -9,17 +9,19 @@ const HeaderDiv = styled.div`
   align-items: center;
   position: absolute;
   top: 0;
-  padding: 10px;
   width: 100%;
+  padding: 20px 20px;
+  box-sizing :border-box;
 
   .branding {
-    font-size: 20px;
+    font-size: 1.5rem;
   }
 
   .nav {
-    font-size: 1rem;
+    font-size: 1.1rem;
     a {
         text-decoration: none;
+        padding: 10px;
     }
   }
 
