@@ -24,6 +24,9 @@ const HeaderDiv = styled.div`
         text-decoration: none;
         padding: 10px;
     }
+    a:hover {
+        color: ${props => props.theme.colors.darkAccent};
+    }
   }
 
 `;

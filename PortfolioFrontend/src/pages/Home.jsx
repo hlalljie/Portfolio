@@ -35,10 +35,14 @@ const StyledBanner = styled.div`
             }    
             .subHeadingWrapper {
                 display: flex;
-                justify-content: space-between;
+                justify-content: left;
+                gap: 30px;
                 > h3{
                     margin: 0;
                     color: ${props => props.theme.colors.darkAccent};
+                }
+                .tree{
+                    font-weight: 100;
                 }
                 
             }
@@ -53,10 +57,10 @@ function Banner() {
         <StyledBanner>
             <div className='bannerContent'>
                 <div className='textContainer'>
-                    <h1>I'm Hayden</h1>
+                    <h1>Hi, I'm Hayden</h1>
                     <div className='subHeadingWrapper'>
-                        <h3> Developer</h3>
-                        <h3>Designer</h3>
+                        <h3> Developer</h3><h3 className='tree'>↟</h3>
+                        <h3>Designer</h3><h3 className='tree'>↟</h3>
                         <h3>Educator</h3>
                     </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>

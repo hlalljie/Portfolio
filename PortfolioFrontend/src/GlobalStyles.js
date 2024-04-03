@@ -22,7 +22,8 @@ const GlobalStyle = createGlobalStyle`
     }
     p{
         font: ${props => props.theme.fonts.paragraph};
-        font-size: 1.3rem
+        font-size: 1.4rem;
+        line-height: 2rem;
     }
 `;
 
