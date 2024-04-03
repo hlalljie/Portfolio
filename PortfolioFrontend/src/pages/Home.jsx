@@ -25,20 +25,20 @@ const StyledBanner = styled.div`
         min-height: calc(100vh - 40px);
         .textContainer {
             background-color: ${props => props.theme.colors.fog};
-            box-shadow: -10px 0 80px 90px ${props => props.theme.colors.fog};
-            padding: 40px 20px;
+            box-shadow: 0px 0 120px 120px ${props => props.theme.colors.fog};
+            padding: 10px 20px;
             margin-left: 7%;
             width: 40%;
             > h1 {
                 color: ${props => props.theme.colors.dark};
-                margin: 0 0 20px 0;
+                margin: 0 0 30px 0;
             }    
             .subHeadingWrapper {
                 display: flex;
                 justify-content: left;
                 gap: 30px;
                 > h3{
-                    margin: 0;
+                    margin: 0 0 10px 0;
                     color: ${props => props.theme.colors.darkAccent};
                 }
                 .tree{
@@ -63,7 +63,7 @@ function Banner() {
                         <h3>Designer</h3><h3 className='tree'>↟</h3>
                         <h3>Educator</h3>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p>I'm passionate about creating solutions through programming and design, and empowering others through education and mentorship.</p>
                 </div>
             </div>
         </StyledBanner>

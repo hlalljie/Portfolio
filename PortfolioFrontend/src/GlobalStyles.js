@@ -11,11 +11,11 @@ const GlobalStyle = createGlobalStyle`
     }
     h1{
         font: ${props => props.theme.fonts.heading};
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
     h3{
         font: ${props => props.theme.fonts.subheading};
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
     a:visited{
         color: inherit;
