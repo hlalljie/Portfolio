@@ -12,6 +12,7 @@ const HeaderDiv = styled.div`
   width: 100%;
   padding: 20px 20px;
   box-sizing :border-box;
+  color: ${props => props.theme.colors.black};
 
   .branding {
     font-size: 1.5rem;

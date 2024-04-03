@@ -1,14 +1,29 @@
+// PortfolioFrontend/src/GlobalStyles.js
 import { createGlobalStyle } from 'styled-components';
 
-// Define global styles using createGlobalStyle
 const GlobalStyle = createGlobalStyle`
-  body {
-    background-color: #333333;
-    color: #ffffff;
-  }
-  a:visited{
-    color: inherit;
-  }
+    
+    // Global styles
+    body {
+        background-color: #333333;
+        color: #ffffff;
+        margin: 0;
+    }
+    h1{
+        font: ${props => props.theme.fonts.heading};
+        font-size: 3rem;
+    }
+    h3{
+        font: ${props => props.theme.fonts.subheading};
+        font-size: 1.5rem;
+    }
+    a:visited{
+        color: inherit;
+    }
+    p{
+        font: ${props => props.theme.fonts.paragraph};
+        font-size: 1.3rem
+    }
 `;
 
 export default GlobalStyle;
