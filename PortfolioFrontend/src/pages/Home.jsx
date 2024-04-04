@@ -18,7 +18,6 @@ const StyledBanner = styled.div`
     background-image: url('https://images.unsplash.com/photo-1542572937-0913e7e3e61b?w=2500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXxPVjV0MGpSVTFqVXx8ZW58MHx8fHx8');
     background-size: cover;
     .bannerContent {
-        padding-top: 40px;
         display: flex;
         align-items: center;
         justify-content: left;
