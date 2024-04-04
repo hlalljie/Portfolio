@@ -2,7 +2,8 @@
 import styled from 'styled-components';
 
 const StyledBranding = styled.div.attrs({ className: 'branding' })`
-    font: ${props => props.theme.fonts.branding};
+    font-family: ${props => props.theme.fonts.heading};
+    font-weight: 300;
 `;
 
 function Branding() {

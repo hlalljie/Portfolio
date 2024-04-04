@@ -10,18 +10,25 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
     }
     h1{
-        font: ${props => props.theme.fonts.heading};
+        font-family: ${props => props.theme.fonts.heading};
+        font-weight: 300;
         font-size: 3.5rem;
     }
     h3{
-        font: ${props => props.theme.fonts.subheading};
+        font-family: ${props => props.theme.fonts.paragraph};
+        font-weight: 500;
         font-size: 1.7rem;
+    }
+    button{
+        font-family: ${props => props.theme.fonts.paragraph};
+        font-weight: 600;
+        font-size: 1.2rem;
     }
     a:visited{
         color: inherit;
     }
     p{
-        font: ${props => props.theme.fonts.paragraph};
+        font-family: ${props => props.theme.fonts.paragraph};
         font-size: 1.4rem;
         line-height: 2rem;
     }
