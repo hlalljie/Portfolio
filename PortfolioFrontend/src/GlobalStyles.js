@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     h3{
         font-family: ${props => props.theme.fonts.paragraph};
         font-weight: 500;
-        font-size: 1.7rem;
+        font-size: 1.8rem;
     }
     button{
         font-family: ${props => props.theme.fonts.paragraph};
@@ -29,8 +29,9 @@ const GlobalStyle = createGlobalStyle`
     }
     p{
         font-family: ${props => props.theme.fonts.paragraph};
-        font-size: 1.4rem;
-        line-height: 2rem;
+        font-size: 1.7rem;
+        font-weight: 420;
+        line-height: 2.5rem;
     }
 `;
 

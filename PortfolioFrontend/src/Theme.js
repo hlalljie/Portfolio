@@ -1,7 +1,7 @@
 const theme = {
     fonts: {
         heading: "'K2D', sans-serif",
-        paragraph: 'Raleway, sans-serif',
+        paragraph: "'Baloo Da 2', sans-serif",
     },
     colors: {
         black: '#3a3a3a',

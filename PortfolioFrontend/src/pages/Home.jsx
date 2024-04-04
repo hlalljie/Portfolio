@@ -38,7 +38,7 @@ const StyledBanner = styled.div`
                 justify-content: left;
                 gap: 30px;
                 > h3{
-                    margin: 0 0 10px 0;
+                    margin: 0 0 0 0;
                     color: ${props => props.theme.colors.darkAccent};
                 }
                 .tree{
