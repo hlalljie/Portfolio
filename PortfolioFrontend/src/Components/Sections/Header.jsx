@@ -19,7 +19,7 @@ const HeaderDiv = styled.div`
   }
 
   .nav {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     a {
         text-decoration: none;
         padding: 10px;
