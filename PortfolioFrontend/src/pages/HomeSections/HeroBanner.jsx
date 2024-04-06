@@ -1,3 +1,4 @@
+// PortfolioFrontend/src/pages/HomeSections/HeroBanner.jsx
 import React from 'react';
 import styled from 'styled-components';
 import ThemedSection from '../../Components/Sections/ThemedSection';
@@ -34,6 +35,10 @@ const heroBannerStyles = css`
   }
 `;
 
+/**
+ * HeroBanner: Home Hero Banner Section
+ * @returns {JSX.Element}
+ */
 function HeroBanner() {
   return (
     <ThemedSection themeName="light" additionalStyles={heroBannerStyles}>

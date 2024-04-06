@@ -31,6 +31,10 @@ const HeaderDiv = styled.div`
 
 `;
 
+/**
+ * Header: Header Section to be used on all pages
+ * @returns {JSX.Element}
+ */
 function Header() {
 
   return (

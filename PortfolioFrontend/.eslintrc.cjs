@@ -20,6 +20,7 @@ module.exports = {
     "no-unused-vars": "warn",
     "eqeqeq": "warn",
     "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
     "jsdoc/require-jsdoc": [1, {
       "require": {
           "FunctionDeclaration": true,
