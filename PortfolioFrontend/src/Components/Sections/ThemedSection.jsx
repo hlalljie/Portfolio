@@ -1,4 +1,3 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
 import theme from '../../Theme';
 
@@ -33,7 +32,12 @@ const StyledSection = styled.section`
 
   ${({ $additionalStyles }) => $additionalStyles}
 `;
-
+/**
+ * ThemedSection: Creates a section allowing a choice of predefined color themes, 
+ * as well as some default section styles
+ * @param {{themeName: string, additionalStyles: object, children: React.ReactNode}} param0 
+ * @returns {JSX.Element}
+ */
 const ThemedSection = ({ themeName = 'default', additionalStyles, children }) => (
   <StyledSection $themeName={themeName} $additionalStyles={additionalStyles}>
     {children}

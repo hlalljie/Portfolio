@@ -5,6 +5,12 @@ import styled from 'styled-components';
 const StyledNav = styled.div.attrs({ className: 'nav' })`
   font-family: ${props => props.theme.fonts.paragraph};
 `;
+
+/**
+ * Nav: Hosts navigation links to be used in different places throughout the site
+ * while they have default styles, they can be restyled as needed
+ * @returns {JSX.Element}
+ */
 function Nav(){
     return (
         <StyledNav>

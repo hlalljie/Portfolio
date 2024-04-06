@@ -6,6 +6,11 @@ const StyledBranding = styled.div.attrs({ className: 'branding' })`
     font-weight: 300;
 `;
 
+/**
+ * Branding: Hosts Branding mark or text content for the site.
+ * branding can be resized and styled where it is being used
+ * @returns {JSX.Element}
+ */
 function Branding() {
   return (
     <StyledBranding>
