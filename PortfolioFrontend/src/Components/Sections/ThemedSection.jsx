@@ -1,39 +1,43 @@
-// PortfolioFrontend/src/Components/Sections/ThemedSection.jsx
 import React from 'react';
 import styled, { css } from 'styled-components';
-import {theme} from '../../Theme';
+import theme from '../../Theme';
 
-// Define your themes
 const colorThemes = {
   light: {
     backgroundColor: theme.colors.white,
-    color: theme.colors.dark,
+    color: theme.colors.black,
   },
   dark: {
-    backgroundColor: theme.colors.dark,
+    backgroundColor: theme.colors.black,
     color: theme.colors.white,
   },
-  default: colorThemes.light,
-  // Add more themes as needed
+  // Default theme as a fallback
+  default: {
+    backgroundColor: theme.colors.white, // Default background color
+    color: theme.colors.black, // Default color
+  }
 };
 
-// Define a styled component for the section
+// Apply transient props with the $ prefix to avoid passing them to the DOM
 const StyledSection = styled.section`
-  padding: 20px;
-  border: 1px solid #ccc;
+  width: 100%;
+  min-height: 100vh;
 
-  /* Define the default theme */
-  ${({ colorTheme }) => css`
-    background-color: ${colorTheme.backgroundColor};
-    color: ${colorTheme.color};
-  `}
+  ${({ $themeName }) => {
+    const { backgroundColor, color } = colorThemes[$themeName] || colorThemes.default;
+    return css`
+      background-color: ${backgroundColor};
+      color: ${color};
+    `;
+  }}
+
+  ${({ $additionalStyles }) => $additionalStyles}
 `;
 
-const ThemedSection = ({ themeName = 'default', children }) => {
-  // Check if the provided themeName exists, otherwise fallback to the default theme
-  const sectionTheme = colorThemes[themeName] || colorThemes.default;
-
-  return <StyledSection colorTheme={sectionTheme}>{children}</StyledSection>;
-};
+const ThemedSection = ({ themeName = 'default', additionalStyles, children }) => (
+  <StyledSection $themeName={themeName} $additionalStyles={additionalStyles}>
+    {children}
+  </StyledSection>
+);
 
 export default ThemedSection;

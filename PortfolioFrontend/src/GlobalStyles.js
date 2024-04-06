@@ -5,14 +5,13 @@ const GlobalStyle = createGlobalStyle`
     
     // Global styles
     body {
-        background-color: #333333;
-        color: #ffffff;
         margin: 0;
     }
     h1{
         font-family: ${props => props.theme.fonts.heading};
         font-weight: 300;
         font-size: 3.5rem;
+        margin: 0 0 30px 0;
     }
     h3{
         font-family: ${props => props.theme.fonts.paragraph};
