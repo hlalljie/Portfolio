@@ -1,6 +1,4 @@
 // PortfolioFrontend/src/pages/HomeSections/HeroBanner.jsx
-import React from 'react';
-import styled from 'styled-components';
 import ThemedSection from '../../Components/Sections/ThemedSection';
 import { css } from 'styled-components';
 

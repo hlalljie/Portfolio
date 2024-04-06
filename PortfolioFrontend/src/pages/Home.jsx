@@ -1,9 +1,9 @@
 // PortfolioFrontend/src/pages/Home.jsx
-import styled from "styled-components";
+//import styled from "styled-components";
 // Components
 import Header from "../Components/Sections/Header";
 import HeroBanner from "./HomeSections/HeroBanner";
-import ThemedSection from "../Components/Sections/ThemedSection";
+//import ThemedSection from "../Components/Sections/ThemedSection";
 import SharedBackground from "../Components/Wrappers/SharedBackground";
 
 /**
