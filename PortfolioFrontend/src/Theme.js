@@ -9,6 +9,9 @@ const theme = {
         darkAccent: '#445835',
         white: '#f5f5f5',
         fog: '#d6d6d6cc',
+    },
+    padding: {
+        largeSection: '7%',
     }
   };
   
