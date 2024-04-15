@@ -25,9 +25,6 @@ const heroBannerStyles = css`
           margin: 0 0 0 0;
           color: ${(props) => props.theme.colors.darkAccent};
         }
-        .tree {
-          font-weight: 100;
-        }
       }
     }
   }

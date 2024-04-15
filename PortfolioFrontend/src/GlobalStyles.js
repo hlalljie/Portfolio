@@ -46,6 +46,9 @@ const GlobalStyle = createGlobalStyle`
     .p1{
         font-size: 1.7rem;
     }
+    .tree {
+        font-weight: 100;
+    }
 `;
 
 export default GlobalStyle;

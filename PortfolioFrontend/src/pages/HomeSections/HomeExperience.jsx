@@ -15,7 +15,7 @@ function HomeExperience() {
             <ExperienceBlock 
                 company='Nav Creative'
                 titles={['Director', 'Project Manager', 'Web Designer']}
-                years='2019 — 2022'
+                years='2019 — 2023'
                 technologies={['Javascript', 'Less', 'JQuery', 'HTML', 'Python', 'Squarespace', 'Wordpress', 'Shopify']}
                 description='Designed numerous websites and led 200+ full-lifecycle projects under heavy workloads, integrating
                 agile practices to improve coordination across staff and leadership. Oversaw all high complexity and technical client lead consultations across their entire lifecycle,
@@ -32,49 +32,59 @@ const StyledExperienceBlockStyles = styled.div`
         display: flex;
         align-items: top;
         column-gap: 50px;
-
-    }
-    .experienceDetailsContainer{
-        min-width: 200px;
-        flex: 1.5;
-    }
-    .experienceTitle{
-        margin: 0;
-    }
-    .experienceTitles .experienceTitle:first-child{
-        color: ${props => props.theme.colors.darkAccent};
-    }
-    .experienceTitles .experienceTitle:not(:first-child){
-        color: ${props => props.theme.colors.dark};
-    }
-    .technologies{
-        display: flex;
-        list-style: none;
-        column-gap: 10px;
-        padding: 0;
-        flex-wrap: wrap;
-    }
-    .technologyItem{
-        font-size: 1.1rem;
-        padding: 0 10px;
-        margin: 5px;
-        border: 2px solid ${props => props.theme.colors.darkAccent};
-        // background-color: ${props => props.theme.colors.darkAccent};
-        // color: ${props => props.theme.colors.white};
-        color: ${props => props.theme.colors.darkAccent};
-        border-radius: 5px;
-    }
-    .description{
-        flex: 2;
-        p{
-            margin-top: 0;
+        .experienceDetailsContainer{
+            min-width: 200px;
+            flex: 1.5;
+            .experienceTitle{
+                margin: 0;
+            }
         }
-        
+        .experienceTitles{
+            .experienceTitleWrapper{
+                display: flex;
+                justify-content: left;
+                flex-direction: row;
+                align-items: flex-start;
+                column-gap: 20px;
+                h3{
+                    margin: 0;
+                }
+                &:first-child h3{
+                    color: ${props => props.theme.colors.darkAccent};
+                }
+                &:not(:first-child) h3{
+                    color: ${props => props.theme.colors.dark};
+                    opacity: .7;
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;;
+                }
+            }
+        }
+        .technologies{
+            display: flex;
+            list-style: none;
+            column-gap: 10px;
+            padding: 0;
+            flex-wrap: wrap;
+            .technologyItem{
+                font-size: 1.1rem;
+                padding: 0 10px;
+                margin: 5px;
+                border: 2px solid ${props => props.theme.colors.darkAccent};
+                color: ${props => props.theme.colors.darkAccent};
+                border-radius: 5px;
+                line-height: 2rem;
+            }
+        }
+        .description{
+            flex: 2;
+            p{
+                margin-top: 0;
+            }
+            
+        }  
     }
-
-    
 `
-
 /**
  * Experience Block: Block component for individual experience item.
  * @param {Object} props - The properties for the ExperienceBlock component.
@@ -92,7 +102,14 @@ function ExperienceBlock({ company, titles, years, technologies, description }) 
             <div className='titleTagContent'>
                 <div className='experienceDetailsContainer'>
                     <span className="experienceTitles">
-                        {titles.map((title, index) => <h3 className="experienceTitle" key={index}>{title}{ index === 0 ? " - " + company : ''}</h3>)}
+                        {titles.map((title, index) => 
+                            <div key={index} className="experienceTitleWrapper">
+                                <h3 className="experienceTitle" key={index}>{title}</h3> {
+                                    index === 0 && (
+                                        <><h3 className="tree">↟</h3> <h3 className="companyName">{company}</h3></>)
+                                }
+                            </div>
+                        )}
                     </span>
                     <ul className='technologies'>
                         {technologies.map((tech, index) => <li className='technologyItem' key={index}>{tech}</li>)}
