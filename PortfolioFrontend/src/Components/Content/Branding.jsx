@@ -1,9 +1,9 @@
 // Branding.jsx
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const StyledBranding = styled.div.attrs({ className: 'branding' })`
-    font-family: ${props => props.theme.fonts.heading};
-    font-weight: 300;
+const StyledBranding = styled.div.attrs({ className: "branding" })`
+  font-family: ${(props) => props.theme.fonts.heading};
+  font-weight: 300;
 `;
 
 /**
