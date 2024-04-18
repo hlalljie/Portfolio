@@ -1,6 +1,6 @@
 // PortfolioFrontend/src/pages/HomeSections/HeroBanner.jsx
-import ThemedSection from '../../Components/Sections/ThemedSection';
-import { css } from 'styled-components';
+import ThemedSection from "../../Components/Sections/ThemedSection";
+import { css } from "styled-components";
 
 const heroBannerStyles = css`
   .bannerContent {
@@ -12,7 +12,7 @@ const heroBannerStyles = css`
       background-color: ${(props) => props.theme.colors.fog};
       box-shadow: 0px 0 120px 120px ${(props) => props.theme.colors.fog};
       padding: 10px 20px;
-      margin-left: 7%;
+      padding: 7%;
       width: 40%;
       > h1 {
         color: ${(props) => props.theme.colors.dark};
@@ -47,7 +47,7 @@ function HeroBanner() {
             <h3 className="tree">↟</h3>
             <h3>Educator</h3>
           </div>
-          <p className='p1'>
+          <p className="p1">
             I'm passionate about creating solutions through programming and
             design, and empowering others through education and mentorship.
           </p>
