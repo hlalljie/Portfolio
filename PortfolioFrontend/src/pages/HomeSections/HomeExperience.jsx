@@ -1,6 +1,7 @@
 import ThemedSection from "../../Components/Sections/ThemedSection";
 import { css, styled } from "styled-components";
 import experienceItems from "../../data/ExperienceItems.jsx";
+import React, { useState } from "react";
 
 const homeExperienceStyles = css`
   padding: ${(props) => props.theme.padding.largeSection};
@@ -14,8 +15,55 @@ function HomeExperience() {
   return (
     <ThemedSection themeName="light" additionalStyles={homeExperienceStyles}>
       <h2>Experience</h2>
-      <ExperienceBlock {...experienceItems[0]} />
+      <ExperienceSelector />
     </ThemedSection>
+  );
+}
+
+const StyledExperienceSelectorStyles = styled.div``;
+
+function ExperienceSelector() {
+  const [activeTab, setActiveTab] = useState(0);
+
+  return (
+    <StyledExperienceSelectorStyles>
+      <ExperienceSelectionTabs
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
+      <ExperienceBlock {...experienceItems[activeTab]} />
+    </StyledExperienceSelectorStyles>
+  );
+}
+
+const StyledExperienceSelectionTabs = styled.div`
+  display: flex;
+  height: 60px;
+  button {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    &.active {
+      font-size: 2rem;
+      border-color: ${(props) => props.theme.colors.black};
+    }
+  }
+`;
+
+function ExperienceSelectionTabs({ activeTab, setActiveTab }) {
+  return (
+    <StyledExperienceSelectionTabs>
+      {experienceItems.map((experienceItem, index) => (
+        <button
+          key={index}
+          className={activeTab === index ? "active" : ""}
+          onClick={() => setActiveTab(index)}
+        >
+          {experienceItem.company}
+        </button>
+      ))}
+    </StyledExperienceSelectionTabs>
   );
 }
 

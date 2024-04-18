@@ -1,5 +1,5 @@
 // PortfolioFrontend/src/GlobalStyles.js
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     
@@ -8,37 +8,41 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
     }
     h1{
-        font-family: ${props => props.theme.fonts.heading};
+        font-family: ${(props) => props.theme.fonts.heading};
         font-weight: 300;
         font-size: 3.5rem;
         margin: 0 0 30px 0;
     }
     h2{
-        font-family: ${props => props.theme.fonts.heading};
+        font-family: ${(props) => props.theme.fonts.heading};
         font-weight: 300;
         font-size: 3rem;
         margin: 0 0 30px 0;
     }
     h3{
-        font-family: ${props => props.theme.fonts.paragraph};
+        font-family: ${(props) => props.theme.fonts.paragraph};
         font-weight: 500;
         font-size: 1.8rem;
     }
     h4{
-        font-family: ${props => props.theme.fonts.paragraph};
+        font-family: ${(props) => props.theme.fonts.paragraph};
         font-weight: 500;
         font-size: 1.3rem;
     }
     button{
-        font-family: ${props => props.theme.fonts.paragraph};
+        font-family: ${(props) => props.theme.fonts.paragraph};
         font-weight: 600;
         font-size: 1.2rem;
+        background-color: transparent;
+        border-radius: 5px;
+        border-width: 2px;
+        border-style: solid;
     }
     a:visited{
         color: inherit;
     }
     p, li{
-        font-family: ${props => props.theme.fonts.paragraph};
+        font-family: ${(props) => props.theme.fonts.paragraph};
         font-size: 1.6rem;
         font-weight: 420;
         line-height: 2.5rem;

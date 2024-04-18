@@ -12,7 +12,7 @@ const heroBannerStyles = css`
     .textContainer {
       background-color: ${(props) => props.theme.colors.fog};
       box-shadow: 0px 0 120px 120px ${(props) => props.theme.colors.fog};
-      padding: 10px 20px;
+      padding: 10px 0;
       width: 40%;
       > h1 {
         color: ${(props) => props.theme.colors.dark};
