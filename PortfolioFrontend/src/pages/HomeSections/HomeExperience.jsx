@@ -2,7 +2,9 @@ import ThemedSection from "../../Components/Sections/ThemedSection";
 import { css, styled } from "styled-components";
 import experienceItems from "../../data/ExperienceItems.jsx";
 
-const homeExperienceStyles = css``;
+const homeExperienceStyles = css`
+  padding: ${(props) => props.theme.padding.largeSection};
+`;
 
 /**
  * Home Experience: Home Experience Section
@@ -11,13 +13,15 @@ const homeExperienceStyles = css``;
 function HomeExperience() {
   return (
     <ThemedSection themeName="light" additionalStyles={homeExperienceStyles}>
+      <h2>Experience</h2>
       <ExperienceBlock {...experienceItems[0]} />
     </ThemedSection>
   );
 }
 
 const StyledExperienceBlockStyles = styled.div`
-  padding: ${(props) => props.theme.padding.largeSection};
+  background-color: ${(props) => props.theme.colors.fog};
+  box-shadow: 0px 0 120px 120px ${(props) => props.theme.colors.fog};
   .titleTagContent {
     display: flex;
     align-items: top;

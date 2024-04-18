@@ -3,6 +3,7 @@ import ThemedSection from "../../Components/Sections/ThemedSection";
 import { css } from "styled-components";
 
 const heroBannerStyles = css`
+  padding: ${(props) => props.theme.padding.largeSection};
   .bannerContent {
     display: flex;
     align-items: center;
@@ -12,7 +13,6 @@ const heroBannerStyles = css`
       background-color: ${(props) => props.theme.colors.fog};
       box-shadow: 0px 0 120px 120px ${(props) => props.theme.colors.fog};
       padding: 10px 20px;
-      padding: 7%;
       width: 40%;
       > h1 {
         color: ${(props) => props.theme.colors.dark};
