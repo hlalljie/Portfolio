@@ -1,18 +1,19 @@
 const theme = {
-    fonts: {
-        heading: "'K2D', sans-serif",
-        paragraph: "'Baloo Da 2', sans-serif",
-    },
-    colors: {
-        black: '#3a3a3a',
-        dark: '#745d57',
-        darkAccent: '#445835',
-        white: '#f5f5f5',
-        fog: '#d6d6d6cc',
-    },
-    padding: {
-        largeSection: '7%',
-    }
-  };
-  
-  export default theme;
+  fonts: {
+    heading: "'K2D', sans-serif",
+    paragraph: "'Baloo Da 2', sans-serif",
+  },
+  colors: {
+    black: "#3a3a3a",
+    fadedBlack: "#3a3a3a99",
+    dark: "#745d57",
+    darkAccent: "#445835",
+    white: "#f5f5f5",
+    fog: "#d6d6d6cc",
+  },
+  padding: {
+    largeSection: "7%",
+  },
+};
+
+export default theme;
