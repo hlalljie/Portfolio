@@ -4,6 +4,10 @@ import { useState } from "react";
 
 const StyledExperienceSelectorStyles = styled.div``;
 
+/**
+ * ExperienceSelector: Component for displaying experience with selection tabs for each company.
+ * @returns {JSX.Element}
+ */
 function ExperienceSelector() {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -53,8 +57,18 @@ const StyledExperienceSelectionTabs = styled.div`
   }
 `;
 
+/**
+ *
+ * @param {Objects} props - The properties for the ExperienceSelector component.
+ * @param {number} props.activeTab - The index of the active tab.
+ * @param {function} props.setActiveTab - The function to set the active tab.
+ * @returns {JSX.Element}
+ */
 function ExperienceSelectionTabs({ activeTab, setActiveTab }) {
-  // Function to get the reordered items
+  /**
+   * getReorderedItems: Function to reorder items based on the active tab being first tab.
+   * @returns {JSX.Element[]}
+   */
   const getReorderedItems = () => {
     // Items from the active index to the end of the array
     const startFromActive = experienceItems.slice(activeTab);

@@ -1,9 +1,12 @@
 import ThemedSection from "../../Components/Sections/ThemedSection";
 import { css } from "styled-components";
-import ExperienceSelector from "../../Components/UI";
+import ExperienceSelector from "../../Components/UI/ExperienceSelector";
 
 const homeExperienceStyles = css`
   padding: ${(props) => props.theme.padding.largeSection};
+  .sectionTitle {
+    //text-align: center;
+  }
 `;
 
 /**
@@ -13,7 +16,7 @@ const homeExperienceStyles = css`
 function HomeExperience() {
   return (
     <ThemedSection themeName="light" additionalStyles={homeExperienceStyles}>
-      <h2>Experience</h2>
+      <h2 className="sectionTitle">Experience</h2>
       <ExperienceSelector />
     </ThemedSection>
   );
