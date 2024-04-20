@@ -5,7 +5,8 @@ import ExperienceSelector from "../../Components/UI/ExperienceSelector";
 const homeExperienceStyles = css`
   padding: ${(props) => props.theme.padding.largeSection};
   .sectionTitle {
-    //text-align: center;
+    text-align: center;
+    margin: 0;
   }
 `;
 

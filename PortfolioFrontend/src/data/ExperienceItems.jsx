@@ -2,7 +2,11 @@ const experienceItems = [
   {
     company: "HL Tutoring",
     titles: ["Founder"],
-    years: "2023 - Present",
+    years: {
+      start: "2023",
+      end: "Present",
+      short: "Present",
+    },
     technologies: [
       "Python",
       "Java",
@@ -23,7 +27,11 @@ const experienceItems = [
   {
     company: "Nav Creative",
     titles: ["Director", "Project Manager", "Web Designer"],
-    years: "2019 — 2023",
+    years: {
+      start: "2019",
+      end: "2023",
+      short: "2023",
+    },
     technologies: [
       "Javascript",
       "Less",
@@ -39,7 +47,11 @@ const experienceItems = [
   {
     company: "Silicon Valley 4u",
     titles: ["Coding Instructor"],
-    years: "2019",
+    years: {
+      start: "May 2019",
+      end: "Nov 2019",
+      short: "2019",
+    },
     technologies: ["Python", "Scratch", "Blender"],
     description: `-Taught courses in Python/Scratch coding and Blender 3D Modeling/Printing/Animation
     -Adapted curriculum to different age groups (6-14), class sizes (4-11), skill levels and interests.
@@ -48,8 +60,12 @@ const experienceItems = [
   },
   {
     company: "Scale API",
-    titles: ["QA Operations Associate", "QA Contractor"],
-    years: "2017 — 2018",
+    titles: ["QA Ops Associate", "QA Contractor"],
+    years: {
+      start: "2017",
+      end: "2018",
+      short: "2018",
+    },
     technologies: ["Jira", "Scale 3d Lidar Annotations", "Google Sheets"],
     description: `✔️ Ensured superior quality for AI training data annotations, including supporting the creation of custom
     quality guidelines for new annotation models that were adopted as a gold standard.

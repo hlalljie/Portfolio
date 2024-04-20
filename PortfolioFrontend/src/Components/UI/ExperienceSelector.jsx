@@ -23,36 +23,79 @@ function ExperienceSelector() {
 }
 
 const StyledExperienceSelectionTabs = styled.div`
-  height: 60px;
+  //height: 60px;
   display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 30px;
+  padding-bottom: 7%;
+  position: relative;
 
-  button {
+  .experienceTab {
     display: flex;
-    align-items: flex-end; /* This centers the text vertically */
-    justify-content: center;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-radius: 0;
-    padding-left: 0;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    vertical-align: baseline;
-    color: ${(props) => props.theme.colors.fadedBlack};
-    border-color: ${(props) => props.theme.colors.fadedBlack};
-    font-family: ${(props) => props.theme.fonts.heading};
-    &.active {
-      font-size: 2rem;
-      border-color: ${(props) => props.theme.colors.darkAccent};
-      color: ${(props) => props.theme.colors.darkAccent};
+    flex-direction: column;
+    align-items: flex-end;
+
+    .years {
+      margin: auto;
+      margin-top: 10px;
+      text-align: center;
+      color: ${(props) => props.theme.colors.fadedBlack};
+      .short {
+        display: inline;
+      }
+      .range {
+        display: none;
+      }
     }
-    &:hover:not(.active) {
-      font-size: 1.3rem;
-      color: ${(props) => props.theme.colors.black};
-      border-color: ${(props) => props.theme.colors.black};
+    button {
+      display: flex;
+      align-items: flex-end; /* This centers the text vertically */
+      justify-content: center;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-radius: 0;
+      padding: 10px 0;
+      vertical-align: baseline;
+      color: ${(props) => props.theme.colors.fadedBlack};
+      border-color: ${(props) => props.theme.colors.fadedBlack};
+      font-family: ${(props) => props.theme.fonts.heading};
+      width: 170px;
+    }
+    &.active {
+      .years {
+        color: ${(props) => props.theme.colors.darkAccent};
+        display: flex;
+        .short {
+          display: none;
+        }
+        .range {
+          display: inline;
+        }
+      }
+      button {
+        padding: 10px 20px;
+        width: 100%;
+        font-size: 2rem;
+        border-color: ${(props) => props.theme.colors.darkAccent};
+        color: ${(props) => props.theme.colors.darkAccent};
+      }
     }
     &:last-child {
-      padding-right: 0;
+      button {
+        padding-right: 0;
+      }
+    }
+    &:hover:not(.active) {
+      .years {
+        color: ${(props) => props.theme.colors.black};
+      }
+      button {
+        font-size: 1.3rem;
+        color: ${(props) => props.theme.colors.black};
+        border-color: ${(props) => props.theme.colors.black};
+      }
     }
   }
 `;
@@ -69,28 +112,35 @@ function ExperienceSelectionTabs({ activeTab, setActiveTab }) {
    * getReorderedItems: Function to reorder items based on the active tab being first tab.
    * @returns {JSX.Element[]}
    */
-  const getReorderedItems = () => {
-    // Items from the active index to the end of the array
-    const startFromActive = experienceItems.slice(activeTab);
-    // Items from the start of the array to the active index
-    const untilActive = experienceItems.slice(0, activeTab);
-    // Concatenating both slices to get the desired order
-    return startFromActive.concat(untilActive);
-  };
+  //   const getReorderedItems = () => {
+  //     // Items from the active index to the end of the array
+  //     const startFromActive = experienceItems.slice(activeTab);
+  //     // Items from the start of the array to the active index
+  //     const untilActive = experienceItems.slice(0, activeTab);
+  //     // Concatenating both slices to get the desired order
+  //     return startFromActive.concat(untilActive);
+  //   };
 
-  // Call the function to reorder items
-  const reorderedItems = getReorderedItems();
+  //   // Call the function to reorder items
+  //   const reorderedItems = getReorderedItems();
 
   return (
     <StyledExperienceSelectionTabs>
-      {reorderedItems.map((experienceItem, index) => (
-        <button
-          key={index} // Consider using a unique id from experienceItem if available
-          className={index === 0 ? "active" : ""} // First item in the reordered list is always active
-          onClick={() => setActiveTab(experienceItems.indexOf(experienceItem))}
+      {experienceItems.map((experienceItem, index) => (
+        <div
+          className={"experienceTab" + (index === activeTab ? " active" : "")}
+          key={index}
         >
-          {experienceItem.company}
-        </button>
+          <button onClick={() => setActiveTab(index)}>
+            {experienceItem.company}
+          </button>
+          <h4 className="years">
+            <span className="short">{experienceItem.years.short}</span>
+            <span className="range">
+              {experienceItem.years.start} - {experienceItem.years.end}
+            </span>
+          </h4>
+        </div>
       ))}
     </StyledExperienceSelectionTabs>
   );
@@ -99,23 +149,18 @@ function ExperienceSelectionTabs({ activeTab, setActiveTab }) {
 const StyledExperienceBlockStyles = styled.div`
   background-color: ${(props) => props.theme.colors.fog};
   box-shadow: 0px 0 120px 120px ${(props) => props.theme.colors.fog};
-  .years {
-    margin-top: 5px;
-  }
   .titleTagContent {
     display: flex;
     align-items: top;
-    column-gap: 50px;
+    column-gap: 7%;
     .experienceDetailsContainer {
-      min-width: 200px;
-      flex: 1.5;
-      .experienceTitle {
-        margin: 0;
-      }
+      min-width: 450px;
+      flex: 1;
+
       .experienceTitles {
         .experienceTitleWrapper {
           display: flex;
-          justify-content: left;
+          justify-content: right;
           flex-direction: row;
           align-items: flex-start;
           column-gap: 20px;
@@ -136,6 +181,7 @@ const StyledExperienceBlockStyles = styled.div`
       .technologies {
         display: flex;
         list-style: none;
+        justify-content: right;
         column-gap: 10px;
         padding: 0;
         flex-wrap: wrap;
@@ -151,7 +197,7 @@ const StyledExperienceBlockStyles = styled.div`
       }
     }
     .description {
-      flex: 2;
+      flex: 1;
       p {
         margin-top: 0;
       }
@@ -163,21 +209,13 @@ const StyledExperienceBlockStyles = styled.div`
  * @param {Object} props - The properties for the ExperienceBlock component.
  * @param {string} props.company - Name of the company.
  * @param {string[]} props.titles - Titles held during the experience.
- * @param {string} props.years - Years of experience.
  * @param {string[]} props.technologies - Technologies utilized at the company
  * @param {string} props.description - Description of the experience.
  * @returns {JSX.Element} The ExperienceBlock component as a JSX element.
  */
-function ExperienceBlock({
-  company,
-  titles,
-  years,
-  technologies,
-  description,
-}) {
+function ExperienceBlock({ company, titles, technologies, description }) {
   return (
     <StyledExperienceBlockStyles>
-      <h4 className="years">{years}</h4>
       <div className="titleTagContent">
         <div className="experienceDetailsContainer">
           <span className="experienceTitles">
