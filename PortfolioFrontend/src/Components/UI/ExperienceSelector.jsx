@@ -28,7 +28,7 @@ const StyledExperienceSelectionTabs = styled.div`
   justify-content: center;
   align-items: flex-end;
   padding-top: 30px;
-  padding-bottom: 7%;
+  padding-bottom: 6.5%;
   position: relative;
 
   .experienceTab {
@@ -89,12 +89,12 @@ const StyledExperienceSelectionTabs = styled.div`
     }
     &:hover:not(.active) {
       .years {
-        color: ${(props) => props.theme.colors.black};
+        color: ${(props) => props.theme.colors.dark};
       }
       button {
         font-size: 1.3rem;
-        color: ${(props) => props.theme.colors.black};
-        border-color: ${(props) => props.theme.colors.black};
+        color: ${(props) => props.theme.colors.dark};
+        border-color: ${(props) => props.theme.colors.dark};
       }
     }
   }
@@ -221,15 +221,15 @@ function ExperienceBlock({ company, titles, technologies, description }) {
           <span className="experienceTitles">
             {titles.map((title, index) => (
               <div key={index} className="experienceTitleWrapper">
-                <h3 className="experienceTitle" key={index}>
-                  {title}
-                </h3>{" "}
                 {index === 0 && (
                   <>
-                    <h3 className="tree">↟</h3>{" "}
                     <h3 className="companyName">{company}</h3>
+                    <h3 className="tree">↟</h3>{" "}
                   </>
-                )}
+                )}{" "}
+                <h3 className="experienceTitle" key={index}>
+                  {title}
+                </h3>
               </div>
             ))}
           </span>
