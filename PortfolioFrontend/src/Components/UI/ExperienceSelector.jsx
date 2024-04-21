@@ -101,29 +101,13 @@ const StyledExperienceSelectionTabs = styled.div`
 `;
 
 /**
- *
+ * ExperienceSelectionTabs: Component for displaying selection tabs for each company and switching between.
  * @param {Objects} props - The properties for the ExperienceSelector component.
  * @param {number} props.activeTab - The index of the active tab.
  * @param {function} props.setActiveTab - The function to set the active tab.
  * @returns {JSX.Element}
  */
 function ExperienceSelectionTabs({ activeTab, setActiveTab }) {
-  /**
-   * getReorderedItems: Function to reorder items based on the active tab being first tab.
-   * @returns {JSX.Element[]}
-   */
-  //   const getReorderedItems = () => {
-  //     // Items from the active index to the end of the array
-  //     const startFromActive = experienceItems.slice(activeTab);
-  //     // Items from the start of the array to the active index
-  //     const untilActive = experienceItems.slice(0, activeTab);
-  //     // Concatenating both slices to get the desired order
-  //     return startFromActive.concat(untilActive);
-  //   };
-
-  //   // Call the function to reorder items
-  //   const reorderedItems = getReorderedItems();
-
   return (
     <StyledExperienceSelectionTabs>
       {experienceItems.map((experienceItem, index) => (
