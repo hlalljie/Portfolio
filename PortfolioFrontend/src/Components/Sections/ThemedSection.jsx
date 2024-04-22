@@ -43,9 +43,14 @@ const StyledSection = styled.section`
 const ThemedSection = ({
   themeName = "default",
   additionalStyles,
+  className = "",
   children,
 }) => (
-  <StyledSection $themeName={themeName} $additionalStyles={additionalStyles}>
+  <StyledSection
+    $themeName={themeName}
+    $additionalStyles={additionalStyles}
+    className={className}
+  >
     {children}
   </StyledSection>
 );

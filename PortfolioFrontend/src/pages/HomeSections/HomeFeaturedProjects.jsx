@@ -1,8 +1,12 @@
-import ThemedSection from '../../Components/Sections/ThemedSection';
-import { css } from 'styled-components';
+import ThemedSection from "../../Components/Sections/ThemedSection";
+import { css } from "styled-components";
 
 const homeFeaturedProjectsStyles = css`
-
+  background: linear-gradient(
+    0deg,
+    ${(props) => props.theme.colors.black},
+    transparent
+  );
 `;
 
 /**
@@ -10,11 +14,15 @@ const homeFeaturedProjectsStyles = css`
  * @returns {JSX.Element}
  */
 function HomeFeaturedProjects() {
-    return (
-        <ThemedSection themeName="light" additionalStyles={homeFeaturedProjectsStyles}>
-            Home Featured Projects
-        </ThemedSection>
-    )
+  return (
+    <ThemedSection
+      themeName="dark"
+      additionalStyles={homeFeaturedProjectsStyles}
+      className="overlay"
+    >
+      Home Featured Projects
+    </ThemedSection>
+  );
 }
 
 export default HomeFeaturedProjects;
