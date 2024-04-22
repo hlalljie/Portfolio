@@ -3,9 +3,12 @@ import { css } from "styled-components";
 
 const homeFeaturedProjectsStyles = css`
   background: linear-gradient(
-    0deg,
-    ${(props) => props.theme.colors.black},
-    transparent
+    to bottom,
+    transparent,
+    ${({ theme }) => theme.withOpacity(theme.colors.fog, 0.2)} 5%,
+
+    ${({ theme }) => theme.withOpacity(theme.colors.black, 0.8)} 40%,
+    ${({ theme }) => theme.withOpacity(theme.colors.black, 1)} 90%
   );
 `;
 
