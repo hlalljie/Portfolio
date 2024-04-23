@@ -4,13 +4,13 @@ const PortfolioItems = {
     "Platinum Advisors": {
       title: "Platinum Advisors Redesign",
       excerpt:
-        "This is a test project. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit",
-      image: "https://picsum.photos/500/400",
+        "Platinum Advisors is a leading government advocacy and advisory group, I desgined a website in line with thier vision.",
+      image: "../../src/assets/platinumAdvisors.png",
       company: "Nav Creative",
       link: "https://www.platinumadvisors.com/",
-      roles: ["Developer", "Designer"],
+      roles: ["Solo Designer"],
       years: "2023",
-      technologies: ["Python", "Javascript"],
+      technologies: ["Squarespace", "Less", "Javascript", "HTML"],
       github: "https://github.com/Username/Repo",
     },
     "Test Project": {

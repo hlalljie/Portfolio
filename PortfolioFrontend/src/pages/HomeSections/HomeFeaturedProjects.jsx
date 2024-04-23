@@ -12,6 +12,13 @@ const homeFeaturedProjectsStyles = css`
     ${({ theme }) => theme.withOpacity(theme.colors.black, 0.8)} 40%,
     ${({ theme }) => theme.withOpacity(theme.colors.black, 1)} 90%
   );
+  .sectionTitle {
+    width: fit-content;
+    color: ${({ theme }) => theme.colors.black};
+    padding-bottom: 20px;
+    background-color: ${(props) => props.theme.colors.fog};
+    box-shadow: 0px 0 120px 120px ${(props) => props.theme.colors.fog};
+  }
 `;
 
 /**
@@ -83,6 +90,7 @@ const StyledProjectCard = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover; /* Ensures the image covers the area without distortion */
+      object-position: top;
     }
   }
 `;

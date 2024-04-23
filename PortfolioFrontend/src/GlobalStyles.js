@@ -52,6 +52,7 @@ const GlobalStyle = createGlobalStyle`
     }
     .smallP{
         font-size: 1.3rem;
+        line-height: 2.2rem;
     }
     .tree {
         font-weight: 100;
