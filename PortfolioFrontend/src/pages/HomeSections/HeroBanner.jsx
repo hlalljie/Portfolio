@@ -47,7 +47,7 @@ function HeroBanner() {
             <h3 className="tree">↟</h3>
             <h3>Educator</h3>
           </div>
-          <p className="p1">
+          <p className="largeP">
             I'm passionate about creating solutions through programming and
             design, and empowering others through education and mentorship.
           </p>
