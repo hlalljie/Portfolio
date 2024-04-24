@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { styled } from "styled-components";
 import experienceItems from "../../data/ExperienceItems.jsx";
-import { useState } from "react";
+import TagList from "./TagList.jsx";
 
 const StyledExperienceSelectorStyles = styled.div``;
 
@@ -163,20 +164,9 @@ const StyledExperienceBlockStyles = styled.div`
         }
       }
       .technologies {
-        display: flex;
-        list-style: none;
-        justify-content: right;
-        column-gap: 10px;
-        padding: 0;
-        flex-wrap: wrap;
-        .technologyItem {
-          font-size: 1.1rem;
-          padding: 0 10px;
-          margin: 5px;
-          border: 2px solid ${(props) => props.theme.colors.darkAccent};
+        li {
+          border-color: ${(props) => props.theme.colors.darkAccent};
           color: ${(props) => props.theme.colors.darkAccent};
-          border-radius: 5px;
-          line-height: 2rem;
         }
       }
     }
@@ -217,13 +207,14 @@ function ExperienceBlock({ company, titles, technologies, description }) {
               </div>
             ))}
           </span>
-          <ul className="technologies">
+          <TagList tags={technologies} className="technologies" />
+          {/* <ul className="technologies">
             {technologies.map((tech, index) => (
               <li className="technologyItem" key={index}>
                 {tech}
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
         <div className="description">
           <p>{description}</p>

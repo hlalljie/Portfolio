@@ -59,18 +59,11 @@ function ProjectList({ featured = false }) {
         ? PortfolioItems.Featured.map((project) => (
             <ProjectCard
               key={project}
-              title={PortfolioItems.Projects[project].title}
-              excerpt={PortfolioItems.Projects[project].excerpt}
-              image={PortfolioItems.Projects[project].image}
+              data={PortfolioItems.Projects[project]}
             />
           ))
         : Object.keys(PortfolioItems.Projects).map((project) => (
-            <ProjectCard
-              key={project}
-              title={PortfolioItems.Projects[project].title}
-              excerpt={PortfolioItems.Projects[project].excerpt}
-              image={PortfolioItems.Projects[project].image}
-            />
+            <ProjectCard key={project} data={project} />
           ))}
     </StyledProjectList>
   );
@@ -95,15 +88,15 @@ const StyledProjectCard = styled.div`
   }
 `;
 
-function ProjectCard({ title, excerpt, image }) {
+function ProjectCard({ data }) {
   return (
     <StyledProjectCard className="projectCard">
       <div className="imgContainer">
-        <img src={image} alt="" />
+        <img src={data.image} alt="" />
       </div>
       <div className="textContainer">
-        <h3 className="projectTitle">{title}</h3>
-        <p className="projectExcerpt smallP">{excerpt}</p>
+        <h3 className="projectTitle">{data.title}</h3>
+        <p className="projectExcerpt smallP">{data.excerpt}</p>
       </div>
     </StyledProjectCard>
   );
