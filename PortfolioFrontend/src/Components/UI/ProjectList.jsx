@@ -41,7 +41,13 @@ function ProjectList({ featured = false, cols = 3, gap = 55 }) {
 }
 
 const StyledProjectCard = styled.div`
+  &:hover {
+    .imgContainer {
+      filter: grayscale(0%);
+    }
+  }
   .imgContainer {
+    filter: grayscale(100%);
     width: 100%;
     border-radius: 10px;
     padding-top: 80%;

@@ -7,7 +7,7 @@ const homeExperienceStyles = css`
   .sectionTitle {
     text-align: center;
     margin: 0;
-    color: ${(props) => props.theme.colors.dark};
+    color: ${(props) => props.theme.colors.darkAccent};
   }
 `;
 

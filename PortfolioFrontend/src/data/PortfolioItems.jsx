@@ -1,10 +1,10 @@
 const PortfolioItems = {
-  Featured: ["Platinum Advisors", "Test Project", "Test Project"],
+  Featured: ["Platinum Advisors", "Block Broker", "Inquizity"],
   Projects: {
     "Platinum Advisors": {
-      title: "Platinum Advisors Redesign",
+      title: "Platinum Advisors",
       excerpt:
-        "Platinum Advisors is a leading government advocacy and advisory group, I desgined a website in line with thier vision.",
+        "I redesigned Platinum Advisors' website to more effectively communicate their professionalism and expertise to clients.",
       image: "../../src/assets/platinumAdvisors.png",
       company: "Nav Creative",
       link: "https://www.platinumadvisors.com/",
@@ -13,10 +13,34 @@ const PortfolioItems = {
       technologies: ["Squarespace", "Less", "Javascript", "HTML"],
       github: "https://github.com/Username/Repo",
     },
+    "Block Broker": {
+      title: "Block Broker",
+      excerpt:
+        "I built the frontend of a blockchain freelance platform for the MLH Blockchain Hackathon.",
+      image: "../../src/assets/blockBroker.jpg",
+      company: "MLH Hackathon",
+      link: "",
+      roles: ["Solo Designer"],
+      years: "2023",
+      technologies: ["React", "CSS", "Javascript"],
+      github: "https://github.com/Username/Repo",
+    },
+    Inquizity: {
+      title: "Inquizity",
+      excerpt:
+        "A personal project built to give students and educators the ability to generate specific quiz quistions and get feedback.",
+      image: "https://picsum.photos/500/400",
+      company: "Test Company",
+      link: "https://example.com",
+      roles: ["Developer", "Designer"],
+      years: "2023",
+      technologies: ["React", "Flask", "Llama2"],
+      github: "https://github.com/Username/Repo",
+    },
     "Test Project": {
       title: "Test Project",
       excerpt:
-        "This is a test project. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit",
+        "This is a test project. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, unsalad dayas arem ovem.",
       image: "https://picsum.photos/500/400",
       company: "Test Company",
       link: "https://example.com",
