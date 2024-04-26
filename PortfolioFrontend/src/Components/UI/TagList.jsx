@@ -3,14 +3,13 @@ import { styled } from "styled-components";
 const StyledTagList = styled.ul`
   display: flex;
   list-style: none;
-  justify-content: right;
   column-gap: 10px;
   padding: 0;
   flex-wrap: wrap;
+  gap: 7px;
   li {
     font-size: 1.1rem;
     padding: 0 10px;
-    margin: 5px;
     border: 2px solid ${(props) => props.theme.colors.black};
     color: ${(props) => props.theme.colors.black};
     border-radius: 5px;
@@ -25,7 +24,7 @@ const StyledTagList = styled.ul`
  * @param {string} props.className - The className for the tagList component.
  * @returns {JSX.Element}
  */
-function TagList({ tags, className }) {
+function TagList({ tags = [], className = "" }) {
   return (
     <StyledTagList className={className}>
       {tags.map((tag, index) => (

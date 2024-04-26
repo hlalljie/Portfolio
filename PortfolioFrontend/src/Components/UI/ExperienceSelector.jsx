@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { styled } from "styled-components";
 import experienceItems from "../../data/ExperienceItems.jsx";
-import TagList from "TagList.jsx";
+import TagList from "./TagList.jsx";
 
 const StyledExperienceSelectorStyles = styled.div``;
 
@@ -164,6 +164,8 @@ const StyledExperienceBlockStyles = styled.div`
         }
       }
       .technologies {
+        justify-content: right;
+
         li {
           border-color: ${(props) => props.theme.colors.darkAccent};
           color: ${(props) => props.theme.colors.darkAccent};

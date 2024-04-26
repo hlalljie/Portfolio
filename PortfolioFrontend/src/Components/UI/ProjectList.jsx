@@ -1,27 +1,31 @@
 import { styled } from "styled-components";
 import PortfolioItems from "../../data/PortfolioItems";
+import TagList from "./TagList.jsx";
 
 const StyledProjectList = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: ${({ $gap }) => $gap}px;
   justify-content: center;
   width: 100%;
 
   .projectCard {
-    width: calc((100% - 80px) / 3);
+    width: ${({ $cols, $gap }) =>
+      `calc((100% - ${$gap * ($cols - 1)}px) / ${$cols})`};
   }
 `;
 
 /**
  *
  * @param {Object} props
- * @param {boolean} props.featured
+ * @param {boolean} props.featured - Whether to filter by only featured projects
+ * @param {number} props.cols - Number of columns for project grid
+ * @param {number} props.gap - Gap between project cards
  * @returns {JSX.Element}
  */
-function ProjectList({ featured = false }) {
+function ProjectList({ featured = false, cols = 3, gap = 60 }) {
   return (
-    <StyledProjectList>
+    <StyledProjectList $cols={cols} $gap={gap}>
       {featured
         ? PortfolioItems.Featured.map((project) => (
             <ProjectCard
@@ -53,6 +57,19 @@ const StyledProjectCard = styled.div`
       object-position: top;
     }
   }
+  .textContainer {
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+  .technologies {
+    li {
+      /* color: ${(props) => props.theme.colors.white};
+      border-color: ${(props) => props.theme.colors.white}; */
+      background-color: ${(props) => props.theme.colors.white};
+      font-weight: 500;
+    }
+  }
 `;
 
 /**
@@ -71,6 +88,7 @@ function ProjectCard({ data }) {
         <h3 className="projectTitle">{data.title}</h3>
         <p className="projectExcerpt smallP">{data.excerpt}</p>
       </div>
+      <TagList tags={data.technologies} className="technologies" />
     </StyledProjectCard>
   );
 }
