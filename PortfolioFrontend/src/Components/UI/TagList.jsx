@@ -19,11 +19,11 @@ const StyledTagList = styled.ul`
 `;
 
 /**
- *
+ * TagList: A styled list component that takes a list of tags and renders them as consitently styled list items.
  * @param {Object} props - The properties for the tagList component.
  * @param {string[]} props.tags - The tags to be displayed.
  * @param {string} props.className - The className for the tagList component.
- * @returns
+ * @returns {JSX.Element}
  */
 function TagList({ tags, className }) {
   return (
