@@ -23,7 +23,7 @@ const StyledProjectList = styled.div`
  * @param {number} props.gap - Gap between project cards
  * @returns {JSX.Element}
  */
-function ProjectList({ featured = false, cols = 3, gap = 60 }) {
+function ProjectList({ featured = false, cols = 3, gap = 55 }) {
   return (
     <StyledProjectList $cols={cols} $gap={gap}>
       {featured
