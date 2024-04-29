@@ -30,7 +30,7 @@ function Home() {
 
         <HomeFeaturedProjects />
       </SharedBackground>
-      {/* <HomeAbout /> */}
+      <HomeAbout />
     </>
   );
 }
