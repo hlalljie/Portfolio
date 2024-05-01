@@ -35,7 +35,7 @@ function HomeAbout() {
         <img src="./src/assets/profilePic.jpg" alt="" />
       </div>
       <div className="textContainer">
-        <h1 className="sectionTitle">About Me</h1>
+        <h2 className="sectionTitle">About Me</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit
           amet nunc odio. Mauris nulla metus, convallis in nisi et, sagittis

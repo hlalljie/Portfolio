@@ -41,11 +41,14 @@ const GlobalStyle = createGlobalStyle`
     a:visited{
         color: inherit;
     }
-    p, li{
+    p, li, a{
         font-family: ${(props) => props.theme.fonts.paragraph};
         font-size: 1.6rem;
         font-weight: 420;
         line-height: 2.5rem;
+    }a {
+        color: ${(props) => props.theme.colors.white};
+        text-decoration: none;
     }
     .largeP{
         font-size: 1.7rem;

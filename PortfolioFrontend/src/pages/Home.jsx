@@ -20,10 +20,16 @@ const StyledHome = styled.div`
       to bottom,
       ${({ theme }) => theme.withOpacity(theme.colors.black, 1)},
       ${({ theme }) => theme.withOpacity(theme.colors.black, 0.85)} 10%,
-      ${({ theme }) => theme.withOpacity(theme.colors.black, 0.75)} 40%,
-      ${({ theme }) => theme.withOpacity(theme.colors.black, 0.4)} 60%,
-      ${({ theme }) => theme.withOpacity(theme.colors.black, 0.2)} 90%
+      ${({ theme }) => theme.withOpacity(theme.colors.black, 0.8)} 60%,
+      ${({ theme }) => theme.withOpacity(theme.colors.black, 0.7)} 70%,
+      transparent 80%
     );
+  }
+  .copyright {
+    margin: 0;
+    line-height: inherit;
+    text-align: center;
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
@@ -52,6 +58,7 @@ function Home() {
       >
         <HomeAbout />
         <HomeContact />
+        <p className="copyright smallP">Copyright 2024</p>
       </SharedBackground>
     </StyledHome>
   );
