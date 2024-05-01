@@ -54,6 +54,15 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.3rem;
         line-height: 2.2rem;
     }
+    .largeSection{
+        min-height: 100vh;
+    }
+    .mediumSection{
+        min-height: 75vh;
+    }
+    .smallSection{
+        min-height: 50vh;
+    }
     .tree {
         font-weight: 100;
     }

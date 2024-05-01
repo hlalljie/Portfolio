@@ -30,6 +30,7 @@ function HomeContact() {
       themeName="dark"
       additionalStyles={homeContactStyles}
       className="homeContact"
+      sectionSize="medium"
     ></ThemedSection>
   );
 }

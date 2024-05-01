@@ -20,7 +20,6 @@ const colorThemes = {
 // Apply transient props with the $ prefix to avoid passing them to the DOM
 const StyledSection = styled.section`
   width: 100%;
-  min-height: 100vh;
   box-sizing: border-box;
 
   ${({ $themeName }) => {
@@ -44,12 +43,13 @@ const ThemedSection = ({
   themeName = "default",
   additionalStyles,
   className = "",
+  sectionSize = "large",
   children,
 }) => (
   <StyledSection
     $themeName={themeName}
     $additionalStyles={additionalStyles}
-    className={className}
+    className={className + " " + themeName + " " + sectionSize + "Section"}
   >
     {children}
   </StyledSection>
