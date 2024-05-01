@@ -4,6 +4,7 @@ import styled from "styled-components";
 const StyledSharedBackground = styled.div`
   background-image: url(${({ $backgroundImage }) => $backgroundImage});
   background-size: cover;
+  background-position: ${({ $imgPosition }) => $imgPosition};
   section:not(.overlay) {
     background: transparent;
   }
@@ -13,10 +14,19 @@ const StyledSharedBackground = styled.div`
  * @param {{children: React.ReactNode, backgroundImage: string}} param0
  * @returns {JSX.Element}
  */
-function SharedBackground({ children, backgroundImage }) {
+function SharedBackground({
+  children,
+  backgroundImage,
+  imgPosition = "top",
+  className = "",
+}) {
   return (
-    <StyledSharedBackground $backgroundImage={backgroundImage}>
-      {children}
+    <StyledSharedBackground
+      $backgroundImage={backgroundImage}
+      $imgPosition={imgPosition}
+      className={className}
+    >
+      <div className="overlay">{children}</div>
     </StyledSharedBackground>
   );
 }
