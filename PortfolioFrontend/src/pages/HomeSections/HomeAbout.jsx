@@ -16,7 +16,7 @@ const homeAboutStyles = css`
     }
   }
   .textContainer {
-    width: 40%;
+    width: 50%;
   }
 `;
 
@@ -32,7 +32,7 @@ function HomeAbout() {
       className="homeAbout"
     >
       <div className="imgContainer">
-        <img src="https://picsum.photos/800/800" alt="" />
+        <img src="./src/assets/profilePic.jpg" alt="" />
       </div>
       <div className="textContainer">
         <h1 className="sectionTitle">About Me</h1>
