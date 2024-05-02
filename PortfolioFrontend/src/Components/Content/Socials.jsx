@@ -28,13 +28,13 @@ const StyledSocials = styled.div.attrs({ className: "socials" })`
 function Socials() {
   return (
     <StyledSocials>
-      <a>
+      <a href="https://github.com/hlalljie" target="_blank">
         <GithubIcon className="socialIcon" />
       </a>
-      <a>
+      <a href="https://www.linkedin.com/in/hayden-lalljie/" target="_blank">
         <LinkedInIcon className="socialIcon" />
       </a>
-      <a>
+      <a href="https://twitter.com/haydondo" target="_blank">
         <TwitterXLogo className="socialIcon" />
       </a>
     </StyledSocials>
