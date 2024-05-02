@@ -1,35 +1,30 @@
 //\\ PortfolioFrontend/src/pages/Home.jsx //\\
 
-/// Unused Imports \\\
+/// Imports \\\
 import styled from "styled-components";
-//import ThemedSection from "../Components/Sections/ThemedSection";
 
 /// Components \\\
-import Header from "../Components/Sections/Header";
 import SharedBackground from "../Components/Wrappers/SharedBackground";
+
 // Sections
+import Header from "../Components/Sections/Header";
 import HeroBanner from "./HomeSections/HeroBanner";
 import HomeExperience from "./HomeSections/HomeExperience";
 import HomeFeaturedProjects from "./HomeSections/HomeFeaturedProjects";
 import HomeAbout from "./HomeSections/HomeAbout";
 import HomeContact from "./HomeSections/HomeContact";
+import Footer from "../Components/Sections/Footer";
 
 const StyledHome = styled.div`
   .bottomBackground .overlay {
     background: linear-gradient(
       to bottom,
       ${({ theme }) => theme.withOpacity(theme.colors.black, 1)},
-      ${({ theme }) => theme.withOpacity(theme.colors.black, 0.85)} 10%,
-      ${({ theme }) => theme.withOpacity(theme.colors.black, 0.8)} 60%,
+      ${({ theme }) => theme.withOpacity(theme.colors.black, 0.9)} 10%,
+      ${({ theme }) => theme.withOpacity(theme.colors.black, 0.85)} 60%,
       ${({ theme }) => theme.withOpacity(theme.colors.black, 0.7)} 70%,
       transparent 80%
     );
-  }
-  .copyright {
-    margin: 0;
-    line-height: inherit;
-    text-align: center;
-    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
@@ -58,7 +53,7 @@ function Home() {
       >
         <HomeAbout />
         <HomeContact />
-        <p className="copyright smallP">Copyright 2024</p>
+        <Footer />
       </SharedBackground>
     </StyledHome>
   );
