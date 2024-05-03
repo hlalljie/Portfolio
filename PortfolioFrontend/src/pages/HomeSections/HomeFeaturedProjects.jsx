@@ -19,6 +19,25 @@ const homeFeaturedProjectsStyles = css`
     background-color: ${(props) => props.theme.colors.fog};
     box-shadow: 0px 0 120px 120px ${(props) => props.theme.colors.fog};
   }
+  .projectCard {
+    &:hover {
+      background-color: ${(props) =>
+        props.theme.withOpacity(props.theme.colors.black, 0.1)};
+      box-shadow: 0px 0 80px 30px
+        ${(props) => props.theme.withOpacity(props.theme.colors.black, 0.1)};
+      .imgContainer {
+        filter: grayscale(0%);
+      }
+      .technologies li {
+        color: ${({ theme }) => theme.colors.darkAccent};
+        /* color: ${({ theme }) => theme.colors.white};
+        background-color: ${({ theme }) => theme.colors.darkAccent}; */
+      }
+    }
+    .imgContainer {
+      filter: grayscale(100%);
+    }
+  }
 `;
 
 /**
