@@ -1,6 +1,7 @@
 // PortfolioFrontend/src/pages/HomeSections/HeroBanner.jsx
 import ThemedSection from "../../Components/Sections/ThemedSection";
 import { css } from "styled-components";
+import { mobile } from "../../styles/mediaQueries";
 
 const heroBannerStyles = css`
   padding: ${(props) => props.theme.padding.largeSection};
@@ -28,6 +29,18 @@ const heroBannerStyles = css`
       }
     }
   }
+  ${mobile(css`
+    .bannerContent {
+      .textContainer {
+        width: 100%;
+      }
+      .subHeadingWrapper {
+        .tree {
+          display: none;
+        }
+      }
+    }
+  `)}
 `;
 
 /**
