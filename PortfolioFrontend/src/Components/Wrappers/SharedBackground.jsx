@@ -2,6 +2,7 @@
 import styled from "styled-components";
 
 const StyledSharedBackground = styled.div`
+  width: 100%;
   background-image: url(${({ $backgroundImage }) => $backgroundImage});
   background-size: cover;
   background-position: ${({ $imgPosition }) => $imgPosition};

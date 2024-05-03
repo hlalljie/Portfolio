@@ -16,6 +16,7 @@ import HomeContact from "./HomeSections/HomeContact";
 import Footer from "../Components/Sections/Footer";
 
 const StyledHome = styled.div`
+  width: 100%;
   .bottomBackground {
     filter: grayscale(40%);
     .overlay {

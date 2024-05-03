@@ -1,7 +1,11 @@
 // Header.jsx
+import { useState } from "react";
 import Branding from "../Content/Branding";
 import Nav from "../Content/Nav";
-import styled from "styled-components";
+import { styled, css } from "styled-components";
+import { mobile } from "../../styles/mediaQueries";
+import BurgerMenu from "../../assets/BurgerMenu.svg?react";
+import CloseMenu from "../../assets/CloseMenu.svg?react";
 
 const HeaderDiv = styled.div`
   display: flex;
@@ -13,7 +17,6 @@ const HeaderDiv = styled.div`
   padding: 20px 20px;
   box-sizing: border-box;
   color: ${(props) => props.theme.colors.black};
-
   .branding {
     a {
       color: ${(props) => props.theme.colors.black};
@@ -32,6 +35,55 @@ const HeaderDiv = styled.div`
       color: ${(props) => props.theme.colors.darkAccent};
     }
   }
+  .burgerMenu,
+  .closeMenu {
+    display: none;
+  }
+  ${mobile(css`
+    .nav.closed {
+      display: none;
+    }
+    .nav.open {
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: ${(props) => props.theme.colors.white};
+      .navItem {
+        margin: 10px 0;
+        a {
+          font-size: 2.5rem;
+          color: ${(props) => props.theme.colors.darkAccent};
+        }
+        &:hover a {
+          color: ${(props) => props.theme.colors.dark};
+        }
+      }
+    }
+    .burgerMenu {
+      transform: scale(2.5);
+      &.show {
+        display: block;
+      }
+    }
+    .closeMenu {
+      transform: scale(1.4);
+      position: fixed;
+      top: 30px;
+      right: 15px;
+      z-index: 11;
+      fill: ${(props) => props.theme.colors.darkAccent};
+      &.show {
+        display: block;
+      }
+    }
+  `)}
 `;
 
 /**
@@ -39,10 +91,26 @@ const HeaderDiv = styled.div`
  * @returns {JSX.Element}
  */
 function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  /**
+   * closeMenu: Closes mobile menu
+   * @returns {void}
+   */
+  const closeMenu = () => setMobileMenuOpen(false);
   return (
     <HeaderDiv>
       <Branding />
-      <Nav />
+      <BurgerMenu
+        className={"burgerMenu " + (mobileMenuOpen ? "hide" : "show")}
+        onClick={() => setMobileMenuOpen(true)}
+        scale={2}
+      />
+      <CloseMenu
+        className={"closeMenu " + (mobileMenuOpen ? "show" : "hide")}
+        onClick={() => setMobileMenuOpen(false)}
+      />
+      <Nav className={mobileMenuOpen ? "open" : "closed"} onClick={closeMenu} />
     </HeaderDiv>
   );
 }
