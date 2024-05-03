@@ -33,7 +33,7 @@ const homeAboutStyles = css`
       opacity: 0;
     }
     &:hover .color {
-      filter: grayscale(0%);
+      filter: grayscale(10%);
     }
   }
   .textContainer {
@@ -51,6 +51,7 @@ function HomeAbout() {
       themeName="dark"
       additionalStyles={homeAboutStyles}
       className="homeAbout"
+      id="about"
     >
       <div className="imgContainer">
         <img

@@ -35,6 +35,7 @@ function HomeContact() {
       themeName="dark"
       additionalStyles={homeContactStyles}
       className="homeContact"
+      id="contact"
       sectionSize="small"
     >
       <div className="textContainer">

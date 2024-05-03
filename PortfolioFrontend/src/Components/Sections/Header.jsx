@@ -1,7 +1,7 @@
 // Header.jsx
-import Branding from '../Content/Branding';
-import Nav from '../Content/Nav';
-import styled from 'styled-components';
+import Branding from "../Content/Branding";
+import Nav from "../Content/Nav";
+import styled from "styled-components";
 
 const HeaderDiv = styled.div`
   display: flex;
@@ -11,24 +11,27 @@ const HeaderDiv = styled.div`
   top: 0;
   width: 100%;
   padding: 20px 20px;
-  box-sizing :border-box;
-  color: ${props => props.theme.colors.black};
+  box-sizing: border-box;
+  color: ${(props) => props.theme.colors.black};
 
   .branding {
-    font-size: 1.5rem;
+    a {
+      color: ${(props) => props.theme.colors.black};
+      font-size: 1.5rem;
+    }
   }
 
   .nav {
     font-size: 1.3rem;
     a {
-        text-decoration: none;
-        padding: 10px;
+      text-decoration: none;
+      padding: 10px;
+      color: ${(props) => props.theme.colors.black};
     }
     a:hover {
-        color: ${props => props.theme.colors.darkAccent};
+      color: ${(props) => props.theme.colors.darkAccent};
     }
   }
-
 `;
 
 /**
@@ -36,10 +39,9 @@ const HeaderDiv = styled.div`
  * @returns {JSX.Element}
  */
 function Header() {
-
   return (
     <HeaderDiv>
-      <Branding/>
+      <Branding />
       <Nav />
     </HeaderDiv>
   );

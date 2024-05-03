@@ -43,6 +43,7 @@ const ThemedSection = ({
   themeName = "default",
   additionalStyles,
   className = "",
+  id = "",
   sectionSize = "large",
   children,
 }) => (
@@ -50,6 +51,7 @@ const ThemedSection = ({
     $themeName={themeName}
     $additionalStyles={additionalStyles}
     className={className + " " + themeName + " " + sectionSize + "Section"}
+    id={id}
   >
     {children}
   </StyledSection>

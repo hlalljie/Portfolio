@@ -23,15 +23,13 @@ const homeFeaturedProjectsStyles = css`
     &:hover {
       background-color: ${(props) =>
         props.theme.withOpacity(props.theme.colors.black, 0.1)};
-      box-shadow: 0px 0 80px 30px
+      box-shadow: 0px 0 80px 20px
         ${(props) => props.theme.withOpacity(props.theme.colors.black, 0.1)};
       .imgContainer {
         filter: grayscale(0%);
       }
       .technologies li {
         color: ${({ theme }) => theme.colors.darkAccent};
-        /* color: ${({ theme }) => theme.colors.white};
-        background-color: ${({ theme }) => theme.colors.darkAccent}; */
       }
     }
     .imgContainer {
@@ -50,6 +48,7 @@ function HomeFeaturedProjects() {
       themeName="dark"
       additionalStyles={homeFeaturedProjectsStyles}
       className="overlay"
+      id="featured-projects"
     >
       <h2 className="sectionTitle">Featured Projects</h2>
       <ProjectList featured />

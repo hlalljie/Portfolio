@@ -1,46 +1,33 @@
 //import { useState } from 'react'
 
 // React Router
-import {
-  createBrowserRouter,
-  RouterProvider
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import GlobalStyle from './GlobalStyles';
-
+import GlobalStyle from "./GlobalStyles";
 
 // Page Imports
-import Home from './pages/Home'
-import About from './pages/About'
-import Portfolio from './pages/Portfolio'
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>,
+    element: <Home />,
   },
   {
     path: "/home",
-    element: <Home/>,
+    element: <Home />,
   },
-  {
-    path: "/about",
-    element: <About/>,
-  },
-  {
-    path: "/Portfolio",
-    element: <Portfolio/>,
-  }
 ]);
 
 function App() {
-
   return (
     <>
       <GlobalStyle />
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -16,15 +16,17 @@ import HomeContact from "./HomeSections/HomeContact";
 import Footer from "../Components/Sections/Footer";
 
 const StyledHome = styled.div`
-  .bottomBackground .overlay {
-    background: linear-gradient(
-      to bottom,
-      ${({ theme }) => theme.withOpacity(theme.colors.black, 1)},
-      ${({ theme }) => theme.withOpacity(theme.colors.black, 0.9)} 10%,
-      ${({ theme }) => theme.withOpacity(theme.colors.black, 0.85)} 60%,
-      ${({ theme }) => theme.withOpacity(theme.colors.black, 0.7)} 70%,
-      transparent 80%
-    );
+  .bottomBackground {
+    filter: grayscale(40%);
+    .overlay {
+      background: linear-gradient(
+        to bottom,
+        ${({ theme }) => theme.withOpacity(theme.colors.black, 1)} 0%,
+        ${({ theme }) => theme.withOpacity(theme.colors.black, 0.7)} 50%,
+        ${({ theme }) => theme.withOpacity(theme.colors.black, 0.4)} 85%,
+        transparent 95%
+      );
+    }
   }
 `;
 
@@ -47,8 +49,8 @@ function Home() {
         <HomeFeaturedProjects />
       </SharedBackground>
       <SharedBackground
-        backgroundImage="./src/assets/homeBottomBanner.jpg"
-        imgPosition="bottom"
+        backgroundImage="./src/assets/homeBottomBackground.jpg"
+        imgPosition="0% 60%"
         className="bottomBackground"
       >
         <HomeAbout />

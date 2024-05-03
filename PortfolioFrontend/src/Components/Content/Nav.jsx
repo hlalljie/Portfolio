@@ -1,9 +1,9 @@
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink as Link } from "react-router-hash-link";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const StyledNav = styled.div.attrs({ className: 'nav' })`
-  font-family: ${props => props.theme.fonts.paragraph};
+const StyledNav = styled.div.attrs({ className: "nav" })`
+  font-family: ${(props) => props.theme.fonts.paragraph};
 `;
 
 /**
@@ -11,14 +11,23 @@ const StyledNav = styled.div.attrs({ className: 'nav' })`
  * while they have default styles, they can be restyled as needed
  * @returns {JSX.Element}
  */
-function Nav(){
-    return (
-        <StyledNav>
-            <span className='navItem'><Link to="/">Home</Link></span>
-            <span className='navItem'><Link to="/about">About</Link></span>
-            <span className='navItem'><Link to="/portfolio">Portfolio</Link></span>
-        </StyledNav>
-    )
+function Nav() {
+  return (
+    <StyledNav>
+      <span className="navItem">
+        <Link to="/home#experience">Experience</Link>
+      </span>
+      <span className="navItem">
+        <Link to="/home#featured-projects">Featured Projects</Link>
+      </span>
+      <span className="navItem">
+        <Link to="/home#about">About</Link>
+      </span>
+      <span className="navItem">
+        <Link to="/home#contact">Contact</Link>
+      </span>
+    </StyledNav>
+  );
 }
 
 export default Nav;

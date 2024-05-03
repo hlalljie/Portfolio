@@ -17,7 +17,11 @@ const homeExperienceStyles = css`
  */
 function HomeExperience() {
   return (
-    <ThemedSection themeName="light" additionalStyles={homeExperienceStyles}>
+    <ThemedSection
+      themeName="light"
+      additionalStyles={homeExperienceStyles}
+      id="experience"
+    >
       <h2 className="sectionTitle">Experience</h2>
       <ExperienceSelector />
     </ThemedSection>
