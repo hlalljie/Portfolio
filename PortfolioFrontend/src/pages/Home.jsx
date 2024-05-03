@@ -52,7 +52,7 @@ function Home() {
         className="bottomBackground"
       >
         <HomeAbout />
-        {/* <HomeContact /> */}
+        <HomeContact />
         <Footer />
       </SharedBackground>
     </StyledHome>

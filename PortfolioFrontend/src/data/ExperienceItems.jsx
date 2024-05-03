@@ -1,7 +1,7 @@
 const experienceItems = [
   {
     company: "HL Tutoring",
-    titles: ["Founder"],
+    titles: ["Computer Science Tutor"],
     years: {
       start: "2023",
       end: "Present",

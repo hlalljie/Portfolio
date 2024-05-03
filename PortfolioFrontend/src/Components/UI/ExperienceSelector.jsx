@@ -115,10 +115,9 @@ function ExperienceSelectionTabs({ activeTab, setActiveTab }) {
         <div
           className={"experienceTab" + (index === activeTab ? " active" : "")}
           key={index}
+          onClick={() => setActiveTab(index)}
         >
-          <button onClick={() => setActiveTab(index)}>
-            {experienceItem.company}
-          </button>
+          <button>{experienceItem.company}</button>
           <h4 className="years">
             <span className="short">{experienceItem.years.short}</span>
             <span className="range">
