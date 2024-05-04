@@ -1,5 +1,7 @@
 // PortfolioFrontend/src/GlobalStyles.js
 import { createGlobalStyle } from "styled-components";
+import { mobile } from "./styles/mediaQueries";
+import { css } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     html{
@@ -75,6 +77,15 @@ const GlobalStyle = createGlobalStyle`
     .tree {
         font-weight: 100;
     }
+    .mobileOnly{
+        display: none;
+    }
+    ${mobile(css`
+      .mobileOnly {
+        display: inherit;
+      }
+    `)}
+    
 `;
 
 export default GlobalStyle;

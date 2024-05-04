@@ -21,7 +21,8 @@ const heroBannerStyles = css`
       .subHeadingWrapper {
         display: flex;
         justify-content: left;
-        gap: 30px;
+        column-gap: 30px;
+        flex-wrap: wrap;
         > h3 {
           margin: 0 0 0 0;
           color: ${(props) => props.theme.colors.darkAccent};
@@ -33,10 +34,11 @@ const heroBannerStyles = css`
     .bannerContent {
       .textContainer {
         width: 100%;
-      }
-      .subHeadingWrapper {
-        .tree {
-          display: none;
+        .subHeadingWrapper {
+          column-gap: 10px;
+          .tree {
+            display: none;
+          }
         }
       }
     }
@@ -54,11 +56,18 @@ function HeroBanner() {
         <div className="textContainer">
           <h1>Hi, I'm Hayden</h1>
           <div className="subHeadingWrapper">
-            <h3> Developer</h3>
+            <h3>
+              {" "}
+              Developer<span className="hideDesktop">,</span>
+            </h3>
             <h3 className="tree">↟</h3>
-            <h3>Designer</h3>
+            <h3>
+              Designer<span className="hideDesktop">,</span>
+            </h3>
             <h3 className="tree">↟</h3>
-            <h3>Educator</h3>
+            <h3>
+              Educator<span className="hideDesktop">,</span>
+            </h3>
           </div>
           <p className="largeP">
             I'm passionate about creating solutions through programming and

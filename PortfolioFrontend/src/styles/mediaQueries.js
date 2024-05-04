@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
 // Define breakpoints as needed
-const breakpoints = {
+export const breakpoints = {
   mobile: 520, // px
   tablet: 768, // px
   desktop: 1024, // px

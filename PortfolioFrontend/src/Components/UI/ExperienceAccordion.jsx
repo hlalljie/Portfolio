@@ -1,0 +1,68 @@
+import { useState } from "react";
+import { styled } from "styled-components";
+import experienceItems from "../../data/ExperienceItems.jsx";
+import TagList from "./TagList.jsx";
+
+const StyledExperienceAccordion = styled.div``;
+
+function ExperienceAccordion() {
+  return (
+    <StyledExperienceAccordion>
+      {experienceItems.map((item, index) => (
+        <ExperienceAccordionDropdown
+          key={index}
+          company={item.company}
+          titles={item.titles}
+          technologies={item.technologies}
+          description={item.description}
+        />
+      ))}
+    </StyledExperienceAccordion>
+  );
+}
+
+const StyledExperienceAccordionDropdown = styled.div`
+  .dropdownHeader {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    border-bottom: 2px solid ${(props) => props.theme.colors.darkAccent};
+    display: flex;
+    .companyName {
+      color: ${(props) => props.theme.colors.darkAccent};
+      margin: 0;
+    }
+  }
+  .dropdownContent {
+    p {
+      &.title {
+        color: ${(props) => props.theme.colors.dark};
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
+    }
+  }
+`;
+
+function ExperienceAccordionDropdown({
+  company,
+  titles,
+  technologies,
+  description,
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <StyledExperienceAccordionDropdown>
+      <div className="dropdownHeader" onClick={() => setIsOpen(!isOpen)}>
+        <h3 className="companyName">{company}</h3>
+      </div>
+      {isOpen && (
+        <div className="dropdownContent">
+          <p className="title">{titles[0]}</p>
+          <p className="smallP">{description}</p>
+        </div>
+      )}
+    </StyledExperienceAccordionDropdown>
+  );
+}
+
+export default ExperienceAccordion;
