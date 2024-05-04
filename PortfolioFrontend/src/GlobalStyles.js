@@ -84,6 +84,9 @@ const GlobalStyle = createGlobalStyle`
       .mobileOnly {
         display: inherit;
       }
+      .largeSection {
+        min-height: 0;
+      }
     `)}
     
 `;

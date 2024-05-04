@@ -1,5 +1,6 @@
 import ThemedSection from "../../Components/Sections/ThemedSection";
 import { css } from "styled-components";
+import { mobile } from "../../styles/mediaQueries";
 
 const homeAboutStyles = css`
   padding: ${(props) => props.theme.padding.largeSection};
@@ -19,26 +20,30 @@ const homeAboutStyles = css`
       left: 0;
       width: 100%;
       border-radius: 10px;
-    }
-    .duotone {
-      opacity: 0;
-      z-index: 1; /* Ensures this image is on top */
-    }
-    .color {
       opacity: 1;
       z-index: 0; /* Ensures this image is below */
       filter: grayscale(100%);
     }
-    &:hover .duotone {
-      opacity: 0;
-    }
-    &:hover .color {
+
+    &:hover img {
       filter: grayscale(10%);
     }
   }
   .textContainer {
     width: 50%;
   }
+  ${mobile(css`
+    flex-direction: column;
+    .imgContainer {
+      width: 100%;
+      img {
+        position: relative;
+      }
+    }
+    .textContainer {
+      width: 100%;
+    }
+  `)}
 `;
 
 /**
@@ -54,12 +59,7 @@ function HomeAbout() {
       id="about"
     >
       <div className="imgContainer">
-        <img
-          src="./src/assets/PortraitBlackWhite.jpg"
-          alt=""
-          className="duotone"
-        />
-        <img src="./src/assets/PortraitColor.jpg" alt="" className="color" />
+        <img src="./src/assets/PortraitColor.jpg" alt="" />
       </div>
       <div className="textContainer">
         <h2 className="sectionTitle">About Me</h2>

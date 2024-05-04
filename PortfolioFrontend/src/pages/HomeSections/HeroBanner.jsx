@@ -31,11 +31,14 @@ const heroBannerStyles = css`
     }
   }
   ${mobile(css`
+    padding: 55px 7%;
     .bannerContent {
+      min-height: 0;
       .textContainer {
         width: 100%;
         .subHeadingWrapper {
-          column-gap: 10px;
+          text-align: center;
+          column-gap: 15px;
           .tree {
             display: none;
           }
@@ -65,9 +68,7 @@ function HeroBanner() {
               Designer<span className="hideDesktop">,</span>
             </h3>
             <h3 className="tree">↟</h3>
-            <h3>
-              Educator<span className="hideDesktop">,</span>
-            </h3>
+            <h3>Educator</h3>
           </div>
           <p className="largeP">
             I'm passionate about creating solutions through programming and

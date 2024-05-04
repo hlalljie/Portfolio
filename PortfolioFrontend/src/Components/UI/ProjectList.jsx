@@ -1,6 +1,7 @@
-import { styled } from "styled-components";
+import { styled, css } from "styled-components";
 import PortfolioItems from "../../data/PortfolioItems";
 import TagList from "./TagList.jsx";
+import { mobile } from "../../styles/mediaQueries";
 
 const StyledProjectList = styled.div`
   display: flex;
@@ -13,6 +14,11 @@ const StyledProjectList = styled.div`
     width: ${({ $cols, $gap }) =>
       `calc((100% - ${$gap * ($cols - 1)}px) / ${$cols})`};
   }
+  ${mobile(css`
+    .projectCard {
+      width: 100%;
+    }
+  `)}
 `;
 
 /**

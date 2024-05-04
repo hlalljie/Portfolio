@@ -1,6 +1,7 @@
 import ThemedSection from "../../Components/Sections/ThemedSection";
 import { css } from "styled-components";
 import ProjectList from "../../Components/UI/ProjectList";
+import { mobile } from "../../styles/mediaQueries";
 
 const homeFeaturedProjectsStyles = css`
   padding: ${({ theme }) => theme.padding.largeSection};
@@ -36,6 +37,13 @@ const homeFeaturedProjectsStyles = css`
       filter: grayscale(100%);
     }
   }
+  ${mobile(css`
+    .projectCard {
+      .imgContainer {
+        filter: grayscale(0%);
+      }
+    }
+  `)}
 `;
 
 /**

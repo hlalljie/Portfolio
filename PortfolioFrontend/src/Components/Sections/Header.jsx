@@ -40,6 +40,7 @@ const HeaderDiv = styled.div`
     display: none;
   }
   ${mobile(css`
+    position: relative;
     .nav.closed {
       display: none;
     }
