@@ -36,8 +36,10 @@ const homeAboutStyles = css`
     flex-direction: column;
     .imgContainer {
       width: 100%;
+
       img {
         position: relative;
+        filter: grayscale(10%);
       }
     }
     .textContainer {

@@ -3,8 +3,15 @@ import { styled } from "styled-components";
 import experienceItems from "../../data/ExperienceItems.jsx";
 import TagList from "./TagList.jsx";
 
-const StyledExperienceAccordion = styled.div``;
+const StyledExperienceAccordion = styled.div`
+  box-shadow: 0px 0 120px 120px ${(props) => props.theme.colors.fog};
+  background-color: ${(props) => props.theme.colors.fog};
+`;
 
+/**
+ *
+ * @returns {JSX.Element}
+ */
 function ExperienceAccordion() {
   return (
     <StyledExperienceAccordion>
@@ -25,17 +32,17 @@ const StyledExperienceAccordionDropdown = styled.div`
   .dropdownHeader {
     margin-top: 20px;
     margin-bottom: 0px;
-    border-bottom: 2px solid ${(props) => props.theme.colors.darkAccent};
+    border-bottom: 2px solid ${(props) => props.theme.colors.dark};
     display: flex;
     .companyName {
-      color: ${(props) => props.theme.colors.darkAccent};
+      color: ${(props) => props.theme.colors.dark};
       margin: 0;
     }
   }
   .dropdownContent {
     p {
       &.title {
-        color: ${(props) => props.theme.colors.dark};
+        color: ${(props) => props.theme.colors.darkAccent};
         margin-top: 10px;
         margin-bottom: 0;
       }

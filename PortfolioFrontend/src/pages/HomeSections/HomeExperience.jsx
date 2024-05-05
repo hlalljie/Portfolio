@@ -3,7 +3,7 @@ import ThemedSection from "../../Components/Sections/ThemedSection";
 import { css } from "styled-components";
 import ExperienceSelector from "../../Components/UI/ExperienceSelector";
 import ExperienceAccordion from "../../Components/UI/ExperienceAccordion";
-import { breakpoints } from "../../styles/mediaQueries";
+import { mobile, breakpoints } from "../../styles/mediaQueries";
 
 const homeExperienceStyles = css`
   padding: ${(props) => props.theme.padding.largeSection};
@@ -12,6 +12,11 @@ const homeExperienceStyles = css`
     margin: 0;
     color: ${(props) => props.theme.colors.darkAccent};
   }
+  ${mobile(css`
+    .sectionTitle {
+      text-align: left;
+    }
+  `)}// mobile
 `;
 
 /**

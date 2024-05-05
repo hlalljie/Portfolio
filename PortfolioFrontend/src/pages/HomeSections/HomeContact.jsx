@@ -1,6 +1,7 @@
 import ThemedSection from "../../Components/Sections/ThemedSection";
 import { css } from "styled-components";
 import Socials from "../../Components/Content/Socials";
+import { mobile } from "../../styles/mediaQueries";
 
 const homeContactStyles = css`
   padding: 50px;
@@ -23,6 +24,12 @@ const homeContactStyles = css`
       height: 35px;
     }
   }
+  ${mobile(css`
+    height: fit-content;
+    .textContainer {
+      width: 100%;
+    }
+  `)}
 `;
 
 /**
