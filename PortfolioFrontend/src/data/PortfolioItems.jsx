@@ -4,7 +4,7 @@ const PortfolioItems = {
     "Platinum Advisors": {
       title: "Platinum Advisors",
       excerpt:
-        "I redesigned Platinum Advisors' website to more effectively communicate their professionalism and expertise to clients.",
+        "Redesigned Platinum Advisors' website to more effectively communicate their professionalism and expertise to clients.",
       image: "../../src/assets/platinumAdvisors.png",
       company: "Nav Creative",
       link: "https://www.platinumadvisors.com/",
@@ -16,9 +16,9 @@ const PortfolioItems = {
     "Block Broker": {
       title: "Block Broker",
       excerpt:
-        "I built the frontend of a blockchain freelance platform for the MLH Blockchain Hackathon.",
+        "Worked as solo frontend dev and team lead on this Web3 Hackathon project to democratize freelance contracting.",
       image: "../../src/assets/blockBroker.jpg",
-      company: "MLH Hackathon",
+      company: "MLH Web3 Hackathon",
       link: "",
       roles: ["Solo Designer"],
       years: "2023",
@@ -28,7 +28,7 @@ const PortfolioItems = {
     Inquizity: {
       title: "Inquizity",
       excerpt:
-        "A personal project built to give students and educators the ability to generate specific quiz quistions and get feedback.",
+        "Product to save teachers time and give student a more effecient way of learning through AI quiz question generation.",
       image: "https://picsum.photos/500/400",
       company: "Test Company",
       link: "https://example.com",

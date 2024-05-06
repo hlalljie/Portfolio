@@ -15,6 +15,7 @@ const homeExperienceStyles = css`
   ${mobile(css`
     .sectionTitle {
       text-align: left;
+      color: ${(props) => props.theme.colors.black};
     }
   `)}// mobile
 `;

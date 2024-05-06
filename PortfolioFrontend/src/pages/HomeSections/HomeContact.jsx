@@ -48,8 +48,8 @@ function HomeContact() {
       <div className="textContainer">
         <h2 className="sectionTitle">Contact Me</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit
-          amet nunc odio. Mauris nulla metus, convallis in.
+          I'm always on the lookout for new projects, opportunities and
+          connections. Feel free to reach out anytime.
         </p>
         <a href="mailto:hlalljie@gmail.com">hlalljie@gmail.com</a>
         <Socials />

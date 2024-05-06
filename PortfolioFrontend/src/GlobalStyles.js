@@ -82,7 +82,7 @@ const GlobalStyle = createGlobalStyle`
     }
     ${mobile(css`
       .mobileOnly {
-        display: inherit;
+        display: initial;
       }
       .largeSection {
         min-height: 0;

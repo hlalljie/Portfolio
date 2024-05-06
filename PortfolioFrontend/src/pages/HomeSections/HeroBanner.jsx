@@ -22,7 +22,6 @@ const heroBannerStyles = css`
         display: flex;
         justify-content: left;
         column-gap: 30px;
-        flex-wrap: wrap;
         > h3 {
           margin: 0 0 0 0;
           color: ${(props) => props.theme.colors.darkAccent};
@@ -39,6 +38,8 @@ const heroBannerStyles = css`
         .subHeadingWrapper {
           text-align: center;
           column-gap: 15px;
+          flex-wrap: wrap;
+
           .tree {
             display: none;
           }
@@ -61,11 +62,11 @@ function HeroBanner() {
           <div className="subHeadingWrapper">
             <h3>
               {" "}
-              Developer<span className="hideDesktop">,</span>
+              Developer<span className="mobileOnly">,</span>
             </h3>
             <h3 className="tree">↟</h3>
             <h3>
-              Designer<span className="hideDesktop">,</span>
+              Designer<span className="mobileOnly">,</span>
             </h3>
             <h3 className="tree">↟</h3>
             <h3>Educator</h3>
