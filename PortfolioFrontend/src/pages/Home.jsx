@@ -46,7 +46,7 @@ function Home() {
         <HomeFeaturedProjects />
       </SharedBackground>
       <SharedBackground
-        backgroundImage="./src/assets/homeBottomBackground.jpg"
+        backgroundImage="./src/assets/homeBottomBackground2400w.jpg"
         imgPosition="0% 60%"
         className="bottomBackground"
       >
