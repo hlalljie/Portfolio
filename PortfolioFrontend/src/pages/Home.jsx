@@ -38,7 +38,7 @@ const StyledHome = styled.div`
 function Home() {
   return (
     <StyledHome>
-      <SharedBackground backgroundImage={"./src/assets/heroBanner2400w.jpeg"}>
+      <SharedBackground imgName="heroBanner" imgExtension=".jpeg">
         <Header />
         <HeroBanner />
         <HomeExperience />
@@ -46,7 +46,7 @@ function Home() {
         <HomeFeaturedProjects />
       </SharedBackground>
       <SharedBackground
-        backgroundImage="./src/assets/homeBottomBackground2400w.jpg"
+        imgName="homeBottomBackground"
         imgPosition="0% 60%"
         className="bottomBackground"
       >
