@@ -9,7 +9,7 @@ const StyledExperienceAccordion = styled.div`
 `;
 
 /**
- *
+ * ExperienceAccordion: Accordion for experience section on mobile
  * @returns {JSX.Element}
  */
 function ExperienceAccordion() {
@@ -50,6 +50,15 @@ const StyledExperienceAccordionDropdown = styled.div`
   }
 `;
 
+/**
+ * ExperienceAccordionDropdown: Single Dropdown for experience section on mobile
+ * @param {object} props - The properties for the ExperienceAccordionDropdown component.
+ * @param {string} props.company - Name of the company.
+ * @param {string[]} props.titles - Titles held during the experience.
+ * @param {string[]} props.technologies - Technologies utilized at the company
+ * @param {string} props.description - Description of the experience.
+ * @returns {JSX.Element}
+ */
 function ExperienceAccordionDropdown({
   company,
   titles,

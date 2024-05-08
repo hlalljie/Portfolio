@@ -60,7 +60,7 @@ function HomeAbout() {
       id="about"
     >
       <div className="imgContainer">
-        <img src="./src/assets/PortraitColor.jpg" alt="" />
+        <img src="./src/assets/Portrait1200w.jpg" alt="" />
       </div>
       <div className="textContainer">
         <h2 className="sectionTitle">About Me</h2>
