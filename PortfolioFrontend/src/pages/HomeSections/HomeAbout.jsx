@@ -8,9 +8,6 @@ const homeAboutStyles = css`
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  &:hover .imgContainer img {
-    filter: grayscale(10%);
-  }
   .imgContainer {
     box-sizing: border-box;
     position: relative;
@@ -25,7 +22,7 @@ const homeAboutStyles = css`
       border-radius: 10px;
       opacity: 1;
       z-index: 0; /* Ensures this image is below */
-      filter: grayscale(100%);
+      filter: grayscale(10%);
     }
   }
   .textContainer {
