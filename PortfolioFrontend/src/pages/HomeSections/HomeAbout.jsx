@@ -61,7 +61,7 @@ function HomeAbout() {
           src="./src/assets/Portrait600w.jpg"
           srcSet="./src/assets/Portrait600w.jpg 600w, ./src/assets/Portrait1200w.jpg 600w 2x, ./src/assets/Portrait1200w.jpg 1200w"
           sizes={"(max-width: " + breakpoints.tablet + "px) 86vw, 43vw"}
-          alt=""
+          alt="Portrait of Hayden Lalljie"
         />
       </div>
       <div className="textContainer">

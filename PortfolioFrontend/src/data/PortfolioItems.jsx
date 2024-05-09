@@ -9,6 +9,7 @@ const PortfolioItems = {
         path: "../../src/assets/",
         name: "platinumAdvisorsThumbnail",
         extension: ".png",
+        alt: "A screenshot of Platinum Advisors' homepage",
       },
       company: "Nav Creative",
       link: "https://www.platinumadvisors.com/",
@@ -25,6 +26,7 @@ const PortfolioItems = {
         path: "../../src/assets/",
         name: "blockBrokerThumbnail",
         extension: ".jpg",
+        alt: "A screenshot of of the homepage of the Block Brokers frontend application",
       },
       company: "MLH Web3 Hackathon",
       link: "",
@@ -37,7 +39,10 @@ const PortfolioItems = {
       title: "Inquizity",
       excerpt:
         "Product to save teachers time and give students a more efficient way of learning through AI quiz question generation.",
-      image: { path: "../../src/assets/inquizityThumbnail.jpg" },
+      image: {
+        path: "../../src/assets/inquizityThumbnail.jpg",
+        alt: "A screenshot of the content generating loading icon from the Inquizity first iteration",
+      },
       company: "Test Company",
       link: "https://example.com",
       roles: ["Developer", "Designer"],

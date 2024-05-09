@@ -115,7 +115,7 @@ function ProjectCard({ data }) {
               : ""
           }
           sizes={"(max-width: " + breakpoints.tablet + "px) 86vw, 27vw"}
-          alt=""
+          alt={data.image.alt}
         />
       </div>
       <div className="textContainer">
