@@ -1,6 +1,6 @@
 import ThemedSection from "../../Components/Sections/ThemedSection";
 import { css } from "styled-components";
-import { mobile } from "../../styles/mediaQueries";
+import { breakpoints, tablet } from "../../styles/mediaQueries";
 
 const homeAboutStyles = css`
   padding: ${(props) => props.theme.padding.largeSection};
@@ -28,7 +28,7 @@ const homeAboutStyles = css`
   .textContainer {
     width: 50%;
   }
-  ${mobile(css`
+  ${tablet(css`
     flex-direction: column;
     .imgContainer {
       width: 100%;
@@ -57,7 +57,12 @@ function HomeAbout() {
       id="about"
     >
       <div className="imgContainer">
-        <img src="./src/assets/Portrait1200w.jpg" alt="" />
+        <img
+          src="./src/assets/Portrait600w.jpg"
+          srcSet="./src/assets/Portrait600w.jpg 600w, ./src/assets/Portrait1200w.jpg 600w 2x, ./src/assets/Portrait1200w.jpg 1200w"
+          sizes={"(max-width: " + breakpoints.tablet + "px) 86vw, 43vw"}
+          alt=""
+        />
       </div>
       <div className="textContainer">
         <h2 className="sectionTitle">About Me</h2>

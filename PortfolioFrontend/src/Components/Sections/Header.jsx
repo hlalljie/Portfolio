@@ -3,7 +3,7 @@ import { useState } from "react";
 import Branding from "../Content/Branding";
 import Nav from "../Content/Nav";
 import { styled, css } from "styled-components";
-import { mobile } from "../../styles/mediaQueries";
+import { tablet } from "../../styles/mediaQueries";
 import BurgerMenu from "../../assets/BurgerMenu.svg?react";
 import CloseMenu from "../../assets/CloseMenu.svg?react";
 
@@ -39,7 +39,7 @@ const HeaderDiv = styled.div`
   .closeMenu {
     display: none;
   }
-  ${mobile(css`
+  ${tablet(css`
     position: relative;
     .nav.closed {
       display: none;

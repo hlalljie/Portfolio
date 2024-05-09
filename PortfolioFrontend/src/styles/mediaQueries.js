@@ -2,10 +2,10 @@ import { css } from "styled-components";
 
 // Define breakpoints as needed
 export const breakpoints = {
-  mobile: 520, // px
-  tablet: 768, // px
-  desktop: 1024, // px
-  largeDesktop: 1440, // px
+  mobile: 600, // px
+  tablet: 1000, // px
+  desktop: 1439, // px
+  largeDesktop: 2500, // px
 };
 
 /**

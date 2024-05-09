@@ -1,7 +1,7 @@
 import { styled, css } from "styled-components";
 import PortfolioItems from "../../data/PortfolioItems";
 import TagList from "./TagList.jsx";
-import { mobile } from "../../styles/mediaQueries";
+import { breakpoints, tablet } from "../../styles/mediaQueries";
 
 const StyledProjectList = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ const StyledProjectList = styled.div`
     width: ${({ $cols, $gap }) =>
       `calc((100% - ${$gap * ($cols - 1)}px) / ${$cols})`};
   }
-  ${mobile(css`
+  ${tablet(css`
     .projectCard {
       width: 100%;
     }
@@ -88,7 +88,35 @@ function ProjectCard({ data }) {
   return (
     <StyledProjectCard className="projectCard">
       <div className="imgContainer">
-        <img src={data.image} alt="" />
+        <img
+          src={
+            data.image.path +
+            (data.image.name
+              ? data.image.name + "600w" + data.image.extension
+              : "")
+          }
+          srcSet={
+            data.image.name
+              ? data.image.path +
+                data.image.name +
+                "600w" +
+                data.image.extension +
+                " 600w, " +
+                data.image.path +
+                data.image.name +
+                "1200w" +
+                data.image.extension +
+                " 1200w, " +
+                data.image.path +
+                data.image.name +
+                "1200w" +
+                data.image.extension +
+                " 600w 2x"
+              : ""
+          }
+          sizes={"(max-width: " + breakpoints.tablet + "px) 86vw, 27vw"}
+          alt=""
+        />
       </div>
       <div className="textContainer">
         <h3 className="projectTitle">{data.title}</h3>

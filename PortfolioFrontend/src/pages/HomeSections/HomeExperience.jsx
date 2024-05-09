@@ -3,7 +3,7 @@ import ThemedSection from "../../Components/Sections/ThemedSection";
 import { css } from "styled-components";
 import ExperienceSelector from "../../Components/UI/ExperienceSelector";
 import ExperienceAccordion from "../../Components/UI/ExperienceAccordion";
-import { mobile, breakpoints } from "../../styles/mediaQueries";
+import { tablet, breakpoints } from "../../styles/mediaQueries";
 
 const homeExperienceStyles = css`
   padding: ${(props) => props.theme.padding.largeSection};
@@ -12,7 +12,7 @@ const homeExperienceStyles = css`
     margin: 0;
     color: ${(props) => props.theme.colors.darkAccent};
   }
-  ${mobile(css`
+  ${tablet(css`
     .sectionTitle {
       text-align: left;
       color: ${(props) => props.theme.colors.black};
@@ -25,8 +25,8 @@ const homeExperienceStyles = css`
  * @returns {JSX.Element}
  */
 function HomeExperience() {
-  const isMobile = useMediaQuery({
-    query: "(max-width: " + breakpoints.mobile + "px)",
+  const isTablet = useMediaQuery({
+    query: "(max-width: " + breakpoints.tablet + "px)",
   });
   return (
     <ThemedSection
@@ -35,7 +35,7 @@ function HomeExperience() {
       id="experience"
     >
       <h2 className="sectionTitle">Experience</h2>
-      {isMobile ? <ExperienceAccordion /> : <ExperienceSelector />}
+      {isTablet ? <ExperienceAccordion /> : <ExperienceSelector />}
     </ThemedSection>
   );
 }

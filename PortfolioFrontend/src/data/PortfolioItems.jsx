@@ -5,7 +5,11 @@ const PortfolioItems = {
       title: "Platinum Advisors",
       excerpt:
         "Redesigned Platinum Advisors' website to more effectively communicate their professionalism and expertise to clients.",
-      image: "../../src/assets/platinumAdvisorsThumbnail1200w.png",
+      image: {
+        path: "../../src/assets/",
+        name: "platinumAdvisorsThumbnail",
+        extension: ".png",
+      },
       company: "Nav Creative",
       link: "https://www.platinumadvisors.com/",
       roles: ["Solo Designer"],
@@ -17,7 +21,11 @@ const PortfolioItems = {
       title: "Block Broker",
       excerpt:
         "Worked as solo frontend dev and team lead on this Web3 Hackathon project to democratize freelance contracting.",
-      image: "../../src/assets/blockBrokerThumbnail1200w.jpg",
+      image: {
+        path: "../../src/assets/",
+        name: "blockBrokerThumbnail",
+        extension: ".jpg",
+      },
       company: "MLH Web3 Hackathon",
       link: "",
       roles: ["Solo Designer"],
@@ -29,7 +37,7 @@ const PortfolioItems = {
       title: "Inquizity",
       excerpt:
         "Product to save teachers time and give students a more efficient way of learning through AI quiz question generation.",
-      image: "https://picsum.photos/500/400",
+      image: { path: "https://picsum.photos/500/400" },
       company: "Test Company",
       link: "https://example.com",
       roles: ["Developer", "Designer"],
@@ -41,7 +49,7 @@ const PortfolioItems = {
       title: "Test Project",
       excerpt:
         "This is a test project. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, unsalad dayas arem ovem.",
-      image: "https://picsum.photos/500/400",
+      image: { path: "https://picsum.photos/500/400" },
       company: "Test Company",
       link: "https://example.com",
       roles: ["Developer", "Designer"],
