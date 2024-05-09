@@ -37,7 +37,7 @@ const PortfolioItems = {
       title: "Inquizity",
       excerpt:
         "Product to save teachers time and give students a more efficient way of learning through AI quiz question generation.",
-      image: { path: "https://picsum.photos/500/400" },
+      image: { path: "../../src/assets/inquizityThumbnail.jpg" },
       company: "Test Company",
       link: "https://example.com",
       roles: ["Developer", "Designer"],
