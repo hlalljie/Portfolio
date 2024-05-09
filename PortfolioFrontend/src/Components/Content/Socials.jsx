@@ -8,16 +8,27 @@ const StyledSocials = styled.div.attrs({ className: "socials" })`
   font-family: ${(props) => props.theme.fonts.heading};
   display: flex;
   gap: 10px;
-  a {
-    display: block;
-    margin: 0;
-    min-height: 0;
+`;
+
+const StyledSocialLink = styled.a`
+  display: block;
+  margin: 0;
+  min-height: 0;
+  .socialIcon {
+    path {
+      fill: ${(props) => props.theme.colors.white};
+    }
+    polygon {
+      fill: ${(props) => props.theme.colors.white};
+    }
   }
-  .socialIcon path {
-    fill: ${(props) => props.theme.colors.white};
-  }
-  .socialIcon polygon {
-    fill: ${(props) => props.theme.colors.white};
+  .socialIcon:hover {
+    path {
+      fill: ${(props) => props.hoverColor};
+    }
+    polygon {
+      fill: ${(props) => props.hoverColor};
+    }
   }
 `;
 
@@ -28,15 +39,28 @@ const StyledSocials = styled.div.attrs({ className: "socials" })`
 function Socials() {
   return (
     <StyledSocials>
-      <a href="https://github.com/hlalljie" target="_blank">
+      <StyledSocialLink
+        href="https://github.com/hlalljie"
+        target="_blank"
+        hoverColor="#8241F9"
+      >
         <GithubIcon className="socialIcon" />
-      </a>
-      <a href="https://www.linkedin.com/in/hayden-lalljie/" target="_blank">
+      </StyledSocialLink>
+      <StyledSocialLink
+        href="https://www.linkedin.com/in/hayden-lalljie/"
+        target="_blank"
+        hoverColor="
+        #0b65c2"
+      >
         <LinkedInIcon className="socialIcon" />
-      </a>
-      <a href="https://twitter.com/haydondo" target="_blank">
+      </StyledSocialLink>
+      <StyledSocialLink
+        href="https://twitter.com/haydondo"
+        target="_blank"
+        hoverColor="black"
+      >
         <TwitterXLogo className="socialIcon" />
-      </a>
+      </StyledSocialLink>
     </StyledSocials>
   );
 }
