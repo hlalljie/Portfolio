@@ -44,7 +44,10 @@ function Socials() {
         target="_blank"
         hoverColor="#8241F9"
       >
-        <GithubIcon className="socialIcon" />
+        <GithubIcon className="socialIcon" aria-labelledby="GithubIconLabel" />
+        <span id="GithubIconLabel" hidden>
+          Visit my GitHub page
+        </span>
       </StyledSocialLink>
       <StyledSocialLink
         href="https://www.linkedin.com/in/hayden-lalljie/"
@@ -52,14 +55,26 @@ function Socials() {
         hoverColor="
         #0b65c2"
       >
-        <LinkedInIcon className="socialIcon" />
+        <LinkedInIcon
+          className="socialIcon"
+          aria-labelledby="LinkedInIconLabel"
+        />
+        <span id="LinkedInIconLabel" hidden>
+          Visit my LinkedIn page
+        </span>
       </StyledSocialLink>
       <StyledSocialLink
         href="https://twitter.com/haydondo"
         target="_blank"
         hoverColor="black"
       >
-        <TwitterXLogo className="socialIcon" />
+        <TwitterXLogo
+          className="socialIcon"
+          aria-labelledby="TwitterIconLabel"
+        />
+        <span id="TwitterIconLabel" hidden>
+          Visit my Twitter page
+        </span>
       </StyledSocialLink>
     </StyledSocials>
   );
