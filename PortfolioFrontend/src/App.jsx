@@ -22,6 +22,10 @@ const router = createBrowserRouter([
   },
 ]);
 
+/**
+ * App: Main App
+ * @returns {JSX.Element}
+ */
 function App() {
   return (
     <>
