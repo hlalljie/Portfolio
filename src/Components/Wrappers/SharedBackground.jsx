@@ -39,7 +39,7 @@ function SharedBackground({
   children,
   imgName,
   imgExtension = ".jpg",
-  imgPath = "./src/assets/",
+  imgPath = "/images/",
   imgPosition = "top",
   className = "",
 }) {
