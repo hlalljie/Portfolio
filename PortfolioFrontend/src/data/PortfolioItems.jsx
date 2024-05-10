@@ -7,7 +7,7 @@ const PortfolioItems = {
         "Redesigned Platinum Advisors' website to more effectively communicate their professionalism and expertise to clients.",
       image: {
         path: "../../src/assets/",
-        name: "platinumAdvisorsThumbnail",
+        name: "PlatinumAdvisorsThumbnail",
         extension: ".png",
         alt: "A screenshot of Platinum Advisors' homepage",
       },

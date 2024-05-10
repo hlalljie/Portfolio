@@ -24,10 +24,10 @@ const StyledSocialLink = styled.a`
   }
   .socialIcon:hover {
     path {
-      fill: ${(props) => props.hoverColor};
+      fill: ${(props) => props.$hoverColor};
     }
     polygon {
-      fill: ${(props) => props.hoverColor};
+      fill: ${(props) => props.$hoverColor};
     }
   }
 `;
@@ -42,7 +42,7 @@ function Socials() {
       <StyledSocialLink
         href="https://github.com/hlalljie"
         target="_blank"
-        hoverColor="#8241F9"
+        $hoverColor="#8241F9"
       >
         <GithubIcon className="socialIcon" aria-labelledby="GithubIconLabel" />
         <span id="GithubIconLabel" hidden>
@@ -52,7 +52,7 @@ function Socials() {
       <StyledSocialLink
         href="https://www.linkedin.com/in/hayden-lalljie/"
         target="_blank"
-        hoverColor="
+        $hoverColor="
         #0b65c2"
       >
         <LinkedInIcon
@@ -66,7 +66,7 @@ function Socials() {
       <StyledSocialLink
         href="https://twitter.com/haydondo"
         target="_blank"
-        hoverColor="black"
+        $hoverColor="black"
       >
         <TwitterXLogo
           className="socialIcon"
