@@ -25,4 +25,4 @@ dist-ssr
 *.sw?
 src/assets/.DS_Store
 tinified/.DS_Store
-PortfolioFrontend/src/.DS_Store
+src/.DS_Store
