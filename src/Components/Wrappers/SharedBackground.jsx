@@ -1,6 +1,16 @@
 // SharedBackground.jsx
 import styled from "styled-components";
 
+/**
+ * StyledSharedBackground: Styles the shared background for multiple sections
+ * @param {Object} props - The properties for the StyledSharedBackground component.
+ * @param {string} props.$backgroundImage600w - The URL of the background image for screens up to 600px wide.
+ * @param {string} props.$backgroundImage1200w - The URL of the background image for screens between 601px and 1200px wide.
+ * @param {string} props.$backgroundImage2400w - The URL of the background image for screens larger than 1200px wide.
+ * @param {string} props.$imgPosition - The position of the background image.
+ * @param {string} props.className - The className for the StyledSharedBackground component.
+ * @returns {JSX.Element}
+ */
 const StyledSharedBackground = styled.div`
   width: 100%;
   background-image: url(${({ $backgroundImage600w }) => $backgroundImage600w});
