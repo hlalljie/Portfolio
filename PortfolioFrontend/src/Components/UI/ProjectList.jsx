@@ -106,12 +106,7 @@ function ProjectCard({ data }) {
                 data.image.name +
                 "1200w" +
                 data.image.extension +
-                " 1200w, " +
-                data.image.path +
-                data.image.name +
-                "1200w" +
-                data.image.extension +
-                " 600w 2x"
+                " 1200w"
               : ""
           }
           sizes={"(max-width: " + breakpoints.tablet + "px) 86vw, 27vw"}
