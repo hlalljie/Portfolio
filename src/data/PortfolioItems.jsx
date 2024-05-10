@@ -6,7 +6,7 @@ const PortfolioItems = {
       excerpt:
         "Redesigned Platinum Advisors' website to more effectively communicate their professionalism and expertise to clients.",
       image: {
-        path: "../../src/assets/",
+        path: "/images/",
         name: "PlatinumAdvisorsThumbnail",
         extension: ".png",
         alt: "A screenshot of Platinum Advisors' homepage",
@@ -23,7 +23,7 @@ const PortfolioItems = {
       excerpt:
         "Worked as solo frontend dev and team lead on this Web3 Hackathon project to democratize freelance contracting.",
       image: {
-        path: "../../src/assets/",
+        path: "/images/",
         name: "blockBrokerThumbnail",
         extension: ".jpg",
         alt: "A screenshot of of the homepage of the Block Brokers frontend application",
@@ -40,7 +40,7 @@ const PortfolioItems = {
       excerpt:
         "Product to save teachers time and give students a more efficient way of learning through AI quiz question generation.",
       image: {
-        path: "../../src/assets/inquizityThumbnail.jpg",
+        path: "/images/inquizityThumbnail.jpg",
         alt: "A screenshot of the content generating loading icon from the Inquizity first iteration",
       },
       company: "Test Company",
