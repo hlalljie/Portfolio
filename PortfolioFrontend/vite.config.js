@@ -8,4 +8,22 @@ export default defineConfig({
     react(),
     svgr({ exportType: "component", svgrOptions: { icon: true } }),
   ],
+  server: {
+    proxy: {
+      // Your proxy settings if any
+    },
+    setupMiddlewares: (middlewares, server) => {
+      if (!server.middlewares) {
+        return middlewares;
+      }
+      server.middlewares.use((req, res, next) => {
+        res.setHeader(
+          "Content-Security-Policy",
+          "default-src 'self'; style-src 'self' 'https://fonts.googleapis.com'; font-src 'self' https://fonts.gstatic.com; script-src 'self'; object-src 'none';"
+        );
+        next();
+      });
+      return middlewares;
+    },
+  },
 });
