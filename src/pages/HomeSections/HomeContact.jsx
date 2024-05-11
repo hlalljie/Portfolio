@@ -51,7 +51,7 @@ function HomeContact() {
           I'm always on the lookout for new projects, opportunities and
           connections. Feel free to reach out anytime.
         </p>
-        <a href="mailto:hlalljie@gmail.com">hlalljie@gmail.com</a>
+        <a href="mailto:haydenlalljie@gmail.com">hlalljie@gmail.com</a>
         <Socials />
       </div>
     </ThemedSection>
