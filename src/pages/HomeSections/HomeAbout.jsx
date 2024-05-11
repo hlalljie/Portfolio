@@ -70,7 +70,7 @@ function HomeAbout() {
         <p>
           I'm a software developer and educator with a passion for creating a
           positive impact through programming, education, user-centric design. I
-          have a Bachelor's in Computer Science from Sonoma State University am
+          have a Bachelor's in Computer Science from Sonoma State University, am
           a Certified Scrum Master, and have worked in a variety of different
           roles including management, design, education, quality assurance. In
           my free time I enjoy developing products, learning new skills,
