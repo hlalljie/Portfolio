@@ -2,19 +2,23 @@
 import ThemedSection from "../../Components/Sections/ThemedSection";
 import { css } from "styled-components";
 import { tablet } from "../../styles/mediaQueries";
+import { fadeIn, comeFromLeft } from "../../styles/animations";
 
 const heroBannerStyles = css`
   padding: ${(props) => props.theme.padding.largeSection};
+
   .bannerContent {
     display: flex;
     align-items: center;
     justify-content: left;
     min-height: calc(100vh - 40px);
+
     .textContainer {
       background-color: ${(props) => props.theme.colors.fog};
+      width: 50%;
       box-shadow: 0px 0 120px 120px ${(props) => props.theme.colors.fog};
+      animation: ${comeFromLeft} 2s, ${fadeIn} 2.5s ease-in-out forwards;
       padding: 10px 0;
-      width: 40%;
       > h1 {
         color: ${(props) => props.theme.colors.dark};
       }

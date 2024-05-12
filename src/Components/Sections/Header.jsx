@@ -1,13 +1,19 @@
 // Header.jsx
+/* Libraries */
 import { useState } from "react";
+import { styled, css } from "styled-components";
+/* Styles */
+import { tablet } from "../../styles/mediaQueries";
+import { fadeIn } from "../../styles/animations";
+/* Components */
 import Branding from "../Content/Branding";
 import Nav from "../Content/Nav";
-import { styled, css } from "styled-components";
-import { tablet } from "../../styles/mediaQueries";
+/* Assets */
 import BurgerMenu from "../../assets/BurgerMenu.svg?react";
 import CloseMenu from "../../assets/CloseMenu.svg?react";
 
 const HeaderDiv = styled.div`
+  animation: ${fadeIn} 1s ease-in-out;
   display: flex;
   justify-content: space-between;
   align-items: center;
