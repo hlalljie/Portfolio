@@ -38,6 +38,8 @@ const StyledExperienceSelectionTabs = styled.div`
     align-items: flex-end;
 
     .years {
+      transition: color 0.3s ease-in-out;
+
       margin: auto;
       margin-top: 10px;
       text-align: center;
@@ -50,6 +52,7 @@ const StyledExperienceSelectionTabs = styled.div`
       }
     }
     button {
+      transition: color 0.3s ease-in-out;
       display: flex;
       align-items: flex-end; /* This centers the text vertically */
       justify-content: center;
@@ -77,6 +80,7 @@ const StyledExperienceSelectionTabs = styled.div`
       }
       button {
         padding: 10px 20px;
+        height: 80px;
         width: 100%;
         font-size: 2rem;
         border-color: ${(props) => props.theme.colors.darkAccent};

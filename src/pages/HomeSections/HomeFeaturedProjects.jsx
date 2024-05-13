@@ -1,7 +1,13 @@
+/* Libraries */
+import { styled, css } from "styled-components";
+
+/* Components */
 import ThemedSection from "../../Components/Sections/ThemedSection";
-import { css } from "styled-components";
 import ProjectList from "../../Components/UI/ProjectList";
+
+/* Styles */
 import { mobile } from "../../styles/mediaQueries";
+import { fadeIn } from "../../styles/animations";
 
 const homeFeaturedProjectsStyles = css`
   padding: ${({ theme }) => theme.padding.largeSection};
@@ -35,6 +41,7 @@ const homeFeaturedProjectsStyles = css`
     }
     .imgContainer {
       filter: grayscale(100%);
+      transition: filter 0.3s ease-in;
     }
   }
   ${mobile(css`
@@ -46,6 +53,15 @@ const homeFeaturedProjectsStyles = css`
   `)}
 `;
 
+const AnimatedHomeFeaturedProjects = styled.div`
+  opacity: ${(props) => (props.$inView ? 1 : 0)};
+  animation: ${(props) =>
+    props.$inView
+      ? css`
+          ${fadeIn} 1s ease-in-out
+        `
+      : "none"};
+`;
 /**
  * Home Featured Projects: Home Featured Projects Section
  * @returns {JSX.Element}
@@ -59,10 +75,10 @@ function HomeFeaturedProjects() {
       id="featured-projects"
     >
       {(inView) => (
-        <>
+        <AnimatedHomeFeaturedProjects $inView={inView}>
           <h2 className="sectionTitle">Featured Projects</h2>
           <ProjectList featured />
-        </>
+        </AnimatedHomeFeaturedProjects>
       )}
     </ThemedSection>
   );
