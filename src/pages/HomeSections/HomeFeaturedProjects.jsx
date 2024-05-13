@@ -58,8 +58,12 @@ function HomeFeaturedProjects() {
       className="overlay"
       id="featured-projects"
     >
-      <h2 className="sectionTitle">Featured Projects</h2>
-      <ProjectList featured />
+      {(inView) => (
+        <>
+          <h2 className="sectionTitle">Featured Projects</h2>
+          <ProjectList featured />
+        </>
+      )}
     </ThemedSection>
   );
 }

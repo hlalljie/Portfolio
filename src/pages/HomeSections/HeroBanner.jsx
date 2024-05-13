@@ -64,27 +64,29 @@ const heroBannerStyles = css`
 function HeroBanner() {
   return (
     <ThemedSection themeName="light" additionalStyles={heroBannerStyles}>
-      <div className="bannerContent">
-        <div className="textContainer">
-          <h1>Hi, I'm Hayden</h1>
-          <div className="subHeadingWrapper">
-            <h3>
-              {" "}
-              Developer<span className="mobileOnly">,</span>
-            </h3>
-            <h3 className="tree">↟</h3>
-            <h3>
-              Designer<span className="mobileOnly">,</span>
-            </h3>
-            <h3 className="tree">↟</h3>
-            <h3>Educator</h3>
+      {(inView) => (
+        <div className="bannerContent">
+          <div className="textContainer">
+            <h1>Hi, I'm Hayden</h1>
+            <div className="subHeadingWrapper">
+              <h3>
+                {" "}
+                Developer<span className="mobileOnly">,</span>
+              </h3>
+              <h3 className="tree">↟</h3>
+              <h3>
+                Designer<span className="mobileOnly">,</span>
+              </h3>
+              <h3 className="tree">↟</h3>
+              <h3>Educator</h3>
+            </div>
+            <p className="largeP">
+              I'm passionate about creating solutions through programming and
+              design, and empowering others through education and mentorship.
+            </p>
           </div>
-          <p className="largeP">
-            I'm passionate about creating solutions through programming and
-            design, and empowering others through education and mentorship.
-          </p>
         </div>
-      </div>
+      )}
     </ThemedSection>
   );
 }

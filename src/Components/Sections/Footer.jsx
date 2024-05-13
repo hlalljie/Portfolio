@@ -31,7 +31,11 @@ function Footer() {
       className="footer"
       sectionSize="tiny"
     >
-      <p className="copyright smallP">Copyright 2024</p>
+      {(inView) => (
+        <>
+          <p className="copyright smallP">Copyright 2024</p>
+        </>
+      )}
     </ThemedSection>
   );
 }

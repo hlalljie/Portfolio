@@ -45,15 +45,17 @@ function HomeContact() {
       id="contact"
       sectionSize="small"
     >
-      <div className="textContainer">
-        <h2 className="sectionTitle">Contact Me</h2>
-        <p>
-          I'm always on the lookout for new projects, opportunities and
-          connections. Feel free to reach out anytime.
-        </p>
-        <a href="mailto:haydenlalljie@gmail.com">haydenlalljie@gmail.com</a>
-        <Socials />
-      </div>
+      {(inView) => (
+        <div className="textContainer">
+          <h2 className="sectionTitle">Contact Me</h2>
+          <p>
+            I'm always on the lookout for new projects, opportunities and
+            connections. Feel free to reach out anytime.
+          </p>
+          <a href="mailto:haydenlalljie@gmail.com">haydenlalljie@gmail.com</a>
+          <Socials />
+        </div>
+      )}
     </ThemedSection>
   );
 }

@@ -56,28 +56,32 @@ function HomeAbout() {
       className="homeAbout"
       id="about"
     >
-      <div className="imgContainer">
-        <img
-          src="/images/Portrait600w.jpg"
-          srcSet="/images/Portrait600w.jpg 600w, /images/Portrait1200w.jpg 1200w"
-          sizes={"(max-width: " + breakpoints.tablet + "px) 86vw, 43vw"}
-          alt="Portrait of Hayden Lalljie"
-          loading="lazy"
-        />
-      </div>
-      <div className="textContainer">
-        <h2 className="sectionTitle">About Me</h2>
-        <p>
-          I'm a software developer and educator with a passion for creating a
-          positive impact through programming, education, user-centric design. I
-          have a Bachelor's in Computer Science from Sonoma State University, am
-          a Certified Scrum Master, and have worked in a variety of different
-          roles including management, design, education, quality assurance. In
-          my free time I enjoy developing products, learning new skills,
-          reading, playing video games, and spending time outdoors with family
-          and friends.
-        </p>
-      </div>
+      {(inView) => (
+        <>
+          <div className="imgContainer">
+            <img
+              src="/images/Portrait600w.jpg"
+              srcSet="/images/Portrait600w.jpg 600w, /images/Portrait1200w.jpg 1200w"
+              sizes={"(max-width: " + breakpoints.tablet + "px) 86vw, 43vw"}
+              alt="Portrait of Hayden Lalljie"
+              loading="lazy"
+            />
+          </div>
+          <div className="textContainer">
+            <h2 className="sectionTitle">About Me</h2>
+            <p>
+              I'm a software developer and educator with a passion for creating
+              a positive impact through programming, education, user-centric
+              design. I have a Bachelor's in Computer Science from Sonoma State
+              University, am a Certified Scrum Master, and have worked in a
+              variety of different roles including management, design,
+              education, quality assurance. In my free time I enjoy developing
+              products, learning new skills, reading, playing video games, and
+              spending time outdoors with family and friends.
+            </p>
+          </div>
+        </>
+      )}
     </ThemedSection>
   );
 }

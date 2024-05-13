@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import theme from "../../Theme";
+import { useInView } from "react-intersection-observer";
 
 const colorThemes = {
   light: {
@@ -46,15 +47,23 @@ const ThemedSection = ({
   id = "",
   sectionSize = "large",
   children,
-}) => (
-  <StyledSection
-    $themeName={themeName}
-    $additionalStyles={additionalStyles}
-    className={className + " " + themeName + " " + sectionSize + "Section"}
-    id={id}
-  >
-    {children}
-  </StyledSection>
-);
+}) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
+  return (
+    <StyledSection
+      $themeName={themeName}
+      $additionalStyles={additionalStyles}
+      className={className + " " + themeName + " " + sectionSize + "Section"}
+      id={id}
+      ref={ref}
+    >
+      {children(inView)}
+    </StyledSection>
+  );
+};
 
 export default ThemedSection;

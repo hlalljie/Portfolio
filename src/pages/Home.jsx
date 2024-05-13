@@ -1,6 +1,6 @@
 //\\ PortfolioFrontend/src/pages/Home.jsx //\\
 
-/// Imports \\\
+/// Libraries \\\
 import styled from "styled-components";
 
 /// Components \\\
