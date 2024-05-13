@@ -90,12 +90,12 @@ function HomeAbout() {
               <h2 className="sectionTitle">About Me</h2>
               <p>
                 I'm a software developer and educator with a passion for
-                creating a positive impact through programming, education,
+                creating a positive impact through programming, education, and
                 user-centric design. I have a Bachelor's in Computer Science
                 from Sonoma State University, am a Certified Scrum Master, and
                 have worked in a variety of different roles including
-                management, design, education, quality assurance. In my free
-                time I enjoy developing products, learning new skills, reading,
+                management, design, education, and quality assurance. In my free
+                time, I enjoy developing products, learning new skills, reading,
                 playing video games, and spending time outdoors with family and
                 friends.
               </p>
