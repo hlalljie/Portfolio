@@ -1,8 +1,9 @@
 //import { useState } from 'react'
 
-// React Router
+// Libraries
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Analytics } from "@vercel/analytics/react";
 
 import GlobalStyle from "./GlobalStyles";
 
@@ -64,6 +65,7 @@ function App() {
 
         <GlobalStyle />
         <RouterProvider router={router} />
+        <Analytics />
       </HelmetProvider>
     </>
   );
