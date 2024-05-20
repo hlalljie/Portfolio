@@ -37,6 +37,26 @@ function App() {
             name="description"
             content="Hayden Lalljie is a web developer, web designer and educator who creates solutions through programming, and user-centric design while empowering others though education and mentorship"
           />
+          {/* Open Graph meta tags */}
+          <meta property="og:title" content="Hayden Lalljie" />
+          <meta
+            property="og:description"
+            content="Hayden Lalljie is a web developer, web designer and educator who creates solutions through programming, and user-centric design while empowering others though education and mentorship"
+          />
+          <meta property="og:url" content="https://haydenlalljie.com" />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content="/images/hl_favicon192w.png" />
+          <meta property="og:image:width" content="192" />
+          <meta property="og:image:height" content="192" />
+
+          {/* Twitter Card meta tags */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Hayden Lalljie" />
+          <meta
+            name="twitter:description"
+            content="Hayden Lalljie is a web developer, web designer and educator who creates solutions through programming, and user-centric design while empowering others though education and mentorship"
+          />
+          <meta name="twitter:image" content="/images/hl_favicon192w.png" />
           <link
             rel="icon"
             sizes="16x16"
