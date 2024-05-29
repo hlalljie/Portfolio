@@ -3,6 +3,9 @@ import PortfolioItems from "../../data/PortfolioItems";
 import TagList from "./TagList.jsx";
 import { breakpoints, tablet } from "../../styles/mediaQueries";
 
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LaunchIcon from "@mui/icons-material/Launch";
+
 const StyledProjectList = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -76,6 +79,12 @@ const StyledProjectCard = styled.div`
       font-weight: 500;
     }
   }
+  .linkContainer {
+    svg {
+      transform: scale(1.2);
+      transform-origin: left center;
+    }
+  }
 `;
 
 /**
@@ -119,6 +128,18 @@ function ProjectCard({ data }) {
         <p className="projectExcerpt smallP">{data.excerpt}</p>
       </div>
       <TagList tags={data.technologies} className="technologies" />
+      <div className="linkContainer">
+        {data.url && (
+          <a href={data.url} target="_blank" rel="noreferrer">
+            <LaunchIcon />
+          </a>
+        )}
+        {data.github && (
+          <a href={data.github} target="_blank">
+            <GitHubIcon />
+          </a>
+        )}
+      </div>
     </StyledProjectCard>
   );
 }
