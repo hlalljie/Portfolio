@@ -40,8 +40,10 @@ const PortfolioItems = {
       excerpt:
         "Product to save teachers time and give students a more efficient way of learning through AI quiz question generation.",
       image: {
-        path: "/images/inquizityThumbnail.jpg",
-        alt: "A screenshot of the content generating loading icon from the Inquizity first iteration",
+        path: "/images/",
+        name: "inquizityThumbnail",
+        extension: ".jpeg",
+        alt: "A visual representation of Inquizity the quiz generation app",
       },
       company: "Test Company",
       link: "https://example.com",
