@@ -8,11 +8,18 @@ const caseStudies = import.meta.glob("../../data/caseStudies/*.md", {
   import: "default",
 });
 
+/**
+ * CaseStudyTemplate: Template for rendering case studies from markdown along with title info
+ * @returns {JSX.Element}
+ */
 const CaseStudyTemplate = () => {
   const { caseStudyId } = useParams();
   const [content, setContent] = useState("");
 
   useEffect(() => {
+    /**
+     * loadCaseStudy: Loads case study from markdown file
+     */
     const loadCaseStudy = async () => {
       try {
         const caseStudyPath = `../../data/caseStudies/${caseStudyId}.md`;
