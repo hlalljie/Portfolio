@@ -6,6 +6,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Analytics } from "@vercel/analytics/react";
 
 import GlobalStyle from "./GlobalStyles";
+import CaseStudyTemplate from "./Components/UI/CaseStudyTemplate";
 
 // Page Imports
 import Home from "./pages/Home";
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home />,
+  },
+  {
+    path: "caseStudies/:caseStudyId",
+    element: <CaseStudyTemplate />,
   },
 ]);
 
