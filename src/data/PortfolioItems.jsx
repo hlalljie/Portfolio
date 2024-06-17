@@ -1,7 +1,7 @@
 const PortfolioItems = {
-  Featured: ["Platinum Advisors", "Block Broker", "Inquizity"],
+  Featured: ["platinumAdvisors", "blockBroker", "inquizity"],
   Projects: {
-    "Platinum Advisors": {
+    platinumAdvisors: {
       title: "Platinum Advisors",
       excerpt:
         "Redesigned Platinum Advisors' website to more effectively communicate their professionalism and expertise to clients.",
@@ -17,7 +17,7 @@ const PortfolioItems = {
       years: "2023",
       technologies: ["Squarespace", "Less", "Javascript", "HTML"],
     },
-    "Block Broker": {
+    blockBroker: {
       title: "Block Broker",
       excerpt:
         "Worked as solo frontend dev and team lead on this Web3 Hackathon project to democratize freelance contracting.",
@@ -33,7 +33,7 @@ const PortfolioItems = {
       technologies: ["React", "CSS", "Javascript"],
       github: "https://github.com/Topupchips/MLH-Web3-Hackathon",
     },
-    Inquizity: {
+    inquizity: {
       title: "Inquizity",
       excerpt:
         "Product to save teachers time and give students a more efficient way of learning through AI quiz question generation.",
