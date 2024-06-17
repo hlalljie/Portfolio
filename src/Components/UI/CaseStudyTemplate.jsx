@@ -1,4 +1,5 @@
 // src/components/UI/CaseStudyTemplate.jsx
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
