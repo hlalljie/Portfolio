@@ -1,8 +1,9 @@
-import { styled, css } from "styled-components";
+// src/Components/UI/ProjectList.jsx
+import { Link } from "react-router-dom";
 import PortfolioItems from "../../data/PortfolioItems";
-import TagList from "./TagList.jsx";
-import { breakpoints, tablet } from "../../styles/mediaQueries";
-
+import { styled, css } from "styled-components";
+import { tablet } from "../../styles/mediaQueries";
+import TagList from "./TagList";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
 
@@ -25,36 +26,45 @@ const StyledProjectList = styled.div`
 `;
 
 /**
- *
+ * ProjectList: Component to display a list of project cards.
  * @param {Object} props
  * @param {boolean} props.featured - Whether to filter by only featured projects
  * @param {number} props.cols - Number of columns for project grid
  * @param {number} props.gap - Gap between project cards
  * @returns {JSX.Element}
  */
-function ProjectList({ featured = false, cols = 3, gap = 55 }) {
+const ProjectList = ({ featured = false, cols = 3, gap = 55 }) => {
+  const projects = featured
+    ? PortfolioItems.Featured
+    : Object.keys(PortfolioItems.Projects);
+
   return (
     <StyledProjectList $cols={cols} $gap={gap}>
-      {featured
-        ? PortfolioItems.Featured.map((project) => (
-            <ProjectCard
-              key={project}
-              data={PortfolioItems.Projects[project]}
-            />
-          ))
-        : Object.keys(PortfolioItems.Projects).map((project) => (
-            <ProjectCard key={project} data={project} />
-          ))}
+      {projects.map((projectId) => {
+        const { excerpt, image, ...projectData } =
+          PortfolioItems.Projects[projectId];
+        return (
+          <ProjectCard
+            key={projectId}
+            data={{ ...projectData, image, excerpt }}
+            projectId={projectId}
+          />
+        );
+      })}
     </StyledProjectList>
   );
-}
+};
 
-const StyledProjectCard = styled.div`
+const StyledProjectCard = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+  display: block;
+
   .imgContainer {
     width: 100%;
     border-radius: 10px;
     padding-top: 80%;
-    position: relative; /* Allows absolute positioning for children */
+    position: relative;
     img {
       border-radius: 10px;
       position: absolute;
@@ -62,7 +72,7 @@ const StyledProjectCard = styled.div`
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Ensures the image covers the area without distortion */
+      object-fit: cover;
       object-position: top;
     }
   }
@@ -73,8 +83,6 @@ const StyledProjectCard = styled.div`
   }
   .technologies {
     li {
-      /* color: ${(props) => props.theme.colors.white};
-      border-color: ${(props) => props.theme.colors.white}; */
       background-color: ${(props) => props.theme.colors.white};
       font-weight: 500;
     }
@@ -88,60 +96,56 @@ const StyledProjectCard = styled.div`
 `;
 
 /**
- *
+ * ProjectCard: Component to display an individual project card.
  * @param {Object} props
- * @param {string} props.data
+ * @param {Object} props.data - The project data
+ * @param {string} props.projectId - The ID of the project
  * @returns {JSX.Element}
  */
-function ProjectCard({ data }) {
-  return (
-    <StyledProjectCard className="projectCard">
-      <div className="imgContainer">
-        <img
-          src={
-            data.image.path +
-            (data.image.name
-              ? data.image.name + "600w" + data.image.extension
-              : "")
-          }
-          srcSet={
-            data.image.name
-              ? data.image.path +
-                data.image.name +
-                "600w" +
-                data.image.extension +
-                " 600w, " +
-                data.image.path +
-                data.image.name +
-                "1200w" +
-                data.image.extension +
-                " 1200w"
-              : ""
-          }
-          sizes={"(max-width: " + breakpoints.tablet + "px) 86vw, 27vw"}
-          alt={data.image.alt}
-          loading="lazy"
-        />
-      </div>
-      <div className="textContainer">
-        <h3 className="projectTitle">{data.title}</h3>
-        <p className="projectExcerpt smallP">{data.excerpt}</p>
-      </div>
-      <TagList tags={data.technologies} className="technologies" />
-      <div className="linkContainer">
-        {data.url && (
-          <a href={data.url} target="_blank" rel="noreferrer">
-            <LaunchIcon />
-          </a>
-        )}
-        {data.github && (
-          <a href={data.github} target="_blank">
-            <GitHubIcon />
-          </a>
-        )}
-      </div>
-    </StyledProjectCard>
-  );
-}
+const ProjectCard = ({ data, projectId }) => (
+  <StyledProjectCard
+    to={{
+      pathname: `/caseStudies/${projectId}`,
+      state: { ...data },
+    }}
+    className="projectCard"
+  >
+    <div className="imgContainer">
+      <img
+        src={`${data.image.path}${data.image.name}600w${data.image.extension}`}
+        srcSet={`${data.image.path}${data.image.name}600w${data.image.extension} 600w, ${data.image.path}${data.image.name}1200w${data.image.extension} 1200w`}
+        sizes="(max-width: 768px) 86vw, 27vw"
+        alt={data.image.alt}
+        loading="lazy"
+      />
+    </div>
+    <div className="textContainer">
+      <h3 className="projectTitle">{data.title}</h3>
+      <p className="projectExcerpt smallP">{data.excerpt}</p>
+    </div>
+    <TagList tags={data.technologies} className="technologies" />
+    <div className="linkContainer">
+      {data.url && (
+        <a
+          href={data.url}
+          target="_blank"
+          rel="noreferrer"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <LaunchIcon />
+        </a>
+      )}
+      {data.github && (
+        <a
+          href={data.github}
+          target="_blank"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <GitHubIcon />
+        </a>
+      )}
+    </div>
+  </StyledProjectCard>
+);
 
 export default ProjectList;

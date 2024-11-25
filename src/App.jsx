@@ -1,31 +1,36 @@
 //import { useState } from 'react'
 
 // Libraries
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import { Analytics } from "@vercel/analytics/react";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Analytics } from '@vercel/analytics/react';
 
-import GlobalStyle from "./GlobalStyles";
-import CaseStudyTemplate from "./Components/UI/CaseStudyTemplate";
+import GlobalStyle from './GlobalStyles';
+// import CaseStudyTemplate from './pages/CaseStudies/CaseStudyTemplate';
+import CaseStudyTemplateBasic from './pages/CaseStudies/CaseStudyTemplateBasic';
 
 // Page Imports
-import Home from "./pages/Home";
+import Home from './pages/Home';
 // import About from "./pages/About";
 // import Portfolio from "./pages/Portfolio";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Home />,
   },
   {
-    path: "/home",
+    path: '/home',
     element: <Home />,
   },
   {
-    path: "caseStudies/:caseStudyId",
-    element: <CaseStudyTemplate />,
+    path: '/case-studies/:caseStudyId',
+    element: <CaseStudyTemplateBasic />,
   },
+  // {
+  //   path: 'caseStudies/:caseStudyId',
+  //   element: <CaseStudyTemplate />,
+  // },
 ]);
 
 /**

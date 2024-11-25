@@ -11,7 +11,7 @@ const caseStudies = import.meta.glob("../../data/caseStudies/*.md", {
 });
 
 /**
- * CaseStudyTemplate: Template for rendering case studies from markdown along with title info
+ * CaseStudyTemplate: Template for rendering case studies from markdown along with title info.
  * @returns {JSX.Element}
  */
 const CaseStudyTemplate = () => {
@@ -21,19 +21,27 @@ const CaseStudyTemplate = () => {
   const [meta, setMeta] = useState(location.state || {});
 
   useEffect(() => {
+    /**
+     * loadCaseStudy: Loads case study from markdown file
+     */
     const loadCaseStudy = async () => {
       try {
         if (!location.state) {
           // Fetch metadata from PortfolioItems if not passed via state
-          const projectMeta = PortfolioItems.Projects[caseStudyId];
+          /* eslint-disable no-unused-vars */
+          const { _excerpt, _image, ...projectMeta } =
+            PortfolioItems.Projects[caseStudyId];
+          /* eslint-enable no-unused-vars */
           setMeta(projectMeta || {});
         }
 
         const caseStudyPath = `../../data/caseStudies/${caseStudyId}.md`;
+        console.log("Looking for:", caseStudyPath);
         const caseStudy = caseStudies[caseStudyPath];
 
         if (caseStudy) {
           const module = await caseStudy();
+          console.log("Module:", module);
           setContent(module.default || module);
         } else {
           console.error("Case study not found:", caseStudyPath);
@@ -49,8 +57,18 @@ const CaseStudyTemplate = () => {
   return (
     <div>
       {meta.title && <h1>{meta.title}</h1>}
-      {meta.date && <p>{meta.date}</p>}
-      {meta.tags && <p>Tags: {meta.tags.join(", ")}</p>}
+      {meta.company && <p>Company: {meta.company}</p>}
+      {meta.url && (
+        <p>
+          URL:{" "}
+          <a href={meta.url} target="_blank" rel="noopener noreferrer">
+            {meta.url}
+          </a>
+        </p>
+      )}
+      {meta.roles && <p>Roles: {meta.roles.join(", ")}</p>}
+      {meta.years && <p>Years: {meta.years}</p>}
+      {meta.technologies && <p>Technologies: {meta.technologies.join(", ")}</p>}
       <ReactMarkdown>{content}</ReactMarkdown>
     </div>
   );
