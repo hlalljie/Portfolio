@@ -1,6 +1,6 @@
-import { HashLink as Link } from "react-router-hash-link";
+import { HashLink as Link } from 'react-router-hash-link';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledNav = styled.div`
   font-family: ${(props) => props.theme.fonts.paragraph};
@@ -12,9 +12,9 @@ const StyledNav = styled.div`
  * @param {string} className - Additional class name for nav components, mainly used for dynamic formatting
  * @returns {JSX.Element}
  */
-function Nav({ className = "", onClick = () => {} }) {
+function Nav({ className = '', onClick = () => {} }) {
   return (
-    <StyledNav className={"nav " + className} onClick={onClick}>
+    <StyledNav className={'nav ' + className} onClick={onClick}>
       <span className="navItem">
         <Link to="/home#experience">Experience</Link>
       </span>
