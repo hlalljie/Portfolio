@@ -1,10 +1,10 @@
-import { styled, css } from "styled-components";
-import PortfolioItems from "../../data/PortfolioItems";
-import TagList from "./TagList.jsx";
-import { breakpoints, tablet } from "../../styles/mediaQueries";
+import { styled, css } from 'styled-components';
+import PortfolioItems from '../../data/PortfolioItems';
+import TagList from './TagList.jsx';
+import { breakpoints, tablet } from '../../styles/mediaQueries';
 
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LaunchIcon from "@mui/icons-material/Launch";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LaunchIcon from '@mui/icons-material/Launch';
 
 const StyledProjectList = styled.div`
   display: flex;
@@ -101,24 +101,24 @@ function ProjectCard({ data }) {
           src={
             data.image.path +
             (data.image.name
-              ? data.image.name + "600w" + data.image.extension
-              : "")
+              ? data.image.name + '600w' + data.image.extension
+              : '')
           }
           srcSet={
             data.image.name
               ? data.image.path +
                 data.image.name +
-                "600w" +
+                '600w' +
                 data.image.extension +
-                " 600w, " +
+                ' 600w, ' +
                 data.image.path +
                 data.image.name +
-                "1200w" +
+                '1200w' +
                 data.image.extension +
-                " 1200w"
-              : ""
+                ' 1200w'
+              : ''
           }
-          sizes={"(max-width: " + breakpoints.tablet + "px) 86vw, 27vw"}
+          sizes={'(max-width: ' + breakpoints.tablet + 'px) 86vw, 27vw'}
           alt={data.image.alt}
           loading="lazy"
         />
@@ -130,13 +130,22 @@ function ProjectCard({ data }) {
       <TagList tags={data.technologies} className="technologies" />
       <div className="linkContainer">
         {data.url && (
-          <a href={data.url} target="_blank" rel="noreferrer">
-            <LaunchIcon />
+          <a
+            href={data.url}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="View Live Website"
+          >
+            <LaunchIcon aria-hidden="true" />
           </a>
         )}
         {data.github && (
-          <a href={data.github} target="_blank">
-            <GitHubIcon />
+          <a
+            href={data.github}
+            target="_blank"
+            aria-label="View Project Github"
+          >
+            <GitHubIcon aria-hidden="true" />
           </a>
         )}
       </div>
