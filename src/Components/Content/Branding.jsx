@@ -29,7 +29,7 @@ const StyledBranding = styled.div.attrs({ className: 'branding' })`
 function Branding({ variant = 'dark' }) {
   return (
     <StyledBranding $variant={variant}>
-      <a>
+      <a href="/home">
         {/* <LogoIcon className="logoIcon" scale={0.5} /> */}
         Hayden Lalljie
       </a>

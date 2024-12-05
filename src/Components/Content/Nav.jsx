@@ -31,6 +31,7 @@ const StyledNav = styled.div`
 function Nav({ variant = 'dark', className = '', onClick = () => {} }) {
   return (
     <StyledNav
+      role="presentation"
       $variant={variant}
       className={'nav ' + className}
       onClick={onClick}
