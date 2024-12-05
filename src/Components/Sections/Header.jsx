@@ -14,100 +14,96 @@ import CloseMenu from '../../assets/CloseMenu.svg?react';
 import Socials from '../Content/Socials';
 
 const HeaderDiv = styled.div`
-  animation: ${fadeIn} 1s ease-in-out;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 20px 20px;
-  box-sizing: border-box;
-  color: ${(props) => props.theme.colors.black};
-  .branding {
-    a {
-      color: ${(props) => props.theme.colors.black};
-      font-size: 1.5rem;
-    }
-  }
+  ${({ theme }) => css`
+    /* Layout */
+    position: ${({ $overlapTopSection }) =>
+      $overlapTopSection ? 'absolute' : 'relative'};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
 
-  .nav {
-    font-size: 1.3rem;
-    margin-left: auto;
+    /* Animation */
+    animation: ${fadeIn} 1s ease-in-out;
 
-    a {
-      text-decoration: none;
-      padding: 10px;
-      color: ${(props) => props.theme.colors.black};
+    .socials {
+      margin-left: 17px;
     }
-    a:hover {
-      color: ${(props) => props.theme.colors.darkAccent};
-    }
-  }
-  .socials {
-    margin-left: 17px;
-  }
-  .burgerMenu,
-  .closeMenu {
-    display: none;
-  }
-  ${tablet(css`
-    position: relative;
-    .nav.closed {
+    .burgerMenu,
+    .closeMenu {
       display: none;
     }
-    .nav.open {
-      position: fixed;
-      z-index: 10;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: ${(props) => props.theme.colors.white};
-      .navItem {
-        margin: 10px 0;
-        a {
-          font-size: 2.5rem;
-          color: ${(props) => props.theme.colors.darkAccent};
+    ${tablet(css`
+      position: relative;
+      .nav.closed {
+        display: none;
+      }
+      .nav.open {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: ${theme.colors.white};
+        .navItem {
+          margin: 10px 0;
+          a {
+            font-size: 2.5rem;
+            color: ${theme.colors.darkAccent};
+          }
+          &:hover a {
+            color: ${theme.colors.dark};
+          }
         }
-        &:hover a {
-          color: ${(props) => props.theme.colors.dark};
+      }
+      .socials {
+        margin-left: auto;
+      }
+      .burgerMenu {
+        margin-left: 30px;
+        transform: scale(2.5);
+        g path {
+          stroke: ${({ variant }) =>
+            variant === 'dark' ? theme.colors.black : theme.colors.white};
+        }
+        &.show {
+          display: block;
         }
       }
-    }
-    .socials {
-      margin-left: auto;
-    }
-    .burgerMenu {
-      margin-left: 30px;
-      transform: scale(2.5);
-      &.show {
-        display: block;
+      .closeMenu {
+        transform: scale(1.4);
+        position: fixed;
+        top: 30px;
+        right: 15px;
+        z-index: 11;
+        fill: ${(props) => props.theme.colors.darkAccent};
+        &.show {
+          display: block;
+        }
       }
-    }
-    .closeMenu {
-      transform: scale(1.4);
-      position: fixed;
-      top: 30px;
-      right: 15px;
-      z-index: 11;
-      fill: ${(props) => props.theme.colors.darkAccent};
-      &.show {
-        display: block;
-      }
-    }
-  `)}
+    `)}
+  `}
 `;
 
+/** @typedef {'light' | 'dark'} HeaderVariant */
+export {};
 /**
  * Header: Header Section to be used on all pages
+ 
+ * @param {Object} props
+ * @param {HeaderVariant} props.variant - Color scheme of header, 'dark' or 'light'
+ * @param {boolean} props.overlapTopSection - Whether the header should go over the top section, false and the header will be above the first section
  * @returns {JSX.Element}
  */
-function Header() {
+function Header({ variant = 'dark', overlapTopSection = true }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   /**
@@ -116,10 +112,14 @@ function Header() {
    */
   const closeMenu = () => setMobileMenuOpen(false);
   return (
-    <HeaderDiv>
-      <Branding />
-      <Nav className={mobileMenuOpen ? 'open' : 'closed'} onClick={closeMenu} />
-      <Socials colorScheme="dark" size="27px" gap="15px" />
+    <HeaderDiv $variant={variant} $overlapTopSection={overlapTopSection}>
+      <Branding variant={variant} />
+      <Nav
+        variant={variant}
+        className={mobileMenuOpen ? 'open' : 'closed'}
+        onClick={closeMenu}
+      />
+      <Socials variant={variant} size="27px" gap="15px" />
       <BurgerMenu
         className={'burgerMenu ' + (mobileMenuOpen ? 'hide' : 'show')}
         onClick={() => setMobileMenuOpen(true)}

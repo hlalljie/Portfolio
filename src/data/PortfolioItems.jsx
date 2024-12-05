@@ -18,7 +18,7 @@ const PortfolioItems = {
       technologies: ['Squarespace', 'Less', 'Javascript', 'HTML'],
       summary:
         'As the sole designer and developer from our studio, I led a website redesign for Platinum Advisors, a national advocacy firm looking to showcase their expanded reach. Working with two client representatives who represented key stakeholders, I managed the project from initial wireframes through custom development in Squarespace. Despite challenges with an expanding scope and indirect stakeholder communication, I delivered a modern, premium design that effectively organized complex information and incorporated custom styling elements, including the Will Meyers Slideshow plugin and specialized portrait frames. The project concluded successfully with stakeholder approval, though it required careful budget management and rapid feedback coordination to meet deadlines.',
-      backgroundColor: '#2f3d3f',
+      backgroundColor: '#282c34',
     },
     blockBroker: {
       title: 'Block Broker',
