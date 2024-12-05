@@ -1,11 +1,11 @@
 // src/Components/UI/ProjectList.jsx
-import { Link } from "react-router-dom";
-import PortfolioItems from "../../data/PortfolioItems";
-import { styled, css } from "styled-components";
-import { tablet } from "../../styles/mediaQueries";
-import TagList from "./TagList";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LaunchIcon from "@mui/icons-material/Launch";
+import { Link } from 'react-router-dom';
+import PortfolioItems from '../../data/PortfolioItems';
+import { styled, css } from 'styled-components';
+import { tablet } from '../../styles/mediaQueries';
+import TagList from './TagList';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LaunchIcon from '@mui/icons-material/Launch';
 
 const StyledProjectList = styled.div`
   display: flex;
@@ -130,18 +130,14 @@ const ProjectCard = ({ data, projectId }) => (
           href={data.url}
           target="_blank"
           rel="noreferrer"
-          onClick={(e) => e.stopPropagation()}
+          aria-label="View Live Website"
         >
-          <LaunchIcon />
+          <LaunchIcon aria-hidden="true" />
         </a>
       )}
       {data.github && (
-        <a
-          href={data.github}
-          target="_blank"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <GitHubIcon />
+        <a href={data.github} target="_blank" aria-label="View Project Github">
+          <GitHubIcon aria-hidden="true" />
         </a>
       )}
     </div>

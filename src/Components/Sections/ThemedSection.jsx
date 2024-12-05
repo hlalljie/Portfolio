@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
-import theme from "../../Theme";
-import { useInView } from "react-intersection-observer";
+import styled, { css } from 'styled-components';
+import theme from '../../Theme';
+import { useInView } from 'react-intersection-observer';
 
 const colorThemes = {
   light: {
@@ -41,23 +41,23 @@ const StyledSection = styled.section`
  * @returns {JSX.Element}
  */
 const ThemedSection = ({
-  themeName = "default",
+  themeName = 'default',
   additionalStyles,
-  className = "",
-  id = "",
-  sectionSize = "large",
+  className = '',
+  id = '',
+  sectionSize = 'large',
   children,
 }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.4,
+    threshold: 0.1,
   });
 
   return (
     <StyledSection
       $themeName={themeName}
       $additionalStyles={additionalStyles}
-      className={className + " " + themeName + " " + sectionSize + "Section"}
+      className={className + ' ' + themeName + ' ' + sectionSize + 'Section'}
       id={id}
       ref={ref}
     >
