@@ -1,16 +1,17 @@
 // Header.jsx
 /* Libraries */
-import { useState } from "react";
-import { styled, css } from "styled-components";
+import { useState } from 'react';
+import { styled, css } from 'styled-components';
 /* Styles */
-import { tablet } from "../../styles/mediaQueries";
-import { fadeIn } from "../../styles/animations";
+import { tablet } from '../../styles/mediaQueries';
+import { fadeIn } from '../../styles/animations';
 /* Components */
-import Branding from "../Content/Branding";
-import Nav from "../Content/Nav";
+import Branding from '../Content/Branding';
+import Nav from '../Content/Nav';
 /* Assets */
-import BurgerMenu from "../../assets/BurgerMenu.svg?react";
-import CloseMenu from "../../assets/CloseMenu.svg?react";
+import BurgerMenu from '../../assets/BurgerMenu.svg?react';
+import CloseMenu from '../../assets/CloseMenu.svg?react';
+import Socials from '../Content/Socials';
 
 const HeaderDiv = styled.div`
   animation: ${fadeIn} 1s ease-in-out;
@@ -32,6 +33,7 @@ const HeaderDiv = styled.div`
 
   .nav {
     font-size: 1.3rem;
+    margin-left: auto;
     a {
       text-decoration: none;
       padding: 10px;
@@ -40,6 +42,9 @@ const HeaderDiv = styled.div`
     a:hover {
       color: ${(props) => props.theme.colors.darkAccent};
     }
+  }
+  .socials {
+    margin-left: 15px;
   }
   .burgerMenu,
   .closeMenu {
@@ -109,15 +114,16 @@ function Header() {
     <HeaderDiv>
       <Branding />
       <BurgerMenu
-        className={"burgerMenu " + (mobileMenuOpen ? "hide" : "show")}
+        className={'burgerMenu ' + (mobileMenuOpen ? 'hide' : 'show')}
         onClick={() => setMobileMenuOpen(true)}
         scale={2}
       />
       <CloseMenu
-        className={"closeMenu " + (mobileMenuOpen ? "show" : "hide")}
+        className={'closeMenu ' + (mobileMenuOpen ? 'show' : 'hide')}
         onClick={() => setMobileMenuOpen(false)}
       />
-      <Nav className={mobileMenuOpen ? "open" : "closed"} onClick={closeMenu} />
+      <Nav className={mobileMenuOpen ? 'open' : 'closed'} onClick={closeMenu} />
+      <Socials colorScheme="dark" />
     </HeaderDiv>
   );
 }

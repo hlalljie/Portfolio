@@ -1,25 +1,33 @@
-import styled from "styled-components";
-import GithubIcon from "../../assets/GitHubLogo.svg?react";
-import LinkedInIcon from "../../assets/LinkedInLogo.svg?react";
-import TwitterXLogo from "../../assets/TwitterXLogo.svg?react";
+import styled from 'styled-components';
+import GithubIcon from '../../assets/GitHubLogo.svg?react';
+import LinkedInIcon from '../../assets/LinkedInLogo.svg?react';
+import TwitterXLogo from '../../assets/TwitterXLogo.svg?react';
 
-const StyledSocials = styled.div.attrs({ className: "socials" })`
+const StyledSocials = styled.div.attrs({ className: 'socials' })`
   box-sizing: border-box;
   font-family: ${(props) => props.theme.fonts.heading};
   display: flex;
   gap: 10px;
+  height: fit-content;
 `;
 
 const StyledSocialLink = styled.a`
   display: block;
   margin: 0;
   min-height: 0;
+  line-height: 0;
   .socialIcon {
     path {
-      fill: ${(props) => props.theme.colors.white};
+      fill: ${(props) =>
+        props.$colorScheme === 'light'
+          ? props.theme.colors.white
+          : props.theme.colors.black};
     }
     polygon {
-      fill: ${(props) => props.theme.colors.white};
+      fill: ${(props) =>
+        props.$colorScheme === 'light'
+          ? props.theme.colors.white
+          : props.theme.colors.black};
     }
   }
   .socialIcon:hover {
@@ -36,12 +44,13 @@ const StyledSocialLink = styled.a`
  * Socials: A component that renders a list of social media links as icons.
  * @returns {JSX.Element}
  */
-function Socials() {
+function Socials({ colorScheme = 'light' }) {
   return (
     <StyledSocials>
       <StyledSocialLink
         href="https://github.com/hlalljie"
         target="_blank"
+        $colorScheme={colorScheme}
         $hoverColor="#8241F9"
       >
         <GithubIcon className="socialIcon" aria-labelledby="GithubIconLabel" />
@@ -52,8 +61,8 @@ function Socials() {
       <StyledSocialLink
         href="https://www.linkedin.com/in/hayden-lalljie/"
         target="_blank"
-        $hoverColor="
-        #0b65c2"
+        $colorScheme={colorScheme}
+        $hoverColor="#0b65c2"
       >
         <LinkedInIcon
           className="socialIcon"
@@ -66,6 +75,7 @@ function Socials() {
       <StyledSocialLink
         href="https://twitter.com/haydondo"
         target="_blank"
+        $colorScheme={colorScheme}
         $hoverColor="black"
       >
         <TwitterXLogo
