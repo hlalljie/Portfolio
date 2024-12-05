@@ -45,6 +45,10 @@ const StyledSocialLink = styled.a`
 
 /**
  * Socials: A component that renders a list of social media links as icons.
+ * @param {Object} props - The properties for the socials component.
+ * @param {string} props.colorScheme - The color scheme for the socials (light or dark).
+ * @param {string} props.size - The size of the social icons (height and width which are the same).
+ * @param {string} props.gap - The gap between the social icons.
  * @returns {JSX.Element}
  */
 function Socials({ colorScheme = 'light', size = '35px', gap = '10px' }) {
