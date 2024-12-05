@@ -34,6 +34,7 @@ const HeaderDiv = styled.div`
   .nav {
     font-size: 1.3rem;
     margin-left: auto;
+
     a {
       text-decoration: none;
       padding: 10px;
@@ -44,7 +45,7 @@ const HeaderDiv = styled.div`
     }
   }
   .socials {
-    margin-left: 15px;
+    margin-left: 17px;
   }
   .burgerMenu,
   .closeMenu {
@@ -123,7 +124,7 @@ function Header() {
         onClick={() => setMobileMenuOpen(false)}
       />
       <Nav className={mobileMenuOpen ? 'open' : 'closed'} onClick={closeMenu} />
-      <Socials colorScheme="dark" />
+      <Socials colorScheme="dark" size="27px" gap="15px" />
     </HeaderDiv>
   );
 }

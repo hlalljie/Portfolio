@@ -7,16 +7,19 @@ const StyledSocials = styled.div.attrs({ className: 'socials' })`
   box-sizing: border-box;
   font-family: ${(props) => props.theme.fonts.heading};
   display: flex;
-  gap: 10px;
+  gap: ${(props) => props.$gap};
   height: fit-content;
 `;
 
 const StyledSocialLink = styled.a`
+  flex-shrink: 0;
   display: block;
   margin: 0;
   min-height: 0;
   line-height: 0;
   .socialIcon {
+    height: ${(props) => props.$size};
+    width: ${(props) => props.$size};
     path {
       fill: ${(props) =>
         props.$colorScheme === 'light'
@@ -44,14 +47,15 @@ const StyledSocialLink = styled.a`
  * Socials: A component that renders a list of social media links as icons.
  * @returns {JSX.Element}
  */
-function Socials({ colorScheme = 'light' }) {
+function Socials({ colorScheme = 'light', size = '35px', gap = '10px' }) {
   return (
-    <StyledSocials>
+    <StyledSocials $gap={gap}>
       <StyledSocialLink
         href="https://github.com/hlalljie"
         target="_blank"
         $colorScheme={colorScheme}
         $hoverColor="#8241F9"
+        $size={size}
       >
         <GithubIcon className="socialIcon" aria-labelledby="GithubIconLabel" />
         <span id="GithubIconLabel" hidden>
@@ -63,6 +67,7 @@ function Socials({ colorScheme = 'light' }) {
         target="_blank"
         $colorScheme={colorScheme}
         $hoverColor="#0b65c2"
+        $size={size}
       >
         <LinkedInIcon
           className="socialIcon"
@@ -77,6 +82,7 @@ function Socials({ colorScheme = 'light' }) {
         target="_blank"
         $colorScheme={colorScheme}
         $hoverColor="black"
+        $size={size}
       >
         <TwitterXLogo
           className="socialIcon"
