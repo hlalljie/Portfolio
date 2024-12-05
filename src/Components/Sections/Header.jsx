@@ -79,7 +79,11 @@ const HeaderDiv = styled.div`
         }
       }
     }
+    .socials {
+      margin-left: auto;
+    }
     .burgerMenu {
+      margin-left: 40px;
       transform: scale(2.5);
       &.show {
         display: block;
@@ -114,6 +118,8 @@ function Header() {
   return (
     <HeaderDiv>
       <Branding />
+      <Nav className={mobileMenuOpen ? 'open' : 'closed'} onClick={closeMenu} />
+      <Socials colorScheme="dark" size="27px" gap="15px" />
       <BurgerMenu
         className={'burgerMenu ' + (mobileMenuOpen ? 'hide' : 'show')}
         onClick={() => setMobileMenuOpen(true)}
@@ -123,8 +129,6 @@ function Header() {
         className={'closeMenu ' + (mobileMenuOpen ? 'show' : 'hide')}
         onClick={() => setMobileMenuOpen(false)}
       />
-      <Nav className={mobileMenuOpen ? 'open' : 'closed'} onClick={closeMenu} />
-      <Socials colorScheme="dark" size="27px" gap="15px" />
     </HeaderDiv>
   );
 }
