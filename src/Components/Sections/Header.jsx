@@ -83,7 +83,7 @@ const HeaderDiv = styled.div`
       margin-left: auto;
     }
     .burgerMenu {
-      margin-left: 40px;
+      margin-left: 30px;
       transform: scale(2.5);
       &.show {
         display: block;
