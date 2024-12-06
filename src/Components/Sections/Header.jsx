@@ -46,8 +46,8 @@ const HeaderDiv = styled.div`
         transform: scale(2.5);
         /* Coloring */
         g path {
-          stroke: ${({ variant }) =>
-            variant === 'dark' ? theme.colors.black : theme.colors.white};
+          stroke: ${({ $variant }) =>
+            $variant === 'dark' ? theme.colors.black : theme.colors.white};
         }
         &.show {
           display: block;
