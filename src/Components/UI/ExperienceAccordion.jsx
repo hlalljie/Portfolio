@@ -1,11 +1,13 @@
-import { useState } from "react";
-import { styled } from "styled-components";
-import experienceItems from "../../data/ExperienceItems.jsx";
-import TagList from "./TagList.jsx";
+import { useState } from 'react';
+import { styled, css } from 'styled-components';
+import experienceItems from '../../data/ExperienceItems.jsx';
+import TagList from './TagList.jsx';
 
 const StyledExperienceAccordion = styled.div`
-  box-shadow: 0px 0 120px 120px ${(props) => props.theme.colors.fog};
-  background-color: ${(props) => props.theme.colors.fog};
+  ${({ theme }) => css`
+    box-shadow: 0px 0 120px 120px ${theme.withOpacity(theme.colors.fog, 0.4)};
+    background-color: ${theme.withOpacity(theme.colors.fog, 0.4)};
+  `}
 `;
 
 /**
