@@ -1,60 +1,65 @@
 // PortfolioFrontend/src/pages/HomeSections/HeroBanner.jsx
-import ThemedSection from "../../Components/Sections/ThemedSection";
-import { css } from "styled-components";
-import { tablet } from "../../styles/mediaQueries";
-import { fadeIn, comeFromLeft } from "../../styles/animations";
+import ThemedSection from '../../Components/Sections/ThemedSection';
+import { css } from 'styled-components';
+import { tablet } from '../../styles/mediaQueries';
+import { fadeIn, comeFromLeft } from '../../styles/animations';
 
 const heroBannerStyles = css`
-  padding: ${(props) => props.theme.padding.largeSection};
-
-  .bannerContent {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    min-height: calc(100vh - 40px);
-
-    .textContainer {
-      background-color: ${(props) => props.theme.colors.fog};
-      width: 50%;
-      box-shadow: 0px 0 120px 120px ${(props) => props.theme.colors.fog};
-      animation: ${comeFromLeft} 2s, ${fadeIn} 2.5s ease-in-out forwards;
-      padding: 10px 0;
-      > h1 {
-        color: ${(props) => props.theme.colors.dark};
-      }
-      .subHeadingWrapper {
-        display: flex;
-        justify-content: left;
-        column-gap: 30px;
-        > h3 {
-          margin: 0 0 0 0;
-          color: ${(props) => props.theme.colors.darkAccent};
-        }
-      }
-    }
-  }
-  ${tablet(css`
-    padding: 55px 7%;
-    &.largeSection {
-      min-height: 0;
-    }
+  ${({ theme }) => css`
+    padding: ${theme.padding.largeSection};
 
     .bannerContent {
-      min-height: 0;
-      .textContainer {
-        width: 100%;
-        .subHeadingWrapper {
-          text-align: center;
-          column-gap: 15px;
-          flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      min-height: calc(100vh - 40px);
 
-          .tree {
-            display: none;
+      .textContainer {
+        background-color: ${theme.colors.fog};
+        width: 50%;
+        box-shadow: 0px 0 120px 120px ${theme.colors.fog};
+        animation: ${comeFromLeft} 2s, ${fadeIn} 2.5s ease-in-out forwards;
+        padding: 10px 0;
+        > h1 {
+          color: ${theme.colors.dark};
+        }
+        .subHeadingWrapper {
+          display: flex;
+          justify-content: left;
+          column-gap: 30px;
+          > h3 {
+            margin: 0 0 0 0;
+            color: ${theme.colors.darkAccent};
           }
         }
       }
     }
-  `)}
+    ${tablet(css`
+      padding: 55px 7%;
+      &.largeSection {
+        min-height: 0;
+      }
+
+      .bannerContent {
+        min-height: 0;
+        .textContainer {
+          width: 100%;
+          background-color: ${theme.withOpacity(theme.colors.fog, 0.4)};
+          box-shadow: 0px 0 120px 120px
+            ${theme.withOpacity(theme.colors.fog, 0.4)};
+          .subHeadingWrapper {
+            text-align: center;
+            column-gap: 15px;
+            flex-wrap: wrap;
+
+            .tree {
+              display: none;
+            }
+          }
+        }
+      }
+    `)}
+  `}
 `;
 
 /**
@@ -70,7 +75,7 @@ function HeroBanner() {
             <h1>Hi, I'm Hayden</h1>
             <div className="subHeadingWrapper">
               <h3>
-                {" "}
+                {' '}
                 Developer<span className="mobileOnly">,</span>
               </h3>
               <h3 className="tree">↟</h3>

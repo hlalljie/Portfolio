@@ -1,37 +1,41 @@
 /* Libraries */
-import { useMediaQuery } from "react-responsive";
-import { css, styled } from "styled-components";
+import { useMediaQuery } from 'react-responsive';
+import { css, styled } from 'styled-components';
 /* Components */
-import ThemedSection from "../../Components/Sections/ThemedSection";
-import ExperienceSelector from "../../Components/UI/ExperienceSelector";
-import ExperienceAccordion from "../../Components/UI/ExperienceAccordion";
+import ThemedSection from '../../Components/Sections/ThemedSection';
+import ExperienceSelector from '../../Components/UI/ExperienceSelector';
+import ExperienceAccordion from '../../Components/UI/ExperienceAccordion';
 /* Styles */
-import { tablet, breakpoints } from "../../styles/mediaQueries";
-import { fadeIn } from "../../styles/animations";
+import { tablet, breakpoints } from '../../styles/mediaQueries';
+import { fadeIn } from '../../styles/animations';
 
 const homeExperienceStyles = css`
-  padding: ${(props) => props.theme.padding.largeSection};
-  .sectionTitle {
-    text-align: center;
-    margin: 0;
-    color: ${(props) => props.theme.colors.darkAccent};
-  }
-  ${tablet(css`
+  ${({ theme }) => css`
+    padding: ${theme.padding.largeSection};
     .sectionTitle {
-      text-align: left;
-      color: ${(props) => props.theme.colors.black};
+      text-align: center;
+      margin: 0;
+      color: ${theme.colors.darkAccent};
     }
-  `)}// mobile
+    /* Tablet and smaller */
+    ${tablet(css`
+      .sectionTitle {
+        text-align: left;
+        color: ${theme.colors.black};
+      }
+    `)}
+  `}
 `;
 
 const AnimatedHomeExperience = styled.div`
-  opacity: ${(props) => (props.$inView ? 1 : 0)};
-  animation: ${(props) =>
-    props.$inView
+  ${({ $inView }) => css`
+    opacity: ${$inView ? 1 : 0};
+    animation: ${$inView
       ? css`
           ${fadeIn} 1s ease-in-out
         `
-      : "none"};
+      : 'none'};
+  `}
 `;
 
 /**
@@ -40,7 +44,7 @@ const AnimatedHomeExperience = styled.div`
  */
 function HomeExperience() {
   const isTablet = useMediaQuery({
-    query: "(max-width: " + breakpoints.tablet + "px)",
+    query: '(max-width: ' + breakpoints.tablet + 'px)',
   });
   return (
     <ThemedSection
