@@ -1,14 +1,38 @@
-import styled from 'styled-components';
+import { styled, css, useTheme } from 'styled-components';
 
-import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { tablet } from '@/styles/mediaQueries';
 import PortfolioItems from '../../data/PortfolioItems.jsx';
 import Header from '@/Components/Sections/Header';
+import ResponsiveImage from '@/Components/UI/ResponsiveImage.jsx';
 
 const StyledCaseStudyTemplateBasic = styled.div`
-  background-color: ${(props) => props.bgColor};
-  color: ${(props) => props.theme.colors.white};
-  height: 100vh;
+  ${({ theme }) => css`
+    background-color: ${({ $bgcolor }) => $bgcolor};
+    color: ${theme.colors.white};
+    min-height: 100vh;
+    height: fit-content;
+    .caseStudyContent {
+      padding-block: 1vw;
+      padding-inline: ${theme.padding.largeSection};
+      .heroImage {
+        width: 100%;
+        aspect-ratio: 16/7;
+        object-fit: cover;
+        object-position: center 50%;
+        border-radius: 10px;
+        margin-block: 2vw;
+      }
+      p {
+        white-space: pre-line;
+      }
+    }
+    ${tablet(css`
+      .caseStudyContent .heroImage {
+        aspect-ratio: 16/9;
+      }
+    `)}
+  `}
 `;
 /**
  * A Basic Case Study Layout including a summary and image
@@ -16,16 +40,27 @@ const StyledCaseStudyTemplateBasic = styled.div`
  */
 const CaseStudyTemplateBasic = () => {
   const { caseStudyId } = useParams();
-  const project = PortfolioItems.Projects[caseStudyId];
+  const theme = useTheme();
 
-  useEffect(() => {
-    console.log('Case study ID:', caseStudyId);
-  }, [caseStudyId]);
+  // TODO : Add 404 link for invalid links
+  const project = PortfolioItems.Projects[caseStudyId];
+  console.log(project);
+
   return (
-    <StyledCaseStudyTemplateBasic bgColor={project.backgroundColor}>
+    <StyledCaseStudyTemplateBasic
+      $bgcolor={
+        Object.hasOwn(project, 'backgroundColor')
+          ? project.backgroundColor
+          : theme.colors.black
+      }
+    >
       <Header variant={'light'} overlapTopSection={false} />
-      <h1>{project.title}</h1>
-      <p>{project.summary}</p>
+      <section className="caseStudyContent">
+        <ResponsiveImage className="heroImage" imageData={project.image} />
+
+        <h1>{project.title}</h1>
+        <p>{project.summary}</p>
+      </section>
     </StyledCaseStudyTemplateBasic>
   );
 };

@@ -38,38 +38,13 @@ const HeaderDiv = styled.div`
     }
     ${tablet(css`
       position: relative;
-      .nav.closed {
-        display: none;
-      }
-      .nav.open {
-        position: fixed;
-        z-index: 10;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: ${theme.colors.white};
-        .navItem {
-          margin: 10px 0;
-          a {
-            font-size: 2.5rem;
-            color: ${theme.colors.darkAccent};
-          }
-          &:hover a {
-            color: ${theme.colors.dark};
-          }
-        }
-      }
       .socials {
         margin-left: auto;
       }
       .burgerMenu {
         margin-left: 30px;
         transform: scale(2.5);
+        /* Coloring */
         g path {
           stroke: ${({ variant }) =>
             variant === 'dark' ? theme.colors.black : theme.colors.white};

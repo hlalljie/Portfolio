@@ -1,6 +1,7 @@
 import { HashLink as Link } from 'react-router-hash-link';
 
 import { styled, css } from 'styled-components';
+import { tablet } from '../../styles/mediaQueries';
 
 const StyledNav = styled.div`
   ${({ theme, $variant }) => css`
@@ -19,6 +20,36 @@ const StyledNav = styled.div`
         ? theme.colors.darkAccent
         : theme.colors.fog};
     }
+
+    /* Tablet and smaller */
+    ${tablet(css`
+      &.closed {
+        display: none;
+      }
+      &.open {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: ${theme.colors.white};
+        .navItem {
+          margin: 10px 0;
+          a {
+            font-size: 2.5rem;
+            color: ${theme.colors.darkAccent};
+          }
+          &:hover a {
+            color: ${theme.colors.dark};
+          }
+        }
+      }
+    `)}
   `}
 `;
 

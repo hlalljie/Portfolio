@@ -1,9 +1,10 @@
 // src/Components/UI/ProjectList.jsx
 import { Link } from 'react-router-dom';
-import PortfolioItems from '../../data/PortfolioItems';
 import { styled, css } from 'styled-components';
 import { tablet } from '../../styles/mediaQueries';
 import TagList from './TagList';
+import PortfolioItems from '../../data/PortfolioItems';
+import ResponsiveImage from './ResponsiveImage';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 
@@ -111,13 +112,7 @@ const ProjectCard = ({ data, projectId }) => (
     className="projectCard"
   >
     <div className="imgContainer">
-      <img
-        src={`${data.image.path}${data.image.name}600w${data.image.extension}`}
-        srcSet={`${data.image.path}${data.image.name}600w${data.image.extension} 600w, ${data.image.path}${data.image.name}1200w${data.image.extension} 1200w`}
-        sizes="(max-width: 768px) 86vw, 27vw"
-        alt={data.image.alt}
-        loading="lazy"
-      />
+      <ResponsiveImage imageData={data.image} />
     </div>
     <div className="textContainer">
       <h3 className="projectTitle">{data.title}</h3>
