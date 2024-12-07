@@ -112,7 +112,10 @@ const ProjectCard = ({ data, projectId }) => (
     className="projectCard"
   >
     <div className="imgContainer">
-      <ResponsiveImage imageData={data.image} />
+      <ResponsiveImage
+        imageData={data.image}
+        sizes="(max-width: 768px) 86vw, 27vw"
+      />
     </div>
     <div className="textContainer">
       <h3 className="projectTitle">{data.title}</h3>
