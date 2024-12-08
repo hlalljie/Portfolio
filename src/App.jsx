@@ -11,6 +11,7 @@ import CaseStudyTemplateBasic from './pages/CaseStudies/CaseStudyTemplateBasic';
 
 // Page Imports
 import Home from './pages/Home';
+import ErrorPage from './pages/ErrorPage';
 // import About from "./pages/About";
 // import Portfolio from "./pages/Portfolio";
 
@@ -18,14 +19,17 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
+    errorElement: <ErrorPage />,
   },
   {
     path: '/home',
     element: <Home />,
+    errorElement: <ErrorPage />,
   },
   {
     path: '/case-studies/:caseStudyId',
     element: <CaseStudyTemplateBasic />,
+    errorElement: <ErrorPage />,
   },
   // {
   //   path: 'caseStudies/:caseStudyId',

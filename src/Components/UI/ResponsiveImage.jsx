@@ -32,6 +32,11 @@ const ResponsiveImage = ({ imageData, className = '', sizes = '100vw' }) => {
   );
 };
 
+/**
+ * Creates a set of sources for the image
+ * @param {Object} imageData data for the image object
+ * @returns {Object} Object containing srcSet and src strings
+ */
 const generateSources = async (imageData) => {
   const srcSizes = ['600w', '1200w', '2400w'];
   const srcLookup = {

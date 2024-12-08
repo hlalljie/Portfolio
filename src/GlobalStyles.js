@@ -1,7 +1,7 @@
 // PortfolioFrontend/src/GlobalStyles.js
-import { createGlobalStyle } from "styled-components";
-import { mobile } from "./styles/mediaQueries";
-import { css } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
+import { mobile } from './styles/mediaQueries';
+import { css } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     html{
@@ -46,9 +46,7 @@ const GlobalStyle = createGlobalStyle`
         border-width: 2px;
         border-style: solid;
     }
-    a:visited{
-        color: inherit;
-    }
+
     p, li, a{
         font-family: ${(props) => props.theme.fonts.paragraph};
         font-size: 1.6rem;
