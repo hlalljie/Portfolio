@@ -15,6 +15,10 @@ const StyledErrorPage = styled.div`
   }
 `;
 
+/**
+ *  ErrorPage: An Error/404 Page
+ * @returns {JSX.Element}
+ */
 function ErrorPage() {
   return (
     <StyledErrorPage>

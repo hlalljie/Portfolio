@@ -6,11 +6,11 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Analytics } from '@vercel/analytics/react';
 
 import GlobalStyle from './GlobalStyles';
-// import CaseStudyTemplate from './pages/CaseStudies/CaseStudyTemplate';
-import CaseStudyTemplateBasic from './pages/CaseStudies/CaseStudyTemplateBasic';
 
 // Page Imports
 import Home from './pages/Home';
+import CaseStudies from './pages/CaseStudies/CaseStudies';
+import CaseStudyTemplateBasic from './pages/CaseStudies/CaseStudyTemplateBasic';
 import ErrorPage from './pages/ErrorPage';
 // import About from "./pages/About";
 // import Portfolio from "./pages/Portfolio";
@@ -27,14 +27,15 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
+    path: '/case-studies',
+    element: <CaseStudies />,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: '/case-studies/:caseStudyId',
     element: <CaseStudyTemplateBasic />,
     errorElement: <ErrorPage />,
   },
-  // {
-  //   path: 'caseStudies/:caseStudyId',
-  //   element: <CaseStudyTemplate />,
-  // },
 ]);
 
 /**

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { styled, css } from 'styled-components';
-import experienceItems from '../../data/ExperienceItems.jsx';
+import experienceItems from '@/data/ExperienceItems.jsx';
 import TagList from './TagList.jsx';
 
 const StyledExperienceSelectorStyles = styled.div``;
@@ -170,11 +170,6 @@ const StyledExperienceBlockStyles = styled.div`
         }
         .technologies {
           justify-content: right;
-
-          li {
-            border-color: ${theme.colors.darkAccent};
-            color: ${theme.colors.darkAccent};
-          }
         }
       }
       .description {
@@ -215,7 +210,12 @@ function ExperienceBlock({ company, titles, technologies, description }) {
               </div>
             ))}
           </span>
-          <TagList tags={technologies} className="technologies" />
+          <TagList
+            tags={technologies}
+            className="technologies"
+            color="darkAccent"
+            filled={false}
+          />
           {/* <ul className="technologies">
             {technologies.map((tech, index) => (
               <li className="technologyItem" key={index}>
