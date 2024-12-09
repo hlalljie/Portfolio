@@ -26,3 +26,5 @@ dist-ssr
 src/assets/.DS_Store
 tinified/.DS_Store
 src/.DS_Store
+
+*/.DS_Store
