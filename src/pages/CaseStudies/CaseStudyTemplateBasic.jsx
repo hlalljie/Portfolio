@@ -1,5 +1,4 @@
 import { styled, css, useTheme } from 'styled-components';
-
 import { useParams } from 'react-router-dom';
 import { tablet } from '@/styles/mediaQueries';
 import PortfolioItems from '../../data/PortfolioItems.jsx';
@@ -19,7 +18,7 @@ const StyledCaseStudyTemplateBasic = styled.div`
         width: 100%;
         aspect-ratio: 16/7;
         object-fit: cover;
-        object-position: center 50%;
+        object-position: ${({ $position }) => $position};
         border-radius: 10px;
         margin-block: 2vw;
       }
@@ -44,7 +43,6 @@ const CaseStudyTemplateBasic = () => {
 
   // TODO : Add 404 link for invalid links
   const project = PortfolioItems.Projects[caseStudyId];
-  console.log(project);
 
   return (
     <StyledCaseStudyTemplateBasic
@@ -53,13 +51,13 @@ const CaseStudyTemplateBasic = () => {
           ? project.backgroundColor
           : theme.colors.black
       }
+      $position={project.image.position || 'center center'}
     >
       <Header variant={'light'} overlapTopSection={false} />
       <section className="caseStudyContent">
         <ResponsiveImage className="heroImage" imageData={project.image} />
-
         <h1>{project.title}</h1>
-        <p>{project.summary}</p>
+        <p>{project.summary || project.excerpt}</p>
       </section>
     </StyledCaseStudyTemplateBasic>
   );

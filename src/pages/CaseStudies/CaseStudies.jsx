@@ -23,7 +23,7 @@ const StyledCaseStudies = styled.div`
       filter: grayscale(100%) contrast(100%) brightness(0.15);
       mix-blend-mode: multiply;
       background-color: ${theme.colors.black};
-      background-image: url('public/images/heroBanner2400w.jpeg');
+      background-image: url('/images/heroBanner2400w.jpeg');
       background-size: cover;
     }
     .projectList {
