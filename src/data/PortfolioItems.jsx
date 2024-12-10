@@ -93,6 +93,23 @@ const PortfolioItems = {
       summary: ``,
       backgroundColor: '#0d2232',
     },
+    'bat-ti': {
+      title: 'BA-TTI',
+      excerpt:
+        'A  rebranding and website refresh to better guide students and better market the brand for the Bay Area Teacher Training Institute.',
+      image: {
+        path: '/images/',
+        name: 'battiThumbnail',
+        extension: '.jpg',
+        alt: 'A screenshot of the BA-TTI website',
+      },
+      company: 'Nav Creative',
+      url: 'https://www.ba-tti.org/',
+      roles: ['Project Manager', 'Designer'],
+      years: '2022',
+      technologies: ['Squarespace', 'Less', 'Javascript'],
+      summary: ``,
+    },
     Test: {
       title: 'Test',
       excerpt: 'Lorem Ipsum Dolor Amet',

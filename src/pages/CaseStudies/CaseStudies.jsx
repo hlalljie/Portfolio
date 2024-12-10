@@ -20,7 +20,7 @@ const StyledCaseStudies = styled.div`
       /* background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
         linear-gradient(${theme.colors.black}, ${theme.colors.black}),
         url('/images//heroBanner2400w.jpeg'); */
-      filter: grayscale(100%) contrast(100%) brightness(0.15);
+      filter: grayscale(100%) contrast(120%) brightness(0.3);
       mix-blend-mode: multiply;
       background-color: ${theme.colors.black};
       background-image: url('/images/heroBanner2400w.jpeg');
