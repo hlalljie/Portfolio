@@ -21,6 +21,9 @@ const StyledProjectList = styled.div`
     width: ${({ $cols, $gap }) =>
       `calc((100% - ${$gap * ($cols - 1)}px) / ${$cols})`};
   }
+  .projectFiller {
+    height: 0px;
+  }
   ${tablet(css`
     .projectCard {
       width: 100%;
@@ -35,6 +38,8 @@ const StyledProjectList = styled.div`
  * @param {number} props.cols - Number of columns for project grid
  * @param {number} props.gap - Gap between project cards
  * @param {string} props.variant - Color variant for project cards
+ * @param {boolean} props.hideLinks - Whether to hide project links
+ * @param {boolean} props.hideExcerpt - Whether to hide project excerpts
  * @returns {JSX.Element}
  */
 const ProjectList = ({
@@ -42,6 +47,8 @@ const ProjectList = ({
   cols = 3,
   gap = 55,
   variant = 'light',
+  hideLinks = false,
+  hideExcerpt = false,
 }) => {
   const projects = featured
     ? PortfolioItems.Featured
@@ -49,6 +56,7 @@ const ProjectList = ({
 
   return (
     <StyledProjectList className="projectList" $cols={cols} $gap={gap}>
+      {/* Show list of projects from data */}
       {projects.map((projectId) => {
         const { excerpt, image, draft, ...projectData } =
           PortfolioItems.Projects[projectId];
@@ -59,9 +67,15 @@ const ProjectList = ({
             data={{ ...projectData, image, excerpt }}
             projectId={projectId}
             variant={variant}
+            hideLinks={hideLinks}
+            hideExcerpt={hideExcerpt}
           />
         );
       })}
+      {/* Add filler spaces after to push unfull rows to the left */}
+      {[...Array(3)].map((id) => (
+        <div className="projectFiller" key={id}></div>
+      ))}
     </StyledProjectList>
   );
 };
@@ -111,7 +125,6 @@ const StyledProjectCard = styled(Link)`
     }
   `}
 `;
-
 /**
  * ProjectCard: Component to display an individual project card.
  * @param {Object} props
@@ -126,8 +139,8 @@ const ProjectCard = ({
   data,
   projectId,
   variant = 'light',
-  hideExcerpt = true,
-  hideLinks = true,
+  hideExcerpt = false,
+  hideLinks = false,
 }) => (
   <StyledProjectCard
     to={{
