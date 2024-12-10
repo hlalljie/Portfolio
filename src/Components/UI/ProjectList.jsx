@@ -1,5 +1,4 @@
 // src/Components/UI/ProjectList.jsx
-import { Link } from 'react-router-dom';
 import { styled, css } from 'styled-components';
 import { tablet } from '../../styles/mediaQueries';
 import TagList from './TagList';
@@ -80,13 +79,14 @@ const ProjectList = ({
   );
 };
 
-const StyledProjectCard = styled(Link)`
+const StyledProjectCard = styled('div')`
   ${({ theme, $variant }) => css`
     text-decoration: none;
     color: ${$variant === 'light' ? theme.colors.white : theme.colors.black};
     display: block;
 
     .imgContainer {
+      display: block;
       width: 100%;
       border-radius: 10px;
       padding-top: 80%;
@@ -137,59 +137,59 @@ const StyledProjectCard = styled(Link)`
  */
 const ProjectCard = ({
   data,
-  projectId,
   variant = 'light',
   hideExcerpt = false,
   hideLinks = false,
-}) => (
-  <StyledProjectCard
-    to={{
-      pathname: `/caseStudies/${projectId}`,
-      state: { ...data },
-    }}
-    className="projectCard"
-    $variant={variant}
-  >
-    <div className="imgContainer">
-      <ResponsiveImage
-        imageData={data.image}
-        sizes="(max-width: 768px) 86vw, 27vw"
-      />
-    </div>
-    <div className="textContainer">
-      <h3 className="projectTitle">{data.title}</h3>
-      {!hideExcerpt && <p className="projectExcerpt smallP">{data.excerpt}</p>}
-    </div>
-    <TagList
-      tags={data.technologies}
-      className="technologies"
-      color={variant === 'light' ? 'white' : 'black'}
-      filled={variant === 'light' ? true : false}
-    />
-    {hideLinks === false && (
-      <div className="linkContainer">
-        {data.url && (
-          <a
-            href={data.url}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="View Live Website"
-          >
-            <LaunchIcon aria-hidden="true" />
-          </a>
-        )}
-        {data.github && (
-          <a
-            href={data.github}
-            target="_blank"
-            aria-label="View Project Github"
-          >
-            <GitHubIcon aria-hidden="true" />
-          </a>
+  projectId,
+}) => {
+  let caseStudyLink = `/case-studies/${projectId}`;
+  return (
+    <StyledProjectCard className="projectCard" $variant={variant}>
+      <a className="imgContainer" href={caseStudyLink}>
+        <ResponsiveImage
+          imageData={data.image}
+          sizes="(max-width: 768px) 86vw, 27vw"
+        />
+      </a>
+      <div className="textContainer">
+        <a href={caseStudyLink}>
+          <h3 className="projectTitle">{data.title}</h3>
+        </a>
+        {!hideExcerpt && (
+          <p className="projectExcerpt smallP">{data.excerpt}</p>
         )}
       </div>
-    )}
-  </StyledProjectCard>
-);
+      <TagList
+        tags={data.technologies}
+        className="technologies"
+        color={variant === 'light' ? 'white' : 'black'}
+        filled={variant === 'light' ? true : false}
+      />
+      {hideLinks === false && (
+        <div className="linkContainer">
+          {data.url && (
+            <a
+              href={data.url}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="View Live Website"
+            >
+              <LaunchIcon aria-hidden="true" />
+            </a>
+          )}
+          {data.github && (
+            <a
+              href={data.github}
+              target="_blank"
+              aria-label="View Project Github"
+            >
+              <GitHubIcon aria-hidden="true" />
+            </a>
+          )}
+        </div>
+      )}
+    </StyledProjectCard>
+  );
+};
 
 export default ProjectList;
