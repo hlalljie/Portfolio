@@ -91,7 +91,7 @@ const PortfolioItems = {
       years: '2022',
       technologies: ['Squarespace', 'Less', 'Javascript', 'Memberspace'],
       summary: ``,
-      backgroundColor: '#04243b',
+      backgroundColor: '#0d2232',
     },
     Test: {
       title: 'Test',
