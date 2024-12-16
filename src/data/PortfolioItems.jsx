@@ -96,7 +96,7 @@ const PortfolioItems = {
     'bat-ti': {
       title: 'BA-TTI',
       excerpt:
-        'A  rebranding and website refresh to better guide students and better market the brand for the Bay Area Teacher Training Institute.',
+        'A rebranding and website refresh to better guide students and better market the brand for the Bay Area Teacher Training Institute.',
       image: {
         path: '/images/',
         name: 'battiThumbnail',
@@ -110,6 +110,26 @@ const PortfolioItems = {
       technologies: ['Squarespace', 'Less', 'Javascript'],
       summary: ``,
     },
+    travelGurus: {
+      title: 'Travel Gurus',
+      excerpt:
+        'Travel Gurus reached out for their first website looking to inspire their customers to travel to new places.',
+      image: {
+        path: '/images/',
+        name: 'travelGurusThumbnail',
+        extension: '.jpg',
+        alt: 'Screenshot of the Travel Gurus website',
+        position: 'center top',
+      },
+      company: 'Nav Creative',
+      url: 'https://www.travelgurusgroup.com/',
+      roles: ['Project Manager', 'Developer'],
+      years: '2022',
+      technologies: ['Squarespace', 'Javascript', 'Less'],
+      summary: ``,
+      backgroundColor: '#060e1c',
+      draft: false,
+    },
     Test: {
       title: 'Test',
       excerpt: 'Lorem Ipsum Dolor Amet',
@@ -118,6 +138,7 @@ const PortfolioItems = {
         name: 'Test',
         extension: '.jpg',
         alt: 'Test alt text',
+        position: 'center top',
       },
       company: 'Test Company',
       url: 'testurl.com',

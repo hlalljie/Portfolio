@@ -38,7 +38,7 @@ const ResponsiveImage = ({ imageData, className = '', sizes = '100vw' }) => {
  * @returns {Object} Object containing srcSet and src strings
  */
 const generateSources = async (imageData) => {
-  const srcSizes = ['600w', '1200w', '1920w', '2400w'];
+  const srcSizes = ['600w', '1200w', '1900w', '1920w', '2400w'];
   const srcLookup = {
     srcSet: '',
     src: null,
