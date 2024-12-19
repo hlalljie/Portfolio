@@ -40,6 +40,7 @@ const homeAboutStyles = css`
       .imgContainer {
         width: 100%;
         padding-top: 0;
+        padding-bottom: 20px;
 
         img {
           position: relative;
