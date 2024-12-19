@@ -130,6 +130,26 @@ const PortfolioItems = {
       backgroundColor: '#060e1c',
       draft: false,
     },
+    nextAdventure: {
+      title: 'Next Adventure',
+      excerpt:
+        'Next Adventure was looking to stun visitor with visuals of safari wildlife while crafting a unique user experience based on how long until planned journey.',
+      image: {
+        path: '/images/',
+        name: 'nextAdventureThumbnail',
+        extension: '.jpg',
+        alt: 'A screenshot of the Next Adventure homepage',
+        position: 'center top',
+      },
+      company: 'Nav Creative',
+      url: 'nextadventure.com',
+      roles: ['Project Manager', 'Designer'],
+      years: '2022',
+      technologies: ['Squarespace', 'Javascript', 'Less'],
+      summary: ``,
+      backgroundColor: '#434d3f',
+      draft: false,
+    },
     Test: {
       title: 'Test',
       excerpt: 'Lorem Ipsum Dolor Amet',
