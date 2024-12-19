@@ -1,10 +1,10 @@
 /* Libraries */
-import { styled, css } from "styled-components";
+import { styled, css } from 'styled-components';
 /* Components */
-import ThemedSection from "../../Components/Sections/ThemedSection";
+import ThemedSection from '../../Components/Sections/ThemedSection';
 /* Styles */
-import { breakpoints, tablet } from "../../styles/mediaQueries";
-import { fadeIn } from "../../styles/animations";
+import { breakpoints, tablet } from '../../styles/mediaQueries';
+import { fadeIn } from '../../styles/animations';
 
 const homeAboutStyles = css`
   .aboutContent {
@@ -39,6 +39,7 @@ const homeAboutStyles = css`
       flex-direction: column;
       .imgContainer {
         width: 100%;
+        padding-top: 0;
 
         img {
           position: relative;
@@ -59,7 +60,7 @@ const AnimatedHomeAbout = styled.div`
       ? css`
           ${fadeIn} 1s ease-in-out forwards
         `
-      : "none"};
+      : 'none'};
 `;
 
 /**
@@ -81,7 +82,7 @@ function HomeAbout() {
               <img
                 src="/images/Portrait600w.jpg"
                 srcSet="/images/Portrait600w.jpg 600w, /images/Portrait1200w.jpg 1200w"
-                sizes={"(max-width: " + breakpoints.tablet + "px) 86vw, 43vw"}
+                sizes={'(max-width: ' + breakpoints.tablet + 'px) 86vw, 43vw'}
                 alt="Portrait of Hayden Lalljie"
                 loading="lazy"
               />
