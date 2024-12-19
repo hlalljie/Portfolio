@@ -1,5 +1,6 @@
 /* Libraries */
 import { styled, css } from 'styled-components';
+import { HashLink as Link } from 'react-router-hash-link';
 
 /* Components */
 import ThemedSection from '../../Components/Sections/ThemedSection';
@@ -19,13 +20,37 @@ const homeFeaturedProjectsStyles = css`
       ${theme.withOpacity(theme.colors.black, 0.8)} 40%,
       ${theme.withOpacity(theme.colors.black, 1)} 90%
     );
+    .titleRowWrapper {
+      display: flex;
+      margin-bottom: 50px;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
     .sectionTitle {
+      margin-bottom: 0;
       width: fit-content;
       color: ${theme.colors.black};
-      padding-bottom: 20px;
       background-color: ${theme.colors.fog};
       box-shadow: 0px 0 120px 120px ${theme.colors.fog};
     }
+
+    button {
+      height: fit-content;
+      border-color: transparent;
+      background-color: ${theme.colors.white};
+      padding: 0 1rem;
+      a {
+        font-size: 1.4rem;
+        color: ${theme.colors.darkAccent};
+      }
+    }
+    button:hover {
+      background-color: ${theme.colors.darkAccent};
+      a {
+        color: ${theme.colors.white};
+      }
+    }
+
     .projectCard {
       &:hover {
         background-color: ${theme.withOpacity(theme.colors.black, 0.1)};
@@ -43,10 +68,21 @@ const homeFeaturedProjectsStyles = css`
         transition: filter 0.3s ease-in;
       }
     }
+
+    .mobileButtonContainer {
+      display: flex;
+      justify-content: center;
+    }
+
     ${mobile(css`
-      .sectionTitle {
-        background-color: transparent;
-        box-shadow: none;
+      .titleRowWrapper {
+        .sectionTitle {
+          background-color: transparent;
+          box-shadow: none;
+        }
+        button {
+          display: none;
+        }
       }
       .projectCard {
         background-color: transparent;
@@ -83,8 +119,18 @@ function HomeFeaturedProjects() {
     >
       {(inView) => (
         <AnimatedHomeFeaturedProjects $inView={inView}>
-          <h2 className="sectionTitle">Featured Projects</h2>
+          <div className="titleRowWrapper">
+            <h2 className="sectionTitle">Featured Projects</h2>
+            <button className="desktopOnly">
+              <Link to="/case-studies">All Projects</Link>
+            </button>
+          </div>
           <ProjectList featured />
+          <div className="mobileButtonContainer mobileTabletOnly">
+            <button>
+              <Link to="/case-studies">All Projects</Link>
+            </button>
+          </div>
         </AnimatedHomeFeaturedProjects>
       )}
     </ThemedSection>

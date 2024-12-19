@@ -1,6 +1,6 @@
 // PortfolioFrontend/src/GlobalStyles.js
 import { createGlobalStyle } from 'styled-components';
-import { mobile } from './styles/mediaQueries';
+import { mobile, tablet } from './styles/mediaQueries';
 import { css } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -75,15 +75,32 @@ const GlobalStyle = createGlobalStyle`
     .tree {
         font-weight: 100;
     }
-    .mobileOnly{
+    .desktopOnly, .desktopTabletOnly{
+        display: initial;
+    }
+    .mobileOnly, .tabletOnly, .mobileTabletOnly{
         display: none;
     }
-    ${mobile(css`
-      .mobileOnly {
+    ${tablet(css`
+      .desktopOnly {
+        display: none;
+      }
+      .tabletOnly {
+        display: initial;
+      }
+      .mobileTabletOnly {
         display: initial;
       }
       .largeSection {
         min-height: 0;
+      }
+    `)}
+    ${mobile(css`
+      .mobileOnly {
+        display: initial;
+      }
+      .desktopTabletOnly {
+        display: none;
       }
     `)}
     
