@@ -76,20 +76,18 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 100;
     }
     .desktopOnly, .desktopTabletOnly{
-        display: initial;
+        display: initial !important;
     }
     .mobileOnly, .tabletOnly, .mobileTabletOnly{
-        display: none;
+        display: none !important;
     }
     ${tablet(css`
       .desktopOnly {
-        display: none;
+        display: none !important;
       }
-      .tabletOnly {
-        display: initial;
-      }
+      .tabletOnly,
       .mobileTabletOnly {
-        display: initial;
+        display: initial !important;
       }
       .largeSection {
         min-height: 0;
@@ -97,10 +95,11 @@ const GlobalStyle = createGlobalStyle`
     `)}
     ${mobile(css`
       .mobileOnly {
-        display: initial;
+        display: initial !important;
       }
-      .desktopTabletOnly {
-        display: none;
+      .desktopTabletOnly,
+      .tabletOnly {
+        display: none !important;
       }
     `)}
     
