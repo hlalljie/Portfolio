@@ -40,7 +40,7 @@ function CaseStudies() {
   return (
     <StyledCaseStudies>
       <Header variant={'light'} overlapTopSection={false} />
-      <ProjectList cols={4} gap={35} variant={'light'} hideLinks hideExcerpt />
+      <ProjectList cols={4} gap={35} variant={'light'} hideLink />
     </StyledCaseStudies>
   );
 }
