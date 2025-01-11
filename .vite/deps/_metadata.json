@@ -1,0 +1,97 @@
+{
+  "hash": "86803452",
+  "configHash": "3e1d9789",
+  "lockfileHash": "f7097a47",
+  "browserHash": "855b53e3",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "332c3ff2",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "25455ee9",
+      "needsInterop": true
+    },
+    "styled-components": {
+      "src": "../../node_modules/styled-components/dist/styled-components.browser.esm.js",
+      "file": "styled-components.js",
+      "fileHash": "22fb984f",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "1aa93f8f",
+      "needsInterop": false
+    },
+    "react-helmet-async": {
+      "src": "../../node_modules/react-helmet-async/lib/index.esm.js",
+      "file": "react-helmet-async.js",
+      "fileHash": "06df6e9e",
+      "needsInterop": false
+    },
+    "@vercel/analytics/react": {
+      "src": "../../node_modules/@vercel/analytics/dist/react/index.mjs",
+      "file": "@vercel_analytics_react.js",
+      "fileHash": "38301a8a",
+      "needsInterop": false
+    },
+    "react-responsive": {
+      "src": "../../node_modules/react-responsive/dist/esm/index.js",
+      "file": "react-responsive.js",
+      "fileHash": "c84f48db",
+      "needsInterop": false
+    },
+    "react-intersection-observer": {
+      "src": "../../node_modules/react-intersection-observer/index.mjs",
+      "file": "react-intersection-observer.js",
+      "fileHash": "3fbc7938",
+      "needsInterop": false
+    },
+    "react-router-hash-link": {
+      "src": "../../node_modules/react-router-hash-link/dist/react-router-hash-link.esm.js",
+      "file": "react-router-hash-link.js",
+      "fileHash": "e81d6cd1",
+      "needsInterop": false
+    },
+    "@mui/icons-material/GitHub": {
+      "src": "../../node_modules/@mui/icons-material/GitHub.js",
+      "file": "@mui_icons-material_GitHub.js",
+      "fileHash": "1bbf43fb",
+      "needsInterop": true
+    },
+    "@mui/icons-material/Launch": {
+      "src": "../../node_modules/@mui/icons-material/Launch.js",
+      "file": "@mui_icons-material_Launch.js",
+      "fileHash": "9cf24a3a",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-GG2GEKVY": {
+      "file": "chunk-GG2GEKVY.js"
+    },
+    "chunk-RBXMMTUT": {
+      "file": "chunk-RBXMMTUT.js"
+    },
+    "chunk-UNBJTX6G": {
+      "file": "chunk-UNBJTX6G.js"
+    },
+    "chunk-Q2CJWAI2": {
+      "file": "chunk-Q2CJWAI2.js"
+    },
+    "chunk-U43VNLDA": {
+      "file": "chunk-U43VNLDA.js"
+    },
+    "chunk-DNTMCXUL": {
+      "file": "chunk-DNTMCXUL.js"
+    },
+    "chunk-QZSPLFNJ": {
+      "file": "chunk-QZSPLFNJ.js"
+    }
+  }
+}

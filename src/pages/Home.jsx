@@ -1,19 +1,19 @@
 //\\ PortfolioFrontend/src/pages/Home.jsx //\\
 
 /// Libraries \\\
-import styled from "styled-components";
+import styled from 'styled-components';
 
 /// Components \\\
-import SharedBackground from "../Components/Wrappers/SharedBackground";
+import SharedBackground from '../Components/Wrappers/SharedBackground';
 
 // Sections
-import Header from "../Components/Sections/Header";
-import HeroBanner from "./HomeSections/HeroBanner";
-import HomeExperience from "./HomeSections/HomeExperience";
-import HomeFeaturedProjects from "./HomeSections/HomeFeaturedProjects";
-import HomeAbout from "./HomeSections/HomeAbout";
-import HomeContact from "./HomeSections/HomeContact";
-import Footer from "../Components/Sections/Footer";
+import Header from '../Components/Sections/Header';
+import HeroBanner from './HomeSections/HeroBanner';
+import HomeExperience from './HomeSections/HomeExperience';
+import HomeFeaturedProjects from './HomeSections/HomeFeaturedProjects';
+import HomeAbout from './HomeSections/HomeAbout';
+import HomeContact from './HomeSections/HomeContact';
+import Footer from '../Components/Sections/Footer';
 
 const StyledHome = styled.div`
   width: 100%;

@@ -1,7 +1,7 @@
 // PortfolioFrontend/src/GlobalStyles.js
-import { createGlobalStyle } from "styled-components";
-import { mobile } from "./styles/mediaQueries";
-import { css } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
+import { mobile, tablet } from './styles/mediaQueries';
+import { css } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     html{
@@ -46,9 +46,7 @@ const GlobalStyle = createGlobalStyle`
         border-width: 2px;
         border-style: solid;
     }
-    a:visited{
-        color: inherit;
-    }
+
     p, li, a{
         font-family: ${(props) => props.theme.fonts.paragraph};
         font-size: 1.6rem;
@@ -77,15 +75,31 @@ const GlobalStyle = createGlobalStyle`
     .tree {
         font-weight: 100;
     }
-    .mobileOnly{
-        display: none;
+    .desktopOnly, .desktopTabletOnly{
+        display: initial !important;
     }
-    ${mobile(css`
-      .mobileOnly {
-        display: initial;
+    .mobileOnly, .tabletOnly, .mobileTabletOnly{
+        display: none !important;
+    }
+    ${tablet(css`
+      .desktopOnly {
+        display: none !important;
+      }
+      .tabletOnly,
+      .mobileTabletOnly {
+        display: initial !important;
       }
       .largeSection {
         min-height: 0;
+      }
+    `)}
+    ${mobile(css`
+      .mobileOnly {
+        display: initial !important;
+      }
+      .desktopTabletOnly,
+      .tabletOnly {
+        display: none !important;
       }
     `)}
     

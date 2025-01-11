@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { styled, css } from 'styled-components';
 import experienceItems from '../../data/ExperienceItems.jsx';
-import TagList from './TagList.jsx';
 
 const StyledExperienceAccordion = styled.div`
   ${({ theme }) => css`
