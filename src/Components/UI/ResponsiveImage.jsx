@@ -45,20 +45,20 @@ const generateSources = async (imageData) => {
   };
   for (const size of srcSizes) {
     let imageName = `${imageData.path}${imageData.name}${size}${imageData.extension}`;
-    console.log(`About to check: ${imageName}`);
-    const imageExists = await checkImageUrl(imageName);
-    console.log(`After check: ${imageName} exists: ${imageExists}`); // Debug log
+    // console.log(`About to check: ${imageName}`);
+    // const imageExists = await checkImageUrl(imageName);
+    // console.log(`After check: ${imageName} exists: ${imageExists}`); // Debug log
 
-    // if image exists, add it's string to the set of sources
-    if (imageExists) {
-      // set src to the first source
-      if (srcLookup.src === null) {
-        srcLookup.src = imageName;
-      } else {
-        srcLookup.srcSet += ', ';
-      }
-      srcLookup.srcSet += `${imageName} ${size}`;
+    // // if image exists, add it's string to the set of sources
+    // if (imageExists) {
+    // set src to the first source
+    if (srcLookup.src === null) {
+      srcLookup.src = imageName;
+    } else {
+      srcLookup.srcSet += ', ';
     }
+    srcLookup.srcSet += `${imageName} ${size}`;
+    // }
   }
   return srcLookup;
 };
