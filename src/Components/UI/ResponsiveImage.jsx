@@ -38,7 +38,6 @@ const ResponsiveImage = ({ imageData, className = '', sizes = '100vw' }) => {
  * @returns {Object} Object containing srcSet and src strings
  */
 const generateSources = async (imageData) => {
-  // const srcSizes = ['600w', '1200w', '1900w', '1920w', '2400w'];
   const srcSizes = ['600w', '1200w', '2400w'];
 
   const srcLookup = {
@@ -47,13 +46,6 @@ const generateSources = async (imageData) => {
   };
   for (const size of srcSizes) {
     let imageName = `${imageData.path}${imageData.name}${size}${imageData.extension}`;
-    // console.log(`About to check: ${imageName}`);
-    // const imageExists = await checkImageUrl(imageName);
-    // console.log(`After check: ${imageName} exists: ${imageExists}`); // Debug log
-
-    // // if image exists, add it's string to the set of sources
-    // if (imageExists) {
-    // set src to the first source
     if (srcLookup.src === null) {
       srcLookup.src = imageName;
     } else {
