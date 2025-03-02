@@ -1,0 +1,12 @@
+{
+  "favorites.resources": [
+    {
+      "filePath": "frontend/src",
+      "group": "Default"
+    },
+    {
+      "filePath": "cms/src/payload.config.ts",
+      "group": "Default"
+    }
+  ]
+}
