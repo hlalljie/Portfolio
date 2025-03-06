@@ -21,6 +21,25 @@ export const Homepage: GlobalConfig = {
       ],
     },
     {
+      name: 'homeExperience',
+      type: 'group',
+      label: 'Home Experience',
+      fields: [
+        {
+          name: 'title',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'experienceItems',
+          type: 'relationship',
+          relationTo: 'experienceItems',
+          required: true,
+          hasMany: true,
+        },
+      ],
+    },
+    {
       name: 'homeAbout',
       type: 'group',
       label: 'Home About',

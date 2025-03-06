@@ -10,6 +10,7 @@ import sharp from 'sharp'
 import { Homepage } from './globals/Homepage'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
+import { ExperienceItems } from './collections/ExperienceItems'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -22,7 +23,7 @@ export default buildConfig({
     },
   },
   globals: [Homepage],
-  collections: [Users, Media],
+  collections: [Users, Media, ExperienceItems],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
