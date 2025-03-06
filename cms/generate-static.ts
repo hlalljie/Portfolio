@@ -6,22 +6,36 @@ import path from 'path'
 const generateStatic = async () => {
   console.log('🚀 Generating static data...')
 
-  // Initialize Payload (dotenv is handled by Next.js automatically)
-  const payload = await getPayload({ config })
+  // Get data from Payload
+  const payloadData = await getData()
 
-  // Fetch data from Payload Global
-  const homepageData = await payload.findGlobal({
-    slug: 'homepage',
-  })
   // Define output file path
   const outputPath = path.join(process.cwd(), 'static-data.json')
 
   // Write data to JSON file
-  fs.writeFileSync(outputPath, JSON.stringify(homepageData, null, 2))
+  fs.writeFileSync(outputPath, JSON.stringify(payloadData, null, 2))
 
   console.log(`✅ Static data saved to ${outputPath}`)
 
   process.exit(0) // Exit the script
+}
+
+const getData = async () => {
+  // Initialize Payload (dotenv is handled by Next.js automatically)
+  const payload = await getPayload({ config })
+
+  // Fetch data from Payload Global
+  // Fetch data from homepage
+  const homepageData = await payload.findGlobal({
+    slug: 'homepage',
+  })
+
+  //structure data for export
+  const data = {
+    homepage: homepageData,
+  }
+
+  return data
 }
 
 // Run the script

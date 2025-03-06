@@ -1,0 +1,40 @@
+import type { GlobalConfig } from 'payload'
+
+export const Homepage: GlobalConfig = {
+  slug: 'homepage',
+  fields: [
+    {
+      name: 'heroBanner',
+      type: 'group',
+      label: 'Hero Banner',
+      fields: [
+        {
+          name: 'headline',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'paragraph',
+          type: 'textarea',
+          required: true,
+        },
+      ],
+    },
+    {
+      name: 'homeAbout',
+      type: 'group',
+      label: 'Home About',
+      fields: [
+        {
+          name: 'title',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'paragraph',
+          type: 'textarea',
+        },
+      ],
+    },
+  ],
+}

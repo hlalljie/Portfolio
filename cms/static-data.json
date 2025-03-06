@@ -1,8 +1,16 @@
 {
-  "createdAt": "2025-03-02T08:55:46.145Z",
-  "globalType": "homepage",
-  "headline": "Hi, I'm Hayden",
-  "paragraph": "I'm passionate about creating solutions through programming and design, and empowering others through education and mentorship.",
-  "updatedAt": "2025-03-02T08:56:31.338Z",
-  "id": "67c41d128244b24d03c44119"
+  "homepage": {
+    "createdAt": "2025-03-02T08:55:46.145Z",
+    "updatedAt": "2025-03-06T07:12:33.627Z",
+    "globalType": "homepage",
+    "heroBanner": {
+      "headline": "Hi, I'm Hayden",
+      "paragraph": "I'm passionate about creating solutions through programming and design, and empowering others through education and mentorship."
+    },
+    "homeAbout": {
+      "title": "About Me",
+      "paragraph": "I'm a software developer and educator with a passion for creating a positive impact through programming, education, and user-centric design. I have a Bachelor's in Computer Science from Sonoma State University, am a Certified Scrum Master, and have worked in a variety of different roles including management, design, education, and quality assurance. In my free time, I enjoy developing products, learning new skills, reading, playing video games, and spending time outdoors with family and friends."
+    },
+    "id": "67c94ade0e528355496e41af"
+  }
 }

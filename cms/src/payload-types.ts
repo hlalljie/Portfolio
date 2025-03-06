@@ -280,8 +280,14 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
  */
 export interface Homepage {
   id: string;
-  headline: string;
-  paragraph: string;
+  heroBanner: {
+    headline: string;
+    paragraph: string;
+  };
+  homeAbout: {
+    title: string;
+    paragraph?: string | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -290,8 +296,18 @@ export interface Homepage {
  * via the `definition` "homepage_select".
  */
 export interface HomepageSelect<T extends boolean = true> {
-  headline?: T;
-  paragraph?: T;
+  heroBanner?:
+    | T
+    | {
+        headline?: T;
+        paragraph?: T;
+      };
+  homeAbout?:
+    | T
+    | {
+        title?: T;
+        paragraph?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

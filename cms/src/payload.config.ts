@@ -7,7 +7,7 @@ import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
-import { Homepage } from './collections/Homepage'
+import { Homepage } from './globals/Homepage'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 
