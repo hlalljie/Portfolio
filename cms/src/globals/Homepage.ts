@@ -4,7 +4,7 @@ export const Homepage: GlobalConfig = {
   slug: 'homepage',
   fields: [
     {
-      name: 'heroBanner',
+      name: 'homeHeroBanner',
       type: 'group',
       label: 'Hero Banner',
       fields: [

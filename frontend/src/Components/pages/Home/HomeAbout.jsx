@@ -1,7 +1,10 @@
 // External Imports
+import { useContext } from 'react';
 import { styled, css } from 'styled-components';
 
 // Internal Imports
+// Context
+import { AppContext } from '@/context/AppContext';
 // Layouts
 import ThemedSection from '@/Components/shared/layout/ThemedSection';
 // Styles
@@ -71,6 +74,14 @@ const AnimatedHomeAbout = styled.div`
  * @returns {JSX.Element}
  */
 function HomeAbout() {
+  // Get context data
+  const { pageData, dataLoading } = useContext(AppContext);
+
+  if (dataLoading || !pageData) {
+    return <div>Loading...</div>;
+  }
+
+  const sectionData = pageData['homeAbout'];
   return (
     <ThemedSection
       themeName="dark"
@@ -91,18 +102,8 @@ function HomeAbout() {
               />
             </div>
             <div className="textContainer">
-              <h2 className="sectionTitle">About Me</h2>
-              <p>
-                I'm a software developer and educator with a passion for
-                creating a positive impact through programming, education, and
-                user-centric design. I have a Bachelor's in Computer Science
-                from Sonoma State University, am a Certified Scrum Master, and
-                have worked in a variety of different roles including
-                management, design, education, and quality assurance. In my free
-                time, I enjoy developing products, learning new skills, reading,
-                playing video games, and spending time outdoors with family and
-                friends.
-              </p>
+              <h2 className="sectionTitle">{sectionData['title']}</h2>
+              <p>{sectionData['paragraph']}</p>
             </div>
           </div>
         </AnimatedHomeAbout>

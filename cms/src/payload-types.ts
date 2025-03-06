@@ -331,7 +331,7 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
  */
 export interface Homepage {
   id: string;
-  heroBanner: {
+  homeHeroBanner: {
     headline: string;
     paragraph: string;
   };
@@ -351,7 +351,7 @@ export interface Homepage {
  * via the `definition` "homepage_select".
  */
 export interface HomepageSelect<T extends boolean = true> {
-  heroBanner?:
+  homeHeroBanner?:
     | T
     | {
         headline?: T;

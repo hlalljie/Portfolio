@@ -1,7 +1,10 @@
 // External Imports
+import { useEffect } from 'react';
 import styled from 'styled-components';
 
 // Internal Imports
+// Hooks
+import usePayloadData from '@/hooks/usePayloadData';
 // Layouts
 import Header from '@/Components/shared/layout/Header';
 import SharedBackground from '@/Components/shared/layout/SharedBackground';
@@ -34,6 +37,23 @@ const StyledHome = styled.div`
  * @returns {JSX.Element}
  */
 function Home() {
+  const { data, loading, fetchData } = usePayloadData({
+    type: 'global',
+    slug: 'homepage',
+  });
+
+  useEffect(() => {
+    fetchData();
+
+    if (data) {
+      console.log('Data loaded successfully:', data);
+    }
+  }, [data, fetchData]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <StyledHome>
       <SharedBackground imgName="heroBanner" imgExtension=".jpeg">

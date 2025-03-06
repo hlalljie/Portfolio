@@ -1,7 +1,10 @@
 // External Imports
+import { useContext } from 'react';
 import { css } from 'styled-components';
 
 // Internal Imports
+// Context
+import { AppContext } from '@/context/AppContext';
 // Layouts
 import ThemedSection from '@/Components/shared/layout/ThemedSection';
 // Styles
@@ -71,12 +74,20 @@ const heroBannerStyles = css`
  * @returns {JSX.Element}
  */
 function HeroBanner() {
+  const { pageData, dataLoading } = useContext(AppContext);
+
+  if (dataLoading || !pageData) {
+    return <div>Loading...</div>;
+  }
+
+  const sectionData = pageData['homeHeroBanner'];
+
   return (
     <ThemedSection themeName="light" additionalStyles={heroBannerStyles}>
       {(inView) => (
         <div className="bannerContent">
           <div className="textContainer">
-            <h1>Hi, I'm Hayden</h1>
+            <h1>{sectionData['headline']}</h1>
             <div className="subHeadingWrapper">
               <h3>
                 {' '}
@@ -89,10 +100,7 @@ function HeroBanner() {
               <h3 className="tree">↟</h3>
               <h3>Educator</h3>
             </div>
-            <p className="largeP">
-              I'm passionate about creating solutions through programming and
-              design, and empowering others through education and mentorship.
-            </p>
+            <p className="largeP">{sectionData['paragraph']}</p>
           </div>
         </div>
       )}

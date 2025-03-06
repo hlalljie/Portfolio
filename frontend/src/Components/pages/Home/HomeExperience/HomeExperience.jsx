@@ -1,8 +1,11 @@
 // External Imports
+import { useContext } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { css, styled } from 'styled-components';
 
 // Internal Imports
+// Context
+import { AppContext } from '@/context/AppContext';
 // Layouts
 import ThemedSection from '@/Components/shared/layout/ThemedSection';
 // UI Subcomponents
@@ -49,6 +52,16 @@ function HomeExperience() {
   const isTablet = useMediaQuery({
     query: '(max-width: ' + breakpoints.tablet + 'px)',
   });
+
+  // Get context data
+  const { pageData, dataLoading } = useContext(AppContext);
+
+  if (dataLoading || !pageData) {
+    return <div>Loading...</div>;
+  }
+
+  const sectionData = pageData['homeExperience'];
+  const { experienceItems } = sectionData; // TODO: use static data for rendering components
   return (
     <ThemedSection
       themeName="light"
@@ -57,7 +70,7 @@ function HomeExperience() {
     >
       {(inView) => (
         <AnimatedHomeExperience $inView={inView}>
-          <h2 className="sectionTitle">Experience</h2>
+          <h2 className="sectionTitle">{sectionData['title']}</h2>
           {isTablet ? <ExperienceAccordion /> : <ExperienceSelector />}
         </AnimatedHomeExperience>
       )}

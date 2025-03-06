@@ -10,7 +10,8 @@ const generateStatic = async () => {
   const payloadData = await getData()
 
   // Define output file path
-  const outputPath = path.join(process.cwd(), 'static-data.json')
+  const filename = 'homepage.json'
+  const outputPath = path.join(process.cwd(), '..', 'frontend', 'src', 'data', 'globals', filename)
 
   // Write data to JSON file
   fs.writeFileSync(outputPath, JSON.stringify(payloadData, null, 2))
@@ -31,9 +32,7 @@ const getData = async () => {
   })
 
   //structure data for export
-  const data = {
-    homepage: homepageData,
-  }
+  const data = homepageData
 
   return data
 }
