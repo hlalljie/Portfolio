@@ -1,19 +1,16 @@
-//import { useState } from 'react'
-
-// Libraries
+// External Imports
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Analytics } from '@vercel/analytics/react';
 
+// Internal Imports
+// Pages
+import Home from '@/Components/pages/Home/Home';
+import Portfolio from '@/Components/pages/Portfolio/Portfolio';
+import ProjectBasic from '@/Components/pages/Project/ProjectBasic';
+import ErrorPage from '@/Components/pages/ErrorPage/ErrorPage';
+// Styles
 import GlobalStyle from './GlobalStyles';
-
-// Page Imports
-import Home from './pages/Home';
-import CaseStudies from './pages/CaseStudies/CaseStudies';
-import CaseStudyTemplateBasic from './pages/CaseStudies/CaseStudyTemplateBasic';
-import ErrorPage from './pages/ErrorPage';
-// import About from "./pages/About";
-// import Portfolio from "./pages/Portfolio";
 
 const router = createBrowserRouter([
   {
@@ -27,13 +24,13 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: '/case-studies',
-    element: <CaseStudies />,
+    path: '/portfolio',
+    element: <Portfolio />,
     errorElement: <ErrorPage />,
   },
   {
-    path: '/case-studies/:caseStudyId',
-    element: <CaseStudyTemplateBasic />,
+    path: '/portfolio/:projectId',
+    element: <ProjectBasic />,
     errorElement: <ErrorPage />,
   },
 ]);
