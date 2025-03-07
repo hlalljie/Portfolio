@@ -55,5 +55,27 @@ export const Homepage: GlobalConfig = {
         },
       ],
     },
+    {
+      name: 'homeContact',
+      type: 'group',
+      label: 'Home Contact',
+      fields: [
+        {
+          name: 'title',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'paragraph',
+          type: 'textarea',
+          required: true,
+        },
+        {
+          name: 'email',
+          type: 'text',
+          required: true,
+        },
+      ],
+    },
   ],
 }

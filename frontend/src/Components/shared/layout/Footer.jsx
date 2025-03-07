@@ -36,7 +36,7 @@ function Footer() {
     >
       {(inView) => (
         <>
-          <p className="copyright smallP">Copyright 2024</p>
+          <p className="copyright smallP">Copyright 2025</p>
         </>
       )}
     </ThemedSection>

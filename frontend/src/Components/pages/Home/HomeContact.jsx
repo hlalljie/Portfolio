@@ -1,7 +1,10 @@
 // External Imports
+import { useContext } from 'react';
 import { css, styled } from 'styled-components';
 
 // Internal Imports
+// Context
+import { AppContext } from '@/context/AppContext';
 // Layouts
 import ThemedSection from '@/Components/shared/layout/ThemedSection';
 import Socials from '@/Components/shared/ui/Socials';
@@ -57,6 +60,15 @@ const AnimatedHomeContact = styled.div`
  * @returns {JSX.Element}
  */
 function HomeContact() {
+  // Get context data
+  const { pageData, dataLoading } = useContext(AppContext);
+
+  if (dataLoading || !pageData) {
+    return <div>Loading...</div>;
+  }
+
+  const sectionData = pageData['homeContact'];
+
   return (
     <ThemedSection
       themeName="dark"
@@ -69,13 +81,10 @@ function HomeContact() {
         <AnimatedHomeContact $inView={inView}>
           <div className="contactContainer">
             <div className="textContainer">
-              <h2 className="sectionTitle">Contact Me</h2>
-              <p>
-                I'm always on the lookout for new projects, opportunities, and
-                connections. Feel free to reach out anytime.
-              </p>
-              <a href="mailto:haydenlalljie@gmail.com">
-                haydenlalljie@gmail.com
+              <h2 className="sectionTitle">{sectionData['title']}</h2>
+              <p>{sectionData['paragraph']}</p>
+              <a href={'mailto:' + sectionData['email']}>
+                {sectionData['email']}
               </a>
               <Socials />
             </div>

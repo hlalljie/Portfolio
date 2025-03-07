@@ -335,6 +335,11 @@ export interface Homepage {
     title: string;
     paragraph?: string | null;
   };
+  homeContact: {
+    title: string;
+    paragraph: string;
+    email: string;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -360,6 +365,13 @@ export interface HomepageSelect<T extends boolean = true> {
     | {
         title?: T;
         paragraph?: T;
+      };
+  homeContact?:
+    | T
+    | {
+        title?: T;
+        paragraph?: T;
+        email?: T;
       };
   updatedAt?: T;
   createdAt?: T;

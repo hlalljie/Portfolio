@@ -1,6 +1,6 @@
 {
   "createdAt": "2025-03-02T08:55:46.145Z",
-  "updatedAt": "2025-03-06T08:19:50.707Z",
+  "updatedAt": "2025-03-07T23:37:43.266Z",
   "globalType": "homepage",
   "homeAbout": {
     "title": "About Me",
@@ -115,6 +115,11 @@
   "homeHeroBanner": {
     "headline": "Hi, I'm Hayden",
     "paragraph": "I'm passionate about creating solutions through programming and design, and empowering others through education and mentorship."
+  },
+  "homeContact": {
+    "title": "Contact Me",
+    "paragraph": "I'm always on the lookout for new projects, opportunities, and connections. Feel free to reach out anytime.",
+    "email": "haydenlalljie@gmail.com"
   },
   "id": "67c94ade0e528355496e41af"
 }
