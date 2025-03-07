@@ -5,15 +5,27 @@ import { useContext } from 'react';
 // Context
 import { AppContext } from '@/context/AppContext';
 
-export default function usePayloadData(options = {}) {
-  const { type = 'global', slug, collection } = options;
+/**
+ * usePayloadData: Hook to fetch data from Payload api or from statically generated Payload data
+ * @param {object} options - The options for the hook.
+ * @param {string} options.type - The type of data to fetch. Can be 'global' or 'collection'.
+ * @param {string} options.slug - The slug of the data to fetch.
+ * @param {string} [options.collection] - The collection of the data to fetch.
+ * @returns {object} Object containing fetchData function
+ */
+export default function usePayloadData({ type = 'global', slug, collection }) {
+  // Get context data
+  const { setPageData, setDataLoading } = useContext(AppContext);
 
-  const { pageData, setPageData, dataLoading, setDataLoading } =
-    useContext(AppContext);
-
+  /**
+   * fetchData: Function to fetch data from Payload api or from statically generated Payload data and set the data in the context
+   * @returns {Promise<void>} Promise that resolves when the data is fetched
+   */
   const fetchData = async () => {
-    if (!slug) return { data: null, loading: false };
+    // Check if slug is provided
+    if (!slug) return;
 
+    // Go into loading state during fetch
     setDataLoading(true);
 
     try {
@@ -22,10 +34,13 @@ export default function usePayloadData(options = {}) {
       if (import.meta.env.DEV && window.__PAYLOAD_AVAILABLE) {
         // For development with Payload running
         let apiPath = '';
+
         if (type === 'global') {
+          // Fetch Payload global data
           apiPath = `http://localhost:3000/api/globals/${slug}`;
         } else if (type === 'collection') {
-          if (!collection) return { data: null, loading: false };
+          // Fetch Payload collection data
+          if (!collection) return;
           apiPath = `http://localhost:3000/api/${collection}/${slug}`;
         }
 
@@ -34,15 +49,15 @@ export default function usePayloadData(options = {}) {
       } else {
         // Static imports
         if (type === 'global') {
-          // You'll need to handle each global slug separately
-          if (slug === 'homepage') {
-            const module = await import('../data/globals/homepage.json');
-            result = module.default;
-          }
-          // Add other globals as needed
+          // Fetch static global data
+          const module = await import(`../data/globals/${slug}.json`);
+          result = module.default;
         } else if (type === 'collection' && collection) {
-          // Handle collections in a similar way
-          // This gets verbose but is analyzable by Vite
+          // Fetch static collection data
+          const module = await import(
+            `../data/collections/${collection}/${slug}.json`
+          );
+          result = module.default;
         }
       }
 
@@ -54,10 +69,7 @@ export default function usePayloadData(options = {}) {
     }
   };
 
-  // You'd need to call fetchData() in your component
   return {
-    data: pageData,
-    loading: dataLoading,
     fetchData,
   };
 }
