@@ -71,7 +71,11 @@ function HomeExperience() {
       {(inView) => (
         <AnimatedHomeExperience $inView={inView}>
           <h2 className="sectionTitle">{sectionData['title']}</h2>
-          {isTablet ? <ExperienceAccordion /> : <ExperienceSelector />}
+          {isTablet ? (
+            <ExperienceAccordion experienceItems={experienceItems} />
+          ) : (
+            <ExperienceSelector experienceItems={experienceItems} />
+          )}
         </AnimatedHomeExperience>
       )}
     </ThemedSection>

@@ -161,10 +161,7 @@ export interface Media {
 export interface ExperienceItem {
   id: string;
   company: string;
-  titles: {
-    title: string;
-    id?: string | null;
-  }[];
+  titles: string[];
   dates: {
     startDate: string;
     endDate: string;
@@ -275,12 +272,7 @@ export interface MediaSelect<T extends boolean = true> {
  */
 export interface ExperienceItemsSelect<T extends boolean = true> {
   company?: T;
-  titles?:
-    | T
-    | {
-        title?: T;
-        id?: T;
-      };
+  titles?: T;
   dates?:
     | T
     | {

@@ -2,9 +2,6 @@
 import { useState } from 'react';
 import { styled, css } from 'styled-components';
 
-// Internal Imports
-import experienceItems from '@/data/ExperienceItems';
-
 const StyledExperienceAccordion = styled.div`
   ${({ theme }) => css`
     box-shadow: 0px 0 120px 120px ${theme.withOpacity(theme.colors.fog, 0.4)};
@@ -14,18 +11,19 @@ const StyledExperienceAccordion = styled.div`
 
 /**
  * ExperienceAccordion: Accordion for experience section on mobile
+ * @param {object} props - The properties for the ExperienceAccordion component.
+ * @param {Array} props.experienceItems - Array of experience item data.
  * @returns {JSX.Element}
  */
-function ExperienceAccordion() {
+function ExperienceAccordion({ experienceItems }) {
   return (
     <StyledExperienceAccordion>
       {experienceItems.map((item, index) => (
         <ExperienceAccordionDropdown
           key={index}
-          company={item.company}
-          titles={item.titles}
-          technologies={item.technologies}
-          description={item.description}
+          company={item['company']}
+          titles={item['titles']}
+          description={item['description']}
         />
       ))}
     </StyledExperienceAccordion>
@@ -59,20 +57,26 @@ const StyledExperienceAccordionDropdown = styled.div`
  * @param {object} props - The properties for the ExperienceAccordionDropdown component.
  * @param {string} props.company - Name of the company.
  * @param {string[]} props.titles - Titles held during the experience.
- * @param {string[]} props.technologies - Technologies utilized at the company
  * @param {string} props.description - Description of the experience.
  * @returns {JSX.Element}
  */
-function ExperienceAccordionDropdown({
-  company,
-  titles,
-  technologies,
-  description,
-}) {
+function ExperienceAccordionDropdown({ company, titles, description }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <StyledExperienceAccordionDropdown>
-      <div className="dropdownHeader" onClick={() => setIsOpen(!isOpen)}>
+      <div
+        className="dropdownHeader"
+        onClick={() => setIsOpen(!isOpen)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault(); // Prevent scrolling on space
+            setIsOpen(!isOpen);
+          }
+        }}
+        tabIndex="0"
+        role="button"
+        aria-expanded={isOpen}
+      >
         <h3 className="companyName">{company}</h3>
       </div>
       {isOpen && (

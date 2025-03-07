@@ -3,21 +3,23 @@ import { useState } from 'react';
 import { styled, css } from 'styled-components';
 
 // Internal Imports
-import experienceItems from '@/data/ExperienceItems';
 import TagList from '@/Components/shared/display/TagList';
 
 const StyledExperienceSelectorStyles = styled.div``;
 
 /**
  * ExperienceSelector: Component for displaying experience with selection tabs for each company.
+ * @param {object} props - The properties for the ExperienceSelector component.
+ * @param {Array} props.experienceItems - Array of experience item data.
  * @returns {JSX.Element}
  */
-function ExperienceSelector() {
+function ExperienceSelector({ experienceItems }) {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
     <StyledExperienceSelectorStyles>
       <ExperienceSelectionTabs
+        experienceItems={experienceItems}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
       />
@@ -40,7 +42,7 @@ const StyledExperienceSelectionTabs = styled.div`
     flex-direction: column;
     align-items: flex-end;
 
-    .years {
+    .dates {
       transition: color 0.3s ease-in-out;
 
       margin: auto;
@@ -71,7 +73,7 @@ const StyledExperienceSelectionTabs = styled.div`
       width: 170px;
     }
     &.active {
-      .years {
+      .dates {
         color: ${(props) => props.theme.colors.darkAccent};
         display: flex;
         .short {
@@ -96,7 +98,7 @@ const StyledExperienceSelectionTabs = styled.div`
       }
     }
     &:hover:not(.active) {
-      .years {
+      .dates {
         color: ${(props) => props.theme.colors.dark};
       }
       button {
@@ -115,7 +117,7 @@ const StyledExperienceSelectionTabs = styled.div`
  * @param {function} props.setActiveTab - The function to set the active tab.
  * @returns {JSX.Element}
  */
-function ExperienceSelectionTabs({ activeTab, setActiveTab }) {
+function ExperienceSelectionTabs({ experienceItems, activeTab, setActiveTab }) {
   return (
     <StyledExperienceSelectionTabs>
       {experienceItems.map((experienceItem, index) => (
@@ -125,11 +127,14 @@ function ExperienceSelectionTabs({ activeTab, setActiveTab }) {
           key={index}
           onClick={() => setActiveTab(index)}
         >
-          <button>{experienceItem.company}</button>
-          <h4 className="years">
-            <span className="short">{experienceItem.years.short}</span>
+          <button>{experienceItem['company']}</button>
+          <h4 className="dates">
+            <span className="short">
+              {experienceItem['dates']['shortLabel']}
+            </span>
             <span className="range">
-              {experienceItem.years.start} - {experienceItem.years.end}
+              {experienceItem['dates']['startDate']} -{' '}
+              {experienceItem['dates']['endDate']}
             </span>
           </h4>
         </div>

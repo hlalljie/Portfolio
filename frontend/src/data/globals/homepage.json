@@ -12,10 +12,7 @@
       {
         "company": "HL Tutoring",
         "titles": [
-          {
-            "title": "Founder",
-            "id": "67c954bdf3c2fbef53f39d39"
-          }
+          "Founder"
         ],
         "dates": {
           "startDate": "2023",
@@ -43,24 +40,15 @@
           "Squarespace"
         ],
         "createdAt": "2025-03-06T07:55:33.072Z",
-        "updatedAt": "2025-03-06T08:15:00.211Z",
+        "updatedAt": "2025-03-07T17:03:19.323Z",
         "id": "67c954f50e528355496e4293"
       },
       {
         "company": "Nav Creative",
         "titles": [
-          {
-            "title": "Director",
-            "id": "67c95547f3c2fbef53f39d3f"
-          },
-          {
-            "title": "Project Manager",
-            "id": "67c95551f3c2fbef53f39d41"
-          },
-          {
-            "title": "Web Designer",
-            "id": "67c95556f3c2fbef53f39d43"
-          }
+          "Director",
+          "Project Manager",
+          "Web Designer"
         ],
         "dates": {
           "startDate": "2019",
@@ -79,16 +67,13 @@
           "Shopify"
         ],
         "createdAt": "2025-03-06T07:58:22.515Z",
-        "updatedAt": "2025-03-06T08:15:59.496Z",
+        "updatedAt": "2025-03-07T17:03:57.100Z",
         "id": "67c9559e0e528355496e42d5"
       },
       {
         "company": "Silicon Valley 4u",
         "titles": [
-          {
-            "title": "Coding Instructor",
-            "id": "67c959daf3c2fbef53f39d49"
-          }
+          "Coding Instructor"
         ],
         "dates": {
           "startDate": "May 2019",
@@ -102,20 +87,14 @@
           "Blender"
         ],
         "createdAt": "2025-03-06T08:17:28.679Z",
-        "updatedAt": "2025-03-06T08:17:28.679Z",
+        "updatedAt": "2025-03-07T17:04:16.946Z",
         "id": "67c95a180e528355496e4451"
       },
       {
         "company": "Scale API",
         "titles": [
-          {
-            "title": "QA Ops Associate",
-            "id": "67c95a2ef3c2fbef53f39d4b"
-          },
-          {
-            "title": "QA Contractor",
-            "id": "67c95a39f3c2fbef53f39d4d"
-          }
+          "QA Ops Associate",
+          "QA Contractor"
         ],
         "dates": {
           "startDate": "2017",
@@ -128,7 +107,7 @@
           "Google Sheets"
         ],
         "createdAt": "2025-03-06T08:19:28.751Z",
-        "updatedAt": "2025-03-06T08:19:28.751Z",
+        "updatedAt": "2025-03-07T17:04:41.211Z",
         "id": "67c95a900e528355496e447f"
       }
     ]

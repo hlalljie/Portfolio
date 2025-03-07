@@ -13,15 +13,9 @@ export const ExperienceItems: CollectionConfig = {
     },
     {
       name: 'titles',
-      type: 'array',
+      type: 'text',
       required: true,
-      fields: [
-        {
-          name: 'title',
-          type: 'text',
-          required: true,
-        },
-      ],
+      hasMany: true,
     },
     {
       name: 'dates',
