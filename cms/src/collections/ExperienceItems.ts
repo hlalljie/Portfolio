@@ -5,6 +5,9 @@ export const ExperienceItems: CollectionConfig = {
   admin: {
     useAsTitle: 'company',
   },
+  access: {
+    read: () => true, // Allow anyone to read
+  },
   fields: [
     {
       name: 'company',

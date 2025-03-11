@@ -37,18 +37,14 @@ const StyledHome = styled.div`
  * @returns {JSX.Element}
  */
 function Home() {
-  const { data, loading, fetchData } = usePayloadData({
+  const { loading, fetchData } = usePayloadData({
     type: 'global',
     slug: 'homepage',
   });
 
   useEffect(() => {
     fetchData();
-
-    if (data) {
-      console.log('Data loaded successfully:', data);
-    }
-  }, [data, fetchData]);
+  }, []);
 
   if (loading) {
     return <div>Loading...</div>;

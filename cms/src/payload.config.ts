@@ -32,6 +32,9 @@ export default buildConfig({
   db: mongooseAdapter({
     url: process.env.DATABASE_URI || '',
   }),
+  cors: [
+    'http://localhost:5173', // Allow Vite React frontend
+  ],
   sharp,
   plugins: [
     payloadCloudPlugin(),

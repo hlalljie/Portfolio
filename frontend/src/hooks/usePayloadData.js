@@ -1,5 +1,5 @@
 // External Imports
-import { useContext } from 'react';
+import { useContext, useCallback } from 'react';
 
 // Internal Imports
 // Context
@@ -21,7 +21,7 @@ export default function usePayloadData({ type = 'global', slug, collection }) {
    * fetchData: Function to fetch data from Payload api or from statically generated Payload data and set the data in the context
    * @returns {Promise<void>} Promise that resolves when the data is fetched
    */
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     // Check if slug is provided
     if (!slug) return;
 
@@ -31,14 +31,17 @@ export default function usePayloadData({ type = 'global', slug, collection }) {
     try {
       let result;
 
-      if (import.meta.env.DEV && window.__PAYLOAD_AVAILABLE) {
+      if (
+        import.meta.env.DEV &&
+        import.meta.env.VITE_PAYLOAD_AVAILABLE === 'true'
+      ) {
         console.log('Fetching data from Payload API');
         // For development with Payload running
         let apiPath = '';
 
         if (type === 'global') {
           // Fetch Payload global data
-          apiPath = `http://localhost:3000/api/globals/${slug}`;
+          apiPath = `http://localhost:3000/api/globals/${slug}?depth=2`;
         } else if (type === 'collection') {
           // Fetch Payload collection data
           if (!collection) return;
@@ -62,14 +65,14 @@ export default function usePayloadData({ type = 'global', slug, collection }) {
           result = module.default;
         }
       }
-
+      console.log(`Fetched ${type} data:`, result);
       setPageData(result);
     } catch (error) {
       console.error(`Error fetching ${type} data:`, error);
     } finally {
       setDataLoading(false);
     }
-  };
+  }, [type, slug, collection, setPageData, setDataLoading]);
 
   return {
     fetchData,
