@@ -1,5 +1,5 @@
 // External Imports
-import { useContext, useCallback } from 'react';
+import { useContext, useCallback, useRef, useEffect } from 'react';
 
 // Internal Imports
 // Context
@@ -14,67 +14,109 @@ import { AppContext } from '@/context/AppContext';
  * @returns {object} Object containing fetchData function
  */
 export default function usePayloadData({ type = 'global', slug, collection }) {
-  // Get context data
-  const { setPageData, setDataLoading } = useContext(AppContext);
+  const { pageData, setPageData, dataLoading, setDataLoading } =
+    useContext(AppContext);
+  // polling vars
+  const pollingRef = useRef(null);
+  const latestDataRef = useRef(pageData);
+
+  // Update latestDataRef when pageData changes
+  useEffect(() => {
+    latestDataRef.current = pageData;
+  }, [pageData]);
 
   /**
-   * fetchData: Function to fetch data from Payload api or from statically generated Payload data and set the data in the context
-   * @returns {Promise<void>} Promise that resolves when the data is fetched
+   * fetchFromAPI: Function to fetch data from the API, used in polling
+   * @returns {Promise<void>}
+   */
+  const fetchFromAPI = useCallback(async () => {
+    console.log('Fetching from API');
+    try {
+      // build api path
+      let apiPath = '';
+      if (type === 'global') {
+        apiPath = `http://localhost:3000/api/globals/${slug}?depth=2`;
+      } else if (type === 'collection' && collection) {
+        apiPath = `http://localhost:3000/api/${collection}/${slug}?depth=2`;
+      }
+
+      // fetch data
+      const response = await fetch(apiPath);
+      const result = await response.json();
+
+      // get current data from reference outside of closure
+      const currentData = latestDataRef.current;
+
+      // Update state only if the data has changed
+      if (!currentData || currentData.updatedAt !== result.updatedAt) {
+        console.log('Data changed, updating state');
+        setPageData(result);
+      }
+    } catch (error) {
+      console.error(`Error fetching API data:`, error);
+    }
+  }, [type, slug, collection, setPageData]);
+
+  /**
+   * fetchData: Function to fetch data from the API or from statically generated Payload data
+   * @returns {Promise<void>}
    */
   const fetchData = useCallback(async () => {
-    // Check if slug is provided
+    // Exit if slug is missing
     if (!slug) return;
 
-    // Go into loading state during fetch
+    // Clear any existing polling
+    if (pollingRef.current) {
+      clearInterval(pollingRef.current);
+      pollingRef.current = null;
+    }
+
     setDataLoading(true);
 
     try {
-      let result;
-
+      // Use API if in dev mode and API is running
       if (
         import.meta.env.DEV &&
         import.meta.env.VITE_PAYLOAD_AVAILABLE === 'true'
       ) {
-        console.log('Fetching data from Payload API');
-        // For development with Payload running
-        let apiPath = '';
+        await fetchFromAPI();
 
-        if (type === 'global') {
-          // Fetch Payload global data
-          apiPath = `http://localhost:3000/api/globals/${slug}?depth=2`;
-        } else if (type === 'collection') {
-          // Fetch Payload collection data
-          if (!collection) return;
-          apiPath = `http://localhost:3000/api/${collection}/${slug}`;
-        }
-
-        const response = await fetch(apiPath);
-        result = await response.json();
+        // Set up polling only if using API
+        pollingRef.current = setInterval(fetchFromAPI, 1000);
       } else {
-        console.log('Fetching data from static files');
-        // Static imports
+        // Static data logic
+        console.log('Fetching from static data');
+
+        let result;
         if (type === 'global') {
-          // Fetch static global data
-          const module = await import(`../data/globals/${slug}.json`);
-          result = module.default;
+          result = await import(
+            /* @vite-ignore */ `../data/globals/${slug}.json`
+          ).then((m) => m.default);
         } else if (type === 'collection' && collection) {
-          // Fetch static collection data
-          const module = await import(
-            `../data/collections/${collection}/${slug}.json`
-          );
-          result = module.default;
+          result = await import(
+            /* @vite-ignore */ `../data/${collection}/${slug}.json`
+          ).then((m) => m.default);
         }
+        setPageData(result);
       }
-      console.log(`Fetched ${type} data:`, result);
-      setPageData(result);
     } catch (error) {
-      console.error(`Error fetching ${type} data:`, error);
+      console.error(`Error fetching data:`, error);
     } finally {
       setDataLoading(false);
     }
-  }, [type, slug, collection, setPageData, setDataLoading]);
+  }, [type, slug, collection, fetchFromAPI, setPageData, setDataLoading]);
+
+  // Clean up polling on unmount
+  useEffect(() => {
+    return () => {
+      if (pollingRef.current) {
+        clearInterval(pollingRef.current);
+      }
+    };
+  }, []);
 
   return {
+    loading: dataLoading,
     fetchData,
   };
 }
