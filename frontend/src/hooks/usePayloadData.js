@@ -32,6 +32,7 @@ export default function usePayloadData({ type = 'global', slug, collection }) {
       let result;
 
       if (import.meta.env.DEV && window.__PAYLOAD_AVAILABLE) {
+        console.log('Fetching data from Payload API');
         // For development with Payload running
         let apiPath = '';
 
@@ -47,6 +48,7 @@ export default function usePayloadData({ type = 'global', slug, collection }) {
         const response = await fetch(apiPath);
         result = await response.json();
       } else {
+        console.log('Fetching data from static files');
         // Static imports
         if (type === 'global') {
           // Fetch static global data

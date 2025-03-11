@@ -1,6 +1,6 @@
 {
   "createdAt": "2025-03-02T08:55:46.145Z",
-  "updatedAt": "2025-03-07T23:37:43.266Z",
+  "updatedAt": "2025-03-11T03:16:37.982Z",
   "globalType": "homepage",
   "homeAbout": {
     "title": "About Me",
@@ -114,6 +114,11 @@
   },
   "homeHeroBanner": {
     "headline": "Hi, I'm Hayden",
+    "subHeadline": [
+      "Developer",
+      "Designer",
+      "Educator"
+    ],
     "paragraph": "I'm passionate about creating solutions through programming and design, and empowering others through education and mentorship."
   },
   "homeContact": {

@@ -14,6 +14,16 @@ export const Homepage: GlobalConfig = {
           required: true,
         },
         {
+          name: 'subHeadline',
+          type: 'text',
+          required: true,
+          hasMany: true,
+          minRows: 3,
+          maxRows: 3,
+          minLength: 4,
+          maxLength: 12,
+        },
+        {
           name: 'paragraph',
           type: 'textarea',
           required: true,

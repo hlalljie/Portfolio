@@ -325,6 +325,7 @@ export interface Homepage {
   id: string;
   homeHeroBanner: {
     headline: string;
+    subHeadline: string[];
     paragraph: string;
   };
   homeExperience: {
@@ -352,6 +353,7 @@ export interface HomepageSelect<T extends boolean = true> {
     | T
     | {
         headline?: T;
+        subHeadline?: T;
         paragraph?: T;
       };
   homeExperience?:

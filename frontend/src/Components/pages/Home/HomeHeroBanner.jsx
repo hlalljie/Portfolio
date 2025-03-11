@@ -91,14 +91,16 @@ function HeroBanner() {
             <div className="subHeadingWrapper">
               <h3>
                 {' '}
-                Developer<span className="mobileOnly">,</span>
+                {sectionData['subHeadline'][0]}
+                <span className="mobileOnly">,</span>
               </h3>
               <h3 className="tree">↟</h3>
               <h3>
-                Designer<span className="mobileOnly">,</span>
+                {sectionData['subHeadline'][1]}
+                <span className="mobileOnly">,</span>
               </h3>
               <h3 className="tree">↟</h3>
-              <h3>Educator</h3>
+              <h3>{sectionData['subHeadline'][2]}</h3>
             </div>
             <p className="largeP">{sectionData['paragraph']}</p>
           </div>

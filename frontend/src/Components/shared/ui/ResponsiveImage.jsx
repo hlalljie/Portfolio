@@ -15,7 +15,7 @@ const ResponsiveImage = ({ imageData, className = '', sizes = '100vw' }) => {
   useEffect(() => {
     generateSources(imageData).then((result) => {
       setSrcLookup(result);
-      console.log('Source set:', result);
+      // console.log('Source set:', result);
     });
   }, [imageData]);
 
