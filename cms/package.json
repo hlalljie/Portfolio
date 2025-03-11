@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "warmup": "cross-env NODE_OPTIONS=--no-deprecation payload run ./src/app/utils/warmupRoutes.js",
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "dev:warmup": "(cross-env NODE_OPTIONS=--no-deprecation pnpm warmup) & pnpm dev",
     "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
     "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
     "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
@@ -23,6 +25,7 @@
     "cross-env": "^7.0.3",
     "graphql": "^16.8.1",
     "next": "15.1.5",
+    "node-fetch": "^3.3.2",
     "payload": "latest",
     "react": "19.0.0",
     "react-dom": "19.0.0",
