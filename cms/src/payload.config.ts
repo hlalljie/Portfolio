@@ -7,6 +7,8 @@ import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
+import triggerRebuild from './app/utils/triggerRebuild'
+
 import { Homepage } from './globals/Homepage'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'

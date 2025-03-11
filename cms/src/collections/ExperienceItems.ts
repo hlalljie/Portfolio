@@ -1,5 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
+import triggerRebuild from '../app/utils/triggerRebuild'
+
 export const ExperienceItems: CollectionConfig = {
   slug: 'experienceItems',
   admin: {
@@ -7,6 +9,9 @@ export const ExperienceItems: CollectionConfig = {
   },
   access: {
     read: () => true, // Allow anyone to read
+  },
+  hooks: {
+    afterChange: [triggerRebuild],
   },
   fields: [
     {

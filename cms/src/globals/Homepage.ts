@@ -1,9 +1,14 @@
 import type { GlobalConfig } from 'payload'
 
+import triggerRebuild from '../app/utils/triggerRebuild'
+
 export const Homepage: GlobalConfig = {
   slug: 'homepage',
   access: {
     read: () => true, // Allow anyone to read
+  },
+  hooks: {
+    afterChange: [triggerRebuild],
   },
   fields: [
     {
