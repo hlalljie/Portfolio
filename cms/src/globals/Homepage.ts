@@ -12,6 +12,25 @@ export const Homepage: GlobalConfig = {
   },
   fields: [
     {
+      name: 'sharedImages',
+      type: 'group',
+      label: 'Shared Images',
+      fields: [
+        {
+          name: 'homeHeroBannerImage',
+          type: 'upload',
+          relationTo: 'media',
+          required: true,
+        },
+        {
+          name: 'homeBottomBackgroundImage',
+          type: 'upload',
+          relationTo: 'media',
+          required: true,
+        },
+      ],
+    },
+    {
       name: 'homeHeroBanner',
       type: 'group',
       label: 'Hero Banner',
@@ -70,6 +89,13 @@ export const Homepage: GlobalConfig = {
         {
           name: 'paragraph',
           type: 'textarea',
+          required: true,
+        },
+        {
+          name: 'portraitImage',
+          type: 'upload',
+          relationTo: 'media',
+          required: true,
         },
       ],
     },

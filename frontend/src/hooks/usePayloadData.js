@@ -14,8 +14,13 @@ import { AppContext } from '@/context/AppContext';
  * @returns {object} Object containing fetchData function
  */
 export default function usePayloadData({ type = 'global', slug, collection }) {
-  const { pageData, setPageData, dataLoading, setDataLoading } =
-    useContext(AppContext);
+  const {
+    pageData,
+    setPageData,
+    dataLoading,
+    setDataLoading,
+    setUseStaticData,
+  } = useContext(AppContext);
   // polling vars
   const pollingRef = useRef(null);
   const latestDataRef = useRef(pageData);
@@ -81,6 +86,9 @@ export default function usePayloadData({ type = 'global', slug, collection }) {
       ) {
         await fetchFromAPI();
 
+        // Set static data flag
+        setUseStaticData(false);
+
         // Set up polling only if using API
         pollingRef.current = setInterval(fetchFromAPI, 1000);
       } else {
@@ -98,13 +106,23 @@ export default function usePayloadData({ type = 'global', slug, collection }) {
           ).then((m) => m.default);
         }
         setPageData(result);
+        // Set static data flag
+        setUseStaticData(true);
       }
     } catch (error) {
       console.error(`Error fetching data:`, error);
     } finally {
       setDataLoading(false);
     }
-  }, [type, slug, collection, fetchFromAPI, setPageData, setDataLoading]);
+  }, [
+    type,
+    slug,
+    collection,
+    fetchFromAPI,
+    setPageData,
+    setDataLoading,
+    setUseStaticData,
+  ]);
 
   // Clean up polling on unmount
   useEffect(() => {

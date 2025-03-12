@@ -429,6 +429,10 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
  */
 export interface Homepage {
   id: string;
+  sharedImages: {
+    homeHeroBannerImage: string | Media;
+    homeBottomBackgroundImage: string | Media;
+  };
   homeHeroBanner: {
     headline: string;
     subHeadline: string[];
@@ -440,7 +444,8 @@ export interface Homepage {
   };
   homeAbout: {
     title: string;
-    paragraph?: string | null;
+    paragraph: string;
+    portraitImage: string | Media;
   };
   homeContact: {
     title: string;
@@ -455,6 +460,12 @@ export interface Homepage {
  * via the `definition` "homepage_select".
  */
 export interface HomepageSelect<T extends boolean = true> {
+  sharedImages?:
+    | T
+    | {
+        homeHeroBannerImage?: T;
+        homeBottomBackgroundImage?: T;
+      };
   homeHeroBanner?:
     | T
     | {
@@ -473,6 +484,7 @@ export interface HomepageSelect<T extends boolean = true> {
     | {
         title?: T;
         paragraph?: T;
+        portraitImage?: T;
       };
   homeContact?:
     | T

@@ -1,10 +1,69 @@
 {
   "createdAt": "2025-03-02T08:55:46.145Z",
-  "updatedAt": "2025-03-11T07:30:22.054Z",
+  "updatedAt": "2025-03-11T22:33:14.820Z",
   "globalType": "homepage",
   "homeAbout": {
     "title": "About Me",
-    "paragraph": "I'm a software developer and educator with a passion for creating a positive impact through programming, education, and user-centric design. I have a Bachelor's in Computer Science from Sonoma State University, am a Certified Scrum Master, and have worked in a variety of different roles including management, design, education, and quality assurance. In my free time, I enjoy developing products, learning new skills, reading, playing video games, and spending time outdoors with family and friends."
+    "paragraph": "I'm a software developer and educator with a passion for creating a positive impact through programming, education, and user-centric design. I have a Bachelor's in Computer Science from Sonoma State University, am a Certified Scrum Master, and have worked in a variety of different roles including management, design, education, and quality assurance. In my free time, I enjoy developing products, learning new skills, reading, playing video games, and spending time outdoors with family and friends.",
+    "portraitImage": {
+      "alt": "Portrait of Hayden Lalljie with trees in the background",
+      "name": "Home About Portrait",
+      "credit": "Photo by McKenna Morrison",
+      "filename": "HomeAboutPortrait.webp",
+      "mimeType": "image/webp",
+      "filesize": 438152,
+      "width": 2048,
+      "height": 1964,
+      "focalX": 50,
+      "focalY": 50,
+      "sizes": {
+        "thumbnail": {
+          "width": 400,
+          "height": 384,
+          "mimeType": "image/webp",
+          "filesize": 36150,
+          "filename": "HomeAboutPortrait-400x384.webp",
+          "url": "/api/media/file/HomeAboutPortrait-400x384.webp"
+        },
+        "small": {
+          "width": 768,
+          "height": 737,
+          "mimeType": "image/webp",
+          "filesize": 93290,
+          "filename": "HomeAboutPortrait-768x737.webp",
+          "url": "/api/media/file/HomeAboutPortrait-768x737.webp"
+        },
+        "medium": {
+          "width": 1200,
+          "height": 1151,
+          "mimeType": "image/webp",
+          "filesize": 155164,
+          "filename": "HomeAboutPortrait-1200x1151.webp",
+          "url": "/api/media/file/HomeAboutPortrait-1200x1151.webp"
+        },
+        "large": {
+          "width": 1800,
+          "height": 1726,
+          "mimeType": "image/webp",
+          "filesize": 278644,
+          "filename": "HomeAboutPortrait-1800x1726.webp",
+          "url": "/api/media/file/HomeAboutPortrait-1800x1726.webp"
+        },
+        "hero": {
+          "width": null,
+          "height": null,
+          "mimeType": null,
+          "filesize": null,
+          "filename": null,
+          "url": null
+        }
+      },
+      "createdAt": "2025-03-11T21:28:42.262Z",
+      "updatedAt": "2025-03-11T21:28:42.262Z",
+      "id": "67d0ab0a337eb52576740786",
+      "url": "/api/media/file/HomeAboutPortrait.webp",
+      "thumbnailURL": null
+    }
   },
   "homeExperience": {
     "title": "Experience",
@@ -125,6 +184,126 @@
     "title": "Contact Me",
     "paragraph": "I'm always on the lookout for new projects, opportunities, and connections. Feel free to reach out anytime.",
     "email": "haydenlalljie@gmail.com"
+  },
+  "sharedImages": {
+    "homeHeroBannerImage": {
+      "alt": "Fog over trees in a mountainous forest",
+      "name": "Home Hero Background",
+      "credit": "https://unsplash.com/photos/cloud-covered-mountains-NO-FxxCE67Y",
+      "filename": "homeHeroBanner.webp",
+      "mimeType": "image/webp",
+      "filesize": 874658,
+      "width": 3751,
+      "height": 5251,
+      "focalX": 50,
+      "focalY": 50,
+      "sizes": {
+        "thumbnail": {
+          "url": "/api/media/file/homeHeroBanner-400x560.webp",
+          "width": 400,
+          "height": 560,
+          "mimeType": "image/webp",
+          "filesize": 32698,
+          "filename": "homeHeroBanner-400x560.webp"
+        },
+        "small": {
+          "url": "/api/media/file/homeHeroBanner-768x1075.webp",
+          "width": 768,
+          "height": 1075,
+          "mimeType": "image/webp",
+          "filesize": 75980,
+          "filename": "homeHeroBanner-768x1075.webp"
+        },
+        "medium": {
+          "url": "/api/media/file/homeHeroBanner-1200x1680.webp",
+          "width": 1200,
+          "height": 1680,
+          "mimeType": "image/webp",
+          "filesize": 129062,
+          "filename": "homeHeroBanner-1200x1680.webp"
+        },
+        "large": {
+          "url": "/api/media/file/homeHeroBanner-1800x2520.webp",
+          "width": 1800,
+          "height": 2520,
+          "mimeType": "image/webp",
+          "filesize": 255120,
+          "filename": "homeHeroBanner-1800x2520.webp"
+        },
+        "hero": {
+          "url": "/api/media/file/homeHeroBanner-2500x3500.webp",
+          "width": 2500,
+          "height": 3500,
+          "mimeType": "image/webp",
+          "filesize": 412728,
+          "filename": "homeHeroBanner-2500x3500.webp"
+        }
+      },
+      "createdAt": "2025-03-11T21:12:51.847Z",
+      "updatedAt": "2025-03-11T21:24:39.944Z",
+      "thumbnailURL": null,
+      "url": "/api/media/file/homeHeroBanner.webp",
+      "id": "67d0a753337eb5257674066e"
+    },
+    "homeBottomBackgroundImage": {
+      "alt": "Forest lake under a mountain",
+      "name": "Home Bottom Background",
+      "credit": "https://unsplash.com/photos/grey-calm-body-of-water-near-green-leaf-trees-at-daytime-choc7LYd98I",
+      "filename": "homeBottomBackground.webp",
+      "mimeType": "image/webp",
+      "filesize": 4868702,
+      "width": 4912,
+      "height": 7360,
+      "focalX": 50,
+      "focalY": 50,
+      "sizes": {
+        "thumbnail": {
+          "url": "/api/media/file/homeBottomBackground-400x599.webp",
+          "width": 400,
+          "height": 599,
+          "mimeType": "image/webp",
+          "filesize": 78270,
+          "filename": "homeBottomBackground-400x599.webp"
+        },
+        "small": {
+          "url": "/api/media/file/homeBottomBackground-768x1151.webp",
+          "width": 768,
+          "height": 1151,
+          "mimeType": "image/webp",
+          "filesize": 202128,
+          "filename": "homeBottomBackground-768x1151.webp"
+        },
+        "medium": {
+          "url": "/api/media/file/homeBottomBackground-1200x1798.webp",
+          "width": 1200,
+          "height": 1798,
+          "mimeType": "image/webp",
+          "filesize": 360316,
+          "filename": "homeBottomBackground-1200x1798.webp"
+        },
+        "large": {
+          "url": "/api/media/file/homeBottomBackground-1800x2697.webp",
+          "width": 1800,
+          "height": 2697,
+          "mimeType": "image/webp",
+          "filesize": 699112,
+          "filename": "homeBottomBackground-1800x2697.webp"
+        },
+        "hero": {
+          "url": "/api/media/file/homeBottomBackground-2500x3746.webp",
+          "width": 2500,
+          "height": 3746,
+          "mimeType": "image/webp",
+          "filesize": 1217280,
+          "filename": "homeBottomBackground-2500x3746.webp"
+        }
+      },
+      "createdAt": "2025-03-11T21:16:55.594Z",
+      "updatedAt": "2025-03-11T21:24:20.860Z",
+      "thumbnailURL": null,
+      "url": "/api/media/file/homeBottomBackground.webp",
+      "id": "67d0a847337eb525767406a0"
+    }
   },
   "id": "67c94ade0e528355496e41af"
 }

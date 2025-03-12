@@ -42,4 +42,5 @@ export default buildConfig({
     payloadCloudPlugin(),
     // storage-adapter-placeholder
   ],
+  serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
 })

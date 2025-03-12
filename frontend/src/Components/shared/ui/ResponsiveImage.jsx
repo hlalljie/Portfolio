@@ -58,29 +58,4 @@ const generateSources = async (imageData) => {
   return srcLookup;
 };
 
-/**
- * Finds out if an image URL is valid
- * @param {string} url - The URL to check
- * @returns {boolean} - True if the URL is valid
- */
-const checkImageUrl = async (url) => {
-  try {
-    const response = await fetch(url, {
-      method: 'HEAD',
-      cache: 'no-store',
-      headers: {
-        Accept: 'image/*', // Tell Vite this is an image request
-        'Cache-Control': 'no-store', // Bypass Vite's dev caching
-      },
-    });
-
-    console.log(`Checking ${url}: ${response.status}`);
-    return response.status === 200;
-  } catch (error) {
-    console.log(`Error checking ${url}:`, error); // Debug log
-
-    return false;
-  }
-};
-
 export default ResponsiveImage;

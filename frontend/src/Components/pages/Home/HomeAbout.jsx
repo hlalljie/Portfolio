@@ -7,6 +7,8 @@ import { styled, css } from 'styled-components';
 import { AppContext } from '@/context/AppContext';
 // Layouts
 import ThemedSection from '@/Components/shared/layout/ThemedSection';
+// UI
+import AdaptiveImage from '@/Components/shared/ui/AdaptiveImage';
 // Styles
 import { breakpoints, tablet } from '@/styles/mediaQueries';
 import { fadeIn } from '@/styles/animations';
@@ -93,13 +95,17 @@ function HomeAbout() {
         <AnimatedHomeAbout $inView={inView}>
           <div className="aboutContent">
             <div className="imgContainer">
-              <img
+              <AdaptiveImage
+                imageData={sectionData['portraitImage']}
+                sizes={'(max-width: ' + breakpoints.tablet + 'px) 86vw, 43vw'}
+              />
+              {/* <img
                 src="/images/Portrait600w.jpg"
                 srcSet="/images/Portrait600w.jpg 600w, /images/Portrait1200w.jpg 1200w"
                 sizes={'(max-width: ' + breakpoints.tablet + 'px) 86vw, 43vw'}
                 alt="Portrait of Hayden Lalljie"
                 loading="lazy"
-              />
+              /> */}
             </div>
             <div className="textContainer">
               <h2 className="sectionTitle">{sectionData['title']}</h2>
