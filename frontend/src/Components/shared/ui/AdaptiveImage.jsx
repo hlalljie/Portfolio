@@ -26,23 +26,20 @@ const AdaptiveImage = ({ imageData, className = '', sizes = '100vw' }) => {
 };
 
 const getImageSources = (imageData, useStaticData) => {
-  const host = 'http://localhost:3000';
   console.log(imageData);
-  const src = `${host}${imageData.sizes.medium.url}`;
-  const thumbnail = imageData.sizes.thumbnail.url
-    ? `${host}${imageData.sizes.thumbnail.url} 400w,`
-    : '';
+  const src = `${formatURL(imageData.sizes.thumbnail.url, useStaticData)}`;
+  const thumbnail = `${src} 400w,`;
   const small = imageData.sizes.small.url
-    ? `${host}${imageData.sizes.small.url} 768w,`
+    ? `${formatURL(imageData.sizes.small.url, useStaticData)} 768w,`
     : '';
   const medium = imageData.sizes.medium.url
-    ? `${host}${imageData.sizes.medium.url} 1200w,`
+    ? `${formatURL(imageData.sizes.medium.url, useStaticData)} 1200w,`
     : '';
   const large = imageData.sizes.large.url
-    ? `${host}${imageData.sizes.large.url} 1800w,`
+    ? `${formatURL(imageData.sizes.large.url, useStaticData)} 1800w,`
     : '';
   const hero = imageData.sizes.hero.url
-    ? `${host}${imageData.sizes.hero.url} 2500w`
+    ? `${formatURL(imageData.sizes.hero.url, useStaticData)} 2500w`
     : '';
 
   const srcSet = `
@@ -53,6 +50,15 @@ const getImageSources = (imageData, useStaticData) => {
         ${hero}
     `;
   return { src: src, srcSet: srcSet };
+};
+
+const formatURL = (url, useStaticData) => {
+  // if using api add api location prefix
+  if (!useStaticData) {
+    return `http://localhost:3000${url}`;
+  }
+  // if not using api, strip change prefix
+  return url.replace('/api/media/file/', '/media/');
 };
 
 export default AdaptiveImage;
