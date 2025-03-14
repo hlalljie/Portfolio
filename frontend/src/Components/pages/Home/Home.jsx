@@ -44,7 +44,7 @@ function Home() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
   if (loading || !pageData) {
     return <div>Loading...</div>;
