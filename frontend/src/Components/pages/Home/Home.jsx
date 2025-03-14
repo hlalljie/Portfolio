@@ -37,7 +37,7 @@ const StyledHome = styled.div`
  * @returns {JSX.Element}
  */
 function Home() {
-  const { loading, fetchData } = usePayloadData({
+  const { loading, fetchData, pageData } = usePayloadData({
     type: 'global',
     slug: 'homepage',
   });
@@ -46,13 +46,16 @@ function Home() {
     fetchData();
   }, []);
 
-  if (loading) {
+  if (loading || !pageData) {
     return <div>Loading...</div>;
   }
 
   return (
     <StyledHome>
-      <SharedBackground imgName="heroBanner" imgExtension=".jpeg">
+      <SharedBackground
+        backgroundImageData={pageData['sharedImages']['homeHeroBannerImage']}
+        className="topBackground"
+      >
         <Header />
         <HeroBanner />
         <HomeExperience />
@@ -60,7 +63,9 @@ function Home() {
         <HomeFeaturedProjects />
       </SharedBackground>
       <SharedBackground
-        imgName="homeBottomBackground"
+        backgroundImageData={
+          pageData['sharedImages']['homeBottomBackgroundImage']
+        }
         imgPosition="0% 60%"
         className="bottomBackground"
       >

@@ -136,5 +136,6 @@ export default function usePayloadData({ type = 'global', slug, collection }) {
   return {
     loading: dataLoading,
     fetchData,
+    pageData,
   };
 }
