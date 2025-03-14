@@ -231,6 +231,7 @@ export interface ExperienceItem {
 export interface PortfolioItem {
   id: string;
   title: string;
+  fullTitle?: string | null;
   thumbnail: string | Media;
   company: string;
   roles: string[];
@@ -446,6 +447,7 @@ export interface ExperienceItemsSelect<T extends boolean = true> {
  */
 export interface PortfolioItemsSelect<T extends boolean = true> {
   title?: T;
+  fullTitle?: T;
   thumbnail?: T;
   company?: T;
   roles?: T;

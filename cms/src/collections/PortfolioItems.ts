@@ -23,6 +23,10 @@ export const PortfolioItems: CollectionConfig = {
       required: true,
     },
     {
+      name: 'fullTitle',
+      type: 'text',
+    },
+    {
       name: 'thumbnail',
       type: 'upload',
       relationTo: 'media',
