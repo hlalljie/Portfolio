@@ -69,6 +69,7 @@ export interface Config {
     users: User;
     media: Media;
     experienceItems: ExperienceItem;
+    portfolioItems: PortfolioItem;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -78,6 +79,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     experienceItems: ExperienceItemsSelect<false> | ExperienceItemsSelect<true>;
+    portfolioItems: PortfolioItemsSelect<false> | PortfolioItemsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -224,6 +226,49 @@ export interface ExperienceItem {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "portfolioItems".
+ */
+export interface PortfolioItem {
+  id: string;
+  title: string;
+  thumbnail: string | Media;
+  company: string;
+  roles: string[];
+  excerpt: string;
+  technologies: string[];
+  year: string;
+  url?: string | null;
+  github?: string | null;
+  pageContent: {
+    bannerImage: string | Media;
+    content?:
+      | {
+          content?: {
+            root: {
+              type: string;
+              children: {
+                type: string;
+                version: number;
+                [k: string]: unknown;
+              }[];
+              direction: ('ltr' | 'rtl') | null;
+              format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+              indent: number;
+              version: number;
+            };
+            [k: string]: unknown;
+          } | null;
+          id?: string | null;
+          blockName?: string | null;
+          blockType: 'textBlock';
+        }[]
+      | null;
+  };
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -240,6 +285,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'experienceItems';
         value: string | ExperienceItem;
+      } | null)
+    | ({
+        relationTo: 'portfolioItems';
+        value: string | PortfolioItem;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -388,6 +437,39 @@ export interface ExperienceItemsSelect<T extends boolean = true> {
       };
   description?: T;
   technologies?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "portfolioItems_select".
+ */
+export interface PortfolioItemsSelect<T extends boolean = true> {
+  title?: T;
+  thumbnail?: T;
+  company?: T;
+  roles?: T;
+  excerpt?: T;
+  technologies?: T;
+  year?: T;
+  url?: T;
+  github?: T;
+  pageContent?:
+    | T
+    | {
+        bannerImage?: T;
+        content?:
+          | T
+          | {
+              textBlock?:
+                | T
+                | {
+                    content?: T;
+                    id?: T;
+                    blockName?: T;
+                  };
+            };
+      };
   updatedAt?: T;
   createdAt?: T;
 }

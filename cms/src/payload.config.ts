@@ -1,4 +1,6 @@
 // storage-adapter-import-placeholder
+
+// External Imports
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { payloadCloudPlugin } from '@payloadcms/payload-cloud'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
@@ -7,12 +9,14 @@ import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
-import triggerRebuild from './app/utils/triggerRebuild'
-
+// Internal Imports
+// Globals
 import { Homepage } from './globals/Homepage'
+// Collections
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { ExperienceItems } from './collections/ExperienceItems'
+import { PortfolioItems } from './collections/PortfolioItems'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -25,7 +29,7 @@ export default buildConfig({
     },
   },
   globals: [Homepage],
-  collections: [Users, Media, ExperienceItems],
+  collections: [Users, Media, ExperienceItems, PortfolioItems],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

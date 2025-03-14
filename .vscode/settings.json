@@ -11,6 +11,14 @@
     {
       "filePath": "cms/src/globals/Homepage.ts",
       "group": "Default"
+    },
+    {
+      "filePath": "cms/package.json",
+      "group": "Default"
+    },
+    {
+      "filePath": "frontend/package.json",
+      "group": "Default"
     }
   ]
 }
