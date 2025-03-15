@@ -2,6 +2,7 @@
 import type { CollectionConfig } from 'payload'
 
 // Internal imports
+import slugify from '../app/utils/slugify'
 import { TextBlock } from '../blocks/TextBlock'
 import triggerRebuild from '../app/utils/triggerRebuild'
 
@@ -25,6 +26,23 @@ export const Projects: CollectionConfig = {
     {
       name: 'fullTitle',
       type: 'text',
+    },
+    {
+      name: 'slug',
+      type: 'text',
+      hooks: {
+        beforeValidate: [
+          ({ data }) => {
+            if (!data) {
+              return
+            }
+            if (data.title && !data.slug) {
+              return slugify(data.title)
+            }
+            return data.slug
+          },
+        ],
+      },
     },
     {
       name: 'thumbnail',
@@ -67,6 +85,7 @@ export const Projects: CollectionConfig = {
       name: 'github',
       type: 'text',
     },
+
     {
       name: 'pageContent',
       type: 'group',

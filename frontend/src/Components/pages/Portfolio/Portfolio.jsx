@@ -54,7 +54,7 @@ function Portfolio() {
     fetchData();
   }, [fetchData]);
 
-  if (loading || !pageData) {
+  if (loading || !pageData || pageData === undefined) {
     return <div>Loading...</div>;
   }
 

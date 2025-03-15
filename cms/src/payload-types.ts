@@ -232,6 +232,7 @@ export interface Project {
   id: string;
   title: string;
   fullTitle?: string | null;
+  slug?: string | null;
   thumbnail: string | Media;
   company: string;
   roles: string[];
@@ -448,6 +449,7 @@ export interface ExperienceItemsSelect<T extends boolean = true> {
 export interface ProjectsSelect<T extends boolean = true> {
   title?: T;
   fullTitle?: T;
+  slug?: T;
   thumbnail?: T;
   company?: T;
   roles?: T;
