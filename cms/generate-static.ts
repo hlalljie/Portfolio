@@ -1,59 +1,97 @@
-import { getPayload } from 'payload'
+import { getPayload, BasePayload, GlobalSlug, CollectionSlug } from 'payload'
 import config from './src/payload.config.ts'
 import fs from 'fs'
 import path from 'path'
 
 // Define output directories
 const outputDir = path.join(process.cwd(), '..', 'frontend')
-const dataOutputDir = path.join(outputDir, 'src', 'data', 'globals')
+const globalOutputDir = path.join(outputDir, 'src', 'data', 'globals')
+const collectionOutputDir = path.join(outputDir, 'src', 'data', 'collections')
 const mediaOutputDir = path.join(outputDir, 'public', 'media')
 
+/**
+ * generateStatic - Function to generate static data and save to frontend
+ */
 const generateStatic = async () => {
   console.log('🚀 Generating static data...')
 
   // Create directories if they don't exist
-  if (!fs.existsSync(dataOutputDir)) {
-    fs.mkdirSync(dataOutputDir, { recursive: true })
-  }
+  createStaticDirectories()
 
-  if (!fs.existsSync(mediaOutputDir)) {
-    fs.mkdirSync(mediaOutputDir, { recursive: true })
-  }
+  // Initialize Payload (dotenv is handled by Next.js automatically)
+  const payload = await getPayload({ config })
 
-  // Get data from Payload
-  const payloadData = await getData()
+  // Save homepage data
+  await saveGlobalData('homepage', payload)
 
-  // Define output file path
-  const filename = 'homepage.json'
-  const outputPath = path.join(dataOutputDir, filename)
-
-  // Write data to JSON file
-  fs.writeFileSync(outputPath, JSON.stringify(payloadData, null, 2))
-
-  console.log(`✅ Static data saved to ${outputPath}`)
+  // Save project data
+  await saveCollectionData('projects', payload)
 
   // Copy media files
   await copyMediaFiles()
 
+  console.log('✅ Static data finished generating')
+
   process.exit(0) // Exit the script
 }
 
-const getData = async () => {
-  // Initialize Payload (dotenv is handled by Next.js automatically)
-  const payload = await getPayload({ config })
-
-  // Fetch data from Payload Global
-  // Fetch data from homepage
-  const homepageData = await payload.findGlobal({
-    slug: 'homepage',
-  })
-
-  //structure data for export
-  const data = homepageData
-
-  return data
+/**
+ * createStaticDirectories - Function to create static directories if they don't exist
+ */
+const createStaticDirectories = () => {
+  // Global output directory
+  if (!fs.existsSync(globalOutputDir)) {
+    fs.mkdirSync(globalOutputDir, { recursive: true })
+  }
+  // Collection output directory
+  if (!fs.existsSync(collectionOutputDir)) {
+    fs.mkdirSync(collectionOutputDir, { recursive: true })
+  }
+  // Media output directory
+  if (!fs.existsSync(mediaOutputDir)) {
+    fs.mkdirSync(mediaOutputDir, { recursive: true })
+  }
 }
 
+/**
+ * getGlobalData - Function to save global data to frontend static json
+ * @param pageSlug - The slug of the global to save
+ */
+const saveGlobalData = async <T extends GlobalSlug>(pageSlug: T, payload: BasePayload) => {
+  // Fetch data from Payload Global
+  const payloadData = await payload.findGlobal({
+    slug: pageSlug,
+  })
+
+  // Define output file path
+  const filename = 'homepage.json'
+  const outputPath = path.join(globalOutputDir, filename)
+
+  // Write data to JSON file
+  fs.writeFileSync(outputPath, JSON.stringify(payloadData, null, 2))
+
+  console.log(`✅ Static data for ${pageSlug} saved to ${outputPath}`)
+}
+
+const saveCollectionData = async (collectionSlug: CollectionSlug, payload: BasePayload) => {
+  // Fetch data from Payload Collection
+  const payloadData = await payload.find({
+    collection: collectionSlug,
+  })
+
+  // Define output file path
+  const filename = `${collectionSlug}.json`
+  const outputPath = path.join(collectionOutputDir, filename)
+
+  // Write data to JSON file
+  fs.writeFileSync(outputPath, JSON.stringify(payloadData, null, 2))
+
+  console.log(`✅ Static data for ${collectionSlug} saved to ${outputPath}`)
+}
+
+/**
+ * copyMediaFiles - Function to copy media files to frontend public directory
+ */
 const copyMediaFiles = async () => {
   console.log('📷 Copying media files...')
 

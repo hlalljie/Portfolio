@@ -77,6 +77,27 @@ export const Homepage: GlobalConfig = {
       ],
     },
     {
+      name: 'homeFeaturedProjects',
+      type: 'group',
+      label: 'Home Featured Projects',
+      fields: [
+        {
+          name: 'title',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'featuredProjects',
+          type: 'relationship',
+          relationTo: 'projects',
+          required: true,
+          hasMany: true,
+          minRows: 3,
+          maxRows: 3,
+        },
+      ],
+    },
+    {
       name: 'homeAbout',
       type: 'group',
       label: 'Home About',

@@ -10,10 +10,9 @@ import { AppContext } from '@/context/AppContext';
  * @param {object} options - The options for the hook.
  * @param {string} options.type - The type of data to fetch. Can be 'global' or 'collection'.
  * @param {string} options.slug - The slug of the data to fetch.
- * @param {string} [options.collection] - The collection of the data to fetch.
  * @returns {object} Object containing fetchData function
  */
-export default function usePayloadData({ type = 'global', slug, collection }) {
+export default function usePayloadData({ type = 'global', slug }) {
   const {
     pageData,
     setPageData,
@@ -41,8 +40,8 @@ export default function usePayloadData({ type = 'global', slug, collection }) {
       let apiPath = '';
       if (type === 'global') {
         apiPath = `http://localhost:3000/api/globals/${slug}?depth=2`;
-      } else if (type === 'collection' && collection) {
-        apiPath = `http://localhost:3000/api/${collection}/${slug}?depth=2`;
+      } else if (type === 'collection') {
+        apiPath = `http://localhost:3000/api/collections/${slug}?depth=2`;
       }
 
       // fetch data
@@ -60,7 +59,7 @@ export default function usePayloadData({ type = 'global', slug, collection }) {
     } catch (error) {
       console.error(`Error fetching API data:`, error);
     }
-  }, [type, slug, collection, setPageData]);
+  }, [type, slug, setPageData]);
 
   /**
    * fetchData: Function to fetch data from the API or from statically generated Payload data
@@ -100,9 +99,9 @@ export default function usePayloadData({ type = 'global', slug, collection }) {
           result = await import(
             /* @vite-ignore */ `../data/globals/${slug}.json`
           ).then((m) => m.default);
-        } else if (type === 'collection' && collection) {
+        } else if (type === 'collection') {
           result = await import(
-            /* @vite-ignore */ `../data/${collection}/${slug}.json`
+            /* @vite-ignore */ `../data/collections/${slug}.json`
           ).then((m) => m.default);
         }
         setPageData(result);
@@ -114,15 +113,7 @@ export default function usePayloadData({ type = 'global', slug, collection }) {
     } finally {
       setDataLoading(false);
     }
-  }, [
-    type,
-    slug,
-    collection,
-    fetchFromAPI,
-    setPageData,
-    setDataLoading,
-    setUseStaticData,
-  ]);
+  }, [type, slug, fetchFromAPI, setPageData, setDataLoading, setUseStaticData]);
 
   // Clean up polling on unmount
   useEffect(() => {

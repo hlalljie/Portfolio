@@ -5,8 +5,8 @@ import type { CollectionConfig } from 'payload'
 import { TextBlock } from '../blocks/TextBlock'
 import triggerRebuild from '../app/utils/triggerRebuild'
 
-export const PortfolioItems: CollectionConfig = {
-  slug: 'portfolioItems',
+export const Projects: CollectionConfig = {
+  slug: 'projects',
   admin: {
     useAsTitle: 'title',
   },

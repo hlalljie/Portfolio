@@ -69,7 +69,7 @@ export interface Config {
     users: User;
     media: Media;
     experienceItems: ExperienceItem;
-    portfolioItems: PortfolioItem;
+    projects: Project;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -79,7 +79,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     experienceItems: ExperienceItemsSelect<false> | ExperienceItemsSelect<true>;
-    portfolioItems: PortfolioItemsSelect<false> | PortfolioItemsSelect<true>;
+    projects: ProjectsSelect<false> | ProjectsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -226,9 +226,9 @@ export interface ExperienceItem {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "portfolioItems".
+ * via the `definition` "projects".
  */
-export interface PortfolioItem {
+export interface Project {
   id: string;
   title: string;
   fullTitle?: string | null;
@@ -288,8 +288,8 @@ export interface PayloadLockedDocument {
         value: string | ExperienceItem;
       } | null)
     | ({
-        relationTo: 'portfolioItems';
-        value: string | PortfolioItem;
+        relationTo: 'projects';
+        value: string | Project;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -443,9 +443,9 @@ export interface ExperienceItemsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "portfolioItems_select".
+ * via the `definition` "projects_select".
  */
-export interface PortfolioItemsSelect<T extends boolean = true> {
+export interface ProjectsSelect<T extends boolean = true> {
   title?: T;
   fullTitle?: T;
   thumbnail?: T;
@@ -526,6 +526,10 @@ export interface Homepage {
     title: string;
     experienceItems: (string | ExperienceItem)[];
   };
+  homeFeaturedProjects: {
+    title: string;
+    featuredProjects: (string | Project)[];
+  };
   homeAbout: {
     title: string;
     paragraph: string;
@@ -562,6 +566,12 @@ export interface HomepageSelect<T extends boolean = true> {
     | {
         title?: T;
         experienceItems?: T;
+      };
+  homeFeaturedProjects?:
+    | T
+    | {
+        title?: T;
+        featuredProjects?: T;
       };
   homeAbout?:
     | T
