@@ -14,7 +14,7 @@ import RichText from '@/Components/shared/ui/RichText';
 // Styles
 import { tablet } from '@/styles/mediaQueries';
 
-const StyledProjectBasic = styled.div`
+const StyledProject = styled.div`
   ${({ theme }) => css`
     background-color: ${({ $bgcolor }) => $bgcolor};
     color: ${theme.colors.white};
@@ -43,11 +43,12 @@ const StyledProjectBasic = styled.div`
  * A Basic Case Study Layout including a summary and image
  * @returns {JSX.Element}
  */
-const ProjectBasic = () => {
+const Project = () => {
   // Get url
   const { projectSlug } = useParams();
   const theme = useTheme();
 
+  // Load page data
   const { loading, fetchData, pageData } = usePayloadData({
     type: 'collection',
     slug: 'projects',
@@ -57,16 +58,16 @@ const ProjectBasic = () => {
     fetchData();
   }, [fetchData]);
 
-  if (loading || !pageData) {
+  if (loading || !pageData || pageData?.projects === undefined) {
     return <div>Loading...</div>;
   }
 
   // TODO : Add 404 link for invalid links
-  const project = pageData.docs.find(
+  const project = pageData.projects.find(
     (potentialProject) => potentialProject['slug'] === projectSlug
   );
   return (
-    <StyledProjectBasic
+    <StyledProject
       $bgcolor={
         Object.hasOwn(project, 'backgroundColor')
           ? project['backgroundColor']
@@ -82,7 +83,7 @@ const ProjectBasic = () => {
         <h1>{project['title']}</h1>
         <ProjectContent project={project} />
       </section>
-    </StyledProjectBasic>
+    </StyledProject>
   );
 };
 
@@ -105,4 +106,4 @@ const TextBlock = ({ blockContent }) => {
   return <RichText content={blockContent} />;
 };
 
-export default ProjectBasic;
+export default Project;

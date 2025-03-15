@@ -47,7 +47,12 @@ function Home() {
     fetchData();
   }, [fetchData]);
 
-  if (loading || !pageData) {
+  if (
+    loading ||
+    !pageData ||
+    pageData?.globalType === undefined ||
+    pageData.globalType !== 'homepage'
+  ) {
     return <div>Loading...</div>;
   }
 
