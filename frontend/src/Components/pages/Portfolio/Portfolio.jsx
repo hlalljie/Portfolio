@@ -35,7 +35,7 @@ const StyledPortfolio = styled.div`
       background-size: cover;
     }
     .projectList {
-      padding: ${theme.padding.fullWidthSection};
+      padding: ${theme.padding.largeSection};
     }
   `}
 `;
@@ -63,8 +63,7 @@ function Portfolio() {
       <Header variant={'light'} overlapTopSection={false} />
       <ProjectList
         projectData={pageData.docs}
-        cols={4}
-        gap={35}
+        cols={3}
         variant={'light'}
         hideLinks
       />
