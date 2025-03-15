@@ -37,6 +37,7 @@ const StyledHome = styled.div`
  * @returns {JSX.Element}
  */
 function Home() {
+  // Load page data
   const { loading, fetchData, pageData } = usePayloadData({
     type: 'global',
     slug: 'homepage',

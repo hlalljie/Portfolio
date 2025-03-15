@@ -64,7 +64,7 @@ const saveGlobalData = async <T extends GlobalSlug>(pageSlug: T, payload: BasePa
   })
 
   // Define output file path
-  const filename = 'homepage.json'
+  const filename = `${pageSlug}.json`
   const outputPath = path.join(globalOutputDir, filename)
 
   // Write data to JSON file

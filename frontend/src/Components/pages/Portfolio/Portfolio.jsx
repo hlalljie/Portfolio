@@ -1,13 +1,16 @@
 // External Imports
+import { useEffect } from 'react';
 import { styled, css } from 'styled-components';
 
 // Internal Imports
+// Hooks
+import usePayloadData from '@/hooks/usePayloadData';
 // Layouts
 import Header from '@/Components/shared/layout/Header';
 // Display
 import ProjectList from '@/Components/shared/display/ProjectList';
 
-const StyledCaseStudies = styled.div`
+const StyledPortfolio = styled.div`
   ${({ theme }) => css`
     min-height: 100vh;
     /* background-color: ${theme.colors.black}; */
@@ -38,16 +41,35 @@ const StyledCaseStudies = styled.div`
 `;
 
 /**
- * CaseStudies: Case Studies Page listing all case studies
+ * Portfolio: Portfolio Page listing all professional projects
  * @returns {JSX.Element}
  */
-function CaseStudies() {
+function Portfolio() {
+  const { loading, fetchData, pageData } = usePayloadData({
+    type: 'collection',
+    slug: 'projects',
+  });
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
+  if (loading || !pageData) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <StyledCaseStudies>
+    <StyledPortfolio>
       <Header variant={'light'} overlapTopSection={false} />
-      <ProjectList cols={4} gap={35} variant={'light'} hideLink />
-    </StyledCaseStudies>
+      <ProjectList
+        projectData={pageData.docs}
+        cols={4}
+        gap={35}
+        variant={'light'}
+        hideLinks
+      />
+    </StyledPortfolio>
   );
 }
 
-export default CaseStudies;
+export default Portfolio;
