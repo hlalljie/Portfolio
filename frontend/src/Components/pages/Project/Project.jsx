@@ -87,23 +87,37 @@ const Project = () => {
   );
 };
 
+/**
+ * Project Content - Renders the project blocks or an excerpt if the project has no block content
+ * @param {object} props - The props passed to the component
+ * @param {object} props.project - The individual project data
+ * @returns {JSX.Element} The rendered project content
+ */
 const ProjectContent = ({ project }) => {
   const content = project['pageContent']['content'];
 
+  // If no content, show excerpt
   if (content === undefined || content === null) {
     return <p>{project['excerpt']}</p>;
   }
 
+  // Render block content
   return content.map((block, index) => {
     if (block['blockType'] === 'textBlock') {
-      return <TextBlock key={index} blockContent={block['content']} />;
+      return <TextBlock key={index} block={block} />;
     }
     return null;
   });
 };
 
-const TextBlock = ({ blockContent }) => {
-  return <RichText content={blockContent} />;
+/**
+ * TextBlock - Renders rich text content from the Payload text block to a React component
+ * @param {object} props - The props passed to the component
+ * @param {object} props.block - The text block object containing rich text content
+ * @returns {JSX.Element} The rendered rich text content
+ */
+const TextBlock = ({ block }) => {
+  return <RichText content={block['content']} />;
 };
 
 export default Project;
