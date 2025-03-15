@@ -42,7 +42,6 @@ const AdaptiveImage = ({ imageData, className = '', sizes = '100vw' }) => {
  * @returns {Object} - Object containing src and srcSet
  */
 const getImageSources = (imageData, useStaticData) => {
-  console.log(imageData);
   const src = `${formatImageURL(imageData.sizes.thumbnail.url, useStaticData)}`;
   const thumbnail = `${src} 400w,`;
   const small = imageData.sizes.small.url

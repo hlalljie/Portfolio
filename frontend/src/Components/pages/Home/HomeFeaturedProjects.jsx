@@ -1,8 +1,11 @@
 // External Imports
+import { useContext } from 'react';
 import { styled, css } from 'styled-components';
 import { HashLink as Link } from 'react-router-hash-link';
 
 // Internal Imports
+// Context
+import { AppContext } from '@/context/AppContext';
 // Layouts
 import ThemedSection from '@/Components/shared/layout/ThemedSection';
 // Display
@@ -111,6 +114,15 @@ const AnimatedHomeFeaturedProjects = styled.div`
  * @returns {JSX.Element}
  */
 function HomeFeaturedProjects() {
+  // Get context data
+  const { pageData, dataLoading } = useContext(AppContext);
+
+  if (dataLoading || !pageData) {
+    return <div>Loading...</div>;
+  }
+
+  const sectionData = pageData['homeFeaturedProjects'];
+
   return (
     <ThemedSection
       themeName="dark"
@@ -121,12 +133,12 @@ function HomeFeaturedProjects() {
       {(inView) => (
         <AnimatedHomeFeaturedProjects $inView={inView}>
           <div className="titleRowWrapper">
-            <h2 className="sectionTitle">Featured Projects</h2>
+            <h2 className="sectionTitle">{sectionData['title']}</h2>
             <button className="desktopOnly">
               <Link to="/portfolio">All Projects</Link>
             </button>
           </div>
-          <ProjectList featured />
+          <ProjectList projectData={sectionData['featuredProjects']} />
           <div className="mobileButtonContainer mobileTabletOnly">
             <button>
               <Link to="/portfolio">All Projects</Link>

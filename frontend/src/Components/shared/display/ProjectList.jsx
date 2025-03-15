@@ -7,11 +7,11 @@ import LaunchIcon from '@mui/icons-material/Launch';
 // Display
 import TagList from '@/Components/shared/display/TagList';
 // UI
-import ResponsiveImage from '@/Components/shared/ui/ResponsiveImage';
-// Data
-import PortfolioItems from '@/data/PortfolioItems';
+import AdaptiveImage from '@/Components/shared/ui/AdaptiveImage';
 // Styles
 import { tablet } from '@/styles/mediaQueries';
+// Utils
+import { slugify } from '@/utils/slugify';
 
 const StyledProjectList = styled.div`
   display: flex;
@@ -39,6 +39,7 @@ const StyledProjectList = styled.div`
 /**
  * ProjectList: Component to display a list of project cards.
  * @param {Object} props
+ * @param {Object} props.projectData - The project data
  * @param {boolean} props.featured - Whether to filter by only featured projects
  * @param {number} props.cols - Number of columns for project grid
  * @param {number} props.gap - Gap between project cards
@@ -48,36 +49,47 @@ const StyledProjectList = styled.div`
  * @returns {JSX.Element}
  */
 const ProjectList = ({
-  featured = false,
+  projectData,
   cols = 3,
   gap = 55,
   variant = 'light',
   hideLinks = false,
   hideExcerpt = false,
 }) => {
-  const projects = featured
-    ? PortfolioItems.Featured
-    : Object.keys(PortfolioItems.Projects);
-
   return (
     <StyledProjectList className="projectList" $cols={cols} $gap={gap}>
       {/* Show list of projects from data */}
-      {projects.map((projectId) => {
-        const { excerpt, image, draft, ...projectData } =
-          PortfolioItems.Projects[projectId];
-        if (draft === true) return null;
+      {projectData.map((project, index) => {
+        const {
+          title,
+          thumbnail,
+          company,
+          roles,
+          excerpt,
+          technologies,
+          url,
+          github,
+        } = project;
         return (
           <ProjectCard
-            key={projectId}
-            data={{ ...projectData, image, excerpt }}
-            projectId={projectId}
+            key={index}
+            project={{
+              title,
+              thumbnail,
+              company,
+              roles,
+              excerpt,
+              technologies,
+              url,
+              github,
+            }}
             variant={variant}
             hideLinks={hideLinks}
             hideExcerpt={hideExcerpt}
           />
         );
       })}
-      {/* Add filler spaces after to push unfull rows to the left */}
+      {/* Add filler spaces after to push unfilled rows to the left */}
       {[...Array(3)].map((id) => (
         <div className="projectFiller" key={id}></div>
       ))}
@@ -134,48 +146,46 @@ const StyledProjectCard = styled('div')`
 /**
  * ProjectCard: Component to display an individual project card.
  * @param {Object} props
- * @param {Object} props.data - The project data
- * @param {string} props.projectId - The ID of the project
+ * @param {Object} props.project - The project data
  * @param {string} props.variant - Color variant for project cards
  * @param {boolean} props.hideExcerpt - Whether to show the excerpt
  * @param {boolean} props.hideLinks - Whether to show the links
  * @returns {JSX.Element}
  */
 const ProjectCard = ({
-  data,
+  project,
   variant = 'light',
   hideExcerpt = false,
   hideLinks = false,
-  projectId,
 }) => {
-  let portfolioLink = `/portfolio/${projectId}`;
+  let portfolioLink = `/portfolio/${slugify(project['title'])}`;
   return (
     <StyledProjectCard className="projectCard" $variant={variant}>
       <a className="imgContainer" href={portfolioLink}>
-        <ResponsiveImage
-          imageData={data.image}
+        <AdaptiveImage
+          imageData={project['thumbnail']}
           sizes="(max-width: 768px) 86vw, 27vw"
         />
       </a>
       <div className="textContainer">
         <a href={portfolioLink}>
-          <h3 className="projectTitle">{data.title}</h3>
+          <h3 className="projectTitle">{project['title']}</h3>
         </a>
         {!hideExcerpt && (
-          <p className="projectExcerpt smallP">{data.excerpt}</p>
+          <p className="projectExcerpt smallP">{project['excerpt']}</p>
         )}
       </div>
       <TagList
-        tags={data.technologies}
+        tags={project['technologies']}
         className="technologies"
         color={variant === 'light' ? 'white' : 'black'}
         filled={variant === 'light' ? true : false}
       />
       {hideLinks === false && (
         <div className="linkContainer">
-          {data.url && (
+          {project['url'] && (
             <a
-              href={data.url}
+              href={project['url']}
               target="_blank"
               rel="noreferrer"
               aria-label="View Live Website"
@@ -183,9 +193,9 @@ const ProjectCard = ({
               <LaunchIcon aria-hidden="true" />
             </a>
           )}
-          {data.github && (
+          {project['github'] && (
             <a
-              href={data.github}
+              href={project['github']}
               target="_blank"
               aria-label="View Project Github"
             >
