@@ -9,6 +9,8 @@ import usePayloadData from '@/hooks/usePayloadData';
 import Header from '@/Components/shared/layout/Header';
 // Display
 import ProjectList from '@/Components/shared/display/ProjectList';
+// UI
+import LoadingScreen from '@/Components/shared/ui/LoadingScreen';
 
 const StyledPortfolio = styled.div`
   ${({ theme }) => css`
@@ -55,7 +57,7 @@ function Portfolio() {
   }, [fetchData]);
 
   if (loading || !pageData || pageData?.docs === undefined) {
-    return <div>Loading...</div>;
+    return <LoadingScreen />;
   }
 
   return (

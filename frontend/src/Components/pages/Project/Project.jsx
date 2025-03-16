@@ -11,6 +11,7 @@ import Header from '@/Components/shared/layout/Header';
 // UI
 import AdaptiveImage from '@/Components/shared/ui/AdaptiveImage';
 import RichText from '@/Components/shared/ui/RichText';
+import LoadingScreen from '@/Components/shared/ui/LoadingScreen';
 // Styles
 import { tablet } from '@/styles/mediaQueries';
 
@@ -59,7 +60,7 @@ const Project = () => {
   }, [fetchData]);
 
   if (loading || !pageData || pageData?.docs === undefined) {
-    return <div>Loading...</div>;
+    return <LoadingScreen />;
   }
 
   // TODO : Add 404 link for invalid links

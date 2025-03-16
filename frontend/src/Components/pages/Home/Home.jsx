@@ -15,6 +15,8 @@ import HomeExperience from './HomeExperience/HomeExperience';
 import HomeFeaturedProjects from './HomeFeaturedProjects';
 import HomeAbout from './HomeAbout';
 import HomeContact from './HomeContact';
+// UI
+import LoadingScreen from '@/Components/shared/ui/LoadingScreen';
 
 const StyledHome = styled.div`
   width: 100%;
@@ -53,7 +55,7 @@ function Home() {
     pageData?.globalType === undefined ||
     pageData.globalType !== 'homepage'
   ) {
-    return <div>Loading...</div>;
+    return <LoadingScreen />;
   }
 
   return (
