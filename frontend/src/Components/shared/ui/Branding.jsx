@@ -1,4 +1,5 @@
 // External Imports
+import { HashLink as Link } from 'react-router-hash-link';
 import { styled, css } from 'styled-components';
 
 const StyledBranding = styled.div.attrs({ className: 'branding' })`
@@ -28,10 +29,10 @@ const StyledBranding = styled.div.attrs({ className: 'branding' })`
 function Branding({ variant = 'dark' }) {
   return (
     <StyledBranding $variant={variant}>
-      <a href="/home">
+      <Link to="/home">
         {/* <LogoIcon className="logoIcon" scale={0.5} /> */}
         Hayden Lalljie
-      </a>
+      </Link>
     </StyledBranding>
   );
 }
