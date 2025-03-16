@@ -58,12 +58,12 @@ const Project = () => {
     fetchData();
   }, [fetchData]);
 
-  if (loading || !pageData || pageData?.projects === undefined) {
+  if (loading || !pageData || pageData?.docs === undefined) {
     return <div>Loading...</div>;
   }
 
   // TODO : Add 404 link for invalid links
-  const project = pageData.projects.find(
+  const project = pageData.docs.find(
     (potentialProject) => potentialProject['slug'] === projectSlug
   );
   return (

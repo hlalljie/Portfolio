@@ -1,5 +1,5 @@
 {
-  "projects": [
+  "docs": [
     {
       "title": "Travel Gurus",
       "thumbnail": {
@@ -570,5 +570,14 @@
       "slug": "platinum-advisors",
       "id": "67d3d1e29b9e1c15dc3d467f"
     }
-  ]
+  ],
+  "totalDocs": 3,
+  "limit": 10,
+  "totalPages": 1,
+  "page": 1,
+  "pagingCounter": 1,
+  "hasPrevPage": false,
+  "hasNextPage": false,
+  "prevPage": null,
+  "nextPage": null
 }

@@ -12,6 +12,7 @@ export function AppProvider({ children }) {
   const [pageData, setPageData] = useState(null);
   const [dataLoading, setDataLoading] = useState(false);
   const [useStaticData, setUseStaticData] = useState(true);
+  const [pollingSessionId, setPollingSessionId] = useState(null);
   // Add more state here as needed
 
   return (
@@ -23,6 +24,8 @@ export function AppProvider({ children }) {
         setDataLoading,
         useStaticData,
         setUseStaticData,
+        pollingSessionId,
+        setPollingSessionId,
       }}
     >
       {children}

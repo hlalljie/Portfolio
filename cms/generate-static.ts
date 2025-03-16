@@ -79,16 +79,12 @@ const saveCollectionData = async (collectionSlug: CollectionSlug, payload: BaseP
     collection: collectionSlug,
   })
 
-  // Index data by slug
-  let indexedPayloadData: any = {}
-  indexedPayloadData[collectionSlug.toString()] = payloadData.docs
-
   // Define output file path
   const filename = `${collectionSlug}.json`
   const outputPath = path.join(collectionOutputDir, filename)
 
   // Write data to JSON file
-  fs.writeFileSync(outputPath, JSON.stringify(indexedPayloadData, null, 2))
+  fs.writeFileSync(outputPath, JSON.stringify(payloadData, null, 2))
 
   console.log(`✅ Static data for ${collectionSlug} saved to ${outputPath}`)
 }

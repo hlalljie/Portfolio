@@ -54,7 +54,7 @@ function Portfolio() {
     fetchData();
   }, [fetchData]);
 
-  if (loading || !pageData || pageData?.projects === undefined) {
+  if (loading || !pageData || pageData?.docs === undefined) {
     return <div>Loading...</div>;
   }
 
@@ -62,7 +62,7 @@ function Portfolio() {
     <StyledPortfolio>
       <Header variant={'light'} overlapTopSection={false} />
       <ProjectList
-        projectData={pageData.projects}
+        projectData={pageData.docs}
         cols={3}
         variant={'light'}
         hideLinks

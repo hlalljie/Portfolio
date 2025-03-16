@@ -4,6 +4,7 @@ import { useContext, useCallback, useRef, useEffect } from 'react';
 // Internal Imports
 // Context
 import { AppContext } from '@/context/AppContext';
+import pollingManager from '@/utils/pollingManager';
 
 /**
  * usePayloadData: Hook to fetch data from Payload api or from statically generated Payload data
@@ -20,9 +21,9 @@ export default function usePayloadData({ type = 'global', slug }) {
     setDataLoading,
     setUseStaticData,
   } = useContext(AppContext);
-  // polling vars
-  const pollingRef = useRef(null);
+
   const latestDataRef = useRef(pageData);
+  const componentKey = `${type}-${slug}`;
 
   // Update latestDataRef when pageData changes
   useEffect(() => {
@@ -34,14 +35,20 @@ export default function usePayloadData({ type = 'global', slug }) {
    * @returns {Promise<void>}
    */
   const fetchFromAPI = useCallback(async () => {
+    // Only proceed if this is still the active polling component
+    if (!pollingManager.isActiveFor(componentKey)) {
+      return;
+    }
+
     console.log('Fetching from API');
+    console.log(`Type: ${type}, Slug: ${slug}`);
     try {
       // build api path
       let apiPath = '';
       if (type === 'global') {
         apiPath = `http://localhost:3000/api/globals/${slug}?depth=2`;
       } else if (type === 'collection') {
-        apiPath = `http://localhost:3000/api/collections/${slug}?depth=2`;
+        apiPath = `http://localhost:3000/api/${slug}`;
       }
 
       // fetch data
@@ -54,12 +61,13 @@ export default function usePayloadData({ type = 'global', slug }) {
       // Update state only if the data has changed
       if (!currentData || currentData.updatedAt !== result.updatedAt) {
         console.log('Data changed, updating state');
+        console.log('New Data:', result);
         setPageData(result);
       }
     } catch (error) {
       console.error(`Error fetching API data:`, error);
     }
-  }, [type, slug, setPageData]);
+  }, [type, slug, setPageData, componentKey]);
 
   /**
    * fetchData: Function to fetch data from the API or from statically generated Payload data
@@ -68,12 +76,6 @@ export default function usePayloadData({ type = 'global', slug }) {
   const fetchData = useCallback(async () => {
     // Exit if slug is missing
     if (!slug) return;
-
-    // Clear any existing polling
-    if (pollingRef.current) {
-      clearInterval(pollingRef.current);
-      pollingRef.current = null;
-    }
 
     setDataLoading(true);
 
@@ -88,8 +90,8 @@ export default function usePayloadData({ type = 'global', slug }) {
         // Set static data flag
         setUseStaticData(false);
 
-        // Set up polling only if using API
-        pollingRef.current = setInterval(fetchFromAPI, 1000);
+        // Start polling for this component
+        pollingManager.startPolling(componentKey, fetchFromAPI, 1000);
       } else {
         // Static data logic
         console.log('Fetching from static data');
@@ -113,16 +115,24 @@ export default function usePayloadData({ type = 'global', slug }) {
     } finally {
       setDataLoading(false);
     }
-  }, [type, slug, fetchFromAPI, setPageData, setDataLoading, setUseStaticData]);
+  }, [
+    type,
+    slug,
+    fetchFromAPI,
+    setPageData,
+    setDataLoading,
+    setUseStaticData,
+    componentKey,
+  ]);
 
-  // Clean up polling on unmount
+  // Clean up polling on unmount if this component is still the active one
   useEffect(() => {
     return () => {
-      if (pollingRef.current) {
-        clearInterval(pollingRef.current);
+      if (pollingManager.isActiveFor(componentKey)) {
+        pollingManager.stopPolling();
       }
     };
-  }, []);
+  }, [componentKey]);
 
   return {
     loading: dataLoading,
