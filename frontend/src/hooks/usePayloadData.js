@@ -4,7 +4,9 @@ import { useContext, useCallback, useRef, useEffect } from 'react';
 // Internal Imports
 // Context
 import { AppContext } from '@/context/AppContext';
+// Utils
 import pollingManager from '@/utils/pollingManager';
+import dataCache from '@/utils/dataCache';
 
 /**
  * usePayloadData: Hook to fetch data from Payload api or from statically generated Payload data
@@ -70,6 +72,46 @@ export default function usePayloadData({ type = 'global', slug }) {
   }, [type, slug, setPageData, componentKey]);
 
   /**
+   * fetchFromStaticData: Function to fetch data from statically generated Payload data
+   * @returns {Promise<void>}
+   */
+  const fetchFromStaticData = useCallback(async () => {
+    // Create a cache key from type and slug
+    const cacheKey = `${type}-${slug}`;
+    // Check cache first
+    if (dataCache.has(cacheKey)) {
+      console.log('Using cached static data');
+      setPageData(dataCache.get(cacheKey));
+      setUseStaticData(true);
+      return true; // Skip loading process
+    }
+
+    console.log('Fetching from static data');
+
+    try {
+      let result;
+      if (type === 'global') {
+        result = await import(
+          /* @vite-ignore */ `../data/globals/${slug}.json`
+        ).then((m) => m.default);
+      } else if (type === 'collection') {
+        result = await import(
+          /* @vite-ignore */ `../data/collections/${slug}.json`
+        ).then((m) => m.default);
+      }
+      // Set cache
+      dataCache.set(cacheKey, result);
+
+      // Update pageData state
+      setPageData(result);
+      // Set static data flag
+      setUseStaticData(true);
+    } catch (error) {
+      console.error(`Error fetching static data:`, error);
+    }
+  }, [slug, type, setPageData, setUseStaticData]);
+
+  /**
    * fetchData: Function to fetch data from the API or from statically generated Payload data
    * @returns {Promise<void>}
    */
@@ -93,22 +135,7 @@ export default function usePayloadData({ type = 'global', slug }) {
         // Start polling for this component
         pollingManager.startPolling(componentKey, fetchFromAPI, 1000);
       } else {
-        // Static data logic
-        console.log('Fetching from static data');
-
-        let result;
-        if (type === 'global') {
-          result = await import(
-            /* @vite-ignore */ `../data/globals/${slug}.json`
-          ).then((m) => m.default);
-        } else if (type === 'collection') {
-          result = await import(
-            /* @vite-ignore */ `../data/collections/${slug}.json`
-          ).then((m) => m.default);
-        }
-        setPageData(result);
-        // Set static data flag
-        setUseStaticData(true);
+        fetchFromStaticData();
       }
     } catch (error) {
       console.error(`Error fetching data:`, error);
@@ -116,10 +143,9 @@ export default function usePayloadData({ type = 'global', slug }) {
       setDataLoading(false);
     }
   }, [
-    type,
     slug,
     fetchFromAPI,
-    setPageData,
+    fetchFromStaticData,
     setDataLoading,
     setUseStaticData,
     componentKey,
