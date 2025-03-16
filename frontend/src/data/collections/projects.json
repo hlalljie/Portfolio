@@ -171,8 +171,9 @@
         ]
       },
       "createdAt": "2025-03-14T17:00:55.727Z",
-      "updatedAt": "2025-03-15T07:51:15.320Z",
+      "updatedAt": "2025-03-16T21:08:20.755Z",
       "slug": "travel-gurus",
+      "type": "professional",
       "id": "67d460c795ccfa757ba89a19"
     },
     {
@@ -347,8 +348,9 @@
         ]
       },
       "createdAt": "2025-03-14T16:54:22.350Z",
-      "updatedAt": "2025-03-15T07:51:23.819Z",
+      "updatedAt": "2025-03-16T21:08:29.564Z",
       "slug": "ba-tti",
+      "type": "professional",
       "id": "67d45f3e95ccfa757ba899bb"
     },
     {
@@ -564,10 +566,11 @@
         ]
       },
       "createdAt": "2025-03-14T06:51:14.689Z",
-      "updatedAt": "2025-03-15T07:51:33.038Z",
+      "updatedAt": "2025-03-16T21:08:39.409Z",
       "url": "https://www.platinumadvisors.com",
       "year": "2023",
       "slug": "platinum-advisors",
+      "type": "professional",
       "id": "67d3d1e29b9e1c15dc3d467f"
     }
   ],

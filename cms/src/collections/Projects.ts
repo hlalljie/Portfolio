@@ -28,6 +28,20 @@ export const Projects: CollectionConfig = {
       type: 'text',
     },
     {
+      name: 'type',
+      type: 'select',
+      options: [
+        {
+          label: 'Personal',
+          value: 'personal',
+        },
+        {
+          label: 'Professional',
+          value: 'professional',
+        },
+      ],
+    },
+    {
       name: 'slug',
       type: 'text',
       hooks: {
