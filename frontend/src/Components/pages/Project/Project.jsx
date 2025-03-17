@@ -81,7 +81,11 @@ const Project = () => {
           className="heroImage"
           imageData={project['pageContent']['bannerImage']}
         />
-        <h1>{project['title']}</h1>
+        {project['fullTitle'] ? (
+          <h1>{project['fullTitle']}</h1>
+        ) : (
+          <h1>{project['title']}</h1>
+        )}
         <ProjectContent project={project} />
       </section>
     </StyledProject>
