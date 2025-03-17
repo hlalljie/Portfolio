@@ -12,7 +12,7 @@ import ProjectList from '@/Components/shared/display/ProjectList';
 // UI
 import LoadingScreen from '@/Components/shared/ui/LoadingScreen';
 
-const StyledPortfolio = styled.div`
+const StyledProjects = styled.div`
   ${({ theme }) => css`
     min-height: 100vh;
     /* background-color: ${theme.colors.black}; */
@@ -48,10 +48,10 @@ const StyledPortfolio = styled.div`
 `;
 
 /**
- * Portfolio: Portfolio Page listing all professional projects
+ * Projects: Projects Page listing all professional projects
  * @returns {JSX.Element}
  */
-function Portfolio() {
+function Projects() {
   const { loading, fetchData, pageData } = usePayloadData({
     type: 'collection',
     slug: 'projects',
@@ -66,19 +66,19 @@ function Portfolio() {
   }
 
   return (
-    <StyledPortfolio className="dark-section">
+    <StyledProjects className="dark-section">
       <Header variant={'light'} overlapTopSection={false} />
-      <h1>Portfolio</h1>
+      <h1>Personal Projects</h1>
       <ProjectList
         projectData={pageData.docs.filter(
-          (project) => project.type === 'professional'
+          (project) => project.type === 'personal'
         )}
         cols={3}
         variant={'light'}
         hideLinks
       />
-    </StyledPortfolio>
+    </StyledProjects>
   );
 }
 
-export default Portfolio;
+export default Projects;

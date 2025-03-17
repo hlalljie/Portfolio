@@ -7,6 +7,7 @@ import { Analytics } from '@vercel/analytics/react';
 // Pages
 import Home from '@/Components/pages/Home/Home';
 import Portfolio from '@/Components/pages/Portfolio/Portfolio';
+import Projects from '@/Components/pages/Projects/Projects';
 import Project from '@/Components/pages/Project/Project';
 import ErrorPage from '@/Components/pages/ErrorPage/ErrorPage';
 // Styles
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
   {
     path: '/portfolio',
     element: <Portfolio />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/projects',
+    element: <Projects />,
     errorElement: <ErrorPage />,
   },
   {

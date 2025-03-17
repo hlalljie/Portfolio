@@ -235,13 +235,14 @@ export interface Project {
   type?: ('personal' | 'professional') | null;
   slug?: string | null;
   thumbnail: string | Media;
-  company: string;
+  company?: string | null;
   roles: string[];
   excerpt: string;
   technologies: string[];
   year: string;
   url?: string | null;
   github?: string | null;
+  itchio?: string | null;
   pageContent: {
     bannerImage: string | Media;
     content?:
@@ -460,6 +461,7 @@ export interface ProjectsSelect<T extends boolean = true> {
   year?: T;
   url?: T;
   github?: T;
+  itchio?: T;
   pageContent?:
     | T
     | {

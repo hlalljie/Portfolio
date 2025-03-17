@@ -67,7 +67,6 @@ export const Projects: CollectionConfig = {
     {
       name: 'company',
       type: 'text',
-      required: true,
     },
     {
       name: 'roles',
@@ -97,6 +96,10 @@ export const Projects: CollectionConfig = {
     },
     {
       name: 'github',
+      type: 'text',
+    },
+    {
+      name: 'itchio',
       type: 'text',
     },
 

@@ -1,50 +1,51 @@
 {
   "docs": [
     {
-      "title": "Next Adventure",
-      "type": "professional",
-      "slug": "next-adventure",
+      "title": "Don't Get Swatted",
+      "type": "personal",
+      "slug": "dont-get-swatted",
       "thumbnail": {
-        "alt": "Next Adventure explore page screenshot",
-        "filename": "nextAdventureThumbnail.webp",
+        "alt": "Don't Get Swatted game art",
+        "name": "Don't Get Swatted Main Image",
+        "filename": "DontGetSwatted.webp",
         "mimeType": "image/webp",
-        "filesize": 148866,
-        "width": 1920,
-        "height": 1536,
+        "filesize": 97990,
+        "width": 2400,
+        "height": 1350,
         "focalX": 50,
         "focalY": 50,
         "sizes": {
           "thumbnail": {
             "width": 400,
-            "height": 320,
+            "height": 225,
             "mimeType": "image/webp",
-            "filesize": 20178,
-            "filename": "nextAdventureThumbnail-400x320.webp",
-            "url": "/api/media/file/nextAdventureThumbnail-400x320.webp"
+            "filesize": 12112,
+            "filename": "DontGetSwatted-400x225.webp",
+            "url": "/api/media/file/DontGetSwatted-400x225.webp"
           },
           "small": {
             "width": 768,
-            "height": 614,
+            "height": 432,
             "mimeType": "image/webp",
-            "filesize": 43672,
-            "filename": "nextAdventureThumbnail-768x614.webp",
-            "url": "/api/media/file/nextAdventureThumbnail-768x614.webp"
+            "filesize": 22818,
+            "filename": "DontGetSwatted-768x432.webp",
+            "url": "/api/media/file/DontGetSwatted-768x432.webp"
           },
           "medium": {
             "width": 1200,
-            "height": 960,
+            "height": 675,
             "mimeType": "image/webp",
-            "filesize": 65276,
-            "filename": "nextAdventureThumbnail-1200x960.webp",
-            "url": "/api/media/file/nextAdventureThumbnail-1200x960.webp"
+            "filesize": 33942,
+            "filename": "DontGetSwatted-1200x675.webp",
+            "url": "/api/media/file/DontGetSwatted-1200x675.webp"
           },
           "large": {
             "width": 1800,
-            "height": 1440,
+            "height": 1013,
             "mimeType": "image/webp",
-            "filesize": 110420,
-            "filename": "nextAdventureThumbnail-1800x1440.webp",
-            "url": "/api/media/file/nextAdventureThumbnail-1800x1440.webp"
+            "filesize": 55956,
+            "filename": "DontGetSwatted-1800x1013.webp",
+            "url": "/api/media/file/DontGetSwatted-1800x1013.webp"
           },
           "hero": {
             "width": null,
@@ -55,11 +56,546 @@
             "url": null
           }
         },
-        "createdAt": "2025-03-17T00:24:58.502Z",
-        "updatedAt": "2025-03-17T00:24:58.502Z",
-        "id": "67d76bda929c408084eb04e6",
-        "url": "/api/media/file/nextAdventureThumbnail.webp",
+        "createdAt": "2025-03-17T03:10:08.246Z",
+        "updatedAt": "2025-03-17T03:10:08.246Z",
+        "id": "67d792902c31a9c4c4836932",
+        "url": "/api/media/file/DontGetSwatted.webp",
         "thumbnailURL": null
+      },
+      "roles": [
+        "Developer",
+        "Technical Lead"
+      ],
+      "excerpt": "A branching story game built in 10 days for the 2024 One Button Jam",
+      "technologies": [
+        "Javascript",
+        "Twine"
+      ],
+      "year": "2024",
+      "github": "https://github.com/hlalljie/bitforest-dont-get-swatted",
+      "pageContent": {
+        "bannerImage": {
+          "alt": "Don't Get Swatted game art",
+          "name": "Don't Get Swatted Main Image",
+          "filename": "DontGetSwatted.webp",
+          "mimeType": "image/webp",
+          "filesize": 97990,
+          "width": 2400,
+          "height": 1350,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "width": 400,
+              "height": 225,
+              "mimeType": "image/webp",
+              "filesize": 12112,
+              "filename": "DontGetSwatted-400x225.webp",
+              "url": "/api/media/file/DontGetSwatted-400x225.webp"
+            },
+            "small": {
+              "width": 768,
+              "height": 432,
+              "mimeType": "image/webp",
+              "filesize": 22818,
+              "filename": "DontGetSwatted-768x432.webp",
+              "url": "/api/media/file/DontGetSwatted-768x432.webp"
+            },
+            "medium": {
+              "width": 1200,
+              "height": 675,
+              "mimeType": "image/webp",
+              "filesize": 33942,
+              "filename": "DontGetSwatted-1200x675.webp",
+              "url": "/api/media/file/DontGetSwatted-1200x675.webp"
+            },
+            "large": {
+              "width": 1800,
+              "height": 1013,
+              "mimeType": "image/webp",
+              "filesize": 55956,
+              "filename": "DontGetSwatted-1800x1013.webp",
+              "url": "/api/media/file/DontGetSwatted-1800x1013.webp"
+            },
+            "hero": {
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null,
+              "url": null
+            }
+          },
+          "createdAt": "2025-03-17T03:10:08.246Z",
+          "updatedAt": "2025-03-17T03:10:08.246Z",
+          "id": "67d792902c31a9c4c4836932",
+          "url": "/api/media/file/DontGetSwatted.webp",
+          "thumbnailURL": null
+        },
+        "content": [
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "I worked as a developer alongside an artist, writer and another developer. With our main challenge being time, I focused solely ensuring sure the game was fully playable by the deadline. After coming up with the idea of a multiple choice, mad libs style story game, each group split off to work on their part. I focused on understanding the visions of both the artist and writer and translated them into issues we could tackle on the software side. ",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "      ",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": null,
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "After we knew our initial requirement the other developer got to work on the base game and I looked at what future problems we would need to solve. I found a software our writer could use to create and visualize branching story paths, trained them how to use it, and integrated it with the game for easy updates in the future. Then I listened to the artist's vision and found a way to implement their visual ideas into the game. In between I setup a Github action to deploy our game to itch.io whenever we pushed to the main branch, saving us time and coming in handy when itch.io went down shortly before the deadline as we already had most of our changes pushed and could easily retry the deployment.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "      ",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": null,
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Then I moved to other issues such as tweaking the frontend, adding a tracker for ending the player had found, making a last minute music addition and many other changes to get the game to it's destination. The game was was released in time and received positive feedback from the jam host and other jammers. It ended up being a great learning experience in how to execute on a tight deadline and coordinate with others for an awesome outcome that players got to enjoy.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67d7923c536928fe1b6399d7"
+          }
+        ]
+      },
+      "createdAt": "2025-03-17T03:11:26.453Z",
+      "updatedAt": "2025-03-17T03:12:37.528Z",
+      "itchio": "https://haydondo.itch.io/dont-get-swatted",
+      "id": "67d792de2c31a9c4c483698d"
+    },
+    {
+      "title": "Inquizity",
+      "type": "personal",
+      "slug": "inquizity",
+      "thumbnail": {
+        "alt": "Picture of computer with a quiz application",
+        "name": "Inquizity Thumbnail",
+        "filename": "inquizityThumbnail.webp",
+        "mimeType": "image/webp",
+        "filesize": 62444,
+        "width": 1200,
+        "height": 900,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "width": 400,
+            "height": 300,
+            "mimeType": "image/webp",
+            "filesize": 17524,
+            "filename": "inquizityThumbnail-400x300.webp",
+            "url": "/api/media/file/inquizityThumbnail-400x300.webp"
+          },
+          "small": {
+            "width": 768,
+            "height": 576,
+            "mimeType": "image/webp",
+            "filesize": 34480,
+            "filename": "inquizityThumbnail-768x576.webp",
+            "url": "/api/media/file/inquizityThumbnail-768x576.webp"
+          },
+          "medium": {
+            "width": 1200,
+            "height": 900,
+            "mimeType": "image/webp",
+            "filesize": 51886,
+            "filename": "inquizityThumbnail-1200x900.webp",
+            "url": "/api/media/file/inquizityThumbnail-1200x900.webp"
+          },
+          "large": {
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null,
+            "url": null
+          },
+          "hero": {
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null,
+            "url": null
+          }
+        },
+        "createdAt": "2025-03-17T03:04:44.034Z",
+        "updatedAt": "2025-03-17T03:04:44.034Z",
+        "id": "67d7914c2c31a9c4c48367f8",
+        "url": "/api/media/file/inquizityThumbnail.webp",
+        "thumbnailURL": null
+      },
+      "company": "",
+      "roles": [
+        "Developer"
+      ],
+      "excerpt": "Product to save teachers time and give students a more efficient way of learning through AI quiz question generation.",
+      "technologies": [
+        "React",
+        "Flask",
+        "Llama2"
+      ],
+      "year": "2023",
+      "github": "https://github.com/hlalljie/QuizGeneratorFlaskReact",
+      "pageContent": {
+        "bannerImage": {
+          "updatedAt": "2025-03-17T03:06:00.621Z",
+          "alt": "Picture of computer with a quiz application",
+          "name": "Inquizity Thumbnail",
+          "url": "/api/media/file/inquizityThumbnail-1.webp",
+          "thumbnailURL": null,
+          "filename": "inquizityThumbnail-1.webp",
+          "mimeType": "image/webp",
+          "filesize": 37150,
+          "width": 1200,
+          "height": 514,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/inquizityThumbnail-1-400x171.webp",
+              "width": 400,
+              "height": 171,
+              "mimeType": "image/webp",
+              "filesize": 13300,
+              "filename": "inquizityThumbnail-1-400x171.webp"
+            },
+            "small": {
+              "url": "/api/media/file/inquizityThumbnail-1-768x329.webp",
+              "width": 768,
+              "height": 329,
+              "mimeType": "image/webp",
+              "filesize": 23326,
+              "filename": "inquizityThumbnail-1-768x329.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/inquizityThumbnail-1-1200x514.webp",
+              "width": 1200,
+              "height": 514,
+              "mimeType": "image/webp",
+              "filesize": 36602,
+              "filename": "inquizityThumbnail-1-1200x514.webp"
+            },
+            "large": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "hero": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            }
+          },
+          "createdAt": "2025-03-17T03:05:35.282Z",
+          "id": "67d7917f2c31a9c4c4836832"
+        },
+        "content": []
+      },
+      "createdAt": "2025-03-17T03:06:07.028Z",
+      "updatedAt": "2025-03-17T03:06:42.372Z",
+      "id": "67d7919f2c31a9c4c4836879"
+    },
+    {
+      "title": "Block Broker",
+      "type": "personal",
+      "slug": "block-broker",
+      "thumbnail": {
+        "alt": "Block Broker landing page screenshot",
+        "name": "Block Broker Thumbnail",
+        "filename": "blockBrokerCropped5x4.webp",
+        "mimeType": "image/webp",
+        "filesize": 174116,
+        "width": 2500,
+        "height": 2000,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "width": 400,
+            "height": 320,
+            "mimeType": "image/webp",
+            "filesize": 24246,
+            "filename": "blockBrokerCropped5x4-400x320.webp",
+            "url": "/api/media/file/blockBrokerCropped5x4-400x320.webp"
+          },
+          "small": {
+            "width": 768,
+            "height": 614,
+            "mimeType": "image/webp",
+            "filesize": 48042,
+            "filename": "blockBrokerCropped5x4-768x614.webp",
+            "url": "/api/media/file/blockBrokerCropped5x4-768x614.webp"
+          },
+          "medium": {
+            "width": 1200,
+            "height": 960,
+            "mimeType": "image/webp",
+            "filesize": 62878,
+            "filename": "blockBrokerCropped5x4-1200x960.webp",
+            "url": "/api/media/file/blockBrokerCropped5x4-1200x960.webp"
+          },
+          "large": {
+            "width": 1800,
+            "height": 1440,
+            "mimeType": "image/webp",
+            "filesize": 99478,
+            "filename": "blockBrokerCropped5x4-1800x1440.webp",
+            "url": "/api/media/file/blockBrokerCropped5x4-1800x1440.webp"
+          },
+          "hero": {
+            "width": 2500,
+            "height": 2000,
+            "mimeType": "image/webp",
+            "filesize": 148362,
+            "filename": "blockBrokerCropped5x4-2500x2000.webp",
+            "url": "/api/media/file/blockBrokerCropped5x4-2500x2000.webp"
+          }
+        },
+        "createdAt": "2025-03-17T02:58:49.548Z",
+        "updatedAt": "2025-03-17T02:58:49.548Z",
+        "id": "67d78fe92c31a9c4c483672d",
+        "url": "/api/media/file/blockBrokerCropped5x4.webp",
+        "thumbnailURL": null
+      },
+      "company": "",
+      "roles": [
+        "Developer",
+        "Techincal Lead",
+        "Designer"
+      ],
+      "excerpt": "Worked as solo frontend dev and team lead on this Web3 Hackathon project to democratize freelance contracting.",
+      "technologies": [
+        "React",
+        "CSS",
+        "Javascript"
+      ],
+      "year": "2023",
+      "github": "https://github.com/Topupchips/MLH-Web3-Hackathon',",
+      "pageContent": {
+        "bannerImage": {
+          "alt": "Screenshot of Block Broker's homepage",
+          "name": "Block Broker Banner",
+          "filename": "blockBrokerBanner.webp",
+          "mimeType": "image/webp",
+          "filesize": 86394,
+          "width": 2500,
+          "height": 1190,
+          "focalX": 50,
+          "focalY": 13,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/blockBrokerBanner-400x190.webp",
+              "width": 400,
+              "height": 190,
+              "mimeType": "image/webp",
+              "filesize": 16810,
+              "filename": "blockBrokerBanner-400x190.webp"
+            },
+            "small": {
+              "url": "/api/media/file/blockBrokerBanner-768x366.webp",
+              "width": 768,
+              "height": 366,
+              "mimeType": "image/webp",
+              "filesize": 28708,
+              "filename": "blockBrokerBanner-768x366.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/blockBrokerBanner-1200x571.webp",
+              "width": 1200,
+              "height": 571,
+              "mimeType": "image/webp",
+              "filesize": 38398,
+              "filename": "blockBrokerBanner-1200x571.webp"
+            },
+            "large": {
+              "url": "/api/media/file/blockBrokerBanner-1800x857.webp",
+              "width": 1800,
+              "height": 857,
+              "mimeType": "image/webp",
+              "filesize": 58984,
+              "filename": "blockBrokerBanner-1800x857.webp"
+            },
+            "hero": {
+              "url": "/api/media/file/blockBrokerBanner-2500x1190.webp",
+              "width": 2500,
+              "height": 1190,
+              "mimeType": "image/webp",
+              "filesize": 85398,
+              "filename": "blockBrokerBanner-2500x1190.webp"
+            }
+          },
+          "createdAt": "2025-03-17T03:01:17.645Z",
+          "updatedAt": "2025-03-17T03:01:37.732Z",
+          "thumbnailURL": null,
+          "url": "/api/media/file/blockBrokerBanner.webp",
+          "id": "67d7907d2c31a9c4c4836775"
+        },
+        "content": []
+      },
+      "createdAt": "2025-03-17T03:01:49.116Z",
+      "updatedAt": "2025-03-17T03:06:58.291Z",
+      "id": "67d7909d2c31a9c4c483679c"
+    },
+    {
+      "title": "Next Adventure",
+      "type": "professional",
+      "slug": "next-adventure",
+      "thumbnail": {
+        "alt": "Next Adventure explore page screenshot",
+        "filename": "nextAdventureThumbnail.webp",
+        "mimeType": "image/webp",
+        "filesize": 137458,
+        "width": 1920,
+        "height": 1536,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "url": "/api/media/file/nextAdventureThumbnail-400x320.webp",
+            "width": 400,
+            "height": 320,
+            "mimeType": "image/webp",
+            "filesize": 19700,
+            "filename": "nextAdventureThumbnail-400x320.webp"
+          },
+          "small": {
+            "url": "/api/media/file/nextAdventureThumbnail-768x614.webp",
+            "width": 768,
+            "height": 614,
+            "mimeType": "image/webp",
+            "filesize": 39398,
+            "filename": "nextAdventureThumbnail-768x614.webp"
+          },
+          "medium": {
+            "url": "/api/media/file/nextAdventureThumbnail-1200x960.webp",
+            "width": 1200,
+            "height": 960,
+            "mimeType": "image/webp",
+            "filesize": 58932,
+            "filename": "nextAdventureThumbnail-1200x960.webp"
+          },
+          "large": {
+            "url": "/api/media/file/nextAdventureThumbnail-1800x1440.webp",
+            "width": 1800,
+            "height": 1440,
+            "mimeType": "image/webp",
+            "filesize": 97190,
+            "filename": "nextAdventureThumbnail-1800x1440.webp"
+          },
+          "hero": {
+            "url": null,
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null
+          }
+        },
+        "createdAt": "2025-03-17T00:24:58.502Z",
+        "updatedAt": "2025-03-17T00:28:26.268Z",
+        "name": "Next Adventure Thumbnail",
+        "thumbnailURL": null,
+        "url": "/api/media/file/nextAdventureThumbnail.webp",
+        "id": "67d76bda929c408084eb04e6"
       },
       "company": "Nav Creative",
       "roles": [
@@ -77,13 +613,13 @@
       "url": "nextadventure.com",
       "pageContent": {
         "bannerImage": {
-          "updatedAt": "2025-03-17T00:27:30.970Z",
+          "updatedAt": "2025-03-17T00:28:04.532Z",
           "alt": "Next Adventure explore page screenshot",
           "url": "/api/media/file/nextAdventureThumbnail-1.webp",
           "thumbnailURL": null,
           "filename": "nextAdventureThumbnail-1.webp",
           "mimeType": "image/webp",
-          "filesize": 70682,
+          "filesize": 75388,
           "width": 1920,
           "height": 832,
           "focalX": 50,
@@ -131,6 +667,7 @@
             }
           },
           "createdAt": "2025-03-17T00:26:56.351Z",
+          "name": "Next Adventure Banner",
           "id": "67d76c50929c408084eb052a"
         },
         "content": []
@@ -851,7 +1388,7 @@
       "id": "67d3d1e29b9e1c15dc3d467f"
     }
   ],
-  "totalDocs": 5,
+  "totalDocs": 8,
   "limit": 10,
   "totalPages": 1,
   "page": 1,

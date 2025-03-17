@@ -60,38 +60,36 @@ const ProjectList = ({
   return (
     <StyledProjectList className="projectList" $cols={cols} $gap={gap}>
       {/* Show list of projects from data */}
-      {projectData
-        .filter((project) => project.type === 'professional')
-        .map((project, index) => {
-          const {
-            title,
-            thumbnail,
-            company,
-            roles,
-            excerpt,
-            technologies,
-            url,
-            github,
-          } = project;
-          return (
-            <ProjectCard
-              key={index}
-              project={{
-                title,
-                thumbnail,
-                company,
-                roles,
-                excerpt,
-                technologies,
-                url,
-                github,
-              }}
-              variant={variant}
-              hideLinks={hideLinks}
-              hideExcerpt={hideExcerpt}
-            />
-          );
-        })}
+      {projectData.map((project, index) => {
+        const {
+          title,
+          thumbnail,
+          company,
+          roles,
+          excerpt,
+          technologies,
+          url,
+          github,
+        } = project;
+        return (
+          <ProjectCard
+            key={index}
+            project={{
+              title,
+              thumbnail,
+              company,
+              roles,
+              excerpt,
+              technologies,
+              url,
+              github,
+            }}
+            variant={variant}
+            hideLinks={hideLinks}
+            hideExcerpt={hideExcerpt}
+          />
+        );
+      })}
       {/* Add filler spaces after to push unfilled rows to the left */}
       {[...Array(3)].map((id) => (
         <div className="projectFiller" key={id}></div>
