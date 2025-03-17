@@ -98,7 +98,7 @@ const ProjectContent = ({ project }) => {
   const content = project['pageContent']['content'];
 
   // If no content, show excerpt
-  if (content === undefined || content === null) {
+  if (content === undefined || content === null || content.length === 0) {
     return <p>{project['excerpt']}</p>;
   }
 

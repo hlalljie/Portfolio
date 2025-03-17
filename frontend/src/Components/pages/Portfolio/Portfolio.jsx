@@ -39,6 +39,11 @@ const StyledPortfolio = styled.div`
     .projectList {
       padding: ${theme.padding.largeSection};
     }
+    h1 {
+      color: ${theme.colors.white};
+      text-align: center;
+      padding-top: 60px;
+    }
   `}
 `;
 
@@ -61,8 +66,9 @@ function Portfolio() {
   }
 
   return (
-    <StyledPortfolio>
+    <StyledPortfolio className="dark-section">
       <Header variant={'light'} overlapTopSection={false} />
+      <h1>Portfolio</h1>
       <ProjectList
         projectData={pageData.docs}
         cols={3}

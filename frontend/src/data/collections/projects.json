@@ -1,6 +1,283 @@
 {
   "docs": [
     {
+      "title": "Next Adventure",
+      "type": "professional",
+      "slug": "next-adventure",
+      "thumbnail": {
+        "alt": "Next Adventure explore page screenshot",
+        "filename": "nextAdventureThumbnail.webp",
+        "mimeType": "image/webp",
+        "filesize": 148866,
+        "width": 1920,
+        "height": 1536,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "width": 400,
+            "height": 320,
+            "mimeType": "image/webp",
+            "filesize": 20178,
+            "filename": "nextAdventureThumbnail-400x320.webp",
+            "url": "/api/media/file/nextAdventureThumbnail-400x320.webp"
+          },
+          "small": {
+            "width": 768,
+            "height": 614,
+            "mimeType": "image/webp",
+            "filesize": 43672,
+            "filename": "nextAdventureThumbnail-768x614.webp",
+            "url": "/api/media/file/nextAdventureThumbnail-768x614.webp"
+          },
+          "medium": {
+            "width": 1200,
+            "height": 960,
+            "mimeType": "image/webp",
+            "filesize": 65276,
+            "filename": "nextAdventureThumbnail-1200x960.webp",
+            "url": "/api/media/file/nextAdventureThumbnail-1200x960.webp"
+          },
+          "large": {
+            "width": 1800,
+            "height": 1440,
+            "mimeType": "image/webp",
+            "filesize": 110420,
+            "filename": "nextAdventureThumbnail-1800x1440.webp",
+            "url": "/api/media/file/nextAdventureThumbnail-1800x1440.webp"
+          },
+          "hero": {
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null,
+            "url": null
+          }
+        },
+        "createdAt": "2025-03-17T00:24:58.502Z",
+        "updatedAt": "2025-03-17T00:24:58.502Z",
+        "id": "67d76bda929c408084eb04e6",
+        "url": "/api/media/file/nextAdventureThumbnail.webp",
+        "thumbnailURL": null
+      },
+      "company": "Nav Creative",
+      "roles": [
+        "Project Manager",
+        "Designer",
+        "Developer"
+      ],
+      "excerpt": "Next Adventure was looking to stun visitor with visuals of safari wildlife while crafting a unique user experience based on how long until planned journey.",
+      "technologies": [
+        "Squarespace",
+        "Javascript",
+        "Less"
+      ],
+      "year": "2021",
+      "url": "nextadventure.com",
+      "pageContent": {
+        "bannerImage": {
+          "updatedAt": "2025-03-17T00:27:30.970Z",
+          "alt": "Next Adventure explore page screenshot",
+          "url": "/api/media/file/nextAdventureThumbnail-1.webp",
+          "thumbnailURL": null,
+          "filename": "nextAdventureThumbnail-1.webp",
+          "mimeType": "image/webp",
+          "filesize": 70682,
+          "width": 1920,
+          "height": 832,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/nextAdventureThumbnail-1-400x173.webp",
+              "width": 400,
+              "height": 173,
+              "mimeType": "image/webp",
+              "filesize": 14274,
+              "filename": "nextAdventureThumbnail-1-400x173.webp"
+            },
+            "small": {
+              "url": "/api/media/file/nextAdventureThumbnail-1-768x333.webp",
+              "width": 768,
+              "height": 333,
+              "mimeType": "image/webp",
+              "filesize": 27118,
+              "filename": "nextAdventureThumbnail-1-768x333.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/nextAdventureThumbnail-1-1200x520.webp",
+              "width": 1200,
+              "height": 520,
+              "mimeType": "image/webp",
+              "filesize": 37314,
+              "filename": "nextAdventureThumbnail-1-1200x520.webp"
+            },
+            "large": {
+              "url": "/api/media/file/nextAdventureThumbnail-1-1800x780.webp",
+              "width": 1800,
+              "height": 780,
+              "mimeType": "image/webp",
+              "filesize": 57574,
+              "filename": "nextAdventureThumbnail-1-1800x780.webp"
+            },
+            "hero": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            }
+          },
+          "createdAt": "2025-03-17T00:26:56.351Z",
+          "id": "67d76c50929c408084eb052a"
+        },
+        "content": []
+      },
+      "createdAt": "2025-03-17T00:27:39.437Z",
+      "updatedAt": "2025-03-17T00:27:55.339Z",
+      "id": "67d76c7b929c408084eb054c"
+    },
+    {
+      "title": "Real Lion",
+      "type": "professional",
+      "slug": "real-lion",
+      "thumbnail": {
+        "alt": "Real Lion website homepage screenshot",
+        "filename": "realLionThumbnail.webp",
+        "mimeType": "image/webp",
+        "filesize": 153480,
+        "width": 1920,
+        "height": 1536,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "width": 400,
+            "height": 320,
+            "mimeType": "image/webp",
+            "filesize": 21814,
+            "filename": "realLionThumbnail-400x320.webp",
+            "url": "/api/media/file/realLionThumbnail-400x320.webp"
+          },
+          "small": {
+            "width": 768,
+            "height": 614,
+            "mimeType": "image/webp",
+            "filesize": 46998,
+            "filename": "realLionThumbnail-768x614.webp",
+            "url": "/api/media/file/realLionThumbnail-768x614.webp"
+          },
+          "medium": {
+            "width": 1200,
+            "height": 960,
+            "mimeType": "image/webp",
+            "filesize": 71806,
+            "filename": "realLionThumbnail-1200x960.webp",
+            "url": "/api/media/file/realLionThumbnail-1200x960.webp"
+          },
+          "large": {
+            "width": 1800,
+            "height": 1440,
+            "mimeType": "image/webp",
+            "filesize": 117722,
+            "filename": "realLionThumbnail-1800x1440.webp",
+            "url": "/api/media/file/realLionThumbnail-1800x1440.webp"
+          },
+          "hero": {
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null,
+            "url": null
+          }
+        },
+        "createdAt": "2025-03-17T00:17:11.289Z",
+        "updatedAt": "2025-03-17T00:17:11.289Z",
+        "id": "67d76a07929c408084eb03f8",
+        "url": "/api/media/file/realLionThumbnail.webp",
+        "thumbnailURL": null
+      },
+      "company": "Nav Creative",
+      "roles": [
+        "Project Manager",
+        "Designer"
+      ],
+      "excerpt": "A modern design for a budding technology consultancy.",
+      "technologies": [
+        "Squarespace",
+        "Less",
+        "Javascript",
+        "Memberspace"
+      ],
+      "year": "2022",
+      "pageContent": {
+        "bannerImage": {
+          "updatedAt": "2025-03-17T00:20:56.688Z",
+          "alt": "Real Lion website homepage screenshot",
+          "url": "/api/media/file/realLionThumbnail-1.webp",
+          "thumbnailURL": null,
+          "filename": "realLionThumbnail-1.webp",
+          "mimeType": "image/webp",
+          "filesize": 71122,
+          "width": 1920,
+          "height": 938,
+          "focalX": 50,
+          "focalY": 31,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/realLionThumbnail-1-400x195.webp",
+              "width": 400,
+              "height": 195,
+              "mimeType": "image/webp",
+              "filesize": 12826,
+              "filename": "realLionThumbnail-1-400x195.webp"
+            },
+            "small": {
+              "url": "/api/media/file/realLionThumbnail-1-768x375.webp",
+              "width": 768,
+              "height": 375,
+              "mimeType": "image/webp",
+              "filesize": 25850,
+              "filename": "realLionThumbnail-1-768x375.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/realLionThumbnail-1-1200x586.webp",
+              "width": 1200,
+              "height": 586,
+              "mimeType": "image/webp",
+              "filesize": 37310,
+              "filename": "realLionThumbnail-1-1200x586.webp"
+            },
+            "large": {
+              "url": "/api/media/file/realLionThumbnail-1-1800x879.webp",
+              "width": 1800,
+              "height": 879,
+              "mimeType": "image/webp",
+              "filesize": 59458,
+              "filename": "realLionThumbnail-1-1800x879.webp"
+            },
+            "hero": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            }
+          },
+          "createdAt": "2025-03-17T00:18:34.243Z",
+          "id": "67d76a5a929c408084eb0434"
+        },
+        "content": []
+      },
+      "createdAt": "2025-03-17T00:20:21.705Z",
+      "updatedAt": "2025-03-17T00:21:11.235Z",
+      "id": "67d76ac5929c408084eb0473"
+    },
+    {
       "title": "Travel Gurus",
       "thumbnail": {
         "alt": "Travel Gurus website homepage screenshot",
@@ -574,7 +851,7 @@
       "id": "67d3d1e29b9e1c15dc3d467f"
     }
   ],
-  "totalDocs": 3,
+  "totalDocs": 5,
   "limit": 10,
   "totalPages": 1,
   "page": 1,
