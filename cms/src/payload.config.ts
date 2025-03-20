@@ -12,6 +12,8 @@ import sharp from 'sharp'
 // Internal Imports
 // Globals
 import { Homepage } from './globals/Homepage'
+import { ProjectsPage } from './globals/ProjectsPage'
+import { PortfolioPage } from './globals/PortfolioPage'
 // Collections
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
@@ -28,7 +30,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  globals: [Homepage],
+  globals: [Homepage, ProjectsPage, PortfolioPage],
   collections: [Users, Media, ExperienceItems, Projects],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',

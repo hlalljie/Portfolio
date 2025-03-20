@@ -1,8 +1,10 @@
 // External Imports
-import { useEffect } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import { styled, css } from 'styled-components';
 
 // Internal Imports
+// Context
+import { AppContext } from '@/context/AppContext';
 // Hooks
 import usePayloadData from '@/hooks/usePayloadData';
 // Layouts
@@ -11,6 +13,10 @@ import Header from '@/Components/shared/layout/Header';
 import ProjectList from '@/Components/shared/display/ProjectList';
 // UI
 import LoadingScreen from '@/Components/shared/ui/LoadingScreen';
+// Utils
+import dataCache from '@/utils/dataCache';
+// Styles
+import { adaptiveBackgroundImage } from '@/styles/adaptiveBackgroundImage';
 
 const StyledProjects = styled.div`
   ${({ theme }) => css`
@@ -33,7 +39,8 @@ const StyledProjects = styled.div`
       filter: grayscale(100%) contrast(120%) brightness(0.3);
       mix-blend-mode: multiply;
       background-color: ${theme.colors.black};
-      background-image: url('/images/heroBanner2400w.jpeg');
+      ${({ $backgroundImageData, $useStaticData }) =>
+        adaptiveBackgroundImage($backgroundImageData, $useStaticData)}
       background-size: cover;
     }
     .projectList {
@@ -52,27 +59,91 @@ const StyledProjects = styled.div`
  * @returns {JSX.Element}
  */
 function Projects() {
-  const { loading, fetchData, pageData } = usePayloadData({
+  const { useStaticData } = useContext(AppContext);
+
+  const [projectsData, setProjectsData] = useState(null);
+  const [projectsPageData, setProjectsPageData] = useState(null);
+
+  // Use separate variable names for each hook call
+  const {
+    loading: projectsLoading,
+    fetchData: fetchProjects,
+    pageData: projectsDataUpdate,
+  } = usePayloadData({
     type: 'collection',
     slug: 'projects',
   });
 
-  useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+  const {
+    loading: projectsPageLoading,
+    fetchData: fetchProjectsPage,
+    pageData: projectsPageDataUpdate,
+  } = usePayloadData({
+    type: 'global',
+    slug: 'projects-page',
+  });
 
-  if (loading || !pageData || pageData?.docs === undefined) {
+  // First fetch projects
+  useEffect(() => {
+    let isMounted = true;
+    /**
+     * fetchData: Function to time fetches to projects and projectsPage
+     * @returns {Promise<void>}
+     */
+    const fetchData = async () => {
+      await fetchProjectsPage();
+      // Only fetch projectsPage data if component is still mounted
+      if (isMounted) {
+        await fetchProjects();
+      }
+    };
+
+    fetchData();
+
+    return () => {
+      isMounted = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Get data from cache
+  useEffect(() => {
+    setProjectsData(
+      dataCache.get(dataCache.createKey('collection', 'projects'))
+    );
+    setProjectsPageData(
+      dataCache.get(dataCache.createKey('global', 'projects-page'))
+    );
+  }, [projectsPageDataUpdate, projectsDataUpdate]);
+
+  // Check loading state and data availability for both
+  if (
+    projectsLoading ||
+    projectsPageLoading ||
+    !projectsData ||
+    !projectsPageData ||
+    projectsData?.docs === undefined
+  ) {
     return <LoadingScreen />;
   }
 
+  console.log('Projects data:', projectsData);
+  console.log('projectsPage data:', projectsPageData);
+
+  const projects = projectsData.docs.filter(
+    (project) => project.type === 'personal'
+  );
+
   return (
-    <StyledProjects className="dark-section">
+    <StyledProjects
+      className="dark-section"
+      $backgroundImageData={projectsPageData['backgroundImage']}
+      $useStaticData={useStaticData}
+    >
       <Header variant={'light'} overlapTopSection={false} />
       <h1>Personal Projects</h1>
       <ProjectList
-        projectData={pageData.docs.filter(
-          (project) => project.type === 'personal'
-        )}
+        projectData={projects}
         cols={3}
         variant={'light'}
         hideLinks

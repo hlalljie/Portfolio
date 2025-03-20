@@ -23,6 +23,8 @@ const generateStatic = async () => {
 
   // Save homepage data
   await saveGlobalData('homepage', payload)
+  await saveGlobalData('portfolio', payload)
+  await saveGlobalData('projects-page', payload)
 
   // Save project data
   await saveCollectionData('projects', payload)
