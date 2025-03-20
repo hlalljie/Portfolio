@@ -1,0 +1,66 @@
+{
+  "createdAt": "2025-03-20T05:23:40.224Z",
+  "globalType": "projects-page",
+  "title": "Personal Projects",
+  "backgroundImage": {
+    "alt": "Fog over trees in a mountainous forest",
+    "name": "Home Hero Background",
+    "credit": "https://unsplash.com/photos/cloud-covered-mountains-NO-FxxCE67Y",
+    "filename": "homeHeroBanner.webp",
+    "mimeType": "image/webp",
+    "filesize": 874658,
+    "width": 3751,
+    "height": 5251,
+    "focalX": 50,
+    "focalY": 50,
+    "sizes": {
+      "thumbnail": {
+        "url": "/api/media/file/homeHeroBanner-400x560.webp",
+        "width": 400,
+        "height": 560,
+        "mimeType": "image/webp",
+        "filesize": 32698,
+        "filename": "homeHeroBanner-400x560.webp"
+      },
+      "small": {
+        "url": "/api/media/file/homeHeroBanner-768x1075.webp",
+        "width": 768,
+        "height": 1075,
+        "mimeType": "image/webp",
+        "filesize": 75980,
+        "filename": "homeHeroBanner-768x1075.webp"
+      },
+      "medium": {
+        "url": "/api/media/file/homeHeroBanner-1200x1680.webp",
+        "width": 1200,
+        "height": 1680,
+        "mimeType": "image/webp",
+        "filesize": 129062,
+        "filename": "homeHeroBanner-1200x1680.webp"
+      },
+      "large": {
+        "url": "/api/media/file/homeHeroBanner-1800x2520.webp",
+        "width": 1800,
+        "height": 2520,
+        "mimeType": "image/webp",
+        "filesize": 255120,
+        "filename": "homeHeroBanner-1800x2520.webp"
+      },
+      "hero": {
+        "url": "/api/media/file/homeHeroBanner-2500x3500.webp",
+        "width": 2500,
+        "height": 3500,
+        "mimeType": "image/webp",
+        "filesize": 412728,
+        "filename": "homeHeroBanner-2500x3500.webp"
+      }
+    },
+    "createdAt": "2025-03-11T21:12:51.847Z",
+    "updatedAt": "2025-03-11T21:24:39.944Z",
+    "thumbnailURL": null,
+    "url": "/api/media/file/homeHeroBanner.webp",
+    "id": "67d0a753337eb5257674066e"
+  },
+  "updatedAt": "2025-03-20T06:45:05.943Z",
+  "id": "67dba65c74b1e4498f5b5631"
+}

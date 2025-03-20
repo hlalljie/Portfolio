@@ -28,6 +28,16 @@ const dataCache = {
   has(key) {
     return this.cache.has(key);
   },
+
+  /**
+   * createKey - Create a key for caching data
+   * @param {string} type  - Type of data to cache (collection or global)
+   * @param {string}slug - Slug of data to cache
+   * @returns {string} - Key for caching data
+   */
+  createKey(type, slug) {
+    return `${type}-${slug}`;
+  },
 };
 
 export default dataCache;

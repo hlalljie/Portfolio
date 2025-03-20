@@ -80,7 +80,7 @@ export default function usePayloadData({ type = 'global', slug }) {
    */
   const fetchFromStaticData = useCallback(async () => {
     // Create a cache key from type and slug
-    const cacheKey = `${type}-${slug}`;
+    const cacheKey = dataCache.createKey(type, slug);
     // Check cache first
     if (dataCache.has(cacheKey)) {
       console.log('Using cached static data');
