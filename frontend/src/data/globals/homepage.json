@@ -1,0 +1,887 @@
+{
+  "createdAt": "2025-03-02T08:55:46.145Z",
+  "updatedAt": "2025-03-15T06:36:27.663Z",
+  "globalType": "homepage",
+  "homeAbout": {
+    "title": "About Me",
+    "paragraph": "I'm a software developer and educator with a passion for creating a positive impact through programming, education, and user-centric design. I have a Bachelor's in Computer Science from Sonoma State University, am a Certified Scrum Master, and have worked in a variety of different roles including management, design, education, and quality assurance. In my free time, I enjoy developing products, learning new skills, reading, playing video games, and spending time outdoors with family and friends.",
+    "portraitImage": {
+      "alt": "Portrait of Hayden Lalljie with trees in the background",
+      "name": "Home About Portrait",
+      "credit": "Photo by McKenna Morrison",
+      "filename": "HomeAboutPortrait.webp",
+      "mimeType": "image/webp",
+      "filesize": 438152,
+      "width": 2048,
+      "height": 1964,
+      "focalX": 50,
+      "focalY": 50,
+      "sizes": {
+        "thumbnail": {
+          "width": 400,
+          "height": 384,
+          "mimeType": "image/webp",
+          "filesize": 36150,
+          "filename": "HomeAboutPortrait-400x384.webp",
+          "url": "/api/media/file/HomeAboutPortrait-400x384.webp"
+        },
+        "small": {
+          "width": 768,
+          "height": 737,
+          "mimeType": "image/webp",
+          "filesize": 93290,
+          "filename": "HomeAboutPortrait-768x737.webp",
+          "url": "/api/media/file/HomeAboutPortrait-768x737.webp"
+        },
+        "medium": {
+          "width": 1200,
+          "height": 1151,
+          "mimeType": "image/webp",
+          "filesize": 155164,
+          "filename": "HomeAboutPortrait-1200x1151.webp",
+          "url": "/api/media/file/HomeAboutPortrait-1200x1151.webp"
+        },
+        "large": {
+          "width": 1800,
+          "height": 1726,
+          "mimeType": "image/webp",
+          "filesize": 278644,
+          "filename": "HomeAboutPortrait-1800x1726.webp",
+          "url": "/api/media/file/HomeAboutPortrait-1800x1726.webp"
+        },
+        "hero": {
+          "width": null,
+          "height": null,
+          "mimeType": null,
+          "filesize": null,
+          "filename": null,
+          "url": null
+        }
+      },
+      "createdAt": "2025-03-11T21:28:42.262Z",
+      "updatedAt": "2025-03-11T21:28:42.262Z",
+      "id": "67d0ab0a337eb52576740786",
+      "url": "/api/media/file/HomeAboutPortrait.webp",
+      "thumbnailURL": null
+    }
+  },
+  "homeExperience": {
+    "title": "Experience",
+    "experienceItems": [
+      {
+        "company": "HL Tutoring",
+        "titles": [
+          "Founder"
+        ],
+        "dates": {
+          "startDate": "2023",
+          "endDate": "Present",
+          "shortLabel": "Present"
+        },
+        "description": "Tutoring of a wide range of students with a focus on helping students gain a thorough understanding of technical topics and achieve a variety of educational goals. Instruct students in college level data structures and algorithms, AP Computer Science, Full Stack Web Development, and learning computer science fundamentals from the ground up.",
+        "technologies": [
+          "Python",
+          "Java",
+          "Javascript",
+          "React",
+          "Go",
+          "Express",
+          "Node.js",
+          "Next.js",
+          "Flask",
+          "Ollama",
+          "MongoDB",
+          "SQL",
+          "CSS",
+          "HTML",
+          "C++",
+          "C",
+          "Squarespace"
+        ],
+        "createdAt": "2025-03-06T07:55:33.072Z",
+        "updatedAt": "2025-03-07T17:03:19.323Z",
+        "id": "67c954f50e528355496e4293"
+      },
+      {
+        "company": "Nav Creative",
+        "titles": [
+          "Director",
+          "Project Manager",
+          "Web Designer"
+        ],
+        "dates": {
+          "startDate": "2019",
+          "endDate": "2023",
+          "shortLabel": "2023"
+        },
+        "description": "Designed and managed over 200 full website builds for small business clients under heavy workloads. Co-created the studio's new core process for web clients, fixing a critical revenue issue. Oversaw all high complexity and technical client lead consultations across their entire lifecycle, streamlining the onboarding of new clients and providing support during the building and offboarding phases of the process.",
+        "technologies": [
+          "Javascript",
+          "Less",
+          "JQuery",
+          "HTML",
+          "Python",
+          "Squarespace",
+          "Wordpress",
+          "Shopify"
+        ],
+        "createdAt": "2025-03-06T07:58:22.515Z",
+        "updatedAt": "2025-03-07T17:03:57.100Z",
+        "id": "67c9559e0e528355496e42d5"
+      },
+      {
+        "company": "Silicon Valley 4u",
+        "titles": [
+          "Coding Instructor"
+        ],
+        "dates": {
+          "startDate": "May 2019",
+          "endDate": "Nov 2019",
+          "shortLabel": "2019"
+        },
+        "description": "Taught a variety of courses in Python, Scratch, and Blender 3D, adapting curriculum to different age groups (6-14), class sizes (4-11), as well as many different skill levels and interests. Communicated with parents and supervisors to meet goals while providing an engaging class environment. Responsible for multiple classroom locations with different stakeholders, resources, and lesson formats.",
+        "technologies": [
+          "Python",
+          "Scratch",
+          "Blender"
+        ],
+        "createdAt": "2025-03-06T08:17:28.679Z",
+        "updatedAt": "2025-03-07T17:04:16.946Z",
+        "id": "67c95a180e528355496e4451"
+      },
+      {
+        "company": "Scale API",
+        "titles": [
+          "QA Ops Associate",
+          "QA Contractor"
+        ],
+        "dates": {
+          "startDate": "2017",
+          "endDate": "2018",
+          "shortLabel": "2018"
+        },
+        "description": "Ensured superior quality for AI training data annotations through detailed review and feedback to annotators. Promoted to Associate for dedicated effort to the team and projects. Addressed/aided in resolving bugs in annotation software for better annotation quality and annotation ease. Developed training material to improve annotation accuracy and train new annotation reviewers at scale.",
+        "technologies": [
+          "Scale 3D Lidar Annotations",
+          "Google Sheets"
+        ],
+        "createdAt": "2025-03-06T08:19:28.751Z",
+        "updatedAt": "2025-03-07T17:04:41.211Z",
+        "id": "67c95a900e528355496e447f"
+      }
+    ]
+  },
+  "homeHeroBanner": {
+    "headline": "Hi, I'm Hayden",
+    "subHeadline": [
+      "Developer",
+      "Designer",
+      "Educator"
+    ],
+    "paragraph": "I'm passionate about creating solutions through programming and design, and empowering others through education and mentorship."
+  },
+  "homeContact": {
+    "title": "Contact Me",
+    "paragraph": "I'm always on the lookout for new projects, opportunities, and connections. Feel free to reach out anytime.",
+    "email": "haydenlalljie@gmail.com"
+  },
+  "sharedImages": {
+    "homeHeroBannerImage": {
+      "alt": "Fog over trees in a mountainous forest",
+      "name": "Home Hero Background",
+      "credit": "https://unsplash.com/photos/cloud-covered-mountains-NO-FxxCE67Y",
+      "filename": "homeHeroBanner.webp",
+      "mimeType": "image/webp",
+      "filesize": 874658,
+      "width": 3751,
+      "height": 5251,
+      "focalX": 50,
+      "focalY": 50,
+      "sizes": {
+        "thumbnail": {
+          "url": "/api/media/file/homeHeroBanner-400x560.webp",
+          "width": 400,
+          "height": 560,
+          "mimeType": "image/webp",
+          "filesize": 32698,
+          "filename": "homeHeroBanner-400x560.webp"
+        },
+        "small": {
+          "url": "/api/media/file/homeHeroBanner-768x1075.webp",
+          "width": 768,
+          "height": 1075,
+          "mimeType": "image/webp",
+          "filesize": 75980,
+          "filename": "homeHeroBanner-768x1075.webp"
+        },
+        "medium": {
+          "url": "/api/media/file/homeHeroBanner-1200x1680.webp",
+          "width": 1200,
+          "height": 1680,
+          "mimeType": "image/webp",
+          "filesize": 129062,
+          "filename": "homeHeroBanner-1200x1680.webp"
+        },
+        "large": {
+          "url": "/api/media/file/homeHeroBanner-1800x2520.webp",
+          "width": 1800,
+          "height": 2520,
+          "mimeType": "image/webp",
+          "filesize": 255120,
+          "filename": "homeHeroBanner-1800x2520.webp"
+        },
+        "hero": {
+          "url": "/api/media/file/homeHeroBanner-2500x3500.webp",
+          "width": 2500,
+          "height": 3500,
+          "mimeType": "image/webp",
+          "filesize": 412728,
+          "filename": "homeHeroBanner-2500x3500.webp"
+        }
+      },
+      "createdAt": "2025-03-11T21:12:51.847Z",
+      "updatedAt": "2025-03-11T21:24:39.944Z",
+      "thumbnailURL": null,
+      "url": "/api/media/file/homeHeroBanner.webp",
+      "id": "67d0a753337eb5257674066e"
+    },
+    "homeBottomBackgroundImage": {
+      "alt": "Forest lake under a mountain",
+      "name": "Home Bottom Background",
+      "credit": "https://unsplash.com/photos/grey-calm-body-of-water-near-green-leaf-trees-at-daytime-choc7LYd98I",
+      "filename": "homeBottomBackground.webp",
+      "mimeType": "image/webp",
+      "filesize": 4868702,
+      "width": 4912,
+      "height": 7360,
+      "focalX": 50,
+      "focalY": 50,
+      "sizes": {
+        "thumbnail": {
+          "url": "/api/media/file/homeBottomBackground-400x599.webp",
+          "width": 400,
+          "height": 599,
+          "mimeType": "image/webp",
+          "filesize": 78270,
+          "filename": "homeBottomBackground-400x599.webp"
+        },
+        "small": {
+          "url": "/api/media/file/homeBottomBackground-768x1151.webp",
+          "width": 768,
+          "height": 1151,
+          "mimeType": "image/webp",
+          "filesize": 202128,
+          "filename": "homeBottomBackground-768x1151.webp"
+        },
+        "medium": {
+          "url": "/api/media/file/homeBottomBackground-1200x1798.webp",
+          "width": 1200,
+          "height": 1798,
+          "mimeType": "image/webp",
+          "filesize": 360316,
+          "filename": "homeBottomBackground-1200x1798.webp"
+        },
+        "large": {
+          "url": "/api/media/file/homeBottomBackground-1800x2697.webp",
+          "width": 1800,
+          "height": 2697,
+          "mimeType": "image/webp",
+          "filesize": 699112,
+          "filename": "homeBottomBackground-1800x2697.webp"
+        },
+        "hero": {
+          "url": "/api/media/file/homeBottomBackground-2500x3746.webp",
+          "width": 2500,
+          "height": 3746,
+          "mimeType": "image/webp",
+          "filesize": 1217280,
+          "filename": "homeBottomBackground-2500x3746.webp"
+        }
+      },
+      "createdAt": "2025-03-11T21:16:55.594Z",
+      "updatedAt": "2025-03-11T21:24:20.860Z",
+      "thumbnailURL": null,
+      "url": "/api/media/file/homeBottomBackground.webp",
+      "id": "67d0a847337eb525767406a0"
+    }
+  },
+  "homeFeaturedProjects": {
+    "title": "Featured Projects",
+    "featuredProjects": [
+      {
+        "title": "Platinum Advisors",
+        "thumbnail": {
+          "alt": "Screenshot of Platinum Advisors website homepage opening fold",
+          "name": "Platinum Advisors Thumbnail",
+          "credit": "platinumadvisors.com",
+          "filename": "PlatinumAdvisorsThumbnailOriginal.webp",
+          "mimeType": "image/webp",
+          "filesize": 170390,
+          "width": 1495,
+          "height": 1196,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "width": 400,
+              "height": 320,
+              "mimeType": "image/webp",
+              "filesize": 27880,
+              "filename": "PlatinumAdvisorsThumbnailOriginal-400x320.webp",
+              "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-400x320.webp"
+            },
+            "small": {
+              "width": 768,
+              "height": 614,
+              "mimeType": "image/webp",
+              "filesize": 67060,
+              "filename": "PlatinumAdvisorsThumbnailOriginal-768x614.webp",
+              "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-768x614.webp"
+            },
+            "medium": {
+              "width": 1200,
+              "height": 960,
+              "mimeType": "image/webp",
+              "filesize": 107676,
+              "filename": "PlatinumAdvisorsThumbnailOriginal-1200x960.webp",
+              "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1200x960.webp"
+            },
+            "large": {
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null,
+              "url": null
+            },
+            "hero": {
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null,
+              "url": null
+            }
+          },
+          "createdAt": "2025-03-14T06:50:43.502Z",
+          "updatedAt": "2025-03-14T06:50:43.502Z",
+          "id": "67d3d1c39b9e1c15dc3d465f",
+          "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal.webp",
+          "thumbnailURL": null
+        },
+        "company": "Nav Creative",
+        "roles": [
+          "Designer",
+          "Project Manager"
+        ],
+        "excerpt": "Redesigned Platinum Advisors' website to more effectively communicate their professionalism and expertise to clients.",
+        "technologies": [
+          "Squarespace",
+          "Less",
+          "Javascript",
+          "HTML"
+        ],
+        "pageContent": {
+          "bannerImage": {
+            "updatedAt": "2025-03-14T17:14:45.264Z",
+            "alt": "Screenshot of Platinum Advisors website homepage opening fold",
+            "name": "Platinum Advisors Banner",
+            "credit": "platinumadvisors.com",
+            "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1.webp",
+            "thumbnailURL": null,
+            "filename": "PlatinumAdvisorsThumbnailOriginal-1.webp",
+            "mimeType": "image/webp",
+            "filesize": 110102,
+            "width": 1494,
+            "height": 654,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-400x175.webp",
+                "width": 400,
+                "height": 175,
+                "mimeType": "image/webp",
+                "filesize": 19782,
+                "filename": "PlatinumAdvisorsThumbnailOriginal-1-400x175.webp"
+              },
+              "small": {
+                "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-768x336.webp",
+                "width": 768,
+                "height": 336,
+                "mimeType": "image/webp",
+                "filesize": 46788,
+                "filename": "PlatinumAdvisorsThumbnailOriginal-1-768x336.webp"
+              },
+              "medium": {
+                "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp",
+                "width": 1200,
+                "height": 525,
+                "mimeType": "image/webp",
+                "filesize": 71692,
+                "filename": "PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp"
+              },
+              "large": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            },
+            "createdAt": "2025-03-14T17:13:28.588Z",
+            "id": "67d463b895ccfa757ba89bd1"
+          },
+          "content": [
+            {
+              "blockType": "textBlock",
+              "content": {
+                "root": {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "As the sole designer and developer from our studio, I led a website redesign for Platinum Advisors, a national advocacy firm looking to showcase their expanded reach. Working with two client representatives who represented key stakeholders, I managed the project from initial wireframes through custom development in Squarespace. ",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "format": "",
+                      "indent": 0,
+                      "type": "paragraph",
+                      "version": 1,
+                      "textFormat": 0,
+                      "textStyle": ""
+                    },
+                    {
+                      "children": [
+                        {
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "        ",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": null,
+                      "format": "",
+                      "indent": 0,
+                      "type": "paragraph",
+                      "version": 1,
+                      "textFormat": 0,
+                      "textStyle": ""
+                    },
+                    {
+                      "children": [
+                        {
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "Despite challenges with an expanding scope and indirect stakeholder communication, I delivered a modern, premium design that effectively organized complex information and incorporated custom styling elements, including the Will Meyers Slideshow plugin and specialized portrait frames. The project concluded successfully with stakeholder approval, though it required careful budget management and rapid feedback coordination to meet deadlines.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "format": "",
+                      "indent": 0,
+                      "type": "paragraph",
+                      "version": 1,
+                      "textFormat": 0,
+                      "textStyle": ""
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "type": "root",
+                  "version": 1
+                }
+              },
+              "id": "67d3d1f0a686efc7ae9eec8d",
+              "blockName": ""
+            }
+          ]
+        },
+        "createdAt": "2025-03-14T06:51:14.689Z",
+        "updatedAt": "2025-03-16T21:08:39.409Z",
+        "url": "https://www.platinumadvisors.com",
+        "year": "2023",
+        "slug": "platinum-advisors",
+        "type": "professional",
+        "id": "67d3d1e29b9e1c15dc3d467f"
+      },
+      {
+        "title": "Travel Gurus",
+        "thumbnail": {
+          "alt": "Travel Gurus website homepage screenshot",
+          "filename": "travelGurusThumbnail.webp",
+          "mimeType": "image/webp",
+          "filesize": 194986,
+          "width": 1900,
+          "height": 1520,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "width": 400,
+              "height": 320,
+              "mimeType": "image/webp",
+              "filesize": 21920,
+              "filename": "travelGurusThumbnail-400x320.webp",
+              "url": "/api/media/file/travelGurusThumbnail-400x320.webp"
+            },
+            "small": {
+              "width": 768,
+              "height": 614,
+              "mimeType": "image/webp",
+              "filesize": 54756,
+              "filename": "travelGurusThumbnail-768x614.webp",
+              "url": "/api/media/file/travelGurusThumbnail-768x614.webp"
+            },
+            "medium": {
+              "width": 1200,
+              "height": 960,
+              "mimeType": "image/webp",
+              "filesize": 89518,
+              "filename": "travelGurusThumbnail-1200x960.webp",
+              "url": "/api/media/file/travelGurusThumbnail-1200x960.webp"
+            },
+            "large": {
+              "width": 1800,
+              "height": 1440,
+              "mimeType": "image/webp",
+              "filesize": 148596,
+              "filename": "travelGurusThumbnail-1800x1440.webp",
+              "url": "/api/media/file/travelGurusThumbnail-1800x1440.webp"
+            },
+            "hero": {
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null,
+              "url": null
+            }
+          },
+          "createdAt": "2025-03-14T17:08:59.220Z",
+          "updatedAt": "2025-03-14T17:08:59.220Z",
+          "id": "67d462ab95ccfa757ba89aa1",
+          "url": "/api/media/file/travelGurusThumbnail.webp",
+          "thumbnailURL": null
+        },
+        "company": "Nav Creative",
+        "roles": [
+          "Project Mananger",
+          "Designer",
+          "Developer"
+        ],
+        "excerpt": "Travel Gurus reached out for their first website looking to inspire their customers to travel to new places.",
+        "technologies": [
+          "Squarespace",
+          "Javascript",
+          "Less"
+        ],
+        "year": "2022",
+        "url": "https://www.travelgurusgroup.com",
+        "pageContent": {
+          "bannerImage": {
+            "alt": "Travel Gurus website homepage screenshot",
+            "filename": "travelGurusThumbnail2400w.webp",
+            "mimeType": "image/webp",
+            "filesize": 90936,
+            "width": 1898,
+            "height": 722,
+            "focalX": 50,
+            "focalY": 24,
+            "sizes": {
+              "thumbnail": {
+                "url": "/api/media/file/travelGurusThumbnail2400w-400x152.webp",
+                "width": 400,
+                "height": 152,
+                "mimeType": "image/webp",
+                "filesize": 12980,
+                "filename": "travelGurusThumbnail2400w-400x152.webp"
+              },
+              "small": {
+                "url": "/api/media/file/travelGurusThumbnail2400w-768x292.webp",
+                "width": 768,
+                "height": 292,
+                "mimeType": "image/webp",
+                "filesize": 28294,
+                "filename": "travelGurusThumbnail2400w-768x292.webp"
+              },
+              "medium": {
+                "url": "/api/media/file/travelGurusThumbnail2400w-1200x456.webp",
+                "width": 1200,
+                "height": 456,
+                "mimeType": "image/webp",
+                "filesize": 42524,
+                "filename": "travelGurusThumbnail2400w-1200x456.webp"
+              },
+              "large": {
+                "url": "/api/media/file/travelGurusThumbnail2400w-1800x685.webp",
+                "width": 1800,
+                "height": 685,
+                "mimeType": "image/webp",
+                "filesize": 68852,
+                "filename": "travelGurusThumbnail2400w-1800x685.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            },
+            "createdAt": "2025-03-14T16:59:10.508Z",
+            "updatedAt": "2025-03-14T17:09:28.395Z",
+            "thumbnailURL": null,
+            "url": "/api/media/file/travelGurusThumbnail2400w.webp",
+            "name": "Travel Gurus Banner",
+            "id": "67d4605e95ccfa757ba899f0"
+          },
+          "content": [
+            {
+              "blockType": "textBlock",
+              "content": {
+                "root": {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "Travel Gurus reached out for their first website looking to inspire their customers to travel to new places.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "format": "",
+                      "indent": 0,
+                      "type": "paragraph",
+                      "version": 1,
+                      "textFormat": 0,
+                      "textStyle": ""
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "type": "root",
+                  "version": 1
+                }
+              },
+              "id": "67d4615128c99d47346dc87a"
+            }
+          ]
+        },
+        "createdAt": "2025-03-14T17:00:55.727Z",
+        "updatedAt": "2025-03-16T21:08:20.755Z",
+        "slug": "travel-gurus",
+        "type": "professional",
+        "id": "67d460c795ccfa757ba89a19"
+      },
+      {
+        "title": "BA-TTI",
+        "fullTitle": "Bay Area Teacher Training Institute",
+        "thumbnail": {
+          "alt": "BA-TTI website homepage screenshot",
+          "filename": "battiThumbnail2400w.webp",
+          "mimeType": "image/webp",
+          "filesize": 168102,
+          "width": 2400,
+          "height": 1920,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "width": 400,
+              "height": 320,
+              "mimeType": "image/webp",
+              "filesize": 23200,
+              "filename": "battiThumbnail2400w-400x320.webp",
+              "url": "/api/media/file/battiThumbnail2400w-400x320.webp"
+            },
+            "small": {
+              "width": 768,
+              "height": 614,
+              "mimeType": "image/webp",
+              "filesize": 45494,
+              "filename": "battiThumbnail2400w-768x614.webp",
+              "url": "/api/media/file/battiThumbnail2400w-768x614.webp"
+            },
+            "medium": {
+              "width": 1200,
+              "height": 960,
+              "mimeType": "image/webp",
+              "filesize": 64578,
+              "filename": "battiThumbnail2400w-1200x960.webp",
+              "url": "/api/media/file/battiThumbnail2400w-1200x960.webp"
+            },
+            "large": {
+              "width": 1800,
+              "height": 1440,
+              "mimeType": "image/webp",
+              "filesize": 102040,
+              "filename": "battiThumbnail2400w-1800x1440.webp",
+              "url": "/api/media/file/battiThumbnail2400w-1800x1440.webp"
+            },
+            "hero": {
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null,
+              "url": null
+            }
+          },
+          "createdAt": "2025-03-14T16:53:53.210Z",
+          "updatedAt": "2025-03-14T16:53:53.210Z",
+          "id": "67d45f2195ccfa757ba89997",
+          "url": "/api/media/file/battiThumbnail2400w.webp",
+          "thumbnailURL": null
+        },
+        "company": "Nav Creative",
+        "roles": [
+          "Project Manger",
+          "Designer",
+          "Developer"
+        ],
+        "excerpt": "A rebranding and website refresh to better guide students and better market the brand for the Bay Area Teacher Training Institute.",
+        "technologies": [
+          "Squarespace",
+          "Less",
+          "Javascript"
+        ],
+        "year": "2022",
+        "url": "https://www.ba-tti.org",
+        "pageContent": {
+          "bannerImage": {
+            "updatedAt": "2025-03-14T17:12:05.466Z",
+            "alt": "BA-TTI website homepage screenshot",
+            "url": "/api/media/file/battiThumbnail2400w-1.webp",
+            "thumbnailURL": null,
+            "filename": "battiThumbnail2400w-1.webp",
+            "mimeType": "image/webp",
+            "filesize": 98248,
+            "width": 2400,
+            "height": 1050,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "/api/media/file/battiThumbnail2400w-1-400x175.webp",
+                "width": 400,
+                "height": 175,
+                "mimeType": "image/webp",
+                "filesize": 17512,
+                "filename": "battiThumbnail2400w-1-400x175.webp"
+              },
+              "small": {
+                "url": "/api/media/file/battiThumbnail2400w-1-768x336.webp",
+                "width": 768,
+                "height": 336,
+                "mimeType": "image/webp",
+                "filesize": 31904,
+                "filename": "battiThumbnail2400w-1-768x336.webp"
+              },
+              "medium": {
+                "url": "/api/media/file/battiThumbnail2400w-1-1200x525.webp",
+                "width": 1200,
+                "height": 525,
+                "mimeType": "image/webp",
+                "filesize": 45522,
+                "filename": "battiThumbnail2400w-1-1200x525.webp"
+              },
+              "large": {
+                "url": "/api/media/file/battiThumbnail2400w-1-1800x788.webp",
+                "width": 1800,
+                "height": 788,
+                "mimeType": "image/webp",
+                "filesize": 67482,
+                "filename": "battiThumbnail2400w-1-1800x788.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            },
+            "createdAt": "2025-03-14T17:11:23.630Z",
+            "name": "BA-TTI Banner",
+            "id": "67d4633b95ccfa757ba89b13"
+          },
+          "content": [
+            {
+              "blockType": "textBlock",
+              "content": {
+                "root": {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "A rebranding and website refresh to better guide students and better market the brand for the Bay Area Teacher Training Institute.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "format": "",
+                      "indent": 0,
+                      "type": "paragraph",
+                      "version": 1,
+                      "textFormat": 0,
+                      "textStyle": ""
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "type": "root",
+                  "version": 1
+                }
+              },
+              "id": "67d45f2a28c99d47346dc878"
+            }
+          ]
+        },
+        "createdAt": "2025-03-14T16:54:22.350Z",
+        "updatedAt": "2025-03-16T21:08:29.564Z",
+        "slug": "ba-tti",
+        "type": "professional",
+        "id": "67d45f3e95ccfa757ba899bb"
+      }
+    ]
+  },
+  "id": "67c94ade0e528355496e41af"
+}

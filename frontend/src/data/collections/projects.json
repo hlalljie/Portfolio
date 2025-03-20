@@ -1,0 +1,1400 @@
+{
+  "docs": [
+    {
+      "title": "Don't Get Swatted",
+      "type": "personal",
+      "slug": "dont-get-swatted",
+      "thumbnail": {
+        "alt": "Don't Get Swatted game art",
+        "name": "Don't Get Swatted Main Image",
+        "filename": "DontGetSwatted.webp",
+        "mimeType": "image/webp",
+        "filesize": 97990,
+        "width": 2400,
+        "height": 1350,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "width": 400,
+            "height": 225,
+            "mimeType": "image/webp",
+            "filesize": 12112,
+            "filename": "DontGetSwatted-400x225.webp",
+            "url": "/api/media/file/DontGetSwatted-400x225.webp"
+          },
+          "small": {
+            "width": 768,
+            "height": 432,
+            "mimeType": "image/webp",
+            "filesize": 22818,
+            "filename": "DontGetSwatted-768x432.webp",
+            "url": "/api/media/file/DontGetSwatted-768x432.webp"
+          },
+          "medium": {
+            "width": 1200,
+            "height": 675,
+            "mimeType": "image/webp",
+            "filesize": 33942,
+            "filename": "DontGetSwatted-1200x675.webp",
+            "url": "/api/media/file/DontGetSwatted-1200x675.webp"
+          },
+          "large": {
+            "width": 1800,
+            "height": 1013,
+            "mimeType": "image/webp",
+            "filesize": 55956,
+            "filename": "DontGetSwatted-1800x1013.webp",
+            "url": "/api/media/file/DontGetSwatted-1800x1013.webp"
+          },
+          "hero": {
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null,
+            "url": null
+          }
+        },
+        "createdAt": "2025-03-17T03:10:08.246Z",
+        "updatedAt": "2025-03-17T03:10:08.246Z",
+        "id": "67d792902c31a9c4c4836932",
+        "url": "/api/media/file/DontGetSwatted.webp",
+        "thumbnailURL": null
+      },
+      "roles": [
+        "Developer",
+        "Technical Lead"
+      ],
+      "excerpt": "A branching story game built in 10 days for the 2024 One Button Jam",
+      "technologies": [
+        "Javascript",
+        "Twine"
+      ],
+      "year": "2024",
+      "github": "https://github.com/hlalljie/bitforest-dont-get-swatted",
+      "pageContent": {
+        "bannerImage": {
+          "alt": "Don't Get Swatted game art",
+          "name": "Don't Get Swatted Main Image",
+          "filename": "DontGetSwatted.webp",
+          "mimeType": "image/webp",
+          "filesize": 97990,
+          "width": 2400,
+          "height": 1350,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "width": 400,
+              "height": 225,
+              "mimeType": "image/webp",
+              "filesize": 12112,
+              "filename": "DontGetSwatted-400x225.webp",
+              "url": "/api/media/file/DontGetSwatted-400x225.webp"
+            },
+            "small": {
+              "width": 768,
+              "height": 432,
+              "mimeType": "image/webp",
+              "filesize": 22818,
+              "filename": "DontGetSwatted-768x432.webp",
+              "url": "/api/media/file/DontGetSwatted-768x432.webp"
+            },
+            "medium": {
+              "width": 1200,
+              "height": 675,
+              "mimeType": "image/webp",
+              "filesize": 33942,
+              "filename": "DontGetSwatted-1200x675.webp",
+              "url": "/api/media/file/DontGetSwatted-1200x675.webp"
+            },
+            "large": {
+              "width": 1800,
+              "height": 1013,
+              "mimeType": "image/webp",
+              "filesize": 55956,
+              "filename": "DontGetSwatted-1800x1013.webp",
+              "url": "/api/media/file/DontGetSwatted-1800x1013.webp"
+            },
+            "hero": {
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null,
+              "url": null
+            }
+          },
+          "createdAt": "2025-03-17T03:10:08.246Z",
+          "updatedAt": "2025-03-17T03:10:08.246Z",
+          "id": "67d792902c31a9c4c4836932",
+          "url": "/api/media/file/DontGetSwatted.webp",
+          "thumbnailURL": null
+        },
+        "content": [
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "I worked as a developer alongside an artist, writer and another developer. With our main challenge being time, I focused solely ensuring sure the game was fully playable by the deadline. After coming up with the idea of a multiple choice, mad libs style story game, each group split off to work on their part. I focused on understanding the visions of both the artist and writer and translated them into issues we could tackle on the software side. ",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "      ",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": null,
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "After we knew our initial requirement the other developer got to work on the base game and I looked at what future problems we would need to solve. I found a software our writer could use to create and visualize branching story paths, trained them how to use it, and integrated it with the game for easy updates in the future. Then I listened to the artist's vision and found a way to implement their visual ideas into the game. In between I setup a Github action to deploy our game to itch.io whenever we pushed to the main branch, saving us time and coming in handy when itch.io went down shortly before the deadline as we already had most of our changes pushed and could easily retry the deployment.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "      ",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": null,
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Then I moved to other issues such as tweaking the frontend, adding a tracker for ending the player had found, making a last minute music addition and many other changes to get the game to it's destination. The game was was released in time and received positive feedback from the jam host and other jammers. It ended up being a great learning experience in how to execute on a tight deadline and coordinate with others for an awesome outcome that players got to enjoy.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67d7923c536928fe1b6399d7"
+          }
+        ]
+      },
+      "createdAt": "2025-03-17T03:11:26.453Z",
+      "updatedAt": "2025-03-17T03:12:37.528Z",
+      "itchio": "https://haydondo.itch.io/dont-get-swatted",
+      "id": "67d792de2c31a9c4c483698d"
+    },
+    {
+      "title": "Inquizity",
+      "type": "personal",
+      "slug": "inquizity",
+      "thumbnail": {
+        "alt": "Picture of computer with a quiz application",
+        "name": "Inquizity Thumbnail",
+        "filename": "inquizityThumbnail.webp",
+        "mimeType": "image/webp",
+        "filesize": 62444,
+        "width": 1200,
+        "height": 900,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "width": 400,
+            "height": 300,
+            "mimeType": "image/webp",
+            "filesize": 17524,
+            "filename": "inquizityThumbnail-400x300.webp",
+            "url": "/api/media/file/inquizityThumbnail-400x300.webp"
+          },
+          "small": {
+            "width": 768,
+            "height": 576,
+            "mimeType": "image/webp",
+            "filesize": 34480,
+            "filename": "inquizityThumbnail-768x576.webp",
+            "url": "/api/media/file/inquizityThumbnail-768x576.webp"
+          },
+          "medium": {
+            "width": 1200,
+            "height": 900,
+            "mimeType": "image/webp",
+            "filesize": 51886,
+            "filename": "inquizityThumbnail-1200x900.webp",
+            "url": "/api/media/file/inquizityThumbnail-1200x900.webp"
+          },
+          "large": {
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null,
+            "url": null
+          },
+          "hero": {
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null,
+            "url": null
+          }
+        },
+        "createdAt": "2025-03-17T03:04:44.034Z",
+        "updatedAt": "2025-03-17T03:04:44.034Z",
+        "id": "67d7914c2c31a9c4c48367f8",
+        "url": "/api/media/file/inquizityThumbnail.webp",
+        "thumbnailURL": null
+      },
+      "company": "",
+      "roles": [
+        "Developer"
+      ],
+      "excerpt": "Product to save teachers time and give students a more efficient way of learning through AI quiz question generation.",
+      "technologies": [
+        "React",
+        "Flask",
+        "Llama2"
+      ],
+      "year": "2023",
+      "github": "https://github.com/hlalljie/QuizGeneratorFlaskReact",
+      "pageContent": {
+        "bannerImage": {
+          "updatedAt": "2025-03-17T03:06:00.621Z",
+          "alt": "Picture of computer with a quiz application",
+          "name": "Inquizity Thumbnail",
+          "url": "/api/media/file/inquizityThumbnail-1.webp",
+          "thumbnailURL": null,
+          "filename": "inquizityThumbnail-1.webp",
+          "mimeType": "image/webp",
+          "filesize": 37150,
+          "width": 1200,
+          "height": 514,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/inquizityThumbnail-1-400x171.webp",
+              "width": 400,
+              "height": 171,
+              "mimeType": "image/webp",
+              "filesize": 13300,
+              "filename": "inquizityThumbnail-1-400x171.webp"
+            },
+            "small": {
+              "url": "/api/media/file/inquizityThumbnail-1-768x329.webp",
+              "width": 768,
+              "height": 329,
+              "mimeType": "image/webp",
+              "filesize": 23326,
+              "filename": "inquizityThumbnail-1-768x329.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/inquizityThumbnail-1-1200x514.webp",
+              "width": 1200,
+              "height": 514,
+              "mimeType": "image/webp",
+              "filesize": 36602,
+              "filename": "inquizityThumbnail-1-1200x514.webp"
+            },
+            "large": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "hero": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            }
+          },
+          "createdAt": "2025-03-17T03:05:35.282Z",
+          "id": "67d7917f2c31a9c4c4836832"
+        },
+        "content": []
+      },
+      "createdAt": "2025-03-17T03:06:07.028Z",
+      "updatedAt": "2025-03-17T03:06:42.372Z",
+      "id": "67d7919f2c31a9c4c4836879"
+    },
+    {
+      "title": "Block Broker",
+      "type": "personal",
+      "slug": "block-broker",
+      "thumbnail": {
+        "alt": "Block Broker landing page screenshot",
+        "name": "Block Broker Thumbnail",
+        "filename": "blockBrokerCropped5x4.webp",
+        "mimeType": "image/webp",
+        "filesize": 174116,
+        "width": 2500,
+        "height": 2000,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "width": 400,
+            "height": 320,
+            "mimeType": "image/webp",
+            "filesize": 24246,
+            "filename": "blockBrokerCropped5x4-400x320.webp",
+            "url": "/api/media/file/blockBrokerCropped5x4-400x320.webp"
+          },
+          "small": {
+            "width": 768,
+            "height": 614,
+            "mimeType": "image/webp",
+            "filesize": 48042,
+            "filename": "blockBrokerCropped5x4-768x614.webp",
+            "url": "/api/media/file/blockBrokerCropped5x4-768x614.webp"
+          },
+          "medium": {
+            "width": 1200,
+            "height": 960,
+            "mimeType": "image/webp",
+            "filesize": 62878,
+            "filename": "blockBrokerCropped5x4-1200x960.webp",
+            "url": "/api/media/file/blockBrokerCropped5x4-1200x960.webp"
+          },
+          "large": {
+            "width": 1800,
+            "height": 1440,
+            "mimeType": "image/webp",
+            "filesize": 99478,
+            "filename": "blockBrokerCropped5x4-1800x1440.webp",
+            "url": "/api/media/file/blockBrokerCropped5x4-1800x1440.webp"
+          },
+          "hero": {
+            "width": 2500,
+            "height": 2000,
+            "mimeType": "image/webp",
+            "filesize": 148362,
+            "filename": "blockBrokerCropped5x4-2500x2000.webp",
+            "url": "/api/media/file/blockBrokerCropped5x4-2500x2000.webp"
+          }
+        },
+        "createdAt": "2025-03-17T02:58:49.548Z",
+        "updatedAt": "2025-03-17T02:58:49.548Z",
+        "id": "67d78fe92c31a9c4c483672d",
+        "url": "/api/media/file/blockBrokerCropped5x4.webp",
+        "thumbnailURL": null
+      },
+      "company": "",
+      "roles": [
+        "Developer",
+        "Techincal Lead",
+        "Designer"
+      ],
+      "excerpt": "Worked as solo frontend dev and team lead on this Web3 Hackathon project to democratize freelance contracting.",
+      "technologies": [
+        "React",
+        "CSS",
+        "Javascript"
+      ],
+      "year": "2023",
+      "github": "https://github.com/Topupchips/MLH-Web3-Hackathon',",
+      "pageContent": {
+        "bannerImage": {
+          "alt": "Screenshot of Block Broker's homepage",
+          "name": "Block Broker Banner",
+          "filename": "blockBrokerBanner.webp",
+          "mimeType": "image/webp",
+          "filesize": 86394,
+          "width": 2500,
+          "height": 1190,
+          "focalX": 50,
+          "focalY": 13,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/blockBrokerBanner-400x190.webp",
+              "width": 400,
+              "height": 190,
+              "mimeType": "image/webp",
+              "filesize": 16810,
+              "filename": "blockBrokerBanner-400x190.webp"
+            },
+            "small": {
+              "url": "/api/media/file/blockBrokerBanner-768x366.webp",
+              "width": 768,
+              "height": 366,
+              "mimeType": "image/webp",
+              "filesize": 28708,
+              "filename": "blockBrokerBanner-768x366.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/blockBrokerBanner-1200x571.webp",
+              "width": 1200,
+              "height": 571,
+              "mimeType": "image/webp",
+              "filesize": 38398,
+              "filename": "blockBrokerBanner-1200x571.webp"
+            },
+            "large": {
+              "url": "/api/media/file/blockBrokerBanner-1800x857.webp",
+              "width": 1800,
+              "height": 857,
+              "mimeType": "image/webp",
+              "filesize": 58984,
+              "filename": "blockBrokerBanner-1800x857.webp"
+            },
+            "hero": {
+              "url": "/api/media/file/blockBrokerBanner-2500x1190.webp",
+              "width": 2500,
+              "height": 1190,
+              "mimeType": "image/webp",
+              "filesize": 85398,
+              "filename": "blockBrokerBanner-2500x1190.webp"
+            }
+          },
+          "createdAt": "2025-03-17T03:01:17.645Z",
+          "updatedAt": "2025-03-17T03:01:37.732Z",
+          "thumbnailURL": null,
+          "url": "/api/media/file/blockBrokerBanner.webp",
+          "id": "67d7907d2c31a9c4c4836775"
+        },
+        "content": []
+      },
+      "createdAt": "2025-03-17T03:01:49.116Z",
+      "updatedAt": "2025-03-17T03:06:58.291Z",
+      "id": "67d7909d2c31a9c4c483679c"
+    },
+    {
+      "title": "Next Adventure",
+      "type": "professional",
+      "slug": "next-adventure",
+      "thumbnail": {
+        "alt": "Next Adventure explore page screenshot",
+        "filename": "nextAdventureThumbnail.webp",
+        "mimeType": "image/webp",
+        "filesize": 137458,
+        "width": 1920,
+        "height": 1536,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "url": "/api/media/file/nextAdventureThumbnail-400x320.webp",
+            "width": 400,
+            "height": 320,
+            "mimeType": "image/webp",
+            "filesize": 19700,
+            "filename": "nextAdventureThumbnail-400x320.webp"
+          },
+          "small": {
+            "url": "/api/media/file/nextAdventureThumbnail-768x614.webp",
+            "width": 768,
+            "height": 614,
+            "mimeType": "image/webp",
+            "filesize": 39398,
+            "filename": "nextAdventureThumbnail-768x614.webp"
+          },
+          "medium": {
+            "url": "/api/media/file/nextAdventureThumbnail-1200x960.webp",
+            "width": 1200,
+            "height": 960,
+            "mimeType": "image/webp",
+            "filesize": 58932,
+            "filename": "nextAdventureThumbnail-1200x960.webp"
+          },
+          "large": {
+            "url": "/api/media/file/nextAdventureThumbnail-1800x1440.webp",
+            "width": 1800,
+            "height": 1440,
+            "mimeType": "image/webp",
+            "filesize": 97190,
+            "filename": "nextAdventureThumbnail-1800x1440.webp"
+          },
+          "hero": {
+            "url": null,
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null
+          }
+        },
+        "createdAt": "2025-03-17T00:24:58.502Z",
+        "updatedAt": "2025-03-17T00:28:26.268Z",
+        "name": "Next Adventure Thumbnail",
+        "thumbnailURL": null,
+        "url": "/api/media/file/nextAdventureThumbnail.webp",
+        "id": "67d76bda929c408084eb04e6"
+      },
+      "company": "Nav Creative",
+      "roles": [
+        "Project Manager",
+        "Designer",
+        "Developer"
+      ],
+      "excerpt": "Next Adventure was looking to stun visitor with visuals of safari wildlife while crafting a unique user experience based on how long until planned journey.",
+      "technologies": [
+        "Squarespace",
+        "Javascript",
+        "Less"
+      ],
+      "year": "2021",
+      "url": "nextadventure.com",
+      "pageContent": {
+        "bannerImage": {
+          "updatedAt": "2025-03-17T00:28:04.532Z",
+          "alt": "Next Adventure explore page screenshot",
+          "url": "/api/media/file/nextAdventureThumbnail-1.webp",
+          "thumbnailURL": null,
+          "filename": "nextAdventureThumbnail-1.webp",
+          "mimeType": "image/webp",
+          "filesize": 75388,
+          "width": 1920,
+          "height": 832,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/nextAdventureThumbnail-1-400x173.webp",
+              "width": 400,
+              "height": 173,
+              "mimeType": "image/webp",
+              "filesize": 14274,
+              "filename": "nextAdventureThumbnail-1-400x173.webp"
+            },
+            "small": {
+              "url": "/api/media/file/nextAdventureThumbnail-1-768x333.webp",
+              "width": 768,
+              "height": 333,
+              "mimeType": "image/webp",
+              "filesize": 27118,
+              "filename": "nextAdventureThumbnail-1-768x333.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/nextAdventureThumbnail-1-1200x520.webp",
+              "width": 1200,
+              "height": 520,
+              "mimeType": "image/webp",
+              "filesize": 37314,
+              "filename": "nextAdventureThumbnail-1-1200x520.webp"
+            },
+            "large": {
+              "url": "/api/media/file/nextAdventureThumbnail-1-1800x780.webp",
+              "width": 1800,
+              "height": 780,
+              "mimeType": "image/webp",
+              "filesize": 57574,
+              "filename": "nextAdventureThumbnail-1-1800x780.webp"
+            },
+            "hero": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            }
+          },
+          "createdAt": "2025-03-17T00:26:56.351Z",
+          "name": "Next Adventure Banner",
+          "id": "67d76c50929c408084eb052a"
+        },
+        "content": []
+      },
+      "createdAt": "2025-03-17T00:27:39.437Z",
+      "updatedAt": "2025-03-17T00:27:55.339Z",
+      "id": "67d76c7b929c408084eb054c"
+    },
+    {
+      "title": "Real Lion",
+      "type": "professional",
+      "slug": "real-lion",
+      "thumbnail": {
+        "alt": "Real Lion website homepage screenshot",
+        "filename": "realLionThumbnail.webp",
+        "mimeType": "image/webp",
+        "filesize": 153480,
+        "width": 1920,
+        "height": 1536,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "width": 400,
+            "height": 320,
+            "mimeType": "image/webp",
+            "filesize": 21814,
+            "filename": "realLionThumbnail-400x320.webp",
+            "url": "/api/media/file/realLionThumbnail-400x320.webp"
+          },
+          "small": {
+            "width": 768,
+            "height": 614,
+            "mimeType": "image/webp",
+            "filesize": 46998,
+            "filename": "realLionThumbnail-768x614.webp",
+            "url": "/api/media/file/realLionThumbnail-768x614.webp"
+          },
+          "medium": {
+            "width": 1200,
+            "height": 960,
+            "mimeType": "image/webp",
+            "filesize": 71806,
+            "filename": "realLionThumbnail-1200x960.webp",
+            "url": "/api/media/file/realLionThumbnail-1200x960.webp"
+          },
+          "large": {
+            "width": 1800,
+            "height": 1440,
+            "mimeType": "image/webp",
+            "filesize": 117722,
+            "filename": "realLionThumbnail-1800x1440.webp",
+            "url": "/api/media/file/realLionThumbnail-1800x1440.webp"
+          },
+          "hero": {
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null,
+            "url": null
+          }
+        },
+        "createdAt": "2025-03-17T00:17:11.289Z",
+        "updatedAt": "2025-03-17T00:17:11.289Z",
+        "id": "67d76a07929c408084eb03f8",
+        "url": "/api/media/file/realLionThumbnail.webp",
+        "thumbnailURL": null
+      },
+      "company": "Nav Creative",
+      "roles": [
+        "Project Manager",
+        "Designer"
+      ],
+      "excerpt": "A modern design for a budding technology consultancy.",
+      "technologies": [
+        "Squarespace",
+        "Less",
+        "Javascript",
+        "Memberspace"
+      ],
+      "year": "2022",
+      "pageContent": {
+        "bannerImage": {
+          "updatedAt": "2025-03-17T00:20:56.688Z",
+          "alt": "Real Lion website homepage screenshot",
+          "url": "/api/media/file/realLionThumbnail-1.webp",
+          "thumbnailURL": null,
+          "filename": "realLionThumbnail-1.webp",
+          "mimeType": "image/webp",
+          "filesize": 71122,
+          "width": 1920,
+          "height": 938,
+          "focalX": 50,
+          "focalY": 31,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/realLionThumbnail-1-400x195.webp",
+              "width": 400,
+              "height": 195,
+              "mimeType": "image/webp",
+              "filesize": 12826,
+              "filename": "realLionThumbnail-1-400x195.webp"
+            },
+            "small": {
+              "url": "/api/media/file/realLionThumbnail-1-768x375.webp",
+              "width": 768,
+              "height": 375,
+              "mimeType": "image/webp",
+              "filesize": 25850,
+              "filename": "realLionThumbnail-1-768x375.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/realLionThumbnail-1-1200x586.webp",
+              "width": 1200,
+              "height": 586,
+              "mimeType": "image/webp",
+              "filesize": 37310,
+              "filename": "realLionThumbnail-1-1200x586.webp"
+            },
+            "large": {
+              "url": "/api/media/file/realLionThumbnail-1-1800x879.webp",
+              "width": 1800,
+              "height": 879,
+              "mimeType": "image/webp",
+              "filesize": 59458,
+              "filename": "realLionThumbnail-1-1800x879.webp"
+            },
+            "hero": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            }
+          },
+          "createdAt": "2025-03-17T00:18:34.243Z",
+          "id": "67d76a5a929c408084eb0434"
+        },
+        "content": []
+      },
+      "createdAt": "2025-03-17T00:20:21.705Z",
+      "updatedAt": "2025-03-17T00:21:11.235Z",
+      "id": "67d76ac5929c408084eb0473"
+    },
+    {
+      "title": "Travel Gurus",
+      "thumbnail": {
+        "alt": "Travel Gurus website homepage screenshot",
+        "filename": "travelGurusThumbnail.webp",
+        "mimeType": "image/webp",
+        "filesize": 194986,
+        "width": 1900,
+        "height": 1520,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "width": 400,
+            "height": 320,
+            "mimeType": "image/webp",
+            "filesize": 21920,
+            "filename": "travelGurusThumbnail-400x320.webp",
+            "url": "/api/media/file/travelGurusThumbnail-400x320.webp"
+          },
+          "small": {
+            "width": 768,
+            "height": 614,
+            "mimeType": "image/webp",
+            "filesize": 54756,
+            "filename": "travelGurusThumbnail-768x614.webp",
+            "url": "/api/media/file/travelGurusThumbnail-768x614.webp"
+          },
+          "medium": {
+            "width": 1200,
+            "height": 960,
+            "mimeType": "image/webp",
+            "filesize": 89518,
+            "filename": "travelGurusThumbnail-1200x960.webp",
+            "url": "/api/media/file/travelGurusThumbnail-1200x960.webp"
+          },
+          "large": {
+            "width": 1800,
+            "height": 1440,
+            "mimeType": "image/webp",
+            "filesize": 148596,
+            "filename": "travelGurusThumbnail-1800x1440.webp",
+            "url": "/api/media/file/travelGurusThumbnail-1800x1440.webp"
+          },
+          "hero": {
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null,
+            "url": null
+          }
+        },
+        "createdAt": "2025-03-14T17:08:59.220Z",
+        "updatedAt": "2025-03-14T17:08:59.220Z",
+        "id": "67d462ab95ccfa757ba89aa1",
+        "url": "/api/media/file/travelGurusThumbnail.webp",
+        "thumbnailURL": null
+      },
+      "company": "Nav Creative",
+      "roles": [
+        "Project Mananger",
+        "Designer",
+        "Developer"
+      ],
+      "excerpt": "Travel Gurus reached out for their first website looking to inspire their customers to travel to new places.",
+      "technologies": [
+        "Squarespace",
+        "Javascript",
+        "Less"
+      ],
+      "year": "2022",
+      "url": "https://www.travelgurusgroup.com",
+      "pageContent": {
+        "bannerImage": {
+          "alt": "Travel Gurus website homepage screenshot",
+          "filename": "travelGurusThumbnail2400w.webp",
+          "mimeType": "image/webp",
+          "filesize": 90936,
+          "width": 1898,
+          "height": 722,
+          "focalX": 50,
+          "focalY": 24,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/travelGurusThumbnail2400w-400x152.webp",
+              "width": 400,
+              "height": 152,
+              "mimeType": "image/webp",
+              "filesize": 12980,
+              "filename": "travelGurusThumbnail2400w-400x152.webp"
+            },
+            "small": {
+              "url": "/api/media/file/travelGurusThumbnail2400w-768x292.webp",
+              "width": 768,
+              "height": 292,
+              "mimeType": "image/webp",
+              "filesize": 28294,
+              "filename": "travelGurusThumbnail2400w-768x292.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/travelGurusThumbnail2400w-1200x456.webp",
+              "width": 1200,
+              "height": 456,
+              "mimeType": "image/webp",
+              "filesize": 42524,
+              "filename": "travelGurusThumbnail2400w-1200x456.webp"
+            },
+            "large": {
+              "url": "/api/media/file/travelGurusThumbnail2400w-1800x685.webp",
+              "width": 1800,
+              "height": 685,
+              "mimeType": "image/webp",
+              "filesize": 68852,
+              "filename": "travelGurusThumbnail2400w-1800x685.webp"
+            },
+            "hero": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            }
+          },
+          "createdAt": "2025-03-14T16:59:10.508Z",
+          "updatedAt": "2025-03-14T17:09:28.395Z",
+          "thumbnailURL": null,
+          "url": "/api/media/file/travelGurusThumbnail2400w.webp",
+          "name": "Travel Gurus Banner",
+          "id": "67d4605e95ccfa757ba899f0"
+        },
+        "content": [
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Travel Gurus reached out for their first website looking to inspire their customers to travel to new places.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67d4615128c99d47346dc87a"
+          }
+        ]
+      },
+      "createdAt": "2025-03-14T17:00:55.727Z",
+      "updatedAt": "2025-03-16T21:08:20.755Z",
+      "slug": "travel-gurus",
+      "type": "professional",
+      "id": "67d460c795ccfa757ba89a19"
+    },
+    {
+      "title": "BA-TTI",
+      "fullTitle": "Bay Area Teacher Training Institute",
+      "thumbnail": {
+        "alt": "BA-TTI website homepage screenshot",
+        "filename": "battiThumbnail2400w.webp",
+        "mimeType": "image/webp",
+        "filesize": 168102,
+        "width": 2400,
+        "height": 1920,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "width": 400,
+            "height": 320,
+            "mimeType": "image/webp",
+            "filesize": 23200,
+            "filename": "battiThumbnail2400w-400x320.webp",
+            "url": "/api/media/file/battiThumbnail2400w-400x320.webp"
+          },
+          "small": {
+            "width": 768,
+            "height": 614,
+            "mimeType": "image/webp",
+            "filesize": 45494,
+            "filename": "battiThumbnail2400w-768x614.webp",
+            "url": "/api/media/file/battiThumbnail2400w-768x614.webp"
+          },
+          "medium": {
+            "width": 1200,
+            "height": 960,
+            "mimeType": "image/webp",
+            "filesize": 64578,
+            "filename": "battiThumbnail2400w-1200x960.webp",
+            "url": "/api/media/file/battiThumbnail2400w-1200x960.webp"
+          },
+          "large": {
+            "width": 1800,
+            "height": 1440,
+            "mimeType": "image/webp",
+            "filesize": 102040,
+            "filename": "battiThumbnail2400w-1800x1440.webp",
+            "url": "/api/media/file/battiThumbnail2400w-1800x1440.webp"
+          },
+          "hero": {
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null,
+            "url": null
+          }
+        },
+        "createdAt": "2025-03-14T16:53:53.210Z",
+        "updatedAt": "2025-03-14T16:53:53.210Z",
+        "id": "67d45f2195ccfa757ba89997",
+        "url": "/api/media/file/battiThumbnail2400w.webp",
+        "thumbnailURL": null
+      },
+      "company": "Nav Creative",
+      "roles": [
+        "Project Manger",
+        "Designer",
+        "Developer"
+      ],
+      "excerpt": "A rebranding and website refresh to better guide students and better market the brand for the Bay Area Teacher Training Institute.",
+      "technologies": [
+        "Squarespace",
+        "Less",
+        "Javascript"
+      ],
+      "year": "2022",
+      "url": "https://www.ba-tti.org",
+      "pageContent": {
+        "bannerImage": {
+          "updatedAt": "2025-03-14T17:12:05.466Z",
+          "alt": "BA-TTI website homepage screenshot",
+          "url": "/api/media/file/battiThumbnail2400w-1.webp",
+          "thumbnailURL": null,
+          "filename": "battiThumbnail2400w-1.webp",
+          "mimeType": "image/webp",
+          "filesize": 98248,
+          "width": 2400,
+          "height": 1050,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/battiThumbnail2400w-1-400x175.webp",
+              "width": 400,
+              "height": 175,
+              "mimeType": "image/webp",
+              "filesize": 17512,
+              "filename": "battiThumbnail2400w-1-400x175.webp"
+            },
+            "small": {
+              "url": "/api/media/file/battiThumbnail2400w-1-768x336.webp",
+              "width": 768,
+              "height": 336,
+              "mimeType": "image/webp",
+              "filesize": 31904,
+              "filename": "battiThumbnail2400w-1-768x336.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/battiThumbnail2400w-1-1200x525.webp",
+              "width": 1200,
+              "height": 525,
+              "mimeType": "image/webp",
+              "filesize": 45522,
+              "filename": "battiThumbnail2400w-1-1200x525.webp"
+            },
+            "large": {
+              "url": "/api/media/file/battiThumbnail2400w-1-1800x788.webp",
+              "width": 1800,
+              "height": 788,
+              "mimeType": "image/webp",
+              "filesize": 67482,
+              "filename": "battiThumbnail2400w-1-1800x788.webp"
+            },
+            "hero": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            }
+          },
+          "createdAt": "2025-03-14T17:11:23.630Z",
+          "name": "BA-TTI Banner",
+          "id": "67d4633b95ccfa757ba89b13"
+        },
+        "content": [
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "A rebranding and website refresh to better guide students and better market the brand for the Bay Area Teacher Training Institute.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67d45f2a28c99d47346dc878"
+          }
+        ]
+      },
+      "createdAt": "2025-03-14T16:54:22.350Z",
+      "updatedAt": "2025-03-16T21:08:29.564Z",
+      "slug": "ba-tti",
+      "type": "professional",
+      "id": "67d45f3e95ccfa757ba899bb"
+    },
+    {
+      "title": "Platinum Advisors",
+      "thumbnail": {
+        "alt": "Screenshot of Platinum Advisors website homepage opening fold",
+        "name": "Platinum Advisors Thumbnail",
+        "credit": "platinumadvisors.com",
+        "filename": "PlatinumAdvisorsThumbnailOriginal.webp",
+        "mimeType": "image/webp",
+        "filesize": 170390,
+        "width": 1495,
+        "height": 1196,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "width": 400,
+            "height": 320,
+            "mimeType": "image/webp",
+            "filesize": 27880,
+            "filename": "PlatinumAdvisorsThumbnailOriginal-400x320.webp",
+            "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-400x320.webp"
+          },
+          "small": {
+            "width": 768,
+            "height": 614,
+            "mimeType": "image/webp",
+            "filesize": 67060,
+            "filename": "PlatinumAdvisorsThumbnailOriginal-768x614.webp",
+            "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-768x614.webp"
+          },
+          "medium": {
+            "width": 1200,
+            "height": 960,
+            "mimeType": "image/webp",
+            "filesize": 107676,
+            "filename": "PlatinumAdvisorsThumbnailOriginal-1200x960.webp",
+            "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1200x960.webp"
+          },
+          "large": {
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null,
+            "url": null
+          },
+          "hero": {
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null,
+            "url": null
+          }
+        },
+        "createdAt": "2025-03-14T06:50:43.502Z",
+        "updatedAt": "2025-03-14T06:50:43.502Z",
+        "id": "67d3d1c39b9e1c15dc3d465f",
+        "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal.webp",
+        "thumbnailURL": null
+      },
+      "company": "Nav Creative",
+      "roles": [
+        "Designer",
+        "Project Manager"
+      ],
+      "excerpt": "Redesigned Platinum Advisors' website to more effectively communicate their professionalism and expertise to clients.",
+      "technologies": [
+        "Squarespace",
+        "Less",
+        "Javascript",
+        "HTML"
+      ],
+      "pageContent": {
+        "bannerImage": {
+          "updatedAt": "2025-03-14T17:14:45.264Z",
+          "alt": "Screenshot of Platinum Advisors website homepage opening fold",
+          "name": "Platinum Advisors Banner",
+          "credit": "platinumadvisors.com",
+          "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1.webp",
+          "thumbnailURL": null,
+          "filename": "PlatinumAdvisorsThumbnailOriginal-1.webp",
+          "mimeType": "image/webp",
+          "filesize": 110102,
+          "width": 1494,
+          "height": 654,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-400x175.webp",
+              "width": 400,
+              "height": 175,
+              "mimeType": "image/webp",
+              "filesize": 19782,
+              "filename": "PlatinumAdvisorsThumbnailOriginal-1-400x175.webp"
+            },
+            "small": {
+              "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-768x336.webp",
+              "width": 768,
+              "height": 336,
+              "mimeType": "image/webp",
+              "filesize": 46788,
+              "filename": "PlatinumAdvisorsThumbnailOriginal-1-768x336.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp",
+              "width": 1200,
+              "height": 525,
+              "mimeType": "image/webp",
+              "filesize": 71692,
+              "filename": "PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp"
+            },
+            "large": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "hero": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            }
+          },
+          "createdAt": "2025-03-14T17:13:28.588Z",
+          "id": "67d463b895ccfa757ba89bd1"
+        },
+        "content": [
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "As the sole designer and developer from our studio, I led a website redesign for Platinum Advisors, a national advocacy firm looking to showcase their expanded reach. Working with two client representatives who represented key stakeholders, I managed the project from initial wireframes through custom development in Squarespace. ",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "        ",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": null,
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Despite challenges with an expanding scope and indirect stakeholder communication, I delivered a modern, premium design that effectively organized complex information and incorporated custom styling elements, including the Will Meyers Slideshow plugin and specialized portrait frames. The project concluded successfully with stakeholder approval, though it required careful budget management and rapid feedback coordination to meet deadlines.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67d3d1f0a686efc7ae9eec8d",
+            "blockName": ""
+          }
+        ]
+      },
+      "createdAt": "2025-03-14T06:51:14.689Z",
+      "updatedAt": "2025-03-16T21:08:39.409Z",
+      "url": "https://www.platinumadvisors.com",
+      "year": "2023",
+      "slug": "platinum-advisors",
+      "type": "professional",
+      "id": "67d3d1e29b9e1c15dc3d467f"
+    }
+  ],
+  "totalDocs": 8,
+  "limit": 10,
+  "totalPages": 1,
+  "page": 1,
+  "pagingCounter": 1,
+  "hasPrevPage": false,
+  "hasNextPage": false,
+  "prevPage": null,
+  "nextPage": null
+}
