@@ -8,6 +8,9 @@ import { AppContext } from '@/context/AppContext';
 import pollingManager from '@/utils/pollingManager';
 import dataCache from '@/utils/dataCache';
 
+// Static imports
+const staticModules = import.meta.glob('../data/**/*.json', { eager: true });
+
 /**
  * usePayloadData: Hook to fetch data from Payload api or from statically generated Payload data
  * @param {object} options - The options for the hook.
@@ -89,16 +92,15 @@ export default function usePayloadData({ type = 'global', slug }) {
     console.log('Fetching from static data');
 
     try {
-      let result;
-      if (type === 'global') {
-        result = await import(
-          /* @vite-ignore */ `../data/globals/${slug}.json`
-        ).then((m) => m.default);
-      } else if (type === 'collection') {
-        result = await import(
-          /* @vite-ignore */ `../data/collections/${slug}.json`
-        ).then((m) => m.default);
+      // Intialize as global
+      let pathKey = `../data/globals/${slug}.json`;
+      if (type === 'collection') {
+        pathKey = `../data/collections/${slug}.json`;
       }
+
+      // Get static data from import
+      const result = staticModules[pathKey];
+
       // Set cache
       dataCache.set(cacheKey, result);
 
