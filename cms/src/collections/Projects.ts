@@ -2,9 +2,12 @@
 import type { CollectionConfig } from 'payload'
 
 // Internal imports
-import slugify from '../app/utils/slugify'
+// Blocks
 import { TextBlock } from '../blocks/TextBlock'
+// Utils
+import slugify from '../app/utils/slugify'
 import triggerRebuild from '../app/utils/triggerRebuild'
+import { requiredToPublish } from '../app/utils/validation'
 
 export const Projects: CollectionConfig = {
   slug: 'projects',
@@ -22,6 +25,21 @@ export const Projects: CollectionConfig = {
       name: 'title',
       type: 'text',
       required: true,
+    },
+    {
+      name: 'publicationStatus',
+      type: 'select',
+      options: [
+        {
+          label: 'Published',
+          value: 'published',
+        },
+        {
+          label: 'Draft',
+          value: 'draft',
+        },
+      ],
+      defaultValue: 'draft',
     },
     {
       name: 'fullTitle',
@@ -62,7 +80,7 @@ export const Projects: CollectionConfig = {
       name: 'thumbnail',
       type: 'upload',
       relationTo: 'media',
-      required: true,
+      validate: requiredToPublish(),
     },
     {
       name: 'company',
@@ -71,24 +89,24 @@ export const Projects: CollectionConfig = {
     {
       name: 'roles',
       type: 'text',
-      required: true,
+      validate: requiredToPublish(),
       hasMany: true,
     },
     {
       name: 'excerpt',
       type: 'textarea',
-      required: true,
+      validate: requiredToPublish(),
     },
     {
       name: 'technologies',
       type: 'text',
-      required: true,
+      validate: requiredToPublish(),
       hasMany: true,
     },
     {
       name: 'year',
       type: 'text',
-      required: true,
+      validate: requiredToPublish(),
     },
     {
       name: 'url',

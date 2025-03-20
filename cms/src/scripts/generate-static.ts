@@ -1,10 +1,10 @@
 import { getPayload, BasePayload, GlobalSlug, CollectionSlug } from 'payload'
-import config from './src/payload.config.ts'
+import config from '../payload.config.ts'
 import fs from 'fs'
 import path from 'path'
 
 // Define output directories
-const outputDir = path.join(process.cwd(), '..', 'frontend')
+const outputDir = path.join(process.cwd(), '..', '..', '..', 'frontend')
 const globalOutputDir = path.join(outputDir, 'src', 'data', 'globals')
 const collectionOutputDir = path.join(outputDir, 'src', 'data', 'collections')
 const mediaOutputDir = path.join(outputDir, 'public', 'media')

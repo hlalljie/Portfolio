@@ -251,8 +251,9 @@
         ]
       },
       "createdAt": "2025-03-17T03:11:26.453Z",
-      "updatedAt": "2025-03-17T03:12:37.528Z",
+      "updatedAt": "2025-03-20T19:31:38.412Z",
       "itchio": "https://haydondo.itch.io/dont-get-swatted",
+      "publicationStatus": "published",
       "id": "67d792de2c31a9c4c483698d"
     },
     {
@@ -391,7 +392,8 @@
         "content": []
       },
       "createdAt": "2025-03-17T03:06:07.028Z",
-      "updatedAt": "2025-03-17T03:06:42.372Z",
+      "updatedAt": "2025-03-20T19:31:38.403Z",
+      "publicationStatus": "published",
       "id": "67d7919f2c31a9c4c4836879"
     },
     {
@@ -532,7 +534,8 @@
         "content": []
       },
       "createdAt": "2025-03-17T03:01:49.116Z",
-      "updatedAt": "2025-03-17T03:06:58.291Z",
+      "updatedAt": "2025-03-20T19:31:38.394Z",
+      "publicationStatus": "published",
       "id": "67d7909d2c31a9c4c483679c"
     },
     {
@@ -673,7 +676,8 @@
         "content": []
       },
       "createdAt": "2025-03-17T00:27:39.437Z",
-      "updatedAt": "2025-03-17T00:27:55.339Z",
+      "updatedAt": "2025-03-20T19:31:38.416Z",
+      "publicationStatus": "published",
       "id": "67d76c7b929c408084eb054c"
     },
     {
@@ -811,7 +815,8 @@
         "content": []
       },
       "createdAt": "2025-03-17T00:20:21.705Z",
-      "updatedAt": "2025-03-17T00:21:11.235Z",
+      "updatedAt": "2025-03-20T19:31:38.398Z",
+      "publicationStatus": "published",
       "id": "67d76ac5929c408084eb0473"
     },
     {
@@ -985,9 +990,10 @@
         ]
       },
       "createdAt": "2025-03-14T17:00:55.727Z",
-      "updatedAt": "2025-03-16T21:08:20.755Z",
+      "updatedAt": "2025-03-20T19:31:38.406Z",
       "slug": "travel-gurus",
       "type": "professional",
+      "publicationStatus": "published",
       "id": "67d460c795ccfa757ba89a19"
     },
     {
@@ -1162,9 +1168,10 @@
         ]
       },
       "createdAt": "2025-03-14T16:54:22.350Z",
-      "updatedAt": "2025-03-16T21:08:29.564Z",
+      "updatedAt": "2025-03-20T19:31:38.382Z",
       "slug": "ba-tti",
       "type": "professional",
+      "publicationStatus": "published",
       "id": "67d45f3e95ccfa757ba899bb"
     },
     {
@@ -1380,11 +1387,12 @@
         ]
       },
       "createdAt": "2025-03-14T06:51:14.689Z",
-      "updatedAt": "2025-03-16T21:08:39.409Z",
+      "updatedAt": "2025-03-20T19:31:38.409Z",
       "url": "https://www.platinumadvisors.com",
       "year": "2023",
       "slug": "platinum-advisors",
       "type": "professional",
+      "publicationStatus": "published",
       "id": "67d3d1e29b9e1c15dc3d467f"
     }
   ],
