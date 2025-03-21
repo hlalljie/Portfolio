@@ -129,7 +129,7 @@ export const Projects: CollectionConfig = {
           name: 'bannerImage',
           type: 'upload',
           relationTo: 'media',
-          required: true,
+          validate: requiredToPublish(),
         },
         {
           name: 'content',

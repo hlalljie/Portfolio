@@ -162,12 +162,14 @@ const ProjectCard = ({
   let portfolioLink = `/portfolio/${slugify(project['title'])}`;
   return (
     <StyledProjectCard className="projectCard" $variant={variant}>
-      <Link className="imgContainer" to={portfolioLink}>
-        <AdaptiveImage
-          imageData={project['thumbnail']}
-          sizes="(max-width: 768px) 86vw, 27vw"
-        />
-      </Link>
+      {project['thumbnail'] && (
+        <Link className="imgContainer" to={portfolioLink}>
+          <AdaptiveImage
+            imageData={project['thumbnail']}
+            sizes="(max-width: 768px) 86vw, 27vw"
+          />
+        </Link>
+      )}
       <div className="textContainer">
         <Link to={portfolioLink}>
           <h3 className="projectTitle">{project['title']}</h3>

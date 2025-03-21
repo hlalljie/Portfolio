@@ -248,8 +248,8 @@ export interface Project {
   url?: string | null;
   github?: string | null;
   itchio?: string | null;
-  pageContent: {
-    bannerImage: string | Media;
+  pageContent?: {
+    bannerImage?: (string | null) | Media;
     content?:
       | {
           content?: {

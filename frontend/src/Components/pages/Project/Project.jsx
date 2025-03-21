@@ -77,10 +77,12 @@ const Project = () => {
     >
       <Header variant={'light'} overlapTopSection={false} />
       <section className="portfolioContent">
-        <AdaptiveImage
-          className="heroImage"
-          imageData={project['pageContent']['bannerImage']}
-        />
+        {project['pageContent']['bannerImage'] && (
+          <AdaptiveImage
+            className="heroImage"
+            imageData={project['pageContent']['bannerImage']}
+          />
+        )}
         {project['fullTitle'] ? (
           <h1>{project['fullTitle']}</h1>
         ) : (
