@@ -67,7 +67,7 @@ function HomeContact() {
     return <div>Loading...</div>;
   }
 
-  const sectionData = pageData['homeContact'];
+  const sectionData = pageData['global']['homepage']['homeContact'];
 
   return (
     <ThemedSection

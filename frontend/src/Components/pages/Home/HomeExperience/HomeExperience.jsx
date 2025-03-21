@@ -60,7 +60,7 @@ function HomeExperience() {
     return <div>Loading...</div>;
   }
 
-  const sectionData = pageData['homeExperience'];
+  const sectionData = pageData['global']['homepage']['homeExperience'];
   const { experienceItems } = sectionData; // TODO: use static data for rendering components
   return (
     <ThemedSection

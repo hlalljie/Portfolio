@@ -52,19 +52,25 @@ const Project = () => {
   // Load page data
   const { loading, fetchData, pageData } = usePayloadData({
     type: 'collection',
-    slug: 'projects',
+    id: 'projects',
+    resources: [{ type: 'collection', slug: 'projects' }],
   });
 
   useEffect(() => {
     fetchData();
   }, [fetchData]);
 
-  if (loading || !pageData || pageData?.docs === undefined) {
+  if (
+    loading ||
+    !pageData ||
+    pageData?.collections?.projects?.docs === undefined
+  ) {
+    console.log('Loading project, data:', pageData);
     return <LoadingScreen />;
   }
 
   // TODO : Add 404 link for invalid links
-  const project = pageData.docs.find(
+  const project = pageData.collections.projects.docs.find(
     (potentialProject) => potentialProject['slug'] === projectSlug
   );
   return (

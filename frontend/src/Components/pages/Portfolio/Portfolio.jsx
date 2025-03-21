@@ -1,5 +1,5 @@
 // External Imports
-import { useEffect, useContext, useState } from 'react';
+import { useEffect, useContext, useMemo, useRef } from 'react';
 import { styled, css } from 'styled-components';
 
 // Internal Imports
@@ -13,8 +13,6 @@ import Header from '@/Components/shared/layout/Header';
 import ProjectList from '@/Components/shared/display/ProjectList';
 // UI
 import LoadingScreen from '@/Components/shared/ui/LoadingScreen';
-// Utils
-import dataCache from '@/utils/dataCache';
 // Styles
 import { adaptiveBackgroundImage } from '@/styles/adaptiveBackgroundImage';
 
@@ -61,68 +59,48 @@ const StyledPortfolio = styled.div`
 function Portfolio() {
   const { useStaticData } = useContext(AppContext);
 
-  const [projectsData, setProjectsData] = useState(null);
-  const [portfolioData, setPortfolioData] = useState(null);
+  const id = 'portfolio';
 
-  // Use separate variable names for each hook call
-  const {
-    loading: projectsLoading,
-    fetchData: fetchProjects,
-    pageData: projectsDataUpdate,
-  } = usePayloadData({
-    type: 'collection',
-    slug: 'projects',
-  });
+  const initialFetchRef = useRef(null);
 
-  const {
-    loading: portfolioLoading,
-    fetchData: fetchPortfolio,
-    pageData: portfolioDataUpdate,
-  } = usePayloadData({
-    type: 'global',
-    slug: 'portfolio',
-  });
+  // Memoize the options object
+  const hookOptions = useMemo(
+    () => ({
+      type: 'batch',
+      id,
+      resources: [
+        { type: 'global', slug: id },
+        { type: 'collection', slug: 'projects' },
+      ],
+    }),
+    [id]
+  );
 
-  // First fetch projects
+  // Use the hook as normal
+  const { loading, fetchData, pageData } = usePayloadData(hookOptions);
+
+  // Only call fetchData once
   useEffect(() => {
-    let isMounted = true;
-    /**
-     * fetchData: Function to time fetches to portfolio and projects
-     * @returns {Promise<void>}
-     */
-    const fetchData = async () => {
-      await fetchPortfolio();
-      if (isMounted) {
-        await fetchProjects();
-      }
-      // Only fetch portfolio data if component is still mounted
-    };
+    if (!initialFetchRef.current !== id) {
+      fetchData();
+      initialFetchRef.current = id;
+    }
+  }, [fetchData]);
 
-    fetchData();
-
-    return () => {
-      isMounted = false;
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // Get data from cache
-  useEffect(() => {
-    setProjectsData(
-      dataCache.get(dataCache.createKey('collection', 'projects'))
-    );
-    setPortfolioData(dataCache.get(dataCache.createKey('global', 'portfolio')));
-  }, [projectsDataUpdate, portfolioDataUpdate]);
-  // Check loading state and data availability for both
   if (
-    projectsLoading ||
-    portfolioLoading ||
-    !projectsData ||
-    !portfolioData ||
-    projectsData?.docs === undefined
+    loading ||
+    !pageData ||
+    pageData?.global === undefined ||
+    pageData?.collection === undefined ||
+    pageData.global[id] === undefined ||
+    pageData.collection['projects'] === undefined
   ) {
+    console.log('Page data not correct:', pageData);
     return <LoadingScreen />;
   }
+
+  const portfolioData = pageData.global[id];
+  const projectsData = pageData.collection['projects'];
 
   const projects = projectsData.docs.filter(
     (project) => project.type === 'professional'

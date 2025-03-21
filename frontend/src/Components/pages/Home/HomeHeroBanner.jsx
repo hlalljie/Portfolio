@@ -80,7 +80,7 @@ function HeroBanner() {
     return <div>Loading...</div>;
   }
 
-  const sectionData = pageData['homeHeroBanner'];
+  const sectionData = pageData['global']['homepage']['homeHeroBanner'];
 
   return (
     <ThemedSection themeName="light" additionalStyles={heroBannerStyles}>

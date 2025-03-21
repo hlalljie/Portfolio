@@ -1,5 +1,5 @@
 // External Imports
-import { useEffect } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import styled from 'styled-components';
 
 // Internal Imports
@@ -39,29 +39,52 @@ const StyledHome = styled.div`
  * @returns {JSX.Element}
  */
 function Home() {
+  const id = 'homepage';
+
+  const initialFetchRef = useRef(null);
+
+  const hookOptions = useMemo(
+    () => ({
+      type: 'global',
+      id: id,
+      resources: [
+        {
+          type: 'global',
+          slug: id,
+        },
+      ],
+    }),
+    []
+  );
+
   // Load page data
-  const { loading, fetchData, pageData } = usePayloadData({
-    type: 'global',
-    slug: 'homepage',
-  });
+  const { loading, fetchData, pageData } = usePayloadData(hookOptions);
 
   useEffect(() => {
-    fetchData();
+    if (!initialFetchRef.current !== id) {
+      fetchData();
+      initialFetchRef.current = id;
+    }
   }, [fetchData]);
 
   if (
     loading ||
     !pageData ||
-    pageData?.globalType === undefined ||
-    pageData.globalType !== 'homepage'
+    pageData?.global === undefined ||
+    pageData?.global[id] === undefined
   ) {
+    console.log('Loading homepage, data:', pageData);
     return <LoadingScreen />;
   }
+
+  const homepageData = pageData['global'][id];
 
   return (
     <StyledHome>
       <SharedBackground
-        backgroundImageData={pageData['sharedImages']['homeHeroBannerImage']}
+        backgroundImageData={
+          homepageData['sharedImages']['homeHeroBannerImage']
+        }
         className="topBackground"
       >
         <Header />
@@ -72,7 +95,7 @@ function Home() {
       </SharedBackground>
       <SharedBackground
         backgroundImageData={
-          pageData['sharedImages']['homeBottomBackgroundImage']
+          homepageData['sharedImages']['homeBottomBackgroundImage']
         }
         imgPosition="0% 60%"
         className="bottomBackground"

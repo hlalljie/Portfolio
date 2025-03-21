@@ -121,7 +121,7 @@ function HomeFeaturedProjects() {
     return <div>Loading...</div>;
   }
 
-  const sectionData = pageData['homeFeaturedProjects'];
+  const sectionData = pageData['global']['homepage']['homeFeaturedProjects'];
 
   return (
     <ThemedSection
