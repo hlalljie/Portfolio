@@ -1,5 +1,5 @@
 // External Imports
-import { useEffect } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { styled, css, useTheme } from 'styled-components';
 import { useParams } from 'react-router-dom';
 
@@ -49,28 +49,39 @@ const Project = () => {
   const { projectSlug } = useParams();
   const theme = useTheme();
 
+  const initialFetchRef = useRef(null);
+
+  // Memoize the options object
+  const hookOptions = useMemo(
+    () => ({
+      type: 'collection',
+      id: 'projects',
+      resources: [{ type: 'collection', slug: 'projects' }],
+    }),
+    []
+  );
+
   // Load page data
-  const { loading, fetchData, pageData } = usePayloadData({
-    type: 'collection',
-    id: 'projects',
-    resources: [{ type: 'collection', slug: 'projects' }],
-  });
+  const { loading, fetchData, pageData } = usePayloadData(hookOptions);
 
   useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    if (!initialFetchRef.current !== projectSlug) {
+      fetchData();
+      initialFetchRef.current = projectSlug;
+    }
+  }, [fetchData, projectSlug]);
 
   if (
     loading ||
     !pageData ||
-    pageData?.collections?.projects?.docs === undefined
+    pageData?.collection?.projects?.docs === undefined
   ) {
     console.log('Loading project, data:', pageData);
     return <LoadingScreen />;
   }
 
   // TODO : Add 404 link for invalid links
-  const project = pageData.collections.projects.docs.find(
+  const project = pageData.collection.projects.docs.find(
     (potentialProject) => potentialProject['slug'] === projectSlug
   );
   return (
