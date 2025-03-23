@@ -1,5 +1,5 @@
 // External Imports
-import { useEffect, useContext, useMemo, useRef } from 'react';
+import { useContext, useMemo } from 'react';
 import { styled, css } from 'styled-components';
 
 // Internal Imports
@@ -61,8 +61,6 @@ function Portfolio() {
 
   const id = 'portfolio';
 
-  const initialFetchRef = useRef(null);
-
   // Memoize the options object
   const hookOptions = useMemo(
     () => ({
@@ -77,15 +75,7 @@ function Portfolio() {
   );
 
   // Use the hook as normal
-  const { loading, fetchData, pageData } = usePayloadData(hookOptions);
-
-  // Only call fetchData once
-  useEffect(() => {
-    if (!initialFetchRef.current !== id) {
-      fetchData();
-      initialFetchRef.current = id;
-    }
-  }, [fetchData]);
+  const { loading, pageData } = usePayloadData(hookOptions);
 
   if (
     loading ||

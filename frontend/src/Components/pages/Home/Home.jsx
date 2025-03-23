@@ -1,5 +1,5 @@
 // External Imports
-import { useEffect, useMemo, useRef } from 'react';
+import { useMemo } from 'react';
 import styled from 'styled-components';
 
 // Internal Imports
@@ -41,8 +41,6 @@ const StyledHome = styled.div`
 function Home() {
   const id = 'homepage';
 
-  const initialFetchRef = useRef(null);
-
   const hookOptions = useMemo(
     () => ({
       type: 'global',
@@ -58,14 +56,7 @@ function Home() {
   );
 
   // Load page data
-  const { loading, fetchData, pageData } = usePayloadData(hookOptions);
-
-  useEffect(() => {
-    if (!initialFetchRef.current !== id) {
-      fetchData();
-      initialFetchRef.current = id;
-    }
-  }, [fetchData]);
+  const { loading, pageData } = usePayloadData(hookOptions);
 
   if (
     loading ||

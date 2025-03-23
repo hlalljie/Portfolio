@@ -1,5 +1,5 @@
 // External Imports
-import { useEffect, useMemo, useRef } from 'react';
+import { useMemo } from 'react';
 import { styled, css, useTheme } from 'styled-components';
 import { useParams } from 'react-router-dom';
 
@@ -49,8 +49,6 @@ const Project = () => {
   const { projectSlug } = useParams();
   const theme = useTheme();
 
-  const initialFetchRef = useRef(null);
-
   // Memoize the options object
   const hookOptions = useMemo(
     () => ({
@@ -62,14 +60,7 @@ const Project = () => {
   );
 
   // Load page data
-  const { loading, fetchData, pageData } = usePayloadData(hookOptions);
-
-  useEffect(() => {
-    if (!initialFetchRef.current !== projectSlug) {
-      fetchData();
-      initialFetchRef.current = projectSlug;
-    }
-  }, [fetchData, projectSlug]);
+  const { loading, pageData } = usePayloadData(hookOptions);
 
   if (
     loading ||

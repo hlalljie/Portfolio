@@ -15,6 +15,7 @@ const pollingManager = {
 
     // Set new polling
     this.currentKey = key;
+    callback();
     this.interval = setInterval(callback, interval);
     console.log(`Started polling for ${key}, interval ID: ${this.interval}`);
   },

@@ -29,6 +29,7 @@ export default function usePayloadData({ type = 'global', id, resources }) {
   } = useContext(AppContext);
 
   const latestDataRef = useRef(pageData);
+  const isMountedRef = useRef(true);
   const componentKey = `${type}-${id}`;
 
   // Update latestDataRef when pageData changes
@@ -41,6 +42,11 @@ export default function usePayloadData({ type = 'global', id, resources }) {
    * @returns {Promise<void>}
    */
   const fetchFromAPI = useCallback(async () => {
+    // Check if component is still mounted
+    if (!isMountedRef.current) {
+      return;
+    }
+
     // Only proceed if this is still the active polling component
     if (!pollingManager.isActiveFor(componentKey)) {
       return;
@@ -74,6 +80,11 @@ export default function usePayloadData({ type = 'global', id, resources }) {
         result[type][slug] = await response.json();
       }
 
+      // Check if component is still mounted before updating state
+      if (!isMountedRef.current) {
+        return;
+      }
+
       // get current data from reference outside of closure
       const currentData = latestDataRef.current;
 
@@ -93,6 +104,11 @@ export default function usePayloadData({ type = 'global', id, resources }) {
    * @returns {Promise<void>}
    */
   const fetchFromStaticData = useCallback(async () => {
+    // Check if component is still mounted
+    if (!isMountedRef.current) {
+      return;
+    }
+
     // Create a cache key from type and id
     const cacheKey = dataCache.createKey(type, id);
     // Check cache first
@@ -120,6 +136,11 @@ export default function usePayloadData({ type = 'global', id, resources }) {
         result[resource.type][slug] = staticModules[pathKey];
       }
 
+      // Check if component is still mounted before updating state
+      if (!isMountedRef.current) {
+        return;
+      }
+
       // Set cache
       dataCache.set(cacheKey, result);
 
@@ -137,8 +158,8 @@ export default function usePayloadData({ type = 'global', id, resources }) {
    * @returns {Promise<void>}
    */
   const fetchData = useCallback(async () => {
-    // Exit if id is missing
-    if (!id) return;
+    // Exit if id is missing or component unmounted
+    if (!id || !isMountedRef.current) return;
 
     setDataLoading(true);
 
@@ -153,14 +174,17 @@ export default function usePayloadData({ type = 'global', id, resources }) {
         // Set static data flag
         setUseStaticData(false);
         // Start polling for this component
-        pollingManager.startPolling(componentKey, fetchFromAPI, 3000);
+        pollingManager.startPolling(componentKey, fetchFromAPI, 1000);
       } else {
-        fetchFromStaticData();
+        await fetchFromStaticData();
       }
     } catch (error) {
       console.error(`Error fetching data:`, error);
     } finally {
-      setDataLoading(false);
+      // Only update loading state if component is still mounted
+      if (isMountedRef.current) {
+        setDataLoading(false);
+      }
     }
   }, [
     id,
@@ -171,14 +195,28 @@ export default function usePayloadData({ type = 'global', id, resources }) {
     componentKey,
   ]);
 
-  // Clean up polling on unmount if this component is still the active one
+  // Reset state and handle new fetch when component mounts or ID changes
+  // This must be after fetchData is defined
   useEffect(() => {
+    console.log(`Setting up for ${id} (${componentKey})`);
+    isMountedRef.current = true;
+
+    // Reset state for new page
+    setPageData(null);
+    setDataLoading(true);
+
+    // Start new fetch
+    fetchData();
+
+    // Cleanup on unmount
     return () => {
+      console.log(`Cleaning up for ${id} (${componentKey})`);
+      isMountedRef.current = false;
       if (pollingManager.isActiveFor(componentKey)) {
         pollingManager.stopPolling();
       }
     };
-  }, [componentKey]);
+  }, [id, componentKey, fetchData, setPageData, setDataLoading]);
 
   return {
     loading: dataLoading,
