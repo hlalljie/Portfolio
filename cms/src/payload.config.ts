@@ -19,6 +19,8 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { ExperienceItems } from './collections/ExperienceItems'
 import { Projects } from './collections/Projects'
+// Endpoints
+import { batchEndpoint } from './endpoints/batchEndpoint'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -43,6 +45,7 @@ export default buildConfig({
   cors: [
     'http://localhost:5173', // Allow Vite React frontend
   ],
+  endpoints: [batchEndpoint],
   sharp,
   plugins: [
     payloadCloudPlugin(),

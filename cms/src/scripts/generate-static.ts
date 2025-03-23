@@ -1,5 +1,5 @@
 import { getPayload, BasePayload, GlobalSlug, CollectionSlug } from 'payload'
-import config from './src/payload.config.ts'
+import config from '../payload.config.ts'
 import fs from 'fs'
 import path from 'path'
 
@@ -80,6 +80,12 @@ const saveCollectionData = async (collectionSlug: CollectionSlug, payload: BaseP
   const payloadData = await payload.find({
     collection: collectionSlug,
   })
+
+  // remove drafts
+  payloadData.docs = payloadData.docs.filter(
+    (doc) =>
+      !Object.hasOwn(doc, 'publicationStatus') || (doc as any).publicationStatus === 'published',
+  )
 
   // Define output file path
   const filename = `${collectionSlug}.json`

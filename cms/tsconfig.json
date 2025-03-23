@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/utils/warmupRoutes.js"
+    "src/scripts/warmupRoutes.js"
   ],
   "exclude": ["node_modules"]
 }

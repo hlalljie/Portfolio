@@ -1,5 +1,5 @@
 // External Imports
-import { useEffect, useContext, useState } from 'react';
+import { useContext, useMemo } from 'react';
 import { styled, css } from 'styled-components';
 
 // Internal Imports
@@ -13,8 +13,6 @@ import Header from '@/Components/shared/layout/Header';
 import ProjectList from '@/Components/shared/display/ProjectList';
 // UI
 import LoadingScreen from '@/Components/shared/ui/LoadingScreen';
-// Utils
-import dataCache from '@/utils/dataCache';
 // Styles
 import { adaptiveBackgroundImage } from '@/styles/adaptiveBackgroundImage';
 
@@ -61,74 +59,38 @@ const StyledProjects = styled.div`
 function Projects() {
   const { useStaticData } = useContext(AppContext);
 
-  const [projectsData, setProjectsData] = useState(null);
-  const [projectsPageData, setProjectsPageData] = useState(null);
+  const id = 'projects-page';
 
-  // Use separate variable names for each hook call
-  const {
-    loading: projectsLoading,
-    fetchData: fetchProjects,
-    pageData: projectsDataUpdate,
-  } = usePayloadData({
-    type: 'collection',
-    slug: 'projects',
-  });
+  // Memoize the options object
+  const hookOptions = useMemo(
+    () => ({
+      type: 'batch',
+      id,
+      resources: [
+        { type: 'global', slug: id },
+        { type: 'collection', slug: 'projects' },
+      ],
+    }),
+    [id]
+  );
 
-  const {
-    loading: projectsPageLoading,
-    fetchData: fetchProjectsPage,
-    pageData: projectsPageDataUpdate,
-  } = usePayloadData({
-    type: 'global',
-    slug: 'projects-page',
-  });
+  // Use the hook as normal
+  const { loading, pageData } = usePayloadData(hookOptions);
 
-  // First fetch projects
-  useEffect(() => {
-    let isMounted = true;
-    /**
-     * fetchData: Function to time fetches to projects and projectsPage
-     * @returns {Promise<void>}
-     */
-    const fetchData = async () => {
-      await fetchProjectsPage();
-      // Only fetch projectsPage data if component is still mounted
-      if (isMounted) {
-        await fetchProjects();
-      }
-    };
-
-    fetchData();
-
-    return () => {
-      isMounted = false;
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // Get data from cache
-  useEffect(() => {
-    setProjectsData(
-      dataCache.get(dataCache.createKey('collection', 'projects'))
-    );
-    setProjectsPageData(
-      dataCache.get(dataCache.createKey('global', 'projects-page'))
-    );
-  }, [projectsPageDataUpdate, projectsDataUpdate]);
-
-  // Check loading state and data availability for both
   if (
-    projectsLoading ||
-    projectsPageLoading ||
-    !projectsData ||
-    !projectsPageData ||
-    projectsData?.docs === undefined
+    loading ||
+    !pageData ||
+    pageData?.global === undefined ||
+    pageData?.collection === undefined ||
+    pageData.global[id] === undefined ||
+    pageData.collection['projects'] === undefined
   ) {
+    console.log('Loading page data, currently:', pageData);
     return <LoadingScreen />;
   }
 
-  console.log('Projects data:', projectsData);
-  console.log('projectsPage data:', projectsPageData);
+  const projectsPageData = pageData.global[id];
+  const projectsData = pageData.collection['projects'];
 
   const projects = projectsData.docs.filter(
     (project) => project.type === 'personal'

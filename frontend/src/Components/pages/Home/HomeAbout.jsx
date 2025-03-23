@@ -83,7 +83,7 @@ function HomeAbout() {
     return <div>Loading...</div>;
   }
 
-  const sectionData = pageData['homeAbout'];
+  const sectionData = pageData['global']['homepage']['homeAbout'];
   return (
     <ThemedSection
       themeName="dark"

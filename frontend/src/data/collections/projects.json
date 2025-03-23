@@ -1,6 +1,149 @@
 {
   "docs": [
     {
+      "updatedAt": "2025-03-22T17:23:22.373Z",
+      "title": "Royal Thai",
+      "publicationStatus": "published",
+      "type": "professional",
+      "slug": "royal-thai",
+      "thumbnail": {
+        "alt": "Screenshot of the Royal Thai homepage",
+        "name": "Royal Thai Homepage",
+        "filename": "royal-thai-homepage.webp",
+        "mimeType": "image/webp",
+        "filesize": 1205350,
+        "width": 2880,
+        "height": 6684,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "width": 400,
+            "height": 928,
+            "mimeType": "image/webp",
+            "filesize": 90178,
+            "filename": "royal-thai-homepage-400x928.webp",
+            "url": "/api/media/file/royal-thai-homepage-400x928.webp"
+          },
+          "small": {
+            "width": 768,
+            "height": 1782,
+            "mimeType": "image/webp",
+            "filesize": 200210,
+            "filename": "royal-thai-homepage-768x1782.webp",
+            "url": "/api/media/file/royal-thai-homepage-768x1782.webp"
+          },
+          "medium": {
+            "width": 1200,
+            "height": 2785,
+            "mimeType": "image/webp",
+            "filesize": 312040,
+            "filename": "royal-thai-homepage-1200x2785.webp",
+            "url": "/api/media/file/royal-thai-homepage-1200x2785.webp"
+          },
+          "large": {
+            "width": 1800,
+            "height": 4178,
+            "mimeType": "image/webp",
+            "filesize": 534982,
+            "filename": "royal-thai-homepage-1800x4178.webp",
+            "url": "/api/media/file/royal-thai-homepage-1800x4178.webp"
+          },
+          "hero": {
+            "width": 2500,
+            "height": 5802,
+            "mimeType": "image/webp",
+            "filesize": 821168,
+            "filename": "royal-thai-homepage-2500x5802.webp",
+            "url": "/api/media/file/royal-thai-homepage-2500x5802.webp"
+          }
+        },
+        "createdAt": "2025-03-22T17:15:23.592Z",
+        "updatedAt": "2025-03-22T17:15:23.592Z",
+        "id": "67def02b98a32200f894c5cb",
+        "url": "/api/media/file/royal-thai-homepage.webp",
+        "thumbnailURL": null
+      },
+      "roles": [
+        "Project Manager",
+        "Designer",
+        "Developer"
+      ],
+      "excerpt": "A project managed and helped design a luxurious website for a well-established carpet design and manufacturing company.",
+      "technologies": [
+        "Squarespace",
+        "Less",
+        "Javascript"
+      ],
+      "year": "2022",
+      "github": "",
+      "itchio": "",
+      "pageContent": {
+        "bannerImage": {
+          "alt": "Hotel with Royal Thai Carpet",
+          "filename": "RoyalThaiHomepageSlide2.webp",
+          "mimeType": "image/webp",
+          "filesize": 246310,
+          "width": 2500,
+          "height": 1063,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/RoyalThaiHomepageSlide2-400x170.webp",
+              "width": 400,
+              "height": 170,
+              "mimeType": "image/webp",
+              "filesize": 17552,
+              "filename": "RoyalThaiHomepageSlide2-400x170.webp"
+            },
+            "small": {
+              "url": "/api/media/file/RoyalThaiHomepageSlide2-768x327.webp",
+              "width": 768,
+              "height": 327,
+              "mimeType": "image/webp",
+              "filesize": 38116,
+              "filename": "RoyalThaiHomepageSlide2-768x327.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/RoyalThaiHomepageSlide2-1200x510.webp",
+              "width": 1200,
+              "height": 510,
+              "mimeType": "image/webp",
+              "filesize": 63772,
+              "filename": "RoyalThaiHomepageSlide2-1200x510.webp"
+            },
+            "large": {
+              "url": "/api/media/file/RoyalThaiHomepageSlide2-1800x765.webp",
+              "width": 1800,
+              "height": 765,
+              "mimeType": "image/webp",
+              "filesize": 120106,
+              "filename": "RoyalThaiHomepageSlide2-1800x765.webp"
+            },
+            "hero": {
+              "url": "/api/media/file/RoyalThaiHomepageSlide2-2500x1063.webp",
+              "width": 2500,
+              "height": 1063,
+              "mimeType": "image/webp",
+              "filesize": 240408,
+              "filename": "RoyalThaiHomepageSlide2-2500x1063.webp"
+            }
+          },
+          "createdAt": "2025-03-22T17:22:37.102Z",
+          "updatedAt": "2025-03-22T17:23:07.538Z",
+          "thumbnailURL": null,
+          "url": "/api/media/file/RoyalThaiHomepageSlide2.webp",
+          "id": "67def1dd98a32200f894c7a7"
+        },
+        "content": []
+      },
+      "createdAt": "2025-03-20T23:53:56.358Z",
+      "company": "Nav Creative",
+      "url": "https://www.royalthai.com/",
+      "id": "67dcaa9456dba09476e116ee"
+    },
+    {
       "title": "Don't Get Swatted",
       "type": "personal",
       "slug": "dont-get-swatted",
@@ -251,8 +394,9 @@
         ]
       },
       "createdAt": "2025-03-17T03:11:26.453Z",
-      "updatedAt": "2025-03-17T03:12:37.528Z",
+      "updatedAt": "2025-03-23T06:24:57.511Z",
       "itchio": "https://haydondo.itch.io/dont-get-swatted",
+      "publicationStatus": "published",
       "id": "67d792de2c31a9c4c483698d"
     },
     {
@@ -391,7 +535,8 @@
         "content": []
       },
       "createdAt": "2025-03-17T03:06:07.028Z",
-      "updatedAt": "2025-03-17T03:06:42.372Z",
+      "updatedAt": "2025-03-20T19:31:38.403Z",
+      "publicationStatus": "published",
       "id": "67d7919f2c31a9c4c4836879"
     },
     {
@@ -532,7 +677,8 @@
         "content": []
       },
       "createdAt": "2025-03-17T03:01:49.116Z",
-      "updatedAt": "2025-03-17T03:06:58.291Z",
+      "updatedAt": "2025-03-20T19:31:38.394Z",
+      "publicationStatus": "published",
       "id": "67d7909d2c31a9c4c483679c"
     },
     {
@@ -673,7 +819,8 @@
         "content": []
       },
       "createdAt": "2025-03-17T00:27:39.437Z",
-      "updatedAt": "2025-03-17T00:27:55.339Z",
+      "updatedAt": "2025-03-20T19:31:38.416Z",
+      "publicationStatus": "published",
       "id": "67d76c7b929c408084eb054c"
     },
     {
@@ -811,7 +958,8 @@
         "content": []
       },
       "createdAt": "2025-03-17T00:20:21.705Z",
-      "updatedAt": "2025-03-17T00:21:11.235Z",
+      "updatedAt": "2025-03-20T19:31:38.398Z",
+      "publicationStatus": "published",
       "id": "67d76ac5929c408084eb0473"
     },
     {
@@ -985,9 +1133,10 @@
         ]
       },
       "createdAt": "2025-03-14T17:00:55.727Z",
-      "updatedAt": "2025-03-16T21:08:20.755Z",
+      "updatedAt": "2025-03-20T19:31:38.406Z",
       "slug": "travel-gurus",
       "type": "professional",
+      "publicationStatus": "published",
       "id": "67d460c795ccfa757ba89a19"
     },
     {
@@ -1162,9 +1311,10 @@
         ]
       },
       "createdAt": "2025-03-14T16:54:22.350Z",
-      "updatedAt": "2025-03-16T21:08:29.564Z",
+      "updatedAt": "2025-03-20T19:31:38.382Z",
       "slug": "ba-tti",
       "type": "professional",
+      "publicationStatus": "published",
       "id": "67d45f3e95ccfa757ba899bb"
     },
     {
@@ -1380,15 +1530,16 @@
         ]
       },
       "createdAt": "2025-03-14T06:51:14.689Z",
-      "updatedAt": "2025-03-16T21:08:39.409Z",
+      "updatedAt": "2025-03-20T19:31:38.409Z",
       "url": "https://www.platinumadvisors.com",
       "year": "2023",
       "slug": "platinum-advisors",
       "type": "professional",
+      "publicationStatus": "published",
       "id": "67d3d1e29b9e1c15dc3d467f"
     }
   ],
-  "totalDocs": 8,
+  "totalDocs": 9,
   "limit": 10,
   "totalPages": 1,
   "page": 1,

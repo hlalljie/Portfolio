@@ -1,5 +1,5 @@
 // External Imports
-import { useEffect } from 'react';
+import { useMemo } from 'react';
 import { styled, css, useTheme } from 'styled-components';
 import { useParams } from 'react-router-dom';
 
@@ -49,22 +49,30 @@ const Project = () => {
   const { projectSlug } = useParams();
   const theme = useTheme();
 
+  // Memoize the options object
+  const hookOptions = useMemo(
+    () => ({
+      type: 'collection',
+      id: 'projects',
+      resources: [{ type: 'collection', slug: 'projects' }],
+    }),
+    []
+  );
+
   // Load page data
-  const { loading, fetchData, pageData } = usePayloadData({
-    type: 'collection',
-    slug: 'projects',
-  });
+  const { loading, pageData } = usePayloadData(hookOptions);
 
-  useEffect(() => {
-    fetchData();
-  }, [fetchData]);
-
-  if (loading || !pageData || pageData?.docs === undefined) {
+  if (
+    loading ||
+    !pageData ||
+    pageData?.collection?.projects?.docs === undefined
+  ) {
+    console.log('Loading project, data:', pageData);
     return <LoadingScreen />;
   }
 
   // TODO : Add 404 link for invalid links
-  const project = pageData.docs.find(
+  const project = pageData.collection.projects.docs.find(
     (potentialProject) => potentialProject['slug'] === projectSlug
   );
   return (
@@ -77,10 +85,12 @@ const Project = () => {
     >
       <Header variant={'light'} overlapTopSection={false} />
       <section className="portfolioContent">
-        <AdaptiveImage
-          className="heroImage"
-          imageData={project['pageContent']['bannerImage']}
-        />
+        {project['pageContent']['bannerImage'] && (
+          <AdaptiveImage
+            className="heroImage"
+            imageData={project['pageContent']['bannerImage']}
+          />
+        )}
         {project['fullTitle'] ? (
           <h1>{project['fullTitle']}</h1>
         ) : (

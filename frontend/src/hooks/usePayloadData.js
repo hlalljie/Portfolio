@@ -15,10 +15,11 @@ const staticModules = import.meta.glob('../data/**/*.json', { eager: true });
  * usePayloadData: Hook to fetch data from Payload api or from statically generated Payload data
  * @param {object} options - The options for the hook.
  * @param {string} options.type - The type of data to fetch. Can be 'global' or 'collection'.
- * @param {string} options.slug - The slug of the data to fetch.
+ * @param {string} options.id - The id of the data to fetch.
+ * @param {array} options.resources - An array of objects containing the type and slug of the data to fetch.
  * @returns {object} Object containing fetchData function
  */
-export default function usePayloadData({ type = 'global', slug }) {
+export default function usePayloadData({ type = 'global', id, resources }) {
   const {
     pageData,
     setPageData,
@@ -28,7 +29,8 @@ export default function usePayloadData({ type = 'global', slug }) {
   } = useContext(AppContext);
 
   const latestDataRef = useRef(pageData);
-  const componentKey = `${type}-${slug}`;
+  const isMountedRef = useRef(true);
+  const componentKey = `${type}-${id}`;
 
   // Update latestDataRef when pageData changes
   useEffect(() => {
@@ -40,25 +42,48 @@ export default function usePayloadData({ type = 'global', slug }) {
    * @returns {Promise<void>}
    */
   const fetchFromAPI = useCallback(async () => {
+    // Check if component is still mounted
+    if (!isMountedRef.current) {
+      return;
+    }
+
     // Only proceed if this is still the active polling component
     if (!pollingManager.isActiveFor(componentKey)) {
       return;
     }
 
     console.log('Fetching from API');
-    console.log(`Type: ${type}, Slug: ${slug}`);
+    console.log(`Type: ${type}, Slug: ${id}`);
     try {
       // build api path
       let apiPath = '';
-      if (type === 'global') {
-        apiPath = `http://localhost:3000/api/globals/${slug}?depth=2`;
-      } else if (type === 'collection') {
-        apiPath = `http://localhost:3000/api/${slug}`;
+      let response = null;
+      let result = { global: {}, collection: {} };
+      if (type === 'batch') {
+        apiPath = `http://localhost:3000/api/batch`;
+        response = await fetch(apiPath, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ resources: resources }),
+        });
+        result = await response.json();
+      } else {
+        const slug = resources[0].slug;
+        if (type === 'global') {
+          apiPath = `http://localhost:3000/api/globals/${slug}?depth=2`;
+        } else if (type === 'collection') {
+          apiPath = `http://localhost:3000/api/${slug}`;
+        }
+        response = await fetch(apiPath);
+        result[type][slug] = await response.json();
       }
 
-      // fetch data
-      const response = await fetch(apiPath);
-      const result = await response.json();
+      // Check if component is still mounted before updating state
+      if (!isMountedRef.current) {
+        return;
+      }
 
       // get current data from reference outside of closure
       const currentData = latestDataRef.current;
@@ -72,15 +97,20 @@ export default function usePayloadData({ type = 'global', slug }) {
     } catch (error) {
       console.error(`Error fetching API data:`, error);
     }
-  }, [type, slug, setPageData, componentKey]);
+  }, [type, id, setPageData, componentKey, resources]);
 
   /**
    * fetchFromStaticData: Function to fetch data from statically generated Payload data
    * @returns {Promise<void>}
    */
   const fetchFromStaticData = useCallback(async () => {
-    // Create a cache key from type and slug
-    const cacheKey = dataCache.createKey(type, slug);
+    // Check if component is still mounted
+    if (!isMountedRef.current) {
+      return;
+    }
+
+    // Create a cache key from type and id
+    const cacheKey = dataCache.createKey(type, id);
     // Check cache first
     if (dataCache.has(cacheKey)) {
       console.log('Using cached static data');
@@ -92,14 +122,24 @@ export default function usePayloadData({ type = 'global', slug }) {
     console.log('Fetching from static data');
 
     try {
-      // Intialize as global
-      let pathKey = `../data/globals/${slug}.json`;
-      if (type === 'collection') {
-        pathKey = `../data/collections/${slug}.json`;
+      const result = {
+        global: {},
+        collection: {},
+      };
+      for (const resource of resources) {
+        // Get slug
+        const folder = resource.type + 's'; // f.e. 'collections'
+        const slug = resource.slug;
+        const pathKey = `../data/${folder}/${slug}.json`;
+
+        // Get static data from import f.e. global.homepage
+        result[resource.type][slug] = staticModules[pathKey];
       }
 
-      // Get static data from import
-      const result = staticModules[pathKey];
+      // Check if component is still mounted before updating state
+      if (!isMountedRef.current) {
+        return;
+      }
 
       // Set cache
       dataCache.set(cacheKey, result);
@@ -111,15 +151,15 @@ export default function usePayloadData({ type = 'global', slug }) {
     } catch (error) {
       console.error(`Error fetching static data:`, error);
     }
-  }, [slug, type, setPageData, setUseStaticData]);
+  }, [id, type, setPageData, setUseStaticData, resources]);
 
   /**
    * fetchData: Function to fetch data from the API or from statically generated Payload data
    * @returns {Promise<void>}
    */
   const fetchData = useCallback(async () => {
-    // Exit if slug is missing
-    if (!slug) return;
+    // Exit if id is missing or component unmounted
+    if (!id || !isMountedRef.current) return;
 
     setDataLoading(true);
 
@@ -133,19 +173,21 @@ export default function usePayloadData({ type = 'global', slug }) {
 
         // Set static data flag
         setUseStaticData(false);
-
         // Start polling for this component
         pollingManager.startPolling(componentKey, fetchFromAPI, 1000);
       } else {
-        fetchFromStaticData();
+        await fetchFromStaticData();
       }
     } catch (error) {
       console.error(`Error fetching data:`, error);
     } finally {
-      setDataLoading(false);
+      // Only update loading state if component is still mounted
+      if (isMountedRef.current) {
+        setDataLoading(false);
+      }
     }
   }, [
-    slug,
+    id,
     fetchFromAPI,
     fetchFromStaticData,
     setDataLoading,
@@ -153,14 +195,28 @@ export default function usePayloadData({ type = 'global', slug }) {
     componentKey,
   ]);
 
-  // Clean up polling on unmount if this component is still the active one
+  // Reset state and handle new fetch when component mounts or ID changes
+  // This must be after fetchData is defined
   useEffect(() => {
+    console.log(`Setting up for ${id} (${componentKey})`);
+    isMountedRef.current = true;
+
+    // Reset state for new page
+    setPageData(null);
+    setDataLoading(true);
+
+    // Start new fetch
+    fetchData();
+
+    // Cleanup on unmount
     return () => {
+      console.log(`Cleaning up for ${id} (${componentKey})`);
+      isMountedRef.current = false;
       if (pollingManager.isActiveFor(componentKey)) {
         pollingManager.stopPolling();
       }
     };
-  }, [componentKey]);
+  }, [id, componentKey, fetchData, setPageData, setDataLoading]);
 
   return {
     loading: dataLoading,

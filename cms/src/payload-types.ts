@@ -235,20 +235,21 @@ export interface ExperienceItem {
 export interface Project {
   id: string;
   title: string;
+  publicationStatus?: ('published' | 'draft') | null;
   fullTitle?: string | null;
   type?: ('personal' | 'professional') | null;
   slug?: string | null;
-  thumbnail: string | Media;
+  thumbnail?: (string | null) | Media;
   company?: string | null;
-  roles: string[];
-  excerpt: string;
-  technologies: string[];
-  year: string;
+  roles?: string[] | null;
+  excerpt?: string | null;
+  technologies?: string[] | null;
+  year?: string | null;
   url?: string | null;
   github?: string | null;
   itchio?: string | null;
-  pageContent: {
-    bannerImage: string | Media;
+  pageContent?: {
+    bannerImage?: (string | null) | Media;
     content?:
       | {
           content?: {
@@ -454,6 +455,7 @@ export interface ExperienceItemsSelect<T extends boolean = true> {
  */
 export interface ProjectsSelect<T extends boolean = true> {
   title?: T;
+  publicationStatus?: T;
   fullTitle?: T;
   type?: T;
   slug?: T;
