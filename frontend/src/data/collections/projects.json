@@ -79,7 +79,8 @@
       "github": "",
       "itchio": "",
       "pageContent": {
-        "bannerImage": {
+        "content": [],
+        "featuredImage": {
           "alt": "Hotel with Royal Thai Carpet",
           "filename": "RoyalThaiHomepageSlide2.webp",
           "mimeType": "image/webp",
@@ -135,8 +136,7 @@
           "thumbnailURL": null,
           "url": "/api/media/file/RoyalThaiHomepageSlide2.webp",
           "id": "67def1dd98a32200f894c7a7"
-        },
-        "content": []
+        }
       },
       "createdAt": "2025-03-20T23:53:56.358Z",
       "company": "Nav Creative",
@@ -217,64 +217,6 @@
       "year": "2024",
       "github": "https://github.com/hlalljie/bitforest-dont-get-swatted",
       "pageContent": {
-        "bannerImage": {
-          "alt": "Don't Get Swatted game art",
-          "name": "Don't Get Swatted Main Image",
-          "filename": "DontGetSwatted.webp",
-          "mimeType": "image/webp",
-          "filesize": 97990,
-          "width": 2400,
-          "height": 1350,
-          "focalX": 50,
-          "focalY": 50,
-          "sizes": {
-            "thumbnail": {
-              "width": 400,
-              "height": 225,
-              "mimeType": "image/webp",
-              "filesize": 12112,
-              "filename": "DontGetSwatted-400x225.webp",
-              "url": "/api/media/file/DontGetSwatted-400x225.webp"
-            },
-            "small": {
-              "width": 768,
-              "height": 432,
-              "mimeType": "image/webp",
-              "filesize": 22818,
-              "filename": "DontGetSwatted-768x432.webp",
-              "url": "/api/media/file/DontGetSwatted-768x432.webp"
-            },
-            "medium": {
-              "width": 1200,
-              "height": 675,
-              "mimeType": "image/webp",
-              "filesize": 33942,
-              "filename": "DontGetSwatted-1200x675.webp",
-              "url": "/api/media/file/DontGetSwatted-1200x675.webp"
-            },
-            "large": {
-              "width": 1800,
-              "height": 1013,
-              "mimeType": "image/webp",
-              "filesize": 55956,
-              "filename": "DontGetSwatted-1800x1013.webp",
-              "url": "/api/media/file/DontGetSwatted-1800x1013.webp"
-            },
-            "hero": {
-              "width": null,
-              "height": null,
-              "mimeType": null,
-              "filesize": null,
-              "filename": null,
-              "url": null
-            }
-          },
-          "createdAt": "2025-03-17T03:10:08.246Z",
-          "updatedAt": "2025-03-17T03:10:08.246Z",
-          "id": "67d792902c31a9c4c4836932",
-          "url": "/api/media/file/DontGetSwatted.webp",
-          "thumbnailURL": null
-        },
         "content": [
           {
             "blockType": "textBlock",
@@ -391,7 +333,65 @@
             },
             "id": "67d7923c536928fe1b6399d7"
           }
-        ]
+        ],
+        "featuredImage": {
+          "alt": "Don't Get Swatted game art",
+          "name": "Don't Get Swatted Main Image",
+          "filename": "DontGetSwatted.webp",
+          "mimeType": "image/webp",
+          "filesize": 97990,
+          "width": 2400,
+          "height": 1350,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "width": 400,
+              "height": 225,
+              "mimeType": "image/webp",
+              "filesize": 12112,
+              "filename": "DontGetSwatted-400x225.webp",
+              "url": "/api/media/file/DontGetSwatted-400x225.webp"
+            },
+            "small": {
+              "width": 768,
+              "height": 432,
+              "mimeType": "image/webp",
+              "filesize": 22818,
+              "filename": "DontGetSwatted-768x432.webp",
+              "url": "/api/media/file/DontGetSwatted-768x432.webp"
+            },
+            "medium": {
+              "width": 1200,
+              "height": 675,
+              "mimeType": "image/webp",
+              "filesize": 33942,
+              "filename": "DontGetSwatted-1200x675.webp",
+              "url": "/api/media/file/DontGetSwatted-1200x675.webp"
+            },
+            "large": {
+              "width": 1800,
+              "height": 1013,
+              "mimeType": "image/webp",
+              "filesize": 55956,
+              "filename": "DontGetSwatted-1800x1013.webp",
+              "url": "/api/media/file/DontGetSwatted-1800x1013.webp"
+            },
+            "hero": {
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null,
+              "url": null
+            }
+          },
+          "createdAt": "2025-03-17T03:10:08.246Z",
+          "updatedAt": "2025-03-17T03:10:08.246Z",
+          "id": "67d792902c31a9c4c4836932",
+          "url": "/api/media/file/DontGetSwatted.webp",
+          "thumbnailURL": null
+        }
       },
       "createdAt": "2025-03-17T03:11:26.453Z",
       "updatedAt": "2025-03-23T06:24:57.511Z",
@@ -474,7 +474,8 @@
       "year": "2023",
       "github": "https://github.com/hlalljie/QuizGeneratorFlaskReact",
       "pageContent": {
-        "bannerImage": {
+        "content": [],
+        "featuredImage": {
           "updatedAt": "2025-03-17T03:06:00.621Z",
           "alt": "Picture of computer with a quiz application",
           "name": "Inquizity Thumbnail",
@@ -531,8 +532,7 @@
           },
           "createdAt": "2025-03-17T03:05:35.282Z",
           "id": "67d7917f2c31a9c4c4836832"
-        },
-        "content": []
+        }
       },
       "createdAt": "2025-03-17T03:06:07.028Z",
       "updatedAt": "2025-03-20T19:31:38.403Z",
@@ -616,7 +616,8 @@
       "year": "2023",
       "github": "https://github.com/Topupchips/MLH-Web3-Hackathon',",
       "pageContent": {
-        "bannerImage": {
+        "content": [],
+        "featuredImage": {
           "alt": "Screenshot of Block Broker's homepage",
           "name": "Block Broker Banner",
           "filename": "blockBrokerBanner.webp",
@@ -673,8 +674,7 @@
           "thumbnailURL": null,
           "url": "/api/media/file/blockBrokerBanner.webp",
           "id": "67d7907d2c31a9c4c4836775"
-        },
-        "content": []
+        }
       },
       "createdAt": "2025-03-17T03:01:49.116Z",
       "updatedAt": "2025-03-20T19:31:38.394Z",
@@ -758,7 +758,8 @@
       "year": "2021",
       "url": "nextadventure.com",
       "pageContent": {
-        "bannerImage": {
+        "content": [],
+        "featuredImage": {
           "updatedAt": "2025-03-17T00:28:04.532Z",
           "alt": "Next Adventure explore page screenshot",
           "url": "/api/media/file/nextAdventureThumbnail-1.webp",
@@ -815,8 +816,7 @@
           "createdAt": "2025-03-17T00:26:56.351Z",
           "name": "Next Adventure Banner",
           "id": "67d76c50929c408084eb052a"
-        },
-        "content": []
+        }
       },
       "createdAt": "2025-03-17T00:27:39.437Z",
       "updatedAt": "2025-03-20T19:31:38.416Z",
@@ -887,7 +887,8 @@
       "company": "Nav Creative",
       "roles": [
         "Project Manager",
-        "Designer"
+        "Designer",
+        "Development"
       ],
       "excerpt": "A modern design for a budding technology consultancy.",
       "technologies": [
@@ -898,67 +899,99 @@
       ],
       "year": "2022",
       "pageContent": {
-        "bannerImage": {
-          "updatedAt": "2025-03-17T00:20:56.688Z",
-          "alt": "Real Lion website homepage screenshot",
-          "url": "/api/media/file/realLionThumbnail-1.webp",
-          "thumbnailURL": null,
-          "filename": "realLionThumbnail-1.webp",
+        "featuredImage": {
+          "alt": "Real Lion Homepage Screenshot",
+          "name": "Real Lion Featured Image",
+          "filename": "real-lion-featured-image.webp",
           "mimeType": "image/webp",
-          "filesize": 71122,
+          "filesize": 3295216,
           "width": 1920,
-          "height": 938,
+          "height": 3109,
           "focalX": 50,
-          "focalY": 31,
+          "focalY": 22,
           "sizes": {
             "thumbnail": {
-              "url": "/api/media/file/realLionThumbnail-1-400x195.webp",
               "width": 400,
-              "height": 195,
+              "height": 648,
               "mimeType": "image/webp",
-              "filesize": 12826,
-              "filename": "realLionThumbnail-1-400x195.webp"
+              "filesize": 44028,
+              "filename": "real-lion-featured-image-400x648.webp",
+              "url": "/api/media/file/real-lion-featured-image-400x648.webp"
             },
             "small": {
-              "url": "/api/media/file/realLionThumbnail-1-768x375.webp",
               "width": 768,
-              "height": 375,
+              "height": 1244,
               "mimeType": "image/webp",
-              "filesize": 25850,
-              "filename": "realLionThumbnail-1-768x375.webp"
+              "filesize": 102030,
+              "filename": "real-lion-featured-image-768x1244.webp",
+              "url": "/api/media/file/real-lion-featured-image-768x1244.webp"
             },
             "medium": {
-              "url": "/api/media/file/realLionThumbnail-1-1200x586.webp",
               "width": 1200,
-              "height": 586,
+              "height": 1943,
               "mimeType": "image/webp",
-              "filesize": 37310,
-              "filename": "realLionThumbnail-1-1200x586.webp"
+              "filesize": 162166,
+              "filename": "real-lion-featured-image-1200x1943.webp",
+              "url": "/api/media/file/real-lion-featured-image-1200x1943.webp"
             },
             "large": {
-              "url": "/api/media/file/realLionThumbnail-1-1800x879.webp",
               "width": 1800,
-              "height": 879,
+              "height": 2915,
               "mimeType": "image/webp",
-              "filesize": 59458,
-              "filename": "realLionThumbnail-1-1800x879.webp"
+              "filesize": 273984,
+              "filename": "real-lion-featured-image-1800x2915.webp",
+              "url": "/api/media/file/real-lion-featured-image-1800x2915.webp"
             },
             "hero": {
-              "url": null,
               "width": null,
               "height": null,
               "mimeType": null,
               "filesize": null,
-              "filename": null
+              "filename": null,
+              "url": null
             }
           },
-          "createdAt": "2025-03-17T00:18:34.243Z",
-          "id": "67d76a5a929c408084eb0434"
+          "createdAt": "2025-03-25T23:05:57.100Z",
+          "updatedAt": "2025-03-25T23:05:57.100Z",
+          "id": "67e336d5e2f880c3cb515565",
+          "url": "/api/media/file/real-lion-featured-image.webp",
+          "thumbnailURL": null
+        },
+        "intro": {
+          "root": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Real Lion is a tech sales coaching agency providing valueable insights into career growth and sucess in technology sales. The goal was to provide a frontend website with a member portal for customers to access premium resources.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
+              }
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "type": "root",
+            "version": 1
+          }
         },
         "content": []
       },
       "createdAt": "2025-03-17T00:20:21.705Z",
-      "updatedAt": "2025-03-20T19:31:38.398Z",
+      "updatedAt": "2025-03-25T23:48:44.173Z",
       "publicationStatus": "published",
       "id": "67d76ac5929c408084eb0473"
     },
@@ -1036,7 +1069,44 @@
       "year": "2022",
       "url": "https://www.travelgurusgroup.com",
       "pageContent": {
-        "bannerImage": {
+        "content": [
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Travel Gurus reached out for their first website looking to inspire their customers to travel to new places.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67d4615128c99d47346dc87a"
+          }
+        ],
+        "featuredImage": {
           "alt": "Travel Gurus website homepage screenshot",
           "filename": "travelGurusThumbnail2400w.webp",
           "mimeType": "image/webp",
@@ -1093,44 +1163,7 @@
           "url": "/api/media/file/travelGurusThumbnail2400w.webp",
           "name": "Travel Gurus Banner",
           "id": "67d4605e95ccfa757ba899f0"
-        },
-        "content": [
-          {
-            "blockType": "textBlock",
-            "content": {
-              "root": {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "detail": 0,
-                        "format": 0,
-                        "mode": "normal",
-                        "style": "",
-                        "text": "Travel Gurus reached out for their first website looking to inspire their customers to travel to new places.",
-                        "type": "text",
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr",
-                    "format": "",
-                    "indent": 0,
-                    "type": "paragraph",
-                    "version": 1,
-                    "textFormat": 0,
-                    "textStyle": ""
-                  }
-                ],
-                "direction": "ltr",
-                "format": "",
-                "indent": 0,
-                "type": "root",
-                "version": 1
-              }
-            },
-            "id": "67d4615128c99d47346dc87a"
-          }
-        ]
+        }
       },
       "createdAt": "2025-03-14T17:00:55.727Z",
       "updatedAt": "2025-03-20T19:31:38.406Z",
@@ -1214,7 +1247,44 @@
       "year": "2022",
       "url": "https://www.ba-tti.org",
       "pageContent": {
-        "bannerImage": {
+        "content": [
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "A rebranding and website refresh to better guide students and better market the brand for the Bay Area Teacher Training Institute.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67d45f2a28c99d47346dc878"
+          }
+        ],
+        "featuredImage": {
           "updatedAt": "2025-03-14T17:12:05.466Z",
           "alt": "BA-TTI website homepage screenshot",
           "url": "/api/media/file/battiThumbnail2400w-1.webp",
@@ -1271,44 +1341,7 @@
           "createdAt": "2025-03-14T17:11:23.630Z",
           "name": "BA-TTI Banner",
           "id": "67d4633b95ccfa757ba89b13"
-        },
-        "content": [
-          {
-            "blockType": "textBlock",
-            "content": {
-              "root": {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "detail": 0,
-                        "format": 0,
-                        "mode": "normal",
-                        "style": "",
-                        "text": "A rebranding and website refresh to better guide students and better market the brand for the Bay Area Teacher Training Institute.",
-                        "type": "text",
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr",
-                    "format": "",
-                    "indent": 0,
-                    "type": "paragraph",
-                    "version": 1,
-                    "textFormat": 0,
-                    "textStyle": ""
-                  }
-                ],
-                "direction": "ltr",
-                "format": "",
-                "indent": 0,
-                "type": "root",
-                "version": 1
-              }
-            },
-            "id": "67d45f2a28c99d47346dc878"
-          }
-        ]
+        }
       },
       "createdAt": "2025-03-14T16:54:22.350Z",
       "updatedAt": "2025-03-20T19:31:38.382Z",
@@ -1391,65 +1424,6 @@
         "HTML"
       ],
       "pageContent": {
-        "bannerImage": {
-          "updatedAt": "2025-03-14T17:14:45.264Z",
-          "alt": "Screenshot of Platinum Advisors website homepage opening fold",
-          "name": "Platinum Advisors Banner",
-          "credit": "platinumadvisors.com",
-          "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1.webp",
-          "thumbnailURL": null,
-          "filename": "PlatinumAdvisorsThumbnailOriginal-1.webp",
-          "mimeType": "image/webp",
-          "filesize": 110102,
-          "width": 1494,
-          "height": 654,
-          "focalX": 50,
-          "focalY": 50,
-          "sizes": {
-            "thumbnail": {
-              "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-400x175.webp",
-              "width": 400,
-              "height": 175,
-              "mimeType": "image/webp",
-              "filesize": 19782,
-              "filename": "PlatinumAdvisorsThumbnailOriginal-1-400x175.webp"
-            },
-            "small": {
-              "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-768x336.webp",
-              "width": 768,
-              "height": 336,
-              "mimeType": "image/webp",
-              "filesize": 46788,
-              "filename": "PlatinumAdvisorsThumbnailOriginal-1-768x336.webp"
-            },
-            "medium": {
-              "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp",
-              "width": 1200,
-              "height": 525,
-              "mimeType": "image/webp",
-              "filesize": 71692,
-              "filename": "PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp"
-            },
-            "large": {
-              "url": null,
-              "width": null,
-              "height": null,
-              "mimeType": null,
-              "filesize": null,
-              "filename": null
-            },
-            "hero": {
-              "url": null,
-              "width": null,
-              "height": null,
-              "mimeType": null,
-              "filesize": null,
-              "filename": null
-            }
-          },
-          "createdAt": "2025-03-14T17:13:28.588Z",
-          "id": "67d463b895ccfa757ba89bd1"
-        },
         "content": [
           {
             "blockType": "textBlock",
@@ -1527,7 +1501,66 @@
             "id": "67d3d1f0a686efc7ae9eec8d",
             "blockName": ""
           }
-        ]
+        ],
+        "featuredImage": {
+          "updatedAt": "2025-03-14T17:14:45.264Z",
+          "alt": "Screenshot of Platinum Advisors website homepage opening fold",
+          "name": "Platinum Advisors Banner",
+          "credit": "platinumadvisors.com",
+          "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1.webp",
+          "thumbnailURL": null,
+          "filename": "PlatinumAdvisorsThumbnailOriginal-1.webp",
+          "mimeType": "image/webp",
+          "filesize": 110102,
+          "width": 1494,
+          "height": 654,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-400x175.webp",
+              "width": 400,
+              "height": 175,
+              "mimeType": "image/webp",
+              "filesize": 19782,
+              "filename": "PlatinumAdvisorsThumbnailOriginal-1-400x175.webp"
+            },
+            "small": {
+              "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-768x336.webp",
+              "width": 768,
+              "height": 336,
+              "mimeType": "image/webp",
+              "filesize": 46788,
+              "filename": "PlatinumAdvisorsThumbnailOriginal-1-768x336.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp",
+              "width": 1200,
+              "height": 525,
+              "mimeType": "image/webp",
+              "filesize": 71692,
+              "filename": "PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp"
+            },
+            "large": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "hero": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            }
+          },
+          "createdAt": "2025-03-14T17:13:28.588Z",
+          "id": "67d463b895ccfa757ba89bd1"
+        }
       },
       "createdAt": "2025-03-14T06:51:14.689Z",
       "updatedAt": "2025-03-20T19:31:38.409Z",

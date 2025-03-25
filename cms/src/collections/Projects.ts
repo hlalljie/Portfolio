@@ -126,10 +126,14 @@ export const Projects: CollectionConfig = {
       type: 'group',
       fields: [
         {
-          name: 'bannerImage',
+          name: 'featuredImage',
           type: 'upload',
           relationTo: 'media',
           validate: requiredToPublish(),
+        },
+        {
+          name: 'intro',
+          type: 'richText',
         },
         {
           name: 'content',

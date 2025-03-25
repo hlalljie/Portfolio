@@ -20,6 +20,7 @@ const theme = {
     fog: 'black',
   },
   padding: {
+    mediumSection: '13%',
     largeSection: '7%',
     fullWidthSection: '20px',
   },

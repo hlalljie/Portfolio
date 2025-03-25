@@ -23,7 +23,7 @@ const StyledProject = styled.div`
     height: fit-content;
     .portfolioContent {
       padding-block: 1vw;
-      padding-inline: ${theme.padding.largeSection};
+      padding-inline: ${theme.padding.mediumSection};
       .heroImage {
         width: 100%;
         object-fit: cover;
@@ -84,45 +84,89 @@ const Project = () => {
       }
     >
       <Header variant={'light'} overlapTopSection={false} />
-      <section className="portfolioContent">
-        {project['pageContent']['bannerImage'] && (
-          <AdaptiveImage
-            className="heroImage"
-            imageData={project['pageContent']['bannerImage']}
-          />
-        )}
+      <ProjectIntro project={project} />
+      <ProjectContent content={project['pageContent']['content']} />
+    </StyledProject>
+  );
+};
+
+const ProjectIntro = ({ project }) => {
+  return (
+    <section className="projectIntro">
+      {/* Title */}
+      <div className="introText">
         {project['fullTitle'] ? (
           <h1>{project['fullTitle']}</h1>
         ) : (
           <h1>{project['title']}</h1>
         )}
-        <ProjectContent project={project} />
-      </section>
-    </StyledProject>
+        <hr />
+        {/* Type and year info Below line */}
+        <div className="subInfo">
+          <p>
+            {project['type'] === 'Personal'
+              ? 'Personal Project'
+              : 'Professional Portfolio'}
+          </p>
+          <p>{project['year']}</p>
+        </div>
+        {/* Other info */}
+        <ul className="otherInfo">
+          <InfoItem title="Role" content={project['roles']} />
+          {project['company'] && (
+            <InfoItem title="At" content={project['company']} />
+          )}
+          <InfoItem title="Technologies" content={project['technologies']} />
+        </ul>
+        {/* Intro summary*/}
+        {project['pageContent']['intro'] ? (
+          <RichText content={project['pageContent']['intro']} />
+        ) : (
+          <p>{project['excerpt']}</p>
+        )}
+      </div>
+      <div className="featuredImageContainer">
+        {project['pageContent']['featuredImage'] && (
+          <AdaptiveImage
+            className="featuredImage"
+            imageData={project['pageContent']['featuredImage']}
+          />
+        )}
+      </div>
+    </section>
+  );
+};
+
+const InfoItem = ({ title, content }) => {
+  return (
+    <li>
+      <h4>{title}</h4>
+      <p>{Array.isArray(content) ? content.join(' - ') : content}</p>
+    </li>
   );
 };
 
 /**
  * Project Content - Renders the project blocks or an excerpt if the project has no block content
  * @param {object} props - The props passed to the component
- * @param {object} props.project - The individual project data
+ * @param {object} props.content - The individual project content
  * @returns {JSX.Element} The rendered project content
  */
-const ProjectContent = ({ project }) => {
-  const content = project['pageContent']['content'];
-
-  // If no content, show excerpt
-  if (content === undefined || content === null || content.length === 0) {
-    return <p>{project['excerpt']}</p>;
+const ProjectContent = ({ content }) => {
+  if (!content || content.length === 0) {
+    return <></>;
   }
-
   // Render block content
-  return content.map((block, index) => {
-    if (block['blockType'] === 'textBlock') {
-      return <TextBlock key={index} block={block} />;
-    }
-    return null;
-  });
+  return (
+    <section className="projectContent">
+      {content.map((block, index) => {
+        if (block['blockType'] === 'textBlock') {
+          return <TextBlock key={index} block={block} />;
+        }
+        return null;
+      })}
+    </section>
+  );
 };
 
 /**

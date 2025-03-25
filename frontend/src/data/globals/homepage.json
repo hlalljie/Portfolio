@@ -382,65 +382,6 @@
           "HTML"
         ],
         "pageContent": {
-          "bannerImage": {
-            "updatedAt": "2025-03-14T17:14:45.264Z",
-            "alt": "Screenshot of Platinum Advisors website homepage opening fold",
-            "name": "Platinum Advisors Banner",
-            "credit": "platinumadvisors.com",
-            "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1.webp",
-            "thumbnailURL": null,
-            "filename": "PlatinumAdvisorsThumbnailOriginal-1.webp",
-            "mimeType": "image/webp",
-            "filesize": 110102,
-            "width": 1494,
-            "height": 654,
-            "focalX": 50,
-            "focalY": 50,
-            "sizes": {
-              "thumbnail": {
-                "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-400x175.webp",
-                "width": 400,
-                "height": 175,
-                "mimeType": "image/webp",
-                "filesize": 19782,
-                "filename": "PlatinumAdvisorsThumbnailOriginal-1-400x175.webp"
-              },
-              "small": {
-                "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-768x336.webp",
-                "width": 768,
-                "height": 336,
-                "mimeType": "image/webp",
-                "filesize": 46788,
-                "filename": "PlatinumAdvisorsThumbnailOriginal-1-768x336.webp"
-              },
-              "medium": {
-                "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp",
-                "width": 1200,
-                "height": 525,
-                "mimeType": "image/webp",
-                "filesize": 71692,
-                "filename": "PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp"
-              },
-              "large": {
-                "url": null,
-                "width": null,
-                "height": null,
-                "mimeType": null,
-                "filesize": null,
-                "filename": null
-              },
-              "hero": {
-                "url": null,
-                "width": null,
-                "height": null,
-                "mimeType": null,
-                "filesize": null,
-                "filename": null
-              }
-            },
-            "createdAt": "2025-03-14T17:13:28.588Z",
-            "id": "67d463b895ccfa757ba89bd1"
-          },
           "content": [
             {
               "blockType": "textBlock",
@@ -518,7 +459,66 @@
               "id": "67d3d1f0a686efc7ae9eec8d",
               "blockName": ""
             }
-          ]
+          ],
+          "featuredImage": {
+            "updatedAt": "2025-03-14T17:14:45.264Z",
+            "alt": "Screenshot of Platinum Advisors website homepage opening fold",
+            "name": "Platinum Advisors Banner",
+            "credit": "platinumadvisors.com",
+            "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1.webp",
+            "thumbnailURL": null,
+            "filename": "PlatinumAdvisorsThumbnailOriginal-1.webp",
+            "mimeType": "image/webp",
+            "filesize": 110102,
+            "width": 1494,
+            "height": 654,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-400x175.webp",
+                "width": 400,
+                "height": 175,
+                "mimeType": "image/webp",
+                "filesize": 19782,
+                "filename": "PlatinumAdvisorsThumbnailOriginal-1-400x175.webp"
+              },
+              "small": {
+                "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-768x336.webp",
+                "width": 768,
+                "height": 336,
+                "mimeType": "image/webp",
+                "filesize": 46788,
+                "filename": "PlatinumAdvisorsThumbnailOriginal-1-768x336.webp"
+              },
+              "medium": {
+                "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp",
+                "width": 1200,
+                "height": 525,
+                "mimeType": "image/webp",
+                "filesize": 71692,
+                "filename": "PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp"
+              },
+              "large": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            },
+            "createdAt": "2025-03-14T17:13:28.588Z",
+            "id": "67d463b895ccfa757ba89bd1"
+          }
         },
         "createdAt": "2025-03-14T06:51:14.689Z",
         "updatedAt": "2025-03-20T19:31:38.409Z",
@@ -603,7 +603,44 @@
         "year": "2022",
         "url": "https://www.travelgurusgroup.com",
         "pageContent": {
-          "bannerImage": {
+          "content": [
+            {
+              "blockType": "textBlock",
+              "content": {
+                "root": {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "Travel Gurus reached out for their first website looking to inspire their customers to travel to new places.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "format": "",
+                      "indent": 0,
+                      "type": "paragraph",
+                      "version": 1,
+                      "textFormat": 0,
+                      "textStyle": ""
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "type": "root",
+                  "version": 1
+                }
+              },
+              "id": "67d4615128c99d47346dc87a"
+            }
+          ],
+          "featuredImage": {
             "alt": "Travel Gurus website homepage screenshot",
             "filename": "travelGurusThumbnail2400w.webp",
             "mimeType": "image/webp",
@@ -660,44 +697,7 @@
             "url": "/api/media/file/travelGurusThumbnail2400w.webp",
             "name": "Travel Gurus Banner",
             "id": "67d4605e95ccfa757ba899f0"
-          },
-          "content": [
-            {
-              "blockType": "textBlock",
-              "content": {
-                "root": {
-                  "children": [
-                    {
-                      "children": [
-                        {
-                          "detail": 0,
-                          "format": 0,
-                          "mode": "normal",
-                          "style": "",
-                          "text": "Travel Gurus reached out for their first website looking to inspire their customers to travel to new places.",
-                          "type": "text",
-                          "version": 1
-                        }
-                      ],
-                      "direction": "ltr",
-                      "format": "",
-                      "indent": 0,
-                      "type": "paragraph",
-                      "version": 1,
-                      "textFormat": 0,
-                      "textStyle": ""
-                    }
-                  ],
-                  "direction": "ltr",
-                  "format": "",
-                  "indent": 0,
-                  "type": "root",
-                  "version": 1
-                }
-              },
-              "id": "67d4615128c99d47346dc87a"
-            }
-          ]
+          }
         },
         "createdAt": "2025-03-14T17:00:55.727Z",
         "updatedAt": "2025-03-20T19:31:38.406Z",
@@ -781,7 +781,44 @@
         "year": "2022",
         "url": "https://www.ba-tti.org",
         "pageContent": {
-          "bannerImage": {
+          "content": [
+            {
+              "blockType": "textBlock",
+              "content": {
+                "root": {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "A rebranding and website refresh to better guide students and better market the brand for the Bay Area Teacher Training Institute.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "format": "",
+                      "indent": 0,
+                      "type": "paragraph",
+                      "version": 1,
+                      "textFormat": 0,
+                      "textStyle": ""
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "type": "root",
+                  "version": 1
+                }
+              },
+              "id": "67d45f2a28c99d47346dc878"
+            }
+          ],
+          "featuredImage": {
             "updatedAt": "2025-03-14T17:12:05.466Z",
             "alt": "BA-TTI website homepage screenshot",
             "url": "/api/media/file/battiThumbnail2400w-1.webp",
@@ -838,44 +875,7 @@
             "createdAt": "2025-03-14T17:11:23.630Z",
             "name": "BA-TTI Banner",
             "id": "67d4633b95ccfa757ba89b13"
-          },
-          "content": [
-            {
-              "blockType": "textBlock",
-              "content": {
-                "root": {
-                  "children": [
-                    {
-                      "children": [
-                        {
-                          "detail": 0,
-                          "format": 0,
-                          "mode": "normal",
-                          "style": "",
-                          "text": "A rebranding and website refresh to better guide students and better market the brand for the Bay Area Teacher Training Institute.",
-                          "type": "text",
-                          "version": 1
-                        }
-                      ],
-                      "direction": "ltr",
-                      "format": "",
-                      "indent": 0,
-                      "type": "paragraph",
-                      "version": 1,
-                      "textFormat": 0,
-                      "textStyle": ""
-                    }
-                  ],
-                  "direction": "ltr",
-                  "format": "",
-                  "indent": 0,
-                  "type": "root",
-                  "version": 1
-                }
-              },
-              "id": "67d45f2a28c99d47346dc878"
-            }
-          ]
+          }
         },
         "createdAt": "2025-03-14T16:54:22.350Z",
         "updatedAt": "2025-03-20T19:31:38.382Z",

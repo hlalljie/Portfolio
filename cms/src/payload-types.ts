@@ -249,7 +249,22 @@ export interface Project {
   github?: string | null;
   itchio?: string | null;
   pageContent?: {
-    bannerImage?: (string | null) | Media;
+    featuredImage?: (string | null) | Media;
+    intro?: {
+      root: {
+        type: string;
+        children: {
+          type: string;
+          version: number;
+          [k: string]: unknown;
+        }[];
+        direction: ('ltr' | 'rtl') | null;
+        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+        indent: number;
+        version: number;
+      };
+      [k: string]: unknown;
+    } | null;
     content?:
       | {
           content?: {
@@ -471,7 +486,8 @@ export interface ProjectsSelect<T extends boolean = true> {
   pageContent?:
     | T
     | {
-        bannerImage?: T;
+        featuredImage?: T;
+        intro?: T;
         content?:
           | T
           | {
