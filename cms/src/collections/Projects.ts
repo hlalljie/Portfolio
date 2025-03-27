@@ -132,6 +132,29 @@ export const Projects: CollectionConfig = {
           validate: requiredToPublish(),
         },
         {
+          name: 'backgroundPattern',
+          type: 'group',
+          fields: [
+            {
+              name: 'svg',
+              type: 'upload',
+              relationTo: 'patterns',
+            },
+            {
+              name: 'size',
+              type: 'number',
+              defaultValue: 10,
+            },
+            {
+              name: 'backgroundOpacity',
+              type: 'number',
+              defaultValue: 0.97,
+              max: 1,
+              min: 0,
+            },
+          ],
+        },
+        {
           name: 'intro',
           type: 'richText',
         },

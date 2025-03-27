@@ -518,6 +518,10 @@
             },
             "createdAt": "2025-03-14T17:13:28.588Z",
             "id": "67d463b895ccfa757ba89bd1"
+          },
+          "backgroundPattern": {
+            "size": 10,
+            "backgroundOpacity": 0.97
           }
         },
         "createdAt": "2025-03-14T06:51:14.689Z",
@@ -697,6 +701,10 @@
             "url": "/api/media/file/travelGurusThumbnail2400w.webp",
             "name": "Travel Gurus Banner",
             "id": "67d4605e95ccfa757ba899f0"
+          },
+          "backgroundPattern": {
+            "size": 10,
+            "backgroundOpacity": 0.97
           }
         },
         "createdAt": "2025-03-14T17:00:55.727Z",
@@ -875,6 +883,10 @@
             "createdAt": "2025-03-14T17:11:23.630Z",
             "name": "BA-TTI Banner",
             "id": "67d4633b95ccfa757ba89b13"
+          },
+          "backgroundPattern": {
+            "size": 10,
+            "backgroundOpacity": 0.97
           }
         },
         "createdAt": "2025-03-14T16:54:22.350Z",

@@ -68,6 +68,7 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
+    patterns: Pattern;
     experienceItems: ExperienceItem;
     projects: Project;
     'payload-locked-documents': PayloadLockedDocument;
@@ -78,6 +79,7 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    patterns: PatternsSelect<false> | PatternsSelect<true>;
     experienceItems: ExperienceItemsSelect<false> | ExperienceItemsSelect<true>;
     projects: ProjectsSelect<false> | ProjectsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -211,6 +213,26 @@ export interface Media {
   };
 }
 /**
+ * SVG pattern files only
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "patterns".
+ */
+export interface Pattern {
+  id: string;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "experienceItems".
  */
@@ -250,6 +272,11 @@ export interface Project {
   itchio?: string | null;
   pageContent?: {
     featuredImage?: (string | null) | Media;
+    backgroundPattern?: {
+      svg?: (string | null) | Pattern;
+      size?: number | null;
+      backgroundOpacity?: number | null;
+    };
     intro?: {
       root: {
         type: string;
@@ -305,6 +332,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: string | Media;
+      } | null)
+    | ({
+        relationTo: 'patterns';
+        value: string | Pattern;
       } | null)
     | ({
         relationTo: 'experienceItems';
@@ -447,6 +478,23 @@ export interface MediaSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "patterns_select".
+ */
+export interface PatternsSelect<T extends boolean = true> {
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "experienceItems_select".
  */
 export interface ExperienceItemsSelect<T extends boolean = true> {
@@ -487,6 +535,13 @@ export interface ProjectsSelect<T extends boolean = true> {
     | T
     | {
         featuredImage?: T;
+        backgroundPattern?:
+          | T
+          | {
+              svg?: T;
+              size?: T;
+              backgroundOpacity?: T;
+            };
         intro?: T;
         content?:
           | T

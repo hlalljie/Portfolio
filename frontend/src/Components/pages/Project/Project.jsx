@@ -1,9 +1,11 @@
 // External Imports
-import { useMemo } from 'react';
+import { useMemo, useContext } from 'react';
 import { useTheme } from 'styled-components';
 import { useParams } from 'react-router-dom';
 
 // Internal Imports
+// Context
+import { AppContext } from '@/context/AppContext';
 // Hooks
 import usePayloadData from '@/hooks/usePayloadData';
 // Layouts
@@ -22,6 +24,9 @@ import StyledProject from './StyledProject';
  * @returns {JSX.Element}
  */
 const Project = () => {
+  // Get static context
+  const { staticContext } = useContext(AppContext);
+
   // Get url
   const { projectSlug } = useParams();
   const theme = useTheme();
@@ -60,6 +65,8 @@ const Project = () => {
           ? project['backgroundColor']
           : theme.colors.black
       }
+      $backgroundPattern={project['pageContent']['backgroundPattern']}
+      $staticContext={staticContext}
     >
       <Header variant={'light'} overlapTopSection={true} />
       <ProjectIntro project={project} />
@@ -81,7 +88,11 @@ const ProjectIntro = ({ project }) => {
       className="projectIntro"
       themeName="dark"
       width="medium"
-      backgroundOpacity={0.98}
+      backgroundOpacity={
+        project['pageContent']['backgroundPattern']['svg']
+          ? project['pageContent']['backgroundPattern']['backgroundOpacity']
+          : 1
+      }
     >
       {(inView) => (
         <>

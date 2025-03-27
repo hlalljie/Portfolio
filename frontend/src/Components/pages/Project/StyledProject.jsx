@@ -1,11 +1,16 @@
 import { styled, css } from 'styled-components';
+import { formatImageURL } from '@/utils/formatImageURL';
 
 const StyledProject = styled.div`
-  ${({ theme }) => css`
-    /* background-image: url('/patterns/hexagons.svg');
-    background-size: 5%; */
-    background-image: url('/patterns/architect.svg');
-    background-size: 5%;
+  ${({ theme, $backgroundPattern, $staticContext }) => css`
+    background-image: ${Object.hasOwn($backgroundPattern, 'svg')
+      ? `url( ${formatImageURL(
+          $backgroundPattern['svg']['url'],
+          $staticContext,
+          'patterns'
+        )})`
+      : 'none'};
+    background-size: ${$backgroundPattern['size'] + '%'};
     .projectIntro {
       display: grid;
       grid-template-columns: 1fr 1fr;
