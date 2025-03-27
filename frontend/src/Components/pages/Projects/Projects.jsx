@@ -102,7 +102,7 @@ function Projects() {
       $backgroundImageData={projectsPageData['backgroundImage']}
       $useStaticData={useStaticData}
     >
-      <Header variant={'light'} overlapTopSection={false} />
+      <Header variant={'transparent'} overlapTopSection={false} />
       <h1>Personal Projects</h1>
       <ProjectList
         projectData={projects}

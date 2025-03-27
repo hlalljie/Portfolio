@@ -7,7 +7,6 @@ import ThemedSection from '@/Components/shared/layout/ThemedSection';
 
 const footerStyles = css`
   margin: 0;
-  margin-top: 40px;
   padding-bottom: 5px;
   display: flex;
   min-height: 0;

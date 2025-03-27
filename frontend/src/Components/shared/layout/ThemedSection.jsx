@@ -4,7 +4,8 @@ import { useInView } from 'react-intersection-observer';
 
 // Internal Imports
 // Styles
-import theme from '@/Theme';
+import theme from '@/styles/theme';
+import { tablet } from '@/styles/mediaQueries';
 
 const colorThemes = {
   light: {
@@ -36,6 +37,15 @@ const StyledSection = styled.section`
     `;
   }}
 
+  ${({ $width }) =>
+    css`
+      padding: ${theme.padding[$width + 'Section']};
+      ${tablet(css`
+        padding: ${theme.padding.fullWidthSection};
+      `)}
+    `}
+
+
   ${({ $additionalStyles }) => $additionalStyles}
 `;
 /**
@@ -49,7 +59,7 @@ const ThemedSection = ({
   additionalStyles,
   className = '',
   id = '',
-  sectionSize = 'large',
+  width = 'large',
   children,
 }) => {
   const { ref, inView } = useInView({
@@ -61,7 +71,8 @@ const ThemedSection = ({
     <StyledSection
       $themeName={themeName}
       $additionalStyles={additionalStyles}
-      className={className + ' ' + themeName + ' ' + sectionSize + 'Section'}
+      $width={width}
+      className={className + ' ' + themeName + ' ' + width + 'WidthSection'}
       id={id}
       ref={ref}
     >

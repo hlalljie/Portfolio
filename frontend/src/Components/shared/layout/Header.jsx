@@ -15,10 +15,16 @@ import BurgerMenu from '@/assets/BurgerMenu.svg?react';
 import CloseMenu from '@/assets/CloseMenu.svg?react';
 
 const HeaderDiv = styled.div`
-  ${({ theme }) => css`
+  ${({ theme, $overlapTopSection, $variant }) => css`
     /* Layout */
-    position: ${({ $overlapTopSection }) =>
-      $overlapTopSection ? 'absolute' : 'relative'};
+    position: ${$overlapTopSection ? 'absolute' : 'relative'};
+    ${!$overlapTopSection &&
+    $variant !== 'transparent' &&
+    css`
+      background-color: ${$variant === 'dark'
+        ? theme.colors.white
+        : theme.colors.black};
+    `}
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,6 +45,12 @@ const HeaderDiv = styled.div`
     }
     ${tablet(css`
       position: relative;
+      ${$variant !== 'transparent' &&
+      css`
+        background-color: ${$variant === 'dark'
+          ? theme.colors.white
+          : theme.colors.black};
+      `}
       .socials {
         margin-left: auto;
       }
@@ -47,8 +59,9 @@ const HeaderDiv = styled.div`
         transform: scale(2.5);
         /* Coloring */
         g path {
-          stroke: ${({ $variant }) =>
-            $variant === 'dark' ? theme.colors.black : theme.colors.white};
+          stroke: ${$variant === 'dark'
+            ? theme.colors.black
+            : theme.colors.white};
         }
         &.show {
           display: block;
@@ -60,7 +73,7 @@ const HeaderDiv = styled.div`
         top: 30px;
         right: 15px;
         z-index: 11;
-        fill: ${(props) => props.theme.colors.darkAccent};
+        fill: ${theme.colors.darkAccent};
         &.show {
           display: block;
         }

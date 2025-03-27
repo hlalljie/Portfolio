@@ -36,6 +36,18 @@ const GlobalStyle = createGlobalStyle`
     }
     h5{
         font-family: ${(props) => props.theme.fonts.heading};
+        font-weight: 500;
+        font-size: 1.4rem;
+    }
+    h6{
+        font-family: ${(props) => props.theme.fonts.heading};
+        font-weight: 100;
+        font-size: 1.2rem;
+    }
+    h7 {
+        font-family: ${(props) => props.theme.fonts.heading};
+        font-weight: 100;
+        font-size: 1.1rem;
     }
     button{
         font-family: ${(props) => props.theme.fonts.paragraph};

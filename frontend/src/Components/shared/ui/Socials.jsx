@@ -55,6 +55,9 @@ const StyledSocialLink = styled.a`
  * @returns {JSX.Element}
  */
 function Socials({ variant = 'light', size = '35px', gap = '10px' }) {
+  if (variant !== 'light' && variant !== 'dark') {
+    variant = 'light';
+  }
   return (
     <StyledSocials $gap={gap}>
       <StyledSocialLink
