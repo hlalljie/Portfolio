@@ -77,7 +77,12 @@ const Project = () => {
  */
 const ProjectIntro = ({ project }) => {
   return (
-    <ThemedSection className="projectIntro" themeName="dark" width="medium">
+    <ThemedSection
+      className="projectIntro"
+      themeName="dark"
+      width="medium"
+      backgroundOpacity={0.98}
+    >
       {(inView) => (
         <>
           {/* Title */}

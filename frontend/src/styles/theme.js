@@ -1,3 +1,5 @@
+import { parseToRgb, rgba } from 'polished';
+
 const theme = {
   fonts: {
     heading: "'K2D', sans-serif",
@@ -46,6 +48,48 @@ const theme = {
       .toString(16)
       .padStart(2, '0');
     return `${color}${opacityHex}`;
+  },
+  /**
+   * Calculates the correct color once an opacity is applied to it with a certain background color
+   * @param {string} targetColor - The original color
+   * @param {number} opacity - The opacity to apply
+   * @param {string} backgroundColor - The background color
+   * @returns {string}
+   */
+  withCorrectedOpacity: (
+    targetColor,
+    opacity = 1,
+    backgroundColor = '#ffffff'
+  ) => {
+    // This correctly uses parseToRgb from polished
+    const target = parseToRgb(targetColor);
+    const background = parseToRgb(backgroundColor);
+
+    // Calculate each channel
+    const r = Math.max(
+      0,
+      Math.min(
+        255,
+        Math.round((target.red - background.red * (1 - opacity)) / opacity)
+      )
+    );
+    const g = Math.max(
+      0,
+      Math.min(
+        255,
+        Math.round((target.green - background.green * (1 - opacity)) / opacity)
+      )
+    );
+    const b = Math.max(
+      0,
+      Math.min(
+        255,
+        Math.round((target.blue - background.blue * (1 - opacity)) / opacity)
+      )
+    );
+
+    // convert rgba to string
+    return rgba(r, g, b, opacity);
   },
 };
 

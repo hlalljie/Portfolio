@@ -2,6 +2,10 @@ import { styled, css } from 'styled-components';
 
 const StyledProject = styled.div`
   ${({ theme }) => css`
+    /* background-image: url('/patterns/hexagons.svg');
+    background-size: 5%; */
+    background-image: url('/patterns/architect.svg');
+    background-size: 5%;
     .projectIntro {
       display: grid;
       grid-template-columns: 1fr 1fr;
