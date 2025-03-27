@@ -107,7 +107,7 @@ const ProjectIntro = ({ project }) => {
             {/* Type and year info Below line */}
             <div className="subInfo">
               <h7>
-                {project['type'] === 'Personal'
+                {project['type'] === 'personal'
                   ? 'Personal Project'
                   : 'Professional Portfolio'}
               </h7>

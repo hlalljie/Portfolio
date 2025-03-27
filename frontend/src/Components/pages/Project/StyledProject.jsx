@@ -15,8 +15,12 @@ const StyledProject = styled.div`
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 70px;
+      overflow: hidden;
+      padding-bottom: 50px;
 
       .introText {
+        overflow: visible;
+
         h1 {
           margin-bottom: 25px;
         }
@@ -54,11 +58,18 @@ const StyledProject = styled.div`
           font-size: 1.4rem;
         }
       }
-
-      .featuredImage {
-        max-width: 100%;
-        margin: 10px;
-        box-shadow: 0px 0 80px 20px ${theme.withOpacity(theme.colors.fog, 0.1)};
+      .featuredImageContainer {
+        box-sizing: border-box;
+        min-height: 0;
+        align-self: start;
+        contain: size;
+        padding: 20px;
+        .featuredImage {
+          max-width: 100%;
+          height: 100%;
+          box-shadow: 0px 0 80px 20px
+            ${theme.withOpacity(theme.colors.fog, 0.1)};
+        }
       }
     }
   `}

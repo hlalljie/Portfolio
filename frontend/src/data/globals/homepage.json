@@ -374,7 +374,7 @@
           "Designer",
           "Project Manager"
         ],
-        "excerpt": "Redesigned Platinum Advisors' website to more effectively communicate their professionalism and expertise to clients.",
+        "excerpt": "A sleek redesign for a national advocacy firm.",
         "technologies": [
           "Squarespace",
           "Less",
@@ -382,6 +382,98 @@
           "HTML"
         ],
         "pageContent": {
+          "featuredImage": {
+            "alt": "Screenshot of Platinum Advisors website homepage",
+            "filename": "platinum-homepage.webp",
+            "mimeType": "image/webp",
+            "filesize": 1295432,
+            "width": 2560,
+            "height": 7764,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "width": 400,
+                "height": 1213,
+                "mimeType": "image/webp",
+                "filesize": 82150,
+                "filename": "platinum-homepage-400x1213.webp",
+                "url": "/api/media/file/platinum-homepage-400x1213.webp"
+              },
+              "small": {
+                "width": 768,
+                "height": 2329,
+                "mimeType": "image/webp",
+                "filesize": 209244,
+                "filename": "platinum-homepage-768x2329.webp",
+                "url": "/api/media/file/platinum-homepage-768x2329.webp"
+              },
+              "medium": {
+                "width": 1200,
+                "height": 3639,
+                "mimeType": "image/webp",
+                "filesize": 371736,
+                "filename": "platinum-homepage-1200x3639.webp",
+                "url": "/api/media/file/platinum-homepage-1200x3639.webp"
+              },
+              "large": {
+                "width": 1800,
+                "height": 5459,
+                "mimeType": "image/webp",
+                "filesize": 678390,
+                "filename": "platinum-homepage-1800x5459.webp",
+                "url": "/api/media/file/platinum-homepage-1800x5459.webp"
+              },
+              "hero": {
+                "width": 2500,
+                "height": 7582,
+                "mimeType": "image/webp",
+                "filesize": 1041460,
+                "filename": "platinum-homepage-2500x7582.webp",
+                "url": "/api/media/file/platinum-homepage-2500x7582.webp"
+              }
+            },
+            "createdAt": "2025-03-27T22:41:15.005Z",
+            "updatedAt": "2025-03-27T22:41:15.005Z",
+            "id": "67e5d40ac1a8ca689fd7e435",
+            "url": "/api/media/file/platinum-homepage.webp",
+            "thumbnailURL": null
+          },
+          "backgroundPattern": {
+            "size": 10,
+            "backgroundOpacity": 0.97
+          },
+          "intro": {
+            "root": {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": "Platinum Advisors is a premier advocacy firm with a reach across the United States. They advise companies on large scale projects, lobby governments on every level to pass legislature, develop media narratives that reach consumer. Our goal was to redesign the website to better reflect their national reach, show the expertise of their team, and create a premier design that appealed to their stakeholders and clients.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "type": "paragraph",
+                  "version": 1,
+                  "textFormat": 0,
+                  "textStyle": ""
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "root",
+              "version": 1
+            }
+          },
           "content": [
             {
               "blockType": "textBlock",
@@ -459,73 +551,10 @@
               "id": "67d3d1f0a686efc7ae9eec8d",
               "blockName": ""
             }
-          ],
-          "featuredImage": {
-            "updatedAt": "2025-03-14T17:14:45.264Z",
-            "alt": "Screenshot of Platinum Advisors website homepage opening fold",
-            "name": "Platinum Advisors Banner",
-            "credit": "platinumadvisors.com",
-            "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1.webp",
-            "thumbnailURL": null,
-            "filename": "PlatinumAdvisorsThumbnailOriginal-1.webp",
-            "mimeType": "image/webp",
-            "filesize": 110102,
-            "width": 1494,
-            "height": 654,
-            "focalX": 50,
-            "focalY": 50,
-            "sizes": {
-              "thumbnail": {
-                "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-400x175.webp",
-                "width": 400,
-                "height": 175,
-                "mimeType": "image/webp",
-                "filesize": 19782,
-                "filename": "PlatinumAdvisorsThumbnailOriginal-1-400x175.webp"
-              },
-              "small": {
-                "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-768x336.webp",
-                "width": 768,
-                "height": 336,
-                "mimeType": "image/webp",
-                "filesize": 46788,
-                "filename": "PlatinumAdvisorsThumbnailOriginal-1-768x336.webp"
-              },
-              "medium": {
-                "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp",
-                "width": 1200,
-                "height": 525,
-                "mimeType": "image/webp",
-                "filesize": 71692,
-                "filename": "PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp"
-              },
-              "large": {
-                "url": null,
-                "width": null,
-                "height": null,
-                "mimeType": null,
-                "filesize": null,
-                "filename": null
-              },
-              "hero": {
-                "url": null,
-                "width": null,
-                "height": null,
-                "mimeType": null,
-                "filesize": null,
-                "filename": null
-              }
-            },
-            "createdAt": "2025-03-14T17:13:28.588Z",
-            "id": "67d463b895ccfa757ba89bd1"
-          },
-          "backgroundPattern": {
-            "size": 10,
-            "backgroundOpacity": 0.97
-          }
+          ]
         },
         "createdAt": "2025-03-14T06:51:14.689Z",
-        "updatedAt": "2025-03-20T19:31:38.409Z",
+        "updatedAt": "2025-03-27T22:51:24.174Z",
         "url": "https://www.platinumadvisors.com",
         "year": "2023",
         "slug": "platinum-advisors",
