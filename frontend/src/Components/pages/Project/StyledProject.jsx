@@ -12,11 +12,13 @@ const StyledProject = styled.div`
       : 'none'};
     background-size: ${$backgroundPattern['size'] + '%'};
     .projectIntro {
+      position: relative;
+      z-index: 1;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 70px;
       overflow: hidden;
-      padding-bottom: 50px;
+      padding-bottom: 70px;
 
       .introText {
         overflow: visible;
@@ -71,6 +73,12 @@ const StyledProject = styled.div`
             ${theme.withOpacity(theme.colors.fog, 0.1)};
         }
       }
+    }
+    .projectContent {
+      padding-block: 50px;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 0 50px 70px ${theme.colors.white};
     }
   `}
 `;

@@ -58,6 +58,11 @@ const Project = () => {
   const project = pageData.collection.projects.docs.find(
     (potentialProject) => potentialProject['slug'] === projectSlug
   );
+
+  // Background opacity
+  const backgroundOpacity = project['pageContent']['backgroundPattern']['svg']
+    ? project['pageContent']['backgroundPattern']['backgroundOpacity']
+    : 1;
   return (
     <StyledProject
       $bgcolor={
@@ -69,9 +74,12 @@ const Project = () => {
       $staticContext={staticContext}
     >
       <Header variant={'light'} overlapTopSection={true} />
-      <ProjectIntro project={project} />
-      <ProjectContent content={project['pageContent']['content']} />
-      <Footer />
+      <ProjectIntro project={project} backgroundOpacity={backgroundOpacity} />
+      <ProjectContent
+        content={project['pageContent']['content']}
+        backgroundOpacity={backgroundOpacity}
+      />
+      <Footer variant="light" />
     </StyledProject>
   );
 };
@@ -80,19 +88,16 @@ const Project = () => {
  * Project Intro - Intro section with project title, info, summary and featured image
  * @param {object} props - The props passed to the component
  * @param {object} props.project - The project data
+ * @param {number} props.backgroundOpacity - The opacity of the background (pattern shows through)
  * @returns {JSX.Element} The rendered project intro
  */
-const ProjectIntro = ({ project }) => {
+const ProjectIntro = ({ project, backgroundOpacity = 1 }) => {
   return (
     <ThemedSection
       className="projectIntro"
       themeName="dark"
       width="medium"
-      backgroundOpacity={
-        project['pageContent']['backgroundPattern']['svg']
-          ? project['pageContent']['backgroundPattern']['backgroundOpacity']
-          : 1
-      }
+      backgroundOpacity={backgroundOpacity}
     >
       {(inView) => (
         <>
@@ -167,22 +172,41 @@ const InfoItem = ({ title, content }) => {
  * Project Content - Renders the project blocks or an excerpt if the project has no block content
  * @param {object} props - The props passed to the component
  * @param {object} props.content - The individual project content
+ * @param {number} props.backgroundOpacity - The opacity of the background (pattern shows through)
  * @returns {JSX.Element} The rendered project content
  */
-const ProjectContent = ({ content }) => {
+const ProjectContent = ({ content, backgroundOpacity = 1 }) => {
   if (!content || content.length === 0) {
-    return <></>;
+    return (
+      <ThemedSection
+        className="projectContent"
+        themeName="light"
+        width="medium"
+        backgroundOpacity={backgroundOpacity}
+      >
+        {(inView) => <></>}
+      </ThemedSection>
+    );
   }
   // Render block content
   return (
-    <section className="projectContent">
-      {content.map((block, index) => {
-        if (block['blockType'] === 'textBlock') {
-          return <TextBlock key={index} block={block} />;
-        }
-        return null;
-      })}
-    </section>
+    <ThemedSection
+      className="projectContent"
+      themeName="light"
+      width="medium"
+      backgroundOpacity={backgroundOpacity}
+    >
+      {(inView) => (
+        <>
+          {content.map((block, index) => {
+            if (block['blockType'] === 'textBlock') {
+              return <TextBlock key={index} block={block} />;
+            }
+            return null;
+          })}
+        </>
+      )}
+    </ThemedSection>
   );
 };
 

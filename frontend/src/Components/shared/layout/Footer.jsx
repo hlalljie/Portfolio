@@ -6,8 +6,10 @@ import { css } from 'styled-components';
 import ThemedSection from '@/Components/shared/layout/ThemedSection';
 
 const footerStyles = css`
+  position: relative;
+  z-index: 100;
   margin: 0;
-  padding-bottom: 5px;
+  padding-block: 5px;
   display: flex;
   min-height: 0;
   align-items: center;
@@ -17,18 +19,19 @@ const footerStyles = css`
     margin: 0;
     line-height: inherit;
     text-align: center;
-    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
 /**
  * Footer: Footer Section to be used on all pages
+ * @param {object} props - The properties for the Footer component
+ * @param {string} props.variant - The color scheme of the footer
  * @returns {JSX.Element}
  */
-function Footer() {
+function Footer({ variant = 'dark' }) {
   return (
     <ThemedSection
-      themeName="dark"
+      themeName={variant}
       additionalStyles={footerStyles}
       className="footer"
       sectionSize="tiny"

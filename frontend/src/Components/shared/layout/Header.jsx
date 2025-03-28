@@ -17,6 +17,7 @@ import CloseMenu from '@/assets/CloseMenu.svg?react';
 const HeaderDiv = styled.div`
   ${({ theme, $overlapTopSection, $variant }) => css`
     /* Layout */
+    z-index: 100;
     position: ${$overlapTopSection ? 'absolute' : 'relative'};
     ${!$overlapTopSection &&
     $variant !== 'transparent' &&
