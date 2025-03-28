@@ -74,7 +74,7 @@ const Project = () => {
       $backgroundPattern={project['pageContent']['backgroundPattern']}
       $staticContext={staticContext}
     >
-      <Header variant={'light'} overlapTopSection={true} />
+      <Header variant="light" overlapTopSection={true} animate={false} />
       <ProjectIntro project={project} backgroundOpacity={backgroundOpacity} />
       <ProjectContent
         content={project['pageContent']['content']}
