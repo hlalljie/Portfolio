@@ -2,8 +2,8 @@ import React from 'react';
 
 /**
  * RichText: Renders rich text content from Payload to a React component
- * @param {object} this.props - The props passed to the component
- * @param {object} this.props.content - The rich text content to be rendered
+ * @param {object} props - The props passed to the component
+ * @param {object} props.content - The rich text content to be rendered
  * @returns {JSX.Element} - The rendered rich text content
  */
 const RichText = ({ content }) => {
@@ -32,7 +32,7 @@ const serializeLexical = (content) => {
       // Get the text content
       let textContent = node.text || '';
 
-      // Apply formatting based on format property
+      // Apply text-level formatting
       if (node.format === 1 || node.bold) {
         textContent = <strong>{textContent}</strong>;
       } else if (node.format === 2 || node.italic) {
@@ -49,29 +49,47 @@ const serializeLexical = (content) => {
       <React.Fragment key={i}>{renderNode(child)}</React.Fragment>
     ));
 
+    // Apply formatting to container elements (paragraphs, headings)
+    const applyFormatting = (element) => {
+      // Handle block-level formatting like alignment
+      if (node.format === 'center') {
+        return <center>{element}</center>;
+      }
+      return element;
+    };
+
     // Map node types to HTML elements
     switch (node.type) {
       case 'root':
         return <>{children}</>;
       case 'paragraph':
-        return <p>{children}</p>;
+        return applyFormatting(<p>{children}</p>);
       case 'heading': {
         // Handle different heading levels
-        const level = node.tag || 2; // Default to h2 if tag is missing
+        const level = node.tag || 'h2'; // Default to h2 if tag is missing
+        let headingElement;
+
         switch (level) {
-          case 1:
-            return <h1>{children}</h1>;
-          case 2:
-            return <h2>{children}</h2>;
-          case 3:
-            return <h3>{children}</h3>;
-          case 4:
-            return <h4>{children}</h4>;
-          case 5:
-            return <h5>{children}</h5>;
+          case 'h1':
+            headingElement = <h1>{children}</h1>;
+            break;
+          case 'h2':
+            headingElement = <h2>{children}</h2>;
+            break;
+          case 'h3':
+            headingElement = <h3>{children}</h3>;
+            break;
+          case 'h4':
+            headingElement = <h4>{children}</h4>;
+            break;
+          case 'h5':
+            headingElement = <h5>{children}</h5>;
+            break;
           default:
-            return <h6>{children}</h6>;
+            headingElement = <h6>{children}</h6>;
         }
+
+        return applyFormatting(headingElement);
       }
       case 'list':
         return node.listType === 'bullet' ? (

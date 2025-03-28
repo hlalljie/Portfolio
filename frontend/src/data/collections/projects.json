@@ -777,7 +777,7 @@
         "Designer",
         "Developer"
       ],
-      "excerpt": "Next Adventure was looking to stun visitor with visuals of safari wildlife while crafting a unique user experience based on how long until planned journey.",
+      "excerpt": "An immersive website for a full-service safari adventure company.",
       "technologies": [
         "Squarespace",
         "Javascript",
@@ -786,72 +786,114 @@
       "year": "2021",
       "url": "nextadventure.com",
       "pageContent": {
-        "content": [],
         "featuredImage": {
-          "updatedAt": "2025-03-17T00:28:04.532Z",
-          "alt": "Next Adventure explore page screenshot",
-          "url": "/api/media/file/nextAdventureThumbnail-1.webp",
-          "thumbnailURL": null,
-          "filename": "nextAdventureThumbnail-1.webp",
+          "alt": "Screenshot of Next Adventure's homepage",
+          "filename": "next-adventure-homepage.webp",
           "mimeType": "image/webp",
-          "filesize": 75388,
+          "filesize": 597060,
           "width": 1920,
-          "height": 832,
+          "height": 5586,
           "focalX": 50,
           "focalY": 50,
           "sizes": {
             "thumbnail": {
-              "url": "/api/media/file/nextAdventureThumbnail-1-400x173.webp",
               "width": 400,
-              "height": 173,
+              "height": 1164,
               "mimeType": "image/webp",
-              "filesize": 14274,
-              "filename": "nextAdventureThumbnail-1-400x173.webp"
+              "filesize": 75480,
+              "filename": "next-adventure-homepage-400x1164.webp",
+              "url": "/api/media/file/next-adventure-homepage-400x1164.webp"
             },
             "small": {
-              "url": "/api/media/file/nextAdventureThumbnail-1-768x333.webp",
               "width": 768,
-              "height": 333,
+              "height": 2234,
               "mimeType": "image/webp",
-              "filesize": 27118,
-              "filename": "nextAdventureThumbnail-1-768x333.webp"
+              "filesize": 172080,
+              "filename": "next-adventure-homepage-768x2234.webp",
+              "url": "/api/media/file/next-adventure-homepage-768x2234.webp"
             },
             "medium": {
-              "url": "/api/media/file/nextAdventureThumbnail-1-1200x520.webp",
               "width": 1200,
-              "height": 520,
+              "height": 3491,
               "mimeType": "image/webp",
-              "filesize": 37314,
-              "filename": "nextAdventureThumbnail-1-1200x520.webp"
+              "filesize": 273658,
+              "filename": "next-adventure-homepage-1200x3491.webp",
+              "url": "/api/media/file/next-adventure-homepage-1200x3491.webp"
             },
             "large": {
-              "url": "/api/media/file/nextAdventureThumbnail-1-1800x780.webp",
               "width": 1800,
-              "height": 780,
+              "height": 5237,
               "mimeType": "image/webp",
-              "filesize": 57574,
-              "filename": "nextAdventureThumbnail-1-1800x780.webp"
+              "filesize": 461392,
+              "filename": "next-adventure-homepage-1800x5237.webp",
+              "url": "/api/media/file/next-adventure-homepage-1800x5237.webp"
             },
             "hero": {
-              "url": null,
               "width": null,
               "height": null,
               "mimeType": null,
               "filesize": null,
-              "filename": null
+              "filename": null,
+              "url": null
             }
           },
-          "createdAt": "2025-03-17T00:26:56.351Z",
-          "name": "Next Adventure Banner",
-          "id": "67d76c50929c408084eb052a"
+          "createdAt": "2025-03-28T22:50:49.161Z",
+          "updatedAt": "2025-03-28T22:50:49.161Z",
+          "id": "67e727c93134d0caffa1a78d",
+          "url": "/api/media/file/next-adventure-homepage.webp",
+          "thumbnailURL": null
         },
         "backgroundPattern": {
-          "size": 10,
+          "svg": {
+            "filename": "topography.svg",
+            "mimeType": "image/svg+xml",
+            "filesize": 91567,
+            "width": 600,
+            "height": 600,
+            "createdAt": "2025-03-28T22:59:18.496Z",
+            "updatedAt": "2025-03-28T22:59:18.496Z",
+            "id": "67e729c63134d0caffa1b134",
+            "url": "/api/patterns/file/topography.svg",
+            "thumbnailURL": null
+          },
+          "size": 30,
           "backgroundOpacity": 0.97
-        }
+        },
+        "intro": {
+          "root": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Next Adventure is a safari service that provides custom crafted journeys for clients. They were looking for a website that transported users to Africa with stunning visuals. We crafted a unique experience for 3 different kinds of clients, sending them to different areas of the website depending on how soon they were planning to journey to Africa.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
+              }
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "type": "root",
+            "version": 1
+          }
+        },
+        "content": []
       },
       "createdAt": "2025-03-17T00:27:39.437Z",
-      "updatedAt": "2025-03-20T19:31:38.416Z",
+      "updatedAt": "2025-03-28T23:00:38.615Z",
       "publicationStatus": "published",
       "id": "67d76c7b929c408084eb054c"
     },
@@ -1027,6 +1069,16 @@
                 "version": 1,
                 "textFormat": 0,
                 "textStyle": ""
+              },
+              {
+                "children": [],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
               }
             ],
             "direction": "ltr",
@@ -1036,10 +1088,75 @@
             "version": 1
           }
         },
-        "content": []
+        "content": [
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "\"Hayden, Caely and the rest of the team did a great job. They were very responsive, provided thoughtful suggestions, and overall were a professional and capable partner. Highly recommended!\"",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "center",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Andrew G.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "center",
+                    "indent": 0,
+                    "type": "heading",
+                    "version": 1,
+                    "tag": "h4"
+                  },
+                  {
+                    "children": [],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67e71fb622d43c685d216a00"
+          }
+        ]
       },
       "createdAt": "2025-03-17T00:20:21.705Z",
-      "updatedAt": "2025-03-27T06:41:58.207Z",
+      "updatedAt": "2025-03-28T22:36:25.536Z",
       "publicationStatus": "published",
       "id": "67d76ac5929c408084eb0473"
     },
@@ -1484,58 +1601,58 @@
           "alt": "Screenshot of Platinum Advisors website homepage",
           "filename": "platinum-homepage.webp",
           "mimeType": "image/webp",
-          "filesize": 1295432,
-          "width": 2560,
+          "filesize": 1044484,
+          "width": 2527,
           "height": 7764,
           "focalX": 50,
           "focalY": 50,
           "sizes": {
             "thumbnail": {
+              "url": "/api/media/file/platinum-homepage-400x1229.webp",
               "width": 400,
-              "height": 1213,
+              "height": 1229,
               "mimeType": "image/webp",
-              "filesize": 82150,
-              "filename": "platinum-homepage-400x1213.webp",
-              "url": "/api/media/file/platinum-homepage-400x1213.webp"
+              "filesize": 80868,
+              "filename": "platinum-homepage-400x1229.webp"
             },
             "small": {
+              "url": "/api/media/file/platinum-homepage-768x2360.webp",
               "width": 768,
-              "height": 2329,
+              "height": 2360,
               "mimeType": "image/webp",
-              "filesize": 209244,
-              "filename": "platinum-homepage-768x2329.webp",
-              "url": "/api/media/file/platinum-homepage-768x2329.webp"
+              "filesize": 197134,
+              "filename": "platinum-homepage-768x2360.webp"
             },
             "medium": {
+              "url": "/api/media/file/platinum-homepage-1200x3687.webp",
               "width": 1200,
-              "height": 3639,
+              "height": 3687,
               "mimeType": "image/webp",
-              "filesize": 371736,
-              "filename": "platinum-homepage-1200x3639.webp",
-              "url": "/api/media/file/platinum-homepage-1200x3639.webp"
+              "filesize": 336014,
+              "filename": "platinum-homepage-1200x3687.webp"
             },
             "large": {
+              "url": "/api/media/file/platinum-homepage-1800x5530.webp",
               "width": 1800,
-              "height": 5459,
+              "height": 5530,
               "mimeType": "image/webp",
-              "filesize": 678390,
-              "filename": "platinum-homepage-1800x5459.webp",
-              "url": "/api/media/file/platinum-homepage-1800x5459.webp"
+              "filesize": 595082,
+              "filename": "platinum-homepage-1800x5530.webp"
             },
             "hero": {
+              "url": "/api/media/file/platinum-homepage-2500x7681.webp",
               "width": 2500,
-              "height": 7582,
+              "height": 7681,
               "mimeType": "image/webp",
-              "filesize": 1041460,
-              "filename": "platinum-homepage-2500x7582.webp",
-              "url": "/api/media/file/platinum-homepage-2500x7582.webp"
+              "filesize": 885140,
+              "filename": "platinum-homepage-2500x7681.webp"
             }
           },
           "createdAt": "2025-03-27T22:41:15.005Z",
-          "updatedAt": "2025-03-27T22:41:15.005Z",
-          "id": "67e5d40ac1a8ca689fd7e435",
+          "updatedAt": "2025-03-27T22:58:26.103Z",
+          "thumbnailURL": null,
           "url": "/api/media/file/platinum-homepage.webp",
-          "thumbnailURL": null
+          "id": "67e5d40ac1a8ca689fd7e435"
         },
         "backgroundPattern": {
           "size": 10,
