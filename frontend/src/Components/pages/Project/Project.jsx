@@ -18,6 +18,7 @@ import RichText from '@/Components/shared/ui/RichText';
 import LoadingScreen from '@/Components/shared/ui/LoadingScreen';
 // Styles
 import StyledProject from './StyledProject';
+import { LinkIcons } from '@/Components/shared/ui/LinkIcons';
 
 /**
  * A Basic Case Study Layout including a summary and image
@@ -135,6 +136,12 @@ const ProjectIntro = ({ project, backgroundOpacity = 1 }) => {
             ) : (
               <p>{project['excerpt']}</p>
             )}
+            {/* Links */}
+            <LinkIcons
+              url={project.url || null}
+              github={project.github || null}
+              itchio={project.itchio || null}
+            />
           </div>
           <div className="featuredImageContainer">
             {project['pageContent']['featuredImage'] && (

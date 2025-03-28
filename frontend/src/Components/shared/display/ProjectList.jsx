@@ -1,14 +1,13 @@
 // External Imports
 import { styled, css } from 'styled-components';
 import { HashLink as Link } from 'react-router-hash-link';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LaunchIcon from '@mui/icons-material/Launch';
 
 // Internal Imports
 // Display
 import TagList from '@/Components/shared/display/TagList';
 // UI
 import AdaptiveImage from '@/Components/shared/ui/AdaptiveImage';
+import { LinkIcons } from '@/Components/shared/ui/LinkIcons';
 // Styles
 import { tablet } from '@/styles/mediaQueries';
 // Utils
@@ -131,17 +130,6 @@ const StyledProjectCard = styled('div')`
         font-weight: 500;
       }
     }
-    .linkContainer {
-      svg {
-        transform: scale(1.2);
-        transform-origin: left center;
-        path {
-          fill: ${$variant === 'light'
-            ? theme.colors.white
-            : theme.colors.black};
-        }
-      }
-    }
   `}
 `;
 /**
@@ -185,27 +173,7 @@ const ProjectCard = ({
         filled={variant === 'light' ? true : false}
       />
       {hideLinks === false && (
-        <div className="linkContainer">
-          {project['url'] && (
-            <a
-              href={project['url']}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="View Live Website"
-            >
-              <LaunchIcon aria-hidden="true" />
-            </a>
-          )}
-          {project['github'] && (
-            <a
-              href={project['github']}
-              target="_blank"
-              aria-label="View Project Github"
-            >
-              <GitHubIcon aria-hidden="true" />
-            </a>
-          )}
-        </div>
+        <LinkIcons url={project['url']} github={project['github']} />
       )}
     </StyledProjectCard>
   );
