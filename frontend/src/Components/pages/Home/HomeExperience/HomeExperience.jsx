@@ -25,6 +25,7 @@ const homeExperienceStyles = css`
     }
     /* Tablet and smaller */
     ${tablet(css`
+      padding-bottom: 120px;
       .sectionTitle {
         text-align: left;
         color: ${theme.colors.black};

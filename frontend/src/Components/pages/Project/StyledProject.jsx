@@ -5,7 +5,7 @@ import { styled, css } from 'styled-components';
 // Utils
 import { formatImageURL } from '@/utils/formatImageURL';
 // Styles
-import { tablet } from '@/styles/mediaQueries';
+import { tablet, mobile } from '@/styles/mediaQueries';
 
 const StyledProject = styled.div`
   ${({ theme, $backgroundPattern, $staticContext }) => css`
@@ -87,6 +87,8 @@ const StyledProject = styled.div`
       box-shadow: 0 0 50px 70px ${theme.colors.white};
     }
 
+    /* Media Queries */
+    // Tablet
     ${tablet(css`
       .projectIntro {
         display: flex;
@@ -94,8 +96,8 @@ const StyledProject = styled.div`
         padding-bottom: 0;
         .featuredImageContainer {
           contain: none;
-          height: 150vw;
-          padding: 0;
+          height: 100vw;
+          padding: 0 10vw;
           width: 100%;
           .featuredImage {
             width: 100%;
@@ -104,6 +106,21 @@ const StyledProject = styled.div`
             object-position: top;
           }
         }
+        .projectContent {
+          transform: translateZ(0);
+        }
+      }
+    `)}
+
+    // Mobile
+    ${mobile(css`
+      .projectIntro {
+        .featuredImageContainer {
+          padding: 0px;
+        }
+      }
+      .projectContent {
+        transform: translateZ(0);
       }
     `)}
   `}

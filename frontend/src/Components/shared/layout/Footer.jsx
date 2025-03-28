@@ -4,6 +4,7 @@ import { css } from 'styled-components';
 // Internal Imports
 // Layout
 import ThemedSection from '@/Components/shared/layout/ThemedSection';
+import { tablet } from '@/styles/mediaQueries';
 
 const footerStyles = css`
   position: relative;
@@ -20,6 +21,11 @@ const footerStyles = css`
     line-height: inherit;
     text-align: center;
   }
+
+  /* Tablet and smaller */
+  ${tablet(css`
+    margin-top: -1px; // correct for pixel gap on mobile
+  `)}
 `;
 
 /**

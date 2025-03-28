@@ -19,6 +19,7 @@ import LoadingScreen from '@/Components/shared/ui/LoadingScreen';
 // Styles
 import StyledProject from './StyledProject';
 import { LinkIcons } from '@/Components/shared/ui/LinkIcons';
+import { breakpoints } from '@/styles/mediaQueries';
 
 /**
  * A Basic Case Study Layout including a summary and image
@@ -148,6 +149,7 @@ const ProjectIntro = ({ project, backgroundOpacity = 1 }) => {
               <AdaptiveImage
                 className="featuredImage"
                 imageData={project['pageContent']['featuredImage']}
+                sizes={`(max-width: ${breakpoints.tablet}px) 80vw, (max-width: ${breakpoints.mobile}px) 99vw, 33vw`}
               />
             )}
           </div>

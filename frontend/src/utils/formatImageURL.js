@@ -15,10 +15,5 @@ export const formatImageURL = (
     return `http://localhost:3000${url}`;
   }
   // if not using api, strip change prefix
-  console.log('url', url);
-  console.log(
-    'new url',
-    url.replace(`/api/${imageFolder}/file/`, `/${imageFolder}/`)
-  );
   return url.replace(`/api/${imageFolder}/file/`, `/${imageFolder}/`);
 };
