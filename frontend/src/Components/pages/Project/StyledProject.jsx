@@ -1,5 +1,11 @@
+// External Imports
 import { styled, css } from 'styled-components';
+
+// Internal Imports
+// Utils
 import { formatImageURL } from '@/utils/formatImageURL';
+// Styles
+import { tablet } from '@/styles/mediaQueries';
 
 const StyledProject = styled.div`
   ${({ theme, $backgroundPattern, $staticContext }) => css`
@@ -80,6 +86,26 @@ const StyledProject = styled.div`
       z-index: 2;
       box-shadow: 0 0 50px 70px ${theme.colors.white};
     }
+
+    ${tablet(css`
+      .projectIntro {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+        .featuredImageContainer {
+          contain: none;
+          height: 150vw;
+          padding: 0;
+          width: 100%;
+          .featuredImage {
+            width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            object-position: top;
+          }
+        }
+      }
+    `)}
   `}
 `;
 
