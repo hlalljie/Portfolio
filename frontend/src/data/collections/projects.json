@@ -816,8 +816,20 @@
           "thumbnailURL": null
         },
         "backgroundPattern": {
-          "size": 10,
-          "backgroundOpacity": 0.97
+          "svg": {
+            "filename": "tiny-checkers.svg",
+            "mimeType": "image/svg+xml",
+            "filesize": 137,
+            "width": 8,
+            "height": 8,
+            "createdAt": "2025-03-29T02:41:59.948Z",
+            "updatedAt": "2025-03-29T02:41:59.948Z",
+            "id": "67e75df73134d0caffa25a57",
+            "url": "/api/patterns/file/tiny-checkers.svg",
+            "thumbnailURL": null
+          },
+          "size": 20,
+          "backgroundOpacity": 0.99
         },
         "intro": {
           "root": {
@@ -853,7 +865,7 @@
         "content": []
       },
       "createdAt": "2025-03-17T03:01:49.116Z",
-      "updatedAt": "2025-03-29T02:10:05.907Z",
+      "updatedAt": "2025-03-29T02:42:25.108Z",
       "publicationStatus": "published",
       "id": "67d7909d2c31a9c4c483679c"
     },
