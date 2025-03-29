@@ -15,10 +15,17 @@ import BurgerMenu from '@/assets/BurgerMenu.svg?react';
 import CloseMenu from '@/assets/CloseMenu.svg?react';
 
 const HeaderDiv = styled.div`
-  ${({ theme }) => css`
+  ${({ theme, $overlapTopSection, $variant, $transparent, $animate }) => css`
     /* Layout */
-    position: ${({ $overlapTopSection }) =>
-      $overlapTopSection ? 'absolute' : 'relative'};
+    z-index: 100;
+    position: ${$overlapTopSection ? 'absolute' : 'relative'};
+    ${!$overlapTopSection &&
+    !$transparent &&
+    css`
+      background-color: ${$variant === 'dark'
+        ? theme.colors.white
+        : theme.colors.black};
+    `}
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +35,10 @@ const HeaderDiv = styled.div`
     box-sizing: border-box;
 
     /* Animation */
-    animation: ${fadeIn} 1s ease-in-out;
+    ${$animate &&
+    css`
+      animation: ${fadeIn} 1s ease-in-out;
+    `}
 
     .socials {
       margin-left: 17px;
@@ -38,7 +48,14 @@ const HeaderDiv = styled.div`
       display: none;
     }
     ${tablet(css`
+      transform: translateZ(0);
       position: relative;
+      ${!$transparent &&
+      css`
+        background-color: ${$variant === 'dark'
+          ? theme.colors.white
+          : theme.colors.black};
+      `}
       .socials {
         margin-left: auto;
       }
@@ -47,8 +64,9 @@ const HeaderDiv = styled.div`
         transform: scale(2.5);
         /* Coloring */
         g path {
-          stroke: ${({ $variant }) =>
-            $variant === 'dark' ? theme.colors.black : theme.colors.white};
+          stroke: ${$variant === 'dark'
+            ? theme.colors.black
+            : theme.colors.white};
         }
         &.show {
           display: block;
@@ -60,7 +78,7 @@ const HeaderDiv = styled.div`
         top: 30px;
         right: 15px;
         z-index: 11;
-        fill: ${(props) => props.theme.colors.darkAccent};
+        fill: ${theme.colors.darkAccent};
         &.show {
           display: block;
         }
@@ -73,13 +91,19 @@ const HeaderDiv = styled.div`
 export {};
 /**
  * Header: Header Section to be used on all pages
- 
  * @param {Object} props
  * @param {HeaderVariant} props.variant - Color scheme of header, 'dark' or 'light'
+ * @param {boolean} props.transparent - Whether the header should be transparent
+ * @param {boolean} props.animate - Whether the header should animate
  * @param {boolean} props.overlapTopSection - Whether the header should go over the top section, false and the header will be above the first section
  * @returns {JSX.Element}
  */
-function Header({ variant = 'dark', overlapTopSection = true }) {
+function Header({
+  variant = 'dark',
+  overlapTopSection = true,
+  transparent = false,
+  animate = true,
+}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   /**
@@ -88,7 +112,12 @@ function Header({ variant = 'dark', overlapTopSection = true }) {
    */
   const closeMenu = () => setMobileMenuOpen(false);
   return (
-    <HeaderDiv $variant={variant} $overlapTopSection={overlapTopSection}>
+    <HeaderDiv
+      $variant={variant}
+      $overlapTopSection={overlapTopSection}
+      $transparent={transparent}
+      $animate={animate}
+    >
       <Branding variant={variant} />
       <Nav
         variant={variant}

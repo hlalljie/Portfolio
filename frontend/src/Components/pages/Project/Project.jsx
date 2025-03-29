@@ -1,50 +1,34 @@
 // External Imports
-import { useMemo } from 'react';
-import { styled, css, useTheme } from 'styled-components';
+import { useMemo, useContext } from 'react';
+import { useTheme } from 'styled-components';
 import { useParams } from 'react-router-dom';
 
 // Internal Imports
+// Context
+import { AppContext } from '@/context/AppContext';
 // Hooks
 import usePayloadData from '@/hooks/usePayloadData';
 // Layouts
 import Header from '@/Components/shared/layout/Header';
+import Footer from '@/Components/shared/layout/Footer';
+import ThemedSection from '@/Components/shared/layout/ThemedSection';
 // UI
 import AdaptiveImage from '@/Components/shared/ui/AdaptiveImage';
 import RichText from '@/Components/shared/ui/RichText';
 import LoadingScreen from '@/Components/shared/ui/LoadingScreen';
 // Styles
-import { tablet } from '@/styles/mediaQueries';
+import StyledProject from './StyledProject';
+import { LinkIcons } from '@/Components/shared/ui/LinkIcons';
+import { breakpoints } from '@/styles/mediaQueries';
 
-const StyledProject = styled.div`
-  ${({ theme }) => css`
-    background-color: ${({ $bgcolor }) => $bgcolor};
-    color: ${theme.colors.white};
-    min-height: 100vh;
-    height: fit-content;
-    .portfolioContent {
-      padding-block: 1vw;
-      padding-inline: ${theme.padding.largeSection};
-      .heroImage {
-        width: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-block: 2vw;
-      }
-      p {
-        white-space: pre-line;
-      }
-    }
-    ${tablet(css`
-      .portfolioContent .heroImage {
-      }
-    `)}
-  `}
-`;
 /**
  * A Basic Case Study Layout including a summary and image
  * @returns {JSX.Element}
  */
 const Project = () => {
+  // Get static context
+  const { staticContext } = useContext(AppContext);
+
   // Get url
   const { projectSlug } = useParams();
   const theme = useTheme();
@@ -62,6 +46,7 @@ const Project = () => {
   // Load page data
   const { loading, pageData } = usePayloadData(hookOptions);
 
+  // Show loading screen while data is loading
   if (
     loading ||
     !pageData ||
@@ -75,6 +60,11 @@ const Project = () => {
   const project = pageData.collection.projects.docs.find(
     (potentialProject) => potentialProject['slug'] === projectSlug
   );
+
+  // Background opacity
+  const backgroundOpacity = project['pageContent']['backgroundPattern']['svg']
+    ? project['pageContent']['backgroundPattern']['backgroundOpacity']
+    : 1;
   return (
     <StyledProject
       $bgcolor={
@@ -82,47 +72,151 @@ const Project = () => {
           ? project['backgroundColor']
           : theme.colors.black
       }
+      $backgroundPattern={project['pageContent']['backgroundPattern']}
+      $staticContext={staticContext}
     >
-      <Header variant={'light'} overlapTopSection={false} />
-      <section className="portfolioContent">
-        {project['pageContent']['bannerImage'] && (
-          <AdaptiveImage
-            className="heroImage"
-            imageData={project['pageContent']['bannerImage']}
-          />
-        )}
-        {project['fullTitle'] ? (
-          <h1>{project['fullTitle']}</h1>
-        ) : (
-          <h1>{project['title']}</h1>
-        )}
-        <ProjectContent project={project} />
-      </section>
+      <Header variant="light" overlapTopSection={true} animate={false} />
+      <ProjectIntro project={project} backgroundOpacity={backgroundOpacity} />
+      <ProjectContent
+        content={project['pageContent']['content']}
+        backgroundOpacity={backgroundOpacity}
+      />
+      <Footer variant="light" />
     </StyledProject>
+  );
+};
+
+/**
+ * Project Intro - Intro section with project title, info, summary and featured image
+ * @param {object} props - The props passed to the component
+ * @param {object} props.project - The project data
+ * @param {number} props.backgroundOpacity - The opacity of the background (pattern shows through)
+ * @returns {JSX.Element} The rendered project intro
+ */
+const ProjectIntro = ({ project, backgroundOpacity = 1 }) => {
+  return (
+    <ThemedSection
+      className="projectIntro"
+      themeName="dark"
+      width="medium"
+      backgroundOpacity={backgroundOpacity}
+    >
+      {(inView) => (
+        <>
+          {/* Title */}
+          <div className="introText">
+            {project['fullTitle'] ? (
+              <h1>{project['fullTitle']}</h1>
+            ) : (
+              <h1>{project['title']}</h1>
+            )}
+            <hr />
+            {/* Type and year info Below line */}
+            <div className="subInfo">
+              <h7>
+                {project['type'] === 'personal'
+                  ? 'Personal Project'
+                  : 'Professional Portfolio'}
+              </h7>
+              <h7>{project['year']}</h7>
+            </div>
+            {/* Other info */}
+            <ul className="otherInfo">
+              <InfoItem title="Roles" content={project['roles']} />
+              {project['company'] && (
+                <InfoItem title="At" content={project['company']} />
+              )}
+              <InfoItem
+                title="Technologies"
+                content={project['technologies']}
+              />
+            </ul>
+            {/* Intro summary*/}
+            {project['pageContent']['intro'] ? (
+              <RichText content={project['pageContent']['intro']} />
+            ) : (
+              <p>{project['excerpt']}</p>
+            )}
+            {/* Links */}
+            <LinkIcons
+              url={project.url || null}
+              github={project.github || null}
+              itchio={project.itchio || null}
+            />
+          </div>
+          <div className="featuredImageContainer">
+            {project['pageContent']['featuredImage'] && (
+              <AdaptiveImage
+                className="featuredImage"
+                imageData={project['pageContent']['featuredImage']}
+                sizes={`(max-width: ${breakpoints.tablet}px) 80vw, (max-width: ${breakpoints.mobile}px) 99vw, 33vw`}
+              />
+            )}
+          </div>
+        </>
+      )}
+    </ThemedSection>
+  );
+};
+
+/**
+ * Info Item - Renders an info item with title and content
+ * @param {object} props - The props passed to the component
+ * @param {string} props.title - The title of the info item
+ * @param {string | string[]} props.content - The content of the info item
+ * @returns {JSX.Element} The rendered info item
+ */
+const InfoItem = ({ title, content }) => {
+  return (
+    <li>
+      <h5 className="infoTitle">{title}</h5>
+      <h6 className="infoContent">
+        {Array.isArray(content) ? content.join(' - ') : content}
+      </h6>
+    </li>
   );
 };
 
 /**
  * Project Content - Renders the project blocks or an excerpt if the project has no block content
  * @param {object} props - The props passed to the component
- * @param {object} props.project - The individual project data
+ * @param {object} props.content - The individual project content
+ * @param {number} props.backgroundOpacity - The opacity of the background (pattern shows through)
  * @returns {JSX.Element} The rendered project content
  */
-const ProjectContent = ({ project }) => {
-  const content = project['pageContent']['content'];
-
-  // If no content, show excerpt
-  if (content === undefined || content === null || content.length === 0) {
-    return <p>{project['excerpt']}</p>;
+const ProjectContent = ({ content, backgroundOpacity = 1 }) => {
+  if (!content || content.length === 0) {
+    return (
+      <ThemedSection
+        className="projectContent"
+        themeName="light"
+        width="medium"
+        backgroundOpacity={backgroundOpacity}
+      >
+        {(inView) => <></>}
+      </ThemedSection>
+    );
   }
-
   // Render block content
-  return content.map((block, index) => {
-    if (block['blockType'] === 'textBlock') {
-      return <TextBlock key={index} block={block} />;
-    }
-    return null;
-  });
+  return (
+    <ThemedSection
+      className="projectContent"
+      themeName="light"
+      width="medium"
+      backgroundOpacity={backgroundOpacity}
+    >
+      {(inView) => (
+        <>
+          {content.map((block, index) => {
+            if (block['blockType'] === 'textBlock') {
+              return <TextBlock key={index} block={block} />;
+            }
+            return null;
+          })}
+        </>
+      )}
+    </ThemedSection>
+  );
 };
 
 /**

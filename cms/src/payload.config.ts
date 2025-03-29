@@ -17,6 +17,7 @@ import { PortfolioPage } from './globals/PortfolioPage'
 // Collections
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
+import { Patterns } from './collections/Patterns'
 import { ExperienceItems } from './collections/ExperienceItems'
 import { Projects } from './collections/Projects'
 // Endpoints
@@ -33,7 +34,7 @@ export default buildConfig({
     },
   },
   globals: [Homepage, ProjectsPage, PortfolioPage],
-  collections: [Users, Media, ExperienceItems, Projects],
+  collections: [Users, Media, Patterns, ExperienceItems, Projects],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

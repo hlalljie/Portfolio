@@ -4,7 +4,8 @@ import { useInView } from 'react-intersection-observer';
 
 // Internal Imports
 // Styles
-import theme from '@/Theme';
+import theme from '@/styles/theme';
+import { tablet } from '@/styles/mediaQueries';
 
 const colorThemes = {
   light: {
@@ -27,29 +28,49 @@ const StyledSection = styled.section`
   width: 100%;
   box-sizing: border-box;
 
-  ${({ $themeName }) => {
+  ${({ $themeName, $backgroundOpacity }) => {
     const { backgroundColor, color } =
       colorThemes[$themeName] || colorThemes.default;
     return css`
-      background-color: ${backgroundColor};
+      background-color: ${theme.withCorrectedOpacity(
+        backgroundColor,
+        $backgroundOpacity
+      )};
       color: ${color};
     `;
   }}
+
+  ${({ $width }) =>
+    css`
+      padding: ${theme.padding[$width + 'Section']};
+      ${tablet(css`
+        padding: ${theme.padding.fullWidthSection};
+      `)}
+    `}
+
 
   ${({ $additionalStyles }) => $additionalStyles}
 `;
 /**
  * ThemedSection: Creates a section allowing a choice of predefined color themes,
  * as well as some default section styles
- * @param {{themeName: string, additionalStyles: object, children: React.ReactNode}} param0
+ * @param {Object} props - The properties for the ThemedSection component.
+ * @param {string} props.themeName - The name of the color theme to apply.
+ * @param {string} props.additionalStyles - Additional styles to apply to the section.
+ * @param {string} props.className - The optional className for the ThemedSection component.
+ * @param {number} props.backgroundOpacity - The opacity of the background color.
+ * @param {string} props.id - The optional id attribute for the ThemedSection component.
+ * @param {string} props.width - The width of the section.
+ * @param {React.ReactNode} props.children - The children of the ThemedSection component.
  * @returns {JSX.Element}
  */
 const ThemedSection = ({
   themeName = 'default',
   additionalStyles,
   className = '',
+  backgroundOpacity = 1,
   id = '',
-  sectionSize = 'large',
+  width = 'large',
   children,
 }) => {
   const { ref, inView } = useInView({
@@ -61,7 +82,9 @@ const ThemedSection = ({
     <StyledSection
       $themeName={themeName}
       $additionalStyles={additionalStyles}
-      className={className + ' ' + themeName + ' ' + sectionSize + 'Section'}
+      $width={width}
+      $backgroundOpacity={backgroundOpacity}
+      className={className + ' ' + themeName + ' ' + width + 'WidthSection'}
       id={id}
       ref={ref}
     >

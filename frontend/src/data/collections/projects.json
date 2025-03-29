@@ -1,7 +1,7 @@
 {
   "docs": [
     {
-      "updatedAt": "2025-03-22T17:23:22.373Z",
+      "updatedAt": "2025-03-28T23:32:49.919Z",
       "title": "Royal Thai",
       "publicationStatus": "published",
       "type": "professional",
@@ -69,7 +69,7 @@
         "Designer",
         "Developer"
       ],
-      "excerpt": "A project managed and helped design a luxurious website for a well-established carpet design and manufacturing company.",
+      "excerpt": "A luxurious website for an established carpet design company.",
       "technologies": [
         "Squarespace",
         "Less",
@@ -79,62 +79,110 @@
       "github": "",
       "itchio": "",
       "pageContent": {
-        "bannerImage": {
-          "alt": "Hotel with Royal Thai Carpet",
-          "filename": "RoyalThaiHomepageSlide2.webp",
+        "featuredImage": {
+          "alt": "Screenshot of the Royal Thai homepage",
+          "name": "Royal Thai Homepage",
+          "filename": "royal-thai-homepage.webp",
           "mimeType": "image/webp",
-          "filesize": 246310,
-          "width": 2500,
-          "height": 1063,
+          "filesize": 1205350,
+          "width": 2880,
+          "height": 6684,
           "focalX": 50,
           "focalY": 50,
           "sizes": {
             "thumbnail": {
-              "url": "/api/media/file/RoyalThaiHomepageSlide2-400x170.webp",
               "width": 400,
-              "height": 170,
+              "height": 928,
               "mimeType": "image/webp",
-              "filesize": 17552,
-              "filename": "RoyalThaiHomepageSlide2-400x170.webp"
+              "filesize": 90178,
+              "filename": "royal-thai-homepage-400x928.webp",
+              "url": "/api/media/file/royal-thai-homepage-400x928.webp"
             },
             "small": {
-              "url": "/api/media/file/RoyalThaiHomepageSlide2-768x327.webp",
               "width": 768,
-              "height": 327,
+              "height": 1782,
               "mimeType": "image/webp",
-              "filesize": 38116,
-              "filename": "RoyalThaiHomepageSlide2-768x327.webp"
+              "filesize": 200210,
+              "filename": "royal-thai-homepage-768x1782.webp",
+              "url": "/api/media/file/royal-thai-homepage-768x1782.webp"
             },
             "medium": {
-              "url": "/api/media/file/RoyalThaiHomepageSlide2-1200x510.webp",
               "width": 1200,
-              "height": 510,
+              "height": 2785,
               "mimeType": "image/webp",
-              "filesize": 63772,
-              "filename": "RoyalThaiHomepageSlide2-1200x510.webp"
+              "filesize": 312040,
+              "filename": "royal-thai-homepage-1200x2785.webp",
+              "url": "/api/media/file/royal-thai-homepage-1200x2785.webp"
             },
             "large": {
-              "url": "/api/media/file/RoyalThaiHomepageSlide2-1800x765.webp",
               "width": 1800,
-              "height": 765,
+              "height": 4178,
               "mimeType": "image/webp",
-              "filesize": 120106,
-              "filename": "RoyalThaiHomepageSlide2-1800x765.webp"
+              "filesize": 534982,
+              "filename": "royal-thai-homepage-1800x4178.webp",
+              "url": "/api/media/file/royal-thai-homepage-1800x4178.webp"
             },
             "hero": {
-              "url": "/api/media/file/RoyalThaiHomepageSlide2-2500x1063.webp",
               "width": 2500,
-              "height": 1063,
+              "height": 5802,
               "mimeType": "image/webp",
-              "filesize": 240408,
-              "filename": "RoyalThaiHomepageSlide2-2500x1063.webp"
+              "filesize": 821168,
+              "filename": "royal-thai-homepage-2500x5802.webp",
+              "url": "/api/media/file/royal-thai-homepage-2500x5802.webp"
             }
           },
-          "createdAt": "2025-03-22T17:22:37.102Z",
-          "updatedAt": "2025-03-22T17:23:07.538Z",
-          "thumbnailURL": null,
-          "url": "/api/media/file/RoyalThaiHomepageSlide2.webp",
-          "id": "67def1dd98a32200f894c7a7"
+          "createdAt": "2025-03-22T17:15:23.592Z",
+          "updatedAt": "2025-03-22T17:15:23.592Z",
+          "id": "67def02b98a32200f894c5cb",
+          "url": "/api/media/file/royal-thai-homepage.webp",
+          "thumbnailURL": null
+        },
+        "backgroundPattern": {
+          "svg": {
+            "filename": "flipped-diamonds.svg",
+            "mimeType": "image/svg+xml",
+            "filesize": 789,
+            "width": 16,
+            "height": 20,
+            "createdAt": "2025-03-27T06:18:48.101Z",
+            "updatedAt": "2025-03-27T06:18:48.101Z",
+            "id": "67e4edc8e29ab24815bc0dc6",
+            "url": "/api/patterns/file/flipped-diamonds.svg",
+            "thumbnailURL": null
+          },
+          "size": 20,
+          "backgroundOpacity": 0.996
+        },
+        "intro": {
+          "root": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Royal Thai is a premier carpet manufacture and design company with a history dating back to 1967. Their goal was to create a modern design that communicated their sophistication, creativity, and legacy to a wide variety of clients around the world.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
+              }
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "type": "root",
+            "version": 1
+          }
         },
         "content": []
       },
@@ -217,63 +265,110 @@
       "year": "2024",
       "github": "https://github.com/hlalljie/bitforest-dont-get-swatted",
       "pageContent": {
-        "bannerImage": {
+        "featuredImage": {
+          "updatedAt": "2025-03-29T02:18:40.820Z",
           "alt": "Don't Get Swatted game art",
           "name": "Don't Get Swatted Main Image",
-          "filename": "DontGetSwatted.webp",
+          "url": "/api/media/file/DontGetSwatted-1.webp",
+          "thumbnailURL": null,
+          "filename": "DontGetSwatted-1.webp",
           "mimeType": "image/webp",
-          "filesize": 97990,
-          "width": 2400,
+          "filesize": 55276,
+          "width": 1351,
           "height": 1350,
           "focalX": 50,
           "focalY": 50,
           "sizes": {
             "thumbnail": {
+              "url": "/api/media/file/DontGetSwatted-1-400x400.webp",
               "width": 400,
-              "height": 225,
+              "height": 400,
               "mimeType": "image/webp",
-              "filesize": 12112,
-              "filename": "DontGetSwatted-400x225.webp",
-              "url": "/api/media/file/DontGetSwatted-400x225.webp"
+              "filesize": 18854,
+              "filename": "DontGetSwatted-1-400x400.webp"
             },
             "small": {
+              "url": "/api/media/file/DontGetSwatted-1-768x767.webp",
               "width": 768,
-              "height": 432,
+              "height": 767,
               "mimeType": "image/webp",
-              "filesize": 22818,
-              "filename": "DontGetSwatted-768x432.webp",
-              "url": "/api/media/file/DontGetSwatted-768x432.webp"
+              "filesize": 32032,
+              "filename": "DontGetSwatted-1-768x767.webp"
             },
             "medium": {
+              "url": "/api/media/file/DontGetSwatted-1-1200x1199.webp",
               "width": 1200,
-              "height": 675,
+              "height": 1199,
               "mimeType": "image/webp",
-              "filesize": 33942,
-              "filename": "DontGetSwatted-1200x675.webp",
-              "url": "/api/media/file/DontGetSwatted-1200x675.webp"
+              "filesize": 42852,
+              "filename": "DontGetSwatted-1-1200x1199.webp"
             },
             "large": {
-              "width": 1800,
-              "height": 1013,
-              "mimeType": "image/webp",
-              "filesize": 55956,
-              "filename": "DontGetSwatted-1800x1013.webp",
-              "url": "/api/media/file/DontGetSwatted-1800x1013.webp"
-            },
-            "hero": {
+              "url": null,
               "width": null,
               "height": null,
               "mimeType": null,
               "filesize": null,
-              "filename": null,
-              "url": null
+              "filename": null
+            },
+            "hero": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
             }
           },
-          "createdAt": "2025-03-17T03:10:08.246Z",
-          "updatedAt": "2025-03-17T03:10:08.246Z",
-          "id": "67d792902c31a9c4c4836932",
-          "url": "/api/media/file/DontGetSwatted.webp",
-          "thumbnailURL": null
+          "createdAt": "2025-03-17T03:10:21.050Z",
+          "id": "67d7929d2c31a9c4c4836946"
+        },
+        "backgroundPattern": {
+          "svg": {
+            "filename": "bubbles.svg",
+            "mimeType": "image/svg+xml",
+            "filesize": 3061,
+            "width": 100,
+            "height": 100,
+            "createdAt": "2025-03-29T02:34:10.981Z",
+            "updatedAt": "2025-03-29T02:34:10.981Z",
+            "id": "67e75c223134d0caffa24edf",
+            "url": "/api/patterns/file/bubbles.svg",
+            "thumbnailURL": null
+          },
+          "size": 40,
+          "backgroundOpacity": 0.992
+        },
+        "intro": {
+          "root": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Don't Get Swatted is a one button game that lets users navigate through a choose-your-adventure style story with collectable unique endings and art. I worked on the development of the game, setting our team with tools to collaborate, and worked to glue everything together.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
+              }
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "type": "root",
+            "version": 1
+          }
         },
         "content": [
           {
@@ -394,7 +489,7 @@
         ]
       },
       "createdAt": "2025-03-17T03:11:26.453Z",
-      "updatedAt": "2025-03-23T06:24:57.511Z",
+      "updatedAt": "2025-03-29T02:36:59.468Z",
       "itchio": "https://haydondo.itch.io/dont-get-swatted",
       "publicationStatus": "published",
       "id": "67d792de2c31a9c4c483698d"
@@ -465,7 +560,7 @@
       "roles": [
         "Developer"
       ],
-      "excerpt": "Product to save teachers time and give students a more efficient way of learning through AI quiz question generation.",
+      "excerpt": "An AI quiz generator to save students and teachers time",
       "technologies": [
         "React",
         "Flask",
@@ -474,68 +569,115 @@
       "year": "2023",
       "github": "https://github.com/hlalljie/QuizGeneratorFlaskReact",
       "pageContent": {
-        "bannerImage": {
-          "updatedAt": "2025-03-17T03:06:00.621Z",
+        "featuredImage": {
           "alt": "Picture of computer with a quiz application",
           "name": "Inquizity Thumbnail",
-          "url": "/api/media/file/inquizityThumbnail-1.webp",
-          "thumbnailURL": null,
-          "filename": "inquizityThumbnail-1.webp",
+          "filename": "inquizityThumbnail.webp",
           "mimeType": "image/webp",
-          "filesize": 37150,
+          "filesize": 62444,
           "width": 1200,
-          "height": 514,
+          "height": 900,
           "focalX": 50,
           "focalY": 50,
           "sizes": {
             "thumbnail": {
-              "url": "/api/media/file/inquizityThumbnail-1-400x171.webp",
               "width": 400,
-              "height": 171,
+              "height": 300,
               "mimeType": "image/webp",
-              "filesize": 13300,
-              "filename": "inquizityThumbnail-1-400x171.webp"
+              "filesize": 17524,
+              "filename": "inquizityThumbnail-400x300.webp",
+              "url": "/api/media/file/inquizityThumbnail-400x300.webp"
             },
             "small": {
-              "url": "/api/media/file/inquizityThumbnail-1-768x329.webp",
               "width": 768,
-              "height": 329,
+              "height": 576,
               "mimeType": "image/webp",
-              "filesize": 23326,
-              "filename": "inquizityThumbnail-1-768x329.webp"
+              "filesize": 34480,
+              "filename": "inquizityThumbnail-768x576.webp",
+              "url": "/api/media/file/inquizityThumbnail-768x576.webp"
             },
             "medium": {
-              "url": "/api/media/file/inquizityThumbnail-1-1200x514.webp",
               "width": 1200,
-              "height": 514,
+              "height": 900,
               "mimeType": "image/webp",
-              "filesize": 36602,
-              "filename": "inquizityThumbnail-1-1200x514.webp"
+              "filesize": 51886,
+              "filename": "inquizityThumbnail-1200x900.webp",
+              "url": "/api/media/file/inquizityThumbnail-1200x900.webp"
             },
             "large": {
-              "url": null,
               "width": null,
               "height": null,
               "mimeType": null,
               "filesize": null,
-              "filename": null
+              "filename": null,
+              "url": null
             },
             "hero": {
-              "url": null,
               "width": null,
               "height": null,
               "mimeType": null,
               "filesize": null,
-              "filename": null
+              "filename": null,
+              "url": null
             }
           },
-          "createdAt": "2025-03-17T03:05:35.282Z",
-          "id": "67d7917f2c31a9c4c4836832"
+          "createdAt": "2025-03-17T03:04:44.034Z",
+          "updatedAt": "2025-03-17T03:04:44.034Z",
+          "id": "67d7914c2c31a9c4c48367f8",
+          "url": "/api/media/file/inquizityThumbnail.webp",
+          "thumbnailURL": null
+        },
+        "backgroundPattern": {
+          "svg": {
+            "filename": "fancy-rectangles.svg",
+            "mimeType": "image/svg+xml",
+            "filesize": 464,
+            "width": 60,
+            "height": 48,
+            "createdAt": "2025-03-29T02:35:19.671Z",
+            "updatedAt": "2025-03-29T02:35:19.671Z",
+            "id": "67e75c673134d0caffa250df",
+            "url": "/api/patterns/file/fancy-rectangles.svg",
+            "thumbnailURL": null
+          },
+          "size": 20,
+          "backgroundOpacity": 0.99
+        },
+        "intro": {
+          "root": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Thought up to solve a personal need of mine; needing customized questions to fit the needs of students. I was able to accurately prompt LLMs for questions that fit the current needs of the students, so I created Inquizity to allow students to continue to generate questions on their own.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
+              }
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "type": "root",
+            "version": 1
+          }
         },
         "content": []
       },
       "createdAt": "2025-03-17T03:06:07.028Z",
-      "updatedAt": "2025-03-20T19:31:38.403Z",
+      "updatedAt": "2025-03-29T02:36:04.949Z",
       "publicationStatus": "published",
       "id": "67d7919f2c31a9c4c4836879"
     },
@@ -607,7 +749,7 @@
         "Techincal Lead",
         "Designer"
       ],
-      "excerpt": "Worked as solo frontend dev and team lead on this Web3 Hackathon project to democratize freelance contracting.",
+      "excerpt": "A freelance contracting platform built in 48 hours for the MLH Web3 Hackathon.",
       "technologies": [
         "React",
         "CSS",
@@ -616,68 +758,114 @@
       "year": "2023",
       "github": "https://github.com/Topupchips/MLH-Web3-Hackathon',",
       "pageContent": {
-        "bannerImage": {
-          "alt": "Screenshot of Block Broker's homepage",
-          "name": "Block Broker Banner",
-          "filename": "blockBrokerBanner.webp",
+        "featuredImage": {
+          "alt": "Block Broker homepage screenshot",
+          "filename": "block_broker_homepage_screenshot.webp",
           "mimeType": "image/webp",
-          "filesize": 86394,
+          "filesize": 354958,
           "width": 2500,
-          "height": 1190,
+          "height": 4432,
           "focalX": 50,
-          "focalY": 13,
+          "focalY": 50,
           "sizes": {
             "thumbnail": {
-              "url": "/api/media/file/blockBrokerBanner-400x190.webp",
               "width": 400,
-              "height": 190,
+              "height": 709,
               "mimeType": "image/webp",
-              "filesize": 16810,
-              "filename": "blockBrokerBanner-400x190.webp"
+              "filesize": 48146,
+              "filename": "block_broker_homepage_screenshot-400x709.webp",
+              "url": "/api/media/file/block_broker_homepage_screenshot-400x709.webp"
             },
             "small": {
-              "url": "/api/media/file/blockBrokerBanner-768x366.webp",
               "width": 768,
-              "height": 366,
+              "height": 1362,
               "mimeType": "image/webp",
-              "filesize": 28708,
-              "filename": "blockBrokerBanner-768x366.webp"
+              "filesize": 92310,
+              "filename": "block_broker_homepage_screenshot-768x1362.webp",
+              "url": "/api/media/file/block_broker_homepage_screenshot-768x1362.webp"
             },
             "medium": {
-              "url": "/api/media/file/blockBrokerBanner-1200x571.webp",
               "width": 1200,
-              "height": 571,
+              "height": 2127,
               "mimeType": "image/webp",
-              "filesize": 38398,
-              "filename": "blockBrokerBanner-1200x571.webp"
+              "filesize": 131468,
+              "filename": "block_broker_homepage_screenshot-1200x2127.webp",
+              "url": "/api/media/file/block_broker_homepage_screenshot-1200x2127.webp"
             },
             "large": {
-              "url": "/api/media/file/blockBrokerBanner-1800x857.webp",
               "width": 1800,
-              "height": 857,
+              "height": 3191,
               "mimeType": "image/webp",
-              "filesize": 58984,
-              "filename": "blockBrokerBanner-1800x857.webp"
+              "filesize": 203472,
+              "filename": "block_broker_homepage_screenshot-1800x3191.webp",
+              "url": "/api/media/file/block_broker_homepage_screenshot-1800x3191.webp"
             },
             "hero": {
-              "url": "/api/media/file/blockBrokerBanner-2500x1190.webp",
               "width": 2500,
-              "height": 1190,
+              "height": 4432,
               "mimeType": "image/webp",
-              "filesize": 85398,
-              "filename": "blockBrokerBanner-2500x1190.webp"
+              "filesize": 300410,
+              "filename": "block_broker_homepage_screenshot-2500x4432.webp",
+              "url": "/api/media/file/block_broker_homepage_screenshot-2500x4432.webp"
             }
           },
-          "createdAt": "2025-03-17T03:01:17.645Z",
-          "updatedAt": "2025-03-17T03:01:37.732Z",
-          "thumbnailURL": null,
-          "url": "/api/media/file/blockBrokerBanner.webp",
-          "id": "67d7907d2c31a9c4c4836775"
+          "createdAt": "2025-03-29T02:10:01.952Z",
+          "updatedAt": "2025-03-29T02:10:01.952Z",
+          "id": "67e756793134d0caffa22fdf",
+          "url": "/api/media/file/block_broker_homepage_screenshot.webp",
+          "thumbnailURL": null
+        },
+        "backgroundPattern": {
+          "svg": {
+            "filename": "tiny-checkers.svg",
+            "mimeType": "image/svg+xml",
+            "filesize": 137,
+            "width": 8,
+            "height": 8,
+            "createdAt": "2025-03-29T02:41:59.948Z",
+            "updatedAt": "2025-03-29T02:41:59.948Z",
+            "id": "67e75df73134d0caffa25a57",
+            "url": "/api/patterns/file/tiny-checkers.svg",
+            "thumbnailURL": null
+          },
+          "size": 20,
+          "backgroundOpacity": 0.99
+        },
+        "intro": {
+          "root": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Our team set out to create a smart contract based app to democratize freelancing on the web. I worked as the sole frontend developer while also bringing together the team from across the globe.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
+              }
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "type": "root",
+            "version": 1
+          }
         },
         "content": []
       },
       "createdAt": "2025-03-17T03:01:49.116Z",
-      "updatedAt": "2025-03-20T19:31:38.394Z",
+      "updatedAt": "2025-03-29T02:42:25.108Z",
       "publicationStatus": "published",
       "id": "67d7909d2c31a9c4c483679c"
     },
@@ -749,7 +937,7 @@
         "Designer",
         "Developer"
       ],
-      "excerpt": "Next Adventure was looking to stun visitor with visuals of safari wildlife while crafting a unique user experience based on how long until planned journey.",
+      "excerpt": "An immersive website for a full-service safari adventure company.",
       "technologies": [
         "Squarespace",
         "Javascript",
@@ -758,68 +946,114 @@
       "year": "2021",
       "url": "nextadventure.com",
       "pageContent": {
-        "bannerImage": {
-          "updatedAt": "2025-03-17T00:28:04.532Z",
-          "alt": "Next Adventure explore page screenshot",
-          "url": "/api/media/file/nextAdventureThumbnail-1.webp",
-          "thumbnailURL": null,
-          "filename": "nextAdventureThumbnail-1.webp",
+        "featuredImage": {
+          "alt": "Screenshot of Next Adventure's homepage",
+          "filename": "next-adventure-homepage.webp",
           "mimeType": "image/webp",
-          "filesize": 75388,
+          "filesize": 597060,
           "width": 1920,
-          "height": 832,
+          "height": 5586,
           "focalX": 50,
           "focalY": 50,
           "sizes": {
             "thumbnail": {
-              "url": "/api/media/file/nextAdventureThumbnail-1-400x173.webp",
               "width": 400,
-              "height": 173,
+              "height": 1164,
               "mimeType": "image/webp",
-              "filesize": 14274,
-              "filename": "nextAdventureThumbnail-1-400x173.webp"
+              "filesize": 75480,
+              "filename": "next-adventure-homepage-400x1164.webp",
+              "url": "/api/media/file/next-adventure-homepage-400x1164.webp"
             },
             "small": {
-              "url": "/api/media/file/nextAdventureThumbnail-1-768x333.webp",
               "width": 768,
-              "height": 333,
+              "height": 2234,
               "mimeType": "image/webp",
-              "filesize": 27118,
-              "filename": "nextAdventureThumbnail-1-768x333.webp"
+              "filesize": 172080,
+              "filename": "next-adventure-homepage-768x2234.webp",
+              "url": "/api/media/file/next-adventure-homepage-768x2234.webp"
             },
             "medium": {
-              "url": "/api/media/file/nextAdventureThumbnail-1-1200x520.webp",
               "width": 1200,
-              "height": 520,
+              "height": 3491,
               "mimeType": "image/webp",
-              "filesize": 37314,
-              "filename": "nextAdventureThumbnail-1-1200x520.webp"
+              "filesize": 273658,
+              "filename": "next-adventure-homepage-1200x3491.webp",
+              "url": "/api/media/file/next-adventure-homepage-1200x3491.webp"
             },
             "large": {
-              "url": "/api/media/file/nextAdventureThumbnail-1-1800x780.webp",
               "width": 1800,
-              "height": 780,
+              "height": 5237,
               "mimeType": "image/webp",
-              "filesize": 57574,
-              "filename": "nextAdventureThumbnail-1-1800x780.webp"
+              "filesize": 461392,
+              "filename": "next-adventure-homepage-1800x5237.webp",
+              "url": "/api/media/file/next-adventure-homepage-1800x5237.webp"
             },
             "hero": {
-              "url": null,
               "width": null,
               "height": null,
               "mimeType": null,
               "filesize": null,
-              "filename": null
+              "filename": null,
+              "url": null
             }
           },
-          "createdAt": "2025-03-17T00:26:56.351Z",
-          "name": "Next Adventure Banner",
-          "id": "67d76c50929c408084eb052a"
+          "createdAt": "2025-03-28T22:50:49.161Z",
+          "updatedAt": "2025-03-28T22:50:49.161Z",
+          "id": "67e727c93134d0caffa1a78d",
+          "url": "/api/media/file/next-adventure-homepage.webp",
+          "thumbnailURL": null
+        },
+        "backgroundPattern": {
+          "svg": {
+            "filename": "topography.svg",
+            "mimeType": "image/svg+xml",
+            "filesize": 91567,
+            "width": 600,
+            "height": 600,
+            "createdAt": "2025-03-28T22:59:18.496Z",
+            "updatedAt": "2025-03-28T22:59:18.496Z",
+            "id": "67e729c63134d0caffa1b134",
+            "url": "/api/patterns/file/topography.svg",
+            "thumbnailURL": null
+          },
+          "size": 30,
+          "backgroundOpacity": 0.97
+        },
+        "intro": {
+          "root": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Next Adventure is a safari service that provides custom crafted journeys for clients. They were looking for a website that transported users to Africa with stunning visuals. We crafted a unique experience for 3 different kinds of clients, sending them to different areas of the website depending on how soon they were planning to journey to Africa.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
+              }
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "type": "root",
+            "version": 1
+          }
         },
         "content": []
       },
       "createdAt": "2025-03-17T00:27:39.437Z",
-      "updatedAt": "2025-03-20T19:31:38.416Z",
+      "updatedAt": "2025-03-28T23:00:38.615Z",
       "publicationStatus": "published",
       "id": "67d76c7b929c408084eb054c"
     },
@@ -887,7 +1121,8 @@
       "company": "Nav Creative",
       "roles": [
         "Project Manager",
-        "Designer"
+        "Designer",
+        "Development"
       ],
       "excerpt": "A modern design for a budding technology consultancy.",
       "technologies": [
@@ -898,67 +1133,190 @@
       ],
       "year": "2022",
       "pageContent": {
-        "bannerImage": {
-          "updatedAt": "2025-03-17T00:20:56.688Z",
-          "alt": "Real Lion website homepage screenshot",
-          "url": "/api/media/file/realLionThumbnail-1.webp",
-          "thumbnailURL": null,
-          "filename": "realLionThumbnail-1.webp",
+        "featuredImage": {
+          "alt": "Real Lion Homepage Screenshot",
+          "name": "Real Lion Featured Image",
+          "filename": "real-lion-featured-image.webp",
           "mimeType": "image/webp",
-          "filesize": 71122,
+          "filesize": 3295216,
           "width": 1920,
-          "height": 938,
+          "height": 3109,
           "focalX": 50,
-          "focalY": 31,
+          "focalY": 22,
           "sizes": {
             "thumbnail": {
-              "url": "/api/media/file/realLionThumbnail-1-400x195.webp",
               "width": 400,
-              "height": 195,
+              "height": 648,
               "mimeType": "image/webp",
-              "filesize": 12826,
-              "filename": "realLionThumbnail-1-400x195.webp"
+              "filesize": 44028,
+              "filename": "real-lion-featured-image-400x648.webp",
+              "url": "/api/media/file/real-lion-featured-image-400x648.webp"
             },
             "small": {
-              "url": "/api/media/file/realLionThumbnail-1-768x375.webp",
               "width": 768,
-              "height": 375,
+              "height": 1244,
               "mimeType": "image/webp",
-              "filesize": 25850,
-              "filename": "realLionThumbnail-1-768x375.webp"
+              "filesize": 102030,
+              "filename": "real-lion-featured-image-768x1244.webp",
+              "url": "/api/media/file/real-lion-featured-image-768x1244.webp"
             },
             "medium": {
-              "url": "/api/media/file/realLionThumbnail-1-1200x586.webp",
               "width": 1200,
-              "height": 586,
+              "height": 1943,
               "mimeType": "image/webp",
-              "filesize": 37310,
-              "filename": "realLionThumbnail-1-1200x586.webp"
+              "filesize": 162166,
+              "filename": "real-lion-featured-image-1200x1943.webp",
+              "url": "/api/media/file/real-lion-featured-image-1200x1943.webp"
             },
             "large": {
-              "url": "/api/media/file/realLionThumbnail-1-1800x879.webp",
               "width": 1800,
-              "height": 879,
+              "height": 2915,
               "mimeType": "image/webp",
-              "filesize": 59458,
-              "filename": "realLionThumbnail-1-1800x879.webp"
+              "filesize": 273984,
+              "filename": "real-lion-featured-image-1800x2915.webp",
+              "url": "/api/media/file/real-lion-featured-image-1800x2915.webp"
             },
             "hero": {
-              "url": null,
               "width": null,
               "height": null,
               "mimeType": null,
               "filesize": null,
-              "filename": null
+              "filename": null,
+              "url": null
             }
           },
-          "createdAt": "2025-03-17T00:18:34.243Z",
-          "id": "67d76a5a929c408084eb0434"
+          "createdAt": "2025-03-25T23:05:57.100Z",
+          "updatedAt": "2025-03-25T23:05:57.100Z",
+          "id": "67e336d5e2f880c3cb515565",
+          "url": "/api/media/file/real-lion-featured-image.webp",
+          "thumbnailURL": null
         },
-        "content": []
+        "backgroundPattern": {
+          "svg": {
+            "filename": "architect.svg",
+            "mimeType": "image/svg+xml",
+            "filesize": 196,
+            "width": 100,
+            "height": 199,
+            "createdAt": "2025-03-27T06:13:07.502Z",
+            "updatedAt": "2025-03-27T06:13:07.502Z",
+            "id": "67e4ec73e29ab24815bc0d2a",
+            "url": "/api/patterns/file/architect.svg",
+            "thumbnailURL": null
+          },
+          "size": 5,
+          "backgroundOpacity": 0.98
+        },
+        "intro": {
+          "root": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Real Lion is a tech sales coaching agency providing valueable insights into career growth and sucess in technology sales. The goal was to provide a frontend website with a member portal for customers to access premium resources.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
+              },
+              {
+                "children": [],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
+              }
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "type": "root",
+            "version": 1
+          }
+        },
+        "content": [
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "\"Hayden, Caely and the rest of the team did a great job. They were very responsive, provided thoughtful suggestions, and overall were a professional and capable partner. Highly recommended!\"",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "center",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Andrew G.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "center",
+                    "indent": 0,
+                    "type": "heading",
+                    "version": 1,
+                    "tag": "h4"
+                  },
+                  {
+                    "children": [],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67e71fb622d43c685d216a00"
+          }
+        ]
       },
       "createdAt": "2025-03-17T00:20:21.705Z",
-      "updatedAt": "2025-03-20T19:31:38.398Z",
+      "updatedAt": "2025-03-28T22:36:25.536Z",
       "publicationStatus": "published",
       "id": "67d76ac5929c408084eb0473"
     },
@@ -1027,7 +1385,7 @@
         "Designer",
         "Developer"
       ],
-      "excerpt": "Travel Gurus reached out for their first website looking to inspire their customers to travel to new places.",
+      "excerpt": "A captivating design inspiring clients to travel to new destinations",
       "technologies": [
         "Squarespace",
         "Javascript",
@@ -1036,47 +1394,47 @@
       "year": "2022",
       "url": "https://www.travelgurusgroup.com",
       "pageContent": {
-        "bannerImage": {
-          "alt": "Travel Gurus website homepage screenshot",
-          "filename": "travelGurusThumbnail2400w.webp",
+        "featuredImage": {
+          "alt": "Travel Gurus Group homepage screenshot",
+          "filename": "screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27.webp",
           "mimeType": "image/webp",
-          "filesize": 90936,
-          "width": 1898,
-          "height": 722,
+          "filesize": 404002,
+          "width": 1895,
+          "height": 5190,
           "focalX": 50,
-          "focalY": 24,
+          "focalY": 25,
           "sizes": {
             "thumbnail": {
-              "url": "/api/media/file/travelGurusThumbnail2400w-400x152.webp",
+              "url": "/api/media/file/screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-400x1096.webp",
               "width": 400,
-              "height": 152,
+              "height": 1096,
               "mimeType": "image/webp",
-              "filesize": 12980,
-              "filename": "travelGurusThumbnail2400w-400x152.webp"
+              "filesize": 55864,
+              "filename": "screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-400x1096.webp"
             },
             "small": {
-              "url": "/api/media/file/travelGurusThumbnail2400w-768x292.webp",
+              "url": "/api/media/file/screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-768x2103.webp",
               "width": 768,
-              "height": 292,
+              "height": 2103,
               "mimeType": "image/webp",
-              "filesize": 28294,
-              "filename": "travelGurusThumbnail2400w-768x292.webp"
+              "filesize": 121304,
+              "filename": "screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-768x2103.webp"
             },
             "medium": {
-              "url": "/api/media/file/travelGurusThumbnail2400w-1200x456.webp",
+              "url": "/api/media/file/screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-1200x3287.webp",
               "width": 1200,
-              "height": 456,
+              "height": 3287,
               "mimeType": "image/webp",
-              "filesize": 42524,
-              "filename": "travelGurusThumbnail2400w-1200x456.webp"
+              "filesize": 196848,
+              "filename": "screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-1200x3287.webp"
             },
             "large": {
-              "url": "/api/media/file/travelGurusThumbnail2400w-1800x685.webp",
+              "url": "/api/media/file/screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-1800x4930.webp",
               "width": 1800,
-              "height": 685,
+              "height": 4930,
               "mimeType": "image/webp",
-              "filesize": 68852,
-              "filename": "travelGurusThumbnail2400w-1800x685.webp"
+              "filesize": 325664,
+              "filename": "screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-1800x4930.webp"
             },
             "hero": {
               "url": null,
@@ -1087,53 +1445,63 @@
               "filename": null
             }
           },
-          "createdAt": "2025-03-14T16:59:10.508Z",
-          "updatedAt": "2025-03-14T17:09:28.395Z",
+          "createdAt": "2025-03-29T01:47:05.534Z",
+          "updatedAt": "2025-03-29T01:48:34.117Z",
           "thumbnailURL": null,
-          "url": "/api/media/file/travelGurusThumbnail2400w.webp",
-          "name": "Travel Gurus Banner",
-          "id": "67d4605e95ccfa757ba899f0"
+          "url": "/api/media/file/screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27.webp",
+          "id": "67e751193134d0caffa215fd"
         },
-        "content": [
-          {
-            "blockType": "textBlock",
-            "content": {
-              "root": {
+        "backgroundPattern": {
+          "svg": {
+            "filename": "morphing-diamonds.svg",
+            "mimeType": "image/svg+xml",
+            "filesize": 6046,
+            "width": 60,
+            "height": 60,
+            "createdAt": "2025-03-29T02:03:13.444Z",
+            "updatedAt": "2025-03-29T02:03:13.444Z",
+            "id": "67e754e13134d0caffa22407",
+            "url": "/api/patterns/file/morphing-diamonds.svg",
+            "thumbnailURL": null
+          },
+          "size": 7,
+          "backgroundOpacity": 0.99
+        },
+        "intro": {
+          "root": {
+            "children": [
+              {
                 "children": [
                   {
-                    "children": [
-                      {
-                        "detail": 0,
-                        "format": 0,
-                        "mode": "normal",
-                        "style": "",
-                        "text": "Travel Gurus reached out for their first website looking to inspire their customers to travel to new places.",
-                        "type": "text",
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr",
-                    "format": "",
-                    "indent": 0,
-                    "type": "paragraph",
-                    "version": 1,
-                    "textFormat": 0,
-                    "textStyle": ""
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Travel Gurus Group is a premier travel agency focused on providing VIP level travel experiences. The goal of the website was to communicate the luxury and attention to detail of the experiences being offered while showing clients what experience waited for them through captivating imagery.",
+                    "type": "text",
+                    "version": 1
                   }
                 ],
                 "direction": "ltr",
                 "format": "",
                 "indent": 0,
-                "type": "root",
-                "version": 1
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
               }
-            },
-            "id": "67d4615128c99d47346dc87a"
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "type": "root",
+            "version": 1
           }
-        ]
+        },
+        "content": []
       },
       "createdAt": "2025-03-14T17:00:55.727Z",
-      "updatedAt": "2025-03-20T19:31:38.406Z",
+      "updatedAt": "2025-03-29T02:05:21.256Z",
       "slug": "travel-gurus",
       "type": "professional",
       "publicationStatus": "published",
@@ -1205,7 +1573,7 @@
         "Designer",
         "Developer"
       ],
-      "excerpt": "A rebranding and website refresh to better guide students and better market the brand for the Bay Area Teacher Training Institute.",
+      "excerpt": "An intuitive refresh for a teacher training institute.",
       "technologies": [
         "Squarespace",
         "Less",
@@ -1214,104 +1582,114 @@
       "year": "2022",
       "url": "https://www.ba-tti.org",
       "pageContent": {
-        "bannerImage": {
-          "updatedAt": "2025-03-14T17:12:05.466Z",
-          "alt": "BA-TTI website homepage screenshot",
-          "url": "/api/media/file/battiThumbnail2400w-1.webp",
-          "thumbnailURL": null,
-          "filename": "battiThumbnail2400w-1.webp",
+        "featuredImage": {
+          "alt": "Screenshot of Bay Area Teacher Training Institute's homepage",
+          "filename": "batti-homepage.webp",
           "mimeType": "image/webp",
-          "filesize": 98248,
-          "width": 2400,
-          "height": 1050,
+          "filesize": 630620,
+          "width": 2500,
+          "height": 8624,
           "focalX": 50,
           "focalY": 50,
           "sizes": {
             "thumbnail": {
-              "url": "/api/media/file/battiThumbnail2400w-1-400x175.webp",
               "width": 400,
-              "height": 175,
+              "height": 1380,
               "mimeType": "image/webp",
-              "filesize": 17512,
-              "filename": "battiThumbnail2400w-1-400x175.webp"
+              "filesize": 73256,
+              "filename": "batti-homepage-400x1380.webp",
+              "url": "/api/media/file/batti-homepage-400x1380.webp"
             },
             "small": {
-              "url": "/api/media/file/battiThumbnail2400w-1-768x336.webp",
               "width": 768,
-              "height": 336,
+              "height": 2649,
               "mimeType": "image/webp",
-              "filesize": 31904,
-              "filename": "battiThumbnail2400w-1-768x336.webp"
+              "filesize": 155130,
+              "filename": "batti-homepage-768x2649.webp",
+              "url": "/api/media/file/batti-homepage-768x2649.webp"
             },
             "medium": {
-              "url": "/api/media/file/battiThumbnail2400w-1-1200x525.webp",
               "width": 1200,
-              "height": 525,
+              "height": 4140,
               "mimeType": "image/webp",
-              "filesize": 45522,
-              "filename": "battiThumbnail2400w-1-1200x525.webp"
+              "filesize": 231964,
+              "filename": "batti-homepage-1200x4140.webp",
+              "url": "/api/media/file/batti-homepage-1200x4140.webp"
             },
             "large": {
-              "url": "/api/media/file/battiThumbnail2400w-1-1800x788.webp",
               "width": 1800,
-              "height": 788,
+              "height": 6209,
               "mimeType": "image/webp",
-              "filesize": 67482,
-              "filename": "battiThumbnail2400w-1-1800x788.webp"
+              "filesize": 373064,
+              "filename": "batti-homepage-1800x6209.webp",
+              "url": "/api/media/file/batti-homepage-1800x6209.webp"
             },
             "hero": {
-              "url": null,
-              "width": null,
-              "height": null,
-              "mimeType": null,
-              "filesize": null,
-              "filename": null
+              "width": 2500,
+              "height": 8624,
+              "mimeType": "image/webp",
+              "filesize": 527356,
+              "filename": "batti-homepage-2500x8624.webp",
+              "url": "/api/media/file/batti-homepage-2500x8624.webp"
             }
           },
-          "createdAt": "2025-03-14T17:11:23.630Z",
-          "name": "BA-TTI Banner",
-          "id": "67d4633b95ccfa757ba89b13"
+          "createdAt": "2025-03-28T23:43:14.993Z",
+          "updatedAt": "2025-03-28T23:43:14.993Z",
+          "id": "67e734123134d0caffa1eb3c",
+          "url": "/api/media/file/batti-homepage.webp",
+          "thumbnailURL": null
         },
-        "content": [
-          {
-            "blockType": "textBlock",
-            "content": {
-              "root": {
+        "backgroundPattern": {
+          "svg": {
+            "filename": "bamboo.svg",
+            "mimeType": "image/svg+xml",
+            "filesize": 389,
+            "width": 16,
+            "height": 32,
+            "createdAt": "2025-03-28T23:05:01.053Z",
+            "updatedAt": "2025-03-28T23:05:01.053Z",
+            "id": "67e72b1d3134d0caffa1b7f6",
+            "url": "/api/patterns/file/bamboo.svg",
+            "thumbnailURL": null
+          },
+          "size": 30,
+          "backgroundOpacity": 0.99
+        },
+        "intro": {
+          "root": {
+            "children": [
+              {
                 "children": [
                   {
-                    "children": [
-                      {
-                        "detail": 0,
-                        "format": 0,
-                        "mode": "normal",
-                        "style": "",
-                        "text": "A rebranding and website refresh to better guide students and better market the brand for the Bay Area Teacher Training Institute.",
-                        "type": "text",
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr",
-                    "format": "",
-                    "indent": 0,
-                    "type": "paragraph",
-                    "version": 1,
-                    "textFormat": 0,
-                    "textStyle": ""
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "The Bay Area Teacher Training Institute is an impactful education institution offering credentials, and masters in teaching degrees. The goal was to create a professional, and easy to navigate website for both prospective students and student needing information in a variety of different stages and programs.",
+                    "type": "text",
+                    "version": 1
                   }
                 ],
                 "direction": "ltr",
                 "format": "",
                 "indent": 0,
-                "type": "root",
-                "version": 1
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
               }
-            },
-            "id": "67d45f2a28c99d47346dc878"
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "type": "root",
+            "version": 1
           }
-        ]
+        },
+        "content": []
       },
       "createdAt": "2025-03-14T16:54:22.350Z",
-      "updatedAt": "2025-03-20T19:31:38.382Z",
+      "updatedAt": "2025-03-28T23:45:19.281Z",
       "slug": "ba-tti",
       "type": "professional",
       "publicationStatus": "published",
@@ -1383,7 +1761,7 @@
         "Designer",
         "Project Manager"
       ],
-      "excerpt": "Redesigned Platinum Advisors' website to more effectively communicate their professionalism and expertise to clients.",
+      "excerpt": "A sleek redesign for a national advocacy firm.",
       "technologies": [
         "Squarespace",
         "Less",
@@ -1391,64 +1769,109 @@
         "HTML"
       ],
       "pageContent": {
-        "bannerImage": {
-          "updatedAt": "2025-03-14T17:14:45.264Z",
-          "alt": "Screenshot of Platinum Advisors website homepage opening fold",
-          "name": "Platinum Advisors Banner",
-          "credit": "platinumadvisors.com",
-          "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1.webp",
-          "thumbnailURL": null,
-          "filename": "PlatinumAdvisorsThumbnailOriginal-1.webp",
+        "featuredImage": {
+          "alt": "Screenshot of Platinum Advisors website homepage",
+          "filename": "platinum-homepage.webp",
           "mimeType": "image/webp",
-          "filesize": 110102,
-          "width": 1494,
-          "height": 654,
+          "filesize": 1044484,
+          "width": 2527,
+          "height": 7764,
           "focalX": 50,
           "focalY": 50,
           "sizes": {
             "thumbnail": {
-              "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-400x175.webp",
+              "url": "/api/media/file/platinum-homepage-400x1229.webp",
               "width": 400,
-              "height": 175,
+              "height": 1229,
               "mimeType": "image/webp",
-              "filesize": 19782,
-              "filename": "PlatinumAdvisorsThumbnailOriginal-1-400x175.webp"
+              "filesize": 80868,
+              "filename": "platinum-homepage-400x1229.webp"
             },
             "small": {
-              "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-768x336.webp",
+              "url": "/api/media/file/platinum-homepage-768x2360.webp",
               "width": 768,
-              "height": 336,
+              "height": 2360,
               "mimeType": "image/webp",
-              "filesize": 46788,
-              "filename": "PlatinumAdvisorsThumbnailOriginal-1-768x336.webp"
+              "filesize": 197134,
+              "filename": "platinum-homepage-768x2360.webp"
             },
             "medium": {
-              "url": "/api/media/file/PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp",
+              "url": "/api/media/file/platinum-homepage-1200x3687.webp",
               "width": 1200,
-              "height": 525,
+              "height": 3687,
               "mimeType": "image/webp",
-              "filesize": 71692,
-              "filename": "PlatinumAdvisorsThumbnailOriginal-1-1200x525.webp"
+              "filesize": 336014,
+              "filename": "platinum-homepage-1200x3687.webp"
             },
             "large": {
-              "url": null,
-              "width": null,
-              "height": null,
-              "mimeType": null,
-              "filesize": null,
-              "filename": null
+              "url": "/api/media/file/platinum-homepage-1800x5530.webp",
+              "width": 1800,
+              "height": 5530,
+              "mimeType": "image/webp",
+              "filesize": 595082,
+              "filename": "platinum-homepage-1800x5530.webp"
             },
             "hero": {
-              "url": null,
-              "width": null,
-              "height": null,
-              "mimeType": null,
-              "filesize": null,
-              "filename": null
+              "url": "/api/media/file/platinum-homepage-2500x7681.webp",
+              "width": 2500,
+              "height": 7681,
+              "mimeType": "image/webp",
+              "filesize": 885140,
+              "filename": "platinum-homepage-2500x7681.webp"
             }
           },
-          "createdAt": "2025-03-14T17:13:28.588Z",
-          "id": "67d463b895ccfa757ba89bd1"
+          "createdAt": "2025-03-27T22:41:15.005Z",
+          "updatedAt": "2025-03-27T22:58:26.103Z",
+          "thumbnailURL": null,
+          "url": "/api/media/file/platinum-homepage.webp",
+          "id": "67e5d40ac1a8ca689fd7e435"
+        },
+        "backgroundPattern": {
+          "svg": {
+            "filename": "flipped-diamonds.svg",
+            "mimeType": "image/svg+xml",
+            "filesize": 789,
+            "width": 16,
+            "height": 20,
+            "createdAt": "2025-03-27T06:18:48.101Z",
+            "updatedAt": "2025-03-27T06:18:48.101Z",
+            "id": "67e4edc8e29ab24815bc0dc6",
+            "url": "/api/patterns/file/flipped-diamonds.svg",
+            "thumbnailURL": null
+          },
+          "size": 50,
+          "backgroundOpacity": 0.985
+        },
+        "intro": {
+          "root": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Platinum Advisors is a premier advocacy firm with a reach across the United States. They advise companies on large scale projects, lobby governments on every level to pass legislature, develop media narratives that reach consumer. Our goal was to redesign the website to better reflect their national reach, show the expertise of their team, and create a premier design that appealed to their stakeholders and clients.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
+              }
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "type": "root",
+            "version": 1
+          }
         },
         "content": [
           {
@@ -1530,7 +1953,7 @@
         ]
       },
       "createdAt": "2025-03-14T06:51:14.689Z",
-      "updatedAt": "2025-03-20T19:31:38.409Z",
+      "updatedAt": "2025-03-28T23:17:08.611Z",
       "url": "https://www.platinumadvisors.com",
       "year": "2023",
       "slug": "platinum-advisors",

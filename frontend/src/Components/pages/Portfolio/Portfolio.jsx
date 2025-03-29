@@ -102,7 +102,7 @@ function Portfolio() {
       $backgroundImageData={portfolioData['backgroundImage']}
       $useStaticData={useStaticData}
     >
-      <Header variant={'light'} overlapTopSection={false} />
+      <Header variant="light" transparent overlapTopSection={false} />
       <h1>{portfolioData.title}</h1>
       <ProjectList
         projectData={projects}

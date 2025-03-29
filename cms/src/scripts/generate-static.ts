@@ -8,6 +8,7 @@ const outputDir = path.join(process.cwd(), '..', 'frontend')
 const globalOutputDir = path.join(outputDir, 'src', 'data', 'globals')
 const collectionOutputDir = path.join(outputDir, 'src', 'data', 'collections')
 const mediaOutputDir = path.join(outputDir, 'public', 'media')
+const patternsOutputDir = path.join(outputDir, 'public', 'patterns')
 
 /**
  * generateStatic - Function to generate static data and save to frontend
@@ -30,7 +31,10 @@ const generateStatic = async () => {
   await saveCollectionData('projects', payload)
 
   // Copy media files
-  await copyMediaFiles()
+  await copyFiles('media', mediaOutputDir)
+
+  // Copy patterns files
+  await copyFiles('patterns', patternsOutputDir)
 
   console.log('✅ Static data finished generating')
 
@@ -52,6 +56,10 @@ const createStaticDirectories = () => {
   // Media output directory
   if (!fs.existsSync(mediaOutputDir)) {
     fs.mkdirSync(mediaOutputDir, { recursive: true })
+  }
+  // Patterns output directory
+  if (!fs.existsSync(patternsOutputDir)) {
+    fs.mkdirSync(patternsOutputDir, { recursive: true })
   }
 }
 
@@ -100,14 +108,14 @@ const saveCollectionData = async (collectionSlug: CollectionSlug, payload: BaseP
 /**
  * copyMediaFiles - Function to copy media files to frontend public directory
  */
-const copyMediaFiles = async () => {
-  console.log('📷 Copying media files...')
+const copyFiles = async (slug: string, outputDir: string) => {
+  console.log(`📷 Copying ${slug} files...`)
 
   // Source directory where Payload stores media files
-  const mediaSourceDir = path.join(process.cwd(), 'public', 'media')
+  const sourceDir = path.join(process.cwd(), 'public', slug)
 
-  if (!fs.existsSync(mediaSourceDir)) {
-    console.log('⚠️ Media source directory does not exist, skipping media copy.')
+  if (!fs.existsSync(sourceDir)) {
+    console.log(`⚠️ ${slug} source directory does not exist, skipping ${slug} copy.`)
     return
   }
 
@@ -136,9 +144,9 @@ const copyMediaFiles = async () => {
   }
 
   // Start copying files
-  copyDir(mediaSourceDir, mediaOutputDir)
+  copyDir(sourceDir, outputDir)
 
-  console.log(`✅ Media files copied to ${mediaOutputDir}`)
+  console.log(`✅ ${slug} files copied to ${outputDir}`)
 }
 
 // Run the script

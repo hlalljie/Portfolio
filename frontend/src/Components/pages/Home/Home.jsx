@@ -78,7 +78,7 @@ function Home() {
         }
         className="topBackground"
       >
-        <Header />
+        <Header transparent />
         <HeroBanner />
         <HomeExperience />
 

@@ -4,11 +4,13 @@ import { css } from 'styled-components';
 // Internal Imports
 // Layout
 import ThemedSection from '@/Components/shared/layout/ThemedSection';
+import { tablet } from '@/styles/mediaQueries';
 
 const footerStyles = css`
+  position: relative;
+  z-index: 100;
   margin: 0;
-  margin-top: 40px;
-  padding-bottom: 5px;
+  padding-block: 5px;
   display: flex;
   min-height: 0;
   align-items: center;
@@ -18,18 +20,24 @@ const footerStyles = css`
     margin: 0;
     line-height: inherit;
     text-align: center;
-    color: ${({ theme }) => theme.colors.white};
   }
+
+  /* Tablet and smaller */
+  ${tablet(css`
+    margin-top: -1px; // correct for pixel gap on mobile
+  `)}
 `;
 
 /**
  * Footer: Footer Section to be used on all pages
+ * @param {object} props - The properties for the Footer component
+ * @param {string} props.variant - The color scheme of the footer
  * @returns {JSX.Element}
  */
-function Footer() {
+function Footer({ variant = 'dark' }) {
   return (
     <ThemedSection
-      themeName="dark"
+      themeName={variant}
       additionalStyles={footerStyles}
       className="footer"
       sectionSize="tiny"
