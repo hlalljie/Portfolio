@@ -265,6 +265,111 @@
       "year": "2024",
       "github": "https://github.com/hlalljie/bitforest-dont-get-swatted",
       "pageContent": {
+        "featuredImage": {
+          "updatedAt": "2025-03-29T02:18:40.820Z",
+          "alt": "Don't Get Swatted game art",
+          "name": "Don't Get Swatted Main Image",
+          "url": "/api/media/file/DontGetSwatted-1.webp",
+          "thumbnailURL": null,
+          "filename": "DontGetSwatted-1.webp",
+          "mimeType": "image/webp",
+          "filesize": 55276,
+          "width": 1351,
+          "height": 1350,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/DontGetSwatted-1-400x400.webp",
+              "width": 400,
+              "height": 400,
+              "mimeType": "image/webp",
+              "filesize": 18854,
+              "filename": "DontGetSwatted-1-400x400.webp"
+            },
+            "small": {
+              "url": "/api/media/file/DontGetSwatted-1-768x767.webp",
+              "width": 768,
+              "height": 767,
+              "mimeType": "image/webp",
+              "filesize": 32032,
+              "filename": "DontGetSwatted-1-768x767.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/DontGetSwatted-1-1200x1199.webp",
+              "width": 1200,
+              "height": 1199,
+              "mimeType": "image/webp",
+              "filesize": 42852,
+              "filename": "DontGetSwatted-1-1200x1199.webp"
+            },
+            "large": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "hero": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            }
+          },
+          "createdAt": "2025-03-17T03:10:21.050Z",
+          "id": "67d7929d2c31a9c4c4836946"
+        },
+        "backgroundPattern": {
+          "svg": {
+            "filename": "bubbles.svg",
+            "mimeType": "image/svg+xml",
+            "filesize": 3061,
+            "width": 100,
+            "height": 100,
+            "createdAt": "2025-03-29T02:34:10.981Z",
+            "updatedAt": "2025-03-29T02:34:10.981Z",
+            "id": "67e75c223134d0caffa24edf",
+            "url": "/api/patterns/file/bubbles.svg",
+            "thumbnailURL": null
+          },
+          "size": 40,
+          "backgroundOpacity": 0.992
+        },
+        "intro": {
+          "root": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Don't Get Swatted is a one button game that lets users navigate through a choose-your-adventure style story with collectable unique endings and art. I worked on the development of the game, setting our team with tools to collaborate, and worked to glue everything together.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
+              }
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "type": "root",
+            "version": 1
+          }
+        },
         "content": [
           {
             "blockType": "textBlock",
@@ -381,72 +486,10 @@
             },
             "id": "67d7923c536928fe1b6399d7"
           }
-        ],
-        "featuredImage": {
-          "alt": "Don't Get Swatted game art",
-          "name": "Don't Get Swatted Main Image",
-          "filename": "DontGetSwatted.webp",
-          "mimeType": "image/webp",
-          "filesize": 97990,
-          "width": 2400,
-          "height": 1350,
-          "focalX": 50,
-          "focalY": 50,
-          "sizes": {
-            "thumbnail": {
-              "width": 400,
-              "height": 225,
-              "mimeType": "image/webp",
-              "filesize": 12112,
-              "filename": "DontGetSwatted-400x225.webp",
-              "url": "/api/media/file/DontGetSwatted-400x225.webp"
-            },
-            "small": {
-              "width": 768,
-              "height": 432,
-              "mimeType": "image/webp",
-              "filesize": 22818,
-              "filename": "DontGetSwatted-768x432.webp",
-              "url": "/api/media/file/DontGetSwatted-768x432.webp"
-            },
-            "medium": {
-              "width": 1200,
-              "height": 675,
-              "mimeType": "image/webp",
-              "filesize": 33942,
-              "filename": "DontGetSwatted-1200x675.webp",
-              "url": "/api/media/file/DontGetSwatted-1200x675.webp"
-            },
-            "large": {
-              "width": 1800,
-              "height": 1013,
-              "mimeType": "image/webp",
-              "filesize": 55956,
-              "filename": "DontGetSwatted-1800x1013.webp",
-              "url": "/api/media/file/DontGetSwatted-1800x1013.webp"
-            },
-            "hero": {
-              "width": null,
-              "height": null,
-              "mimeType": null,
-              "filesize": null,
-              "filename": null,
-              "url": null
-            }
-          },
-          "createdAt": "2025-03-17T03:10:08.246Z",
-          "updatedAt": "2025-03-17T03:10:08.246Z",
-          "id": "67d792902c31a9c4c4836932",
-          "url": "/api/media/file/DontGetSwatted.webp",
-          "thumbnailURL": null
-        },
-        "backgroundPattern": {
-          "size": 10,
-          "backgroundOpacity": 0.97
-        }
+        ]
       },
       "createdAt": "2025-03-17T03:11:26.453Z",
-      "updatedAt": "2025-03-23T06:24:57.511Z",
+      "updatedAt": "2025-03-29T02:36:59.468Z",
       "itchio": "https://haydondo.itch.io/dont-get-swatted",
       "publicationStatus": "published",
       "id": "67d792de2c31a9c4c483698d"
@@ -517,7 +560,7 @@
       "roles": [
         "Developer"
       ],
-      "excerpt": "Product to save teachers time and give students a more efficient way of learning through AI quiz question generation.",
+      "excerpt": "An AI quiz generator to save students and teachers time",
       "technologies": [
         "React",
         "Flask",
@@ -526,72 +569,115 @@
       "year": "2023",
       "github": "https://github.com/hlalljie/QuizGeneratorFlaskReact",
       "pageContent": {
-        "content": [],
         "featuredImage": {
-          "updatedAt": "2025-03-17T03:06:00.621Z",
           "alt": "Picture of computer with a quiz application",
           "name": "Inquizity Thumbnail",
-          "url": "/api/media/file/inquizityThumbnail-1.webp",
-          "thumbnailURL": null,
-          "filename": "inquizityThumbnail-1.webp",
+          "filename": "inquizityThumbnail.webp",
           "mimeType": "image/webp",
-          "filesize": 37150,
+          "filesize": 62444,
           "width": 1200,
-          "height": 514,
+          "height": 900,
           "focalX": 50,
           "focalY": 50,
           "sizes": {
             "thumbnail": {
-              "url": "/api/media/file/inquizityThumbnail-1-400x171.webp",
               "width": 400,
-              "height": 171,
+              "height": 300,
               "mimeType": "image/webp",
-              "filesize": 13300,
-              "filename": "inquizityThumbnail-1-400x171.webp"
+              "filesize": 17524,
+              "filename": "inquizityThumbnail-400x300.webp",
+              "url": "/api/media/file/inquizityThumbnail-400x300.webp"
             },
             "small": {
-              "url": "/api/media/file/inquizityThumbnail-1-768x329.webp",
               "width": 768,
-              "height": 329,
+              "height": 576,
               "mimeType": "image/webp",
-              "filesize": 23326,
-              "filename": "inquizityThumbnail-1-768x329.webp"
+              "filesize": 34480,
+              "filename": "inquizityThumbnail-768x576.webp",
+              "url": "/api/media/file/inquizityThumbnail-768x576.webp"
             },
             "medium": {
-              "url": "/api/media/file/inquizityThumbnail-1-1200x514.webp",
               "width": 1200,
-              "height": 514,
+              "height": 900,
               "mimeType": "image/webp",
-              "filesize": 36602,
-              "filename": "inquizityThumbnail-1-1200x514.webp"
+              "filesize": 51886,
+              "filename": "inquizityThumbnail-1200x900.webp",
+              "url": "/api/media/file/inquizityThumbnail-1200x900.webp"
             },
             "large": {
-              "url": null,
               "width": null,
               "height": null,
               "mimeType": null,
               "filesize": null,
-              "filename": null
+              "filename": null,
+              "url": null
             },
             "hero": {
-              "url": null,
               "width": null,
               "height": null,
               "mimeType": null,
               "filesize": null,
-              "filename": null
+              "filename": null,
+              "url": null
             }
           },
-          "createdAt": "2025-03-17T03:05:35.282Z",
-          "id": "67d7917f2c31a9c4c4836832"
+          "createdAt": "2025-03-17T03:04:44.034Z",
+          "updatedAt": "2025-03-17T03:04:44.034Z",
+          "id": "67d7914c2c31a9c4c48367f8",
+          "url": "/api/media/file/inquizityThumbnail.webp",
+          "thumbnailURL": null
         },
         "backgroundPattern": {
-          "size": 10,
-          "backgroundOpacity": 0.97
-        }
+          "svg": {
+            "filename": "fancy-rectangles.svg",
+            "mimeType": "image/svg+xml",
+            "filesize": 464,
+            "width": 60,
+            "height": 48,
+            "createdAt": "2025-03-29T02:35:19.671Z",
+            "updatedAt": "2025-03-29T02:35:19.671Z",
+            "id": "67e75c673134d0caffa250df",
+            "url": "/api/patterns/file/fancy-rectangles.svg",
+            "thumbnailURL": null
+          },
+          "size": 20,
+          "backgroundOpacity": 0.99
+        },
+        "intro": {
+          "root": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Thought up to solve a personal need of mine; needing customized questions to fit the needs of students. I was able to accurately prompt LLMs for questions that fit the current needs of the students, so I created Inquizity to allow students to continue to generate questions on their own.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
+              }
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "type": "root",
+            "version": 1
+          }
+        },
+        "content": []
       },
       "createdAt": "2025-03-17T03:06:07.028Z",
-      "updatedAt": "2025-03-20T19:31:38.403Z",
+      "updatedAt": "2025-03-29T02:36:04.949Z",
       "publicationStatus": "published",
       "id": "67d7919f2c31a9c4c4836879"
     },
@@ -663,7 +749,7 @@
         "Techincal Lead",
         "Designer"
       ],
-      "excerpt": "Worked as solo frontend dev and team lead on this Web3 Hackathon project to democratize freelance contracting.",
+      "excerpt": "A freelance contracting platform built in 48 hours for the MLH Web3 Hackathon.",
       "technologies": [
         "React",
         "CSS",
@@ -672,72 +758,102 @@
       "year": "2023",
       "github": "https://github.com/Topupchips/MLH-Web3-Hackathon',",
       "pageContent": {
-        "content": [],
         "featuredImage": {
-          "alt": "Screenshot of Block Broker's homepage",
-          "name": "Block Broker Banner",
-          "filename": "blockBrokerBanner.webp",
+          "alt": "Block Broker homepage screenshot",
+          "filename": "block_broker_homepage_screenshot.webp",
           "mimeType": "image/webp",
-          "filesize": 86394,
+          "filesize": 354958,
           "width": 2500,
-          "height": 1190,
+          "height": 4432,
           "focalX": 50,
-          "focalY": 13,
+          "focalY": 50,
           "sizes": {
             "thumbnail": {
-              "url": "/api/media/file/blockBrokerBanner-400x190.webp",
               "width": 400,
-              "height": 190,
+              "height": 709,
               "mimeType": "image/webp",
-              "filesize": 16810,
-              "filename": "blockBrokerBanner-400x190.webp"
+              "filesize": 48146,
+              "filename": "block_broker_homepage_screenshot-400x709.webp",
+              "url": "/api/media/file/block_broker_homepage_screenshot-400x709.webp"
             },
             "small": {
-              "url": "/api/media/file/blockBrokerBanner-768x366.webp",
               "width": 768,
-              "height": 366,
+              "height": 1362,
               "mimeType": "image/webp",
-              "filesize": 28708,
-              "filename": "blockBrokerBanner-768x366.webp"
+              "filesize": 92310,
+              "filename": "block_broker_homepage_screenshot-768x1362.webp",
+              "url": "/api/media/file/block_broker_homepage_screenshot-768x1362.webp"
             },
             "medium": {
-              "url": "/api/media/file/blockBrokerBanner-1200x571.webp",
               "width": 1200,
-              "height": 571,
+              "height": 2127,
               "mimeType": "image/webp",
-              "filesize": 38398,
-              "filename": "blockBrokerBanner-1200x571.webp"
+              "filesize": 131468,
+              "filename": "block_broker_homepage_screenshot-1200x2127.webp",
+              "url": "/api/media/file/block_broker_homepage_screenshot-1200x2127.webp"
             },
             "large": {
-              "url": "/api/media/file/blockBrokerBanner-1800x857.webp",
               "width": 1800,
-              "height": 857,
+              "height": 3191,
               "mimeType": "image/webp",
-              "filesize": 58984,
-              "filename": "blockBrokerBanner-1800x857.webp"
+              "filesize": 203472,
+              "filename": "block_broker_homepage_screenshot-1800x3191.webp",
+              "url": "/api/media/file/block_broker_homepage_screenshot-1800x3191.webp"
             },
             "hero": {
-              "url": "/api/media/file/blockBrokerBanner-2500x1190.webp",
               "width": 2500,
-              "height": 1190,
+              "height": 4432,
               "mimeType": "image/webp",
-              "filesize": 85398,
-              "filename": "blockBrokerBanner-2500x1190.webp"
+              "filesize": 300410,
+              "filename": "block_broker_homepage_screenshot-2500x4432.webp",
+              "url": "/api/media/file/block_broker_homepage_screenshot-2500x4432.webp"
             }
           },
-          "createdAt": "2025-03-17T03:01:17.645Z",
-          "updatedAt": "2025-03-17T03:01:37.732Z",
-          "thumbnailURL": null,
-          "url": "/api/media/file/blockBrokerBanner.webp",
-          "id": "67d7907d2c31a9c4c4836775"
+          "createdAt": "2025-03-29T02:10:01.952Z",
+          "updatedAt": "2025-03-29T02:10:01.952Z",
+          "id": "67e756793134d0caffa22fdf",
+          "url": "/api/media/file/block_broker_homepage_screenshot.webp",
+          "thumbnailURL": null
         },
         "backgroundPattern": {
           "size": 10,
           "backgroundOpacity": 0.97
-        }
+        },
+        "intro": {
+          "root": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Our team set out to create a smart contract based app to democratize freelancing on the web. I worked as the sole frontend developer while also bringing together the team from across the globe.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "paragraph",
+                "version": 1,
+                "textFormat": 0,
+                "textStyle": ""
+              }
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "type": "root",
+            "version": 1
+          }
+        },
+        "content": []
       },
       "createdAt": "2025-03-17T03:01:49.116Z",
-      "updatedAt": "2025-03-20T19:31:38.394Z",
+      "updatedAt": "2025-03-29T02:10:05.907Z",
       "publicationStatus": "published",
       "id": "67d7909d2c31a9c4c483679c"
     },
@@ -1267,65 +1383,77 @@
       "url": "https://www.travelgurusgroup.com",
       "pageContent": {
         "featuredImage": {
-          "name": "Screenshot of the Travel Gurus Group homepage",
-          "filename": "travel-gurus-homepage.webp",
+          "alt": "Travel Gurus Group homepage screenshot",
+          "filename": "screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27.webp",
           "mimeType": "image/webp",
-          "filesize": 941080,
-          "width": 1920,
-          "height": 6312,
+          "filesize": 404002,
+          "width": 1895,
+          "height": 5190,
           "focalX": 50,
-          "focalY": 50,
+          "focalY": 25,
           "sizes": {
             "thumbnail": {
+              "url": "/api/media/file/screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-400x1096.webp",
               "width": 400,
-              "height": 1315,
+              "height": 1096,
               "mimeType": "image/webp",
-              "filesize": 100134,
-              "filename": "travel-gurus-homepage-400x1315.webp",
-              "url": "/api/media/file/travel-gurus-homepage-400x1315.webp"
+              "filesize": 55864,
+              "filename": "screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-400x1096.webp"
             },
             "small": {
+              "url": "/api/media/file/screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-768x2103.webp",
               "width": 768,
-              "height": 2525,
+              "height": 2103,
               "mimeType": "image/webp",
-              "filesize": 233200,
-              "filename": "travel-gurus-homepage-768x2525.webp",
-              "url": "/api/media/file/travel-gurus-homepage-768x2525.webp"
+              "filesize": 121304,
+              "filename": "screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-768x2103.webp"
             },
             "medium": {
+              "url": "/api/media/file/screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-1200x3287.webp",
               "width": 1200,
-              "height": 3945,
+              "height": 3287,
               "mimeType": "image/webp",
-              "filesize": 391956,
-              "filename": "travel-gurus-homepage-1200x3945.webp",
-              "url": "/api/media/file/travel-gurus-homepage-1200x3945.webp"
+              "filesize": 196848,
+              "filename": "screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-1200x3287.webp"
             },
             "large": {
+              "url": "/api/media/file/screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-1800x4930.webp",
               "width": 1800,
-              "height": 5918,
+              "height": 4930,
               "mimeType": "image/webp",
-              "filesize": 711432,
-              "filename": "travel-gurus-homepage-1800x5918.webp",
-              "url": "/api/media/file/travel-gurus-homepage-1800x5918.webp"
+              "filesize": 325664,
+              "filename": "screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-1800x4930.webp"
             },
             "hero": {
+              "url": null,
               "width": null,
               "height": null,
               "mimeType": null,
               "filesize": null,
-              "filename": null,
-              "url": null
+              "filename": null
             }
           },
-          "createdAt": "2025-03-29T00:09:51.997Z",
-          "updatedAt": "2025-03-29T00:09:51.997Z",
-          "id": "67e73a4f3134d0caffa1fdd4",
-          "url": "/api/media/file/travel-gurus-homepage.webp",
-          "thumbnailURL": null
+          "createdAt": "2025-03-29T01:47:05.534Z",
+          "updatedAt": "2025-03-29T01:48:34.117Z",
+          "thumbnailURL": null,
+          "url": "/api/media/file/screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27.webp",
+          "id": "67e751193134d0caffa215fd"
         },
         "backgroundPattern": {
-          "size": 10,
-          "backgroundOpacity": 0.97
+          "svg": {
+            "filename": "morphing-diamonds.svg",
+            "mimeType": "image/svg+xml",
+            "filesize": 6046,
+            "width": 60,
+            "height": 60,
+            "createdAt": "2025-03-29T02:03:13.444Z",
+            "updatedAt": "2025-03-29T02:03:13.444Z",
+            "id": "67e754e13134d0caffa22407",
+            "url": "/api/patterns/file/morphing-diamonds.svg",
+            "thumbnailURL": null
+          },
+          "size": 7,
+          "backgroundOpacity": 0.99
         },
         "intro": {
           "root": {
@@ -1361,7 +1489,7 @@
         "content": []
       },
       "createdAt": "2025-03-14T17:00:55.727Z",
-      "updatedAt": "2025-03-29T00:09:57.554Z",
+      "updatedAt": "2025-03-29T02:05:21.256Z",
       "slug": "travel-gurus",
       "type": "professional",
       "publicationStatus": "published",

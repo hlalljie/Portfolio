@@ -649,65 +649,77 @@
         "url": "https://www.travelgurusgroup.com",
         "pageContent": {
           "featuredImage": {
-            "name": "Screenshot of the Travel Gurus Group homepage",
-            "filename": "travel-gurus-homepage.webp",
+            "alt": "Travel Gurus Group homepage screenshot",
+            "filename": "screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27.webp",
             "mimeType": "image/webp",
-            "filesize": 941080,
-            "width": 1920,
-            "height": 6312,
+            "filesize": 404002,
+            "width": 1895,
+            "height": 5190,
             "focalX": 50,
-            "focalY": 50,
+            "focalY": 25,
             "sizes": {
               "thumbnail": {
+                "url": "/api/media/file/screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-400x1096.webp",
                 "width": 400,
-                "height": 1315,
+                "height": 1096,
                 "mimeType": "image/webp",
-                "filesize": 100134,
-                "filename": "travel-gurus-homepage-400x1315.webp",
-                "url": "/api/media/file/travel-gurus-homepage-400x1315.webp"
+                "filesize": 55864,
+                "filename": "screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-400x1096.webp"
               },
               "small": {
+                "url": "/api/media/file/screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-768x2103.webp",
                 "width": 768,
-                "height": 2525,
+                "height": 2103,
                 "mimeType": "image/webp",
-                "filesize": 233200,
-                "filename": "travel-gurus-homepage-768x2525.webp",
-                "url": "/api/media/file/travel-gurus-homepage-768x2525.webp"
+                "filesize": 121304,
+                "filename": "screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-768x2103.webp"
               },
               "medium": {
+                "url": "/api/media/file/screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-1200x3287.webp",
                 "width": 1200,
-                "height": 3945,
+                "height": 3287,
                 "mimeType": "image/webp",
-                "filesize": 391956,
-                "filename": "travel-gurus-homepage-1200x3945.webp",
-                "url": "/api/media/file/travel-gurus-homepage-1200x3945.webp"
+                "filesize": 196848,
+                "filename": "screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-1200x3287.webp"
               },
               "large": {
+                "url": "/api/media/file/screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-1800x4930.webp",
                 "width": 1800,
-                "height": 5918,
+                "height": 4930,
                 "mimeType": "image/webp",
-                "filesize": 711432,
-                "filename": "travel-gurus-homepage-1800x5918.webp",
-                "url": "/api/media/file/travel-gurus-homepage-1800x5918.webp"
+                "filesize": 325664,
+                "filename": "screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27-1800x4930.webp"
               },
               "hero": {
+                "url": null,
                 "width": null,
                 "height": null,
                 "mimeType": null,
                 "filesize": null,
-                "filename": null,
-                "url": null
+                "filename": null
               }
             },
-            "createdAt": "2025-03-29T00:09:51.997Z",
-            "updatedAt": "2025-03-29T00:09:51.997Z",
-            "id": "67e73a4f3134d0caffa1fdd4",
-            "url": "/api/media/file/travel-gurus-homepage.webp",
-            "thumbnailURL": null
+            "createdAt": "2025-03-29T01:47:05.534Z",
+            "updatedAt": "2025-03-29T01:48:34.117Z",
+            "thumbnailURL": null,
+            "url": "/api/media/file/screencapture-travelgurus-squarespace-services-2022-10-08-11_09_27.webp",
+            "id": "67e751193134d0caffa215fd"
           },
           "backgroundPattern": {
-            "size": 10,
-            "backgroundOpacity": 0.97
+            "svg": {
+              "filename": "morphing-diamonds.svg",
+              "mimeType": "image/svg+xml",
+              "filesize": 6046,
+              "width": 60,
+              "height": 60,
+              "createdAt": "2025-03-29T02:03:13.444Z",
+              "updatedAt": "2025-03-29T02:03:13.444Z",
+              "id": "67e754e13134d0caffa22407",
+              "url": "/api/patterns/file/morphing-diamonds.svg",
+              "thumbnailURL": null
+            },
+            "size": 7,
+            "backgroundOpacity": 0.99
           },
           "intro": {
             "root": {
@@ -743,7 +755,7 @@
           "content": []
         },
         "createdAt": "2025-03-14T17:00:55.727Z",
-        "updatedAt": "2025-03-29T00:09:57.554Z",
+        "updatedAt": "2025-03-29T02:05:21.256Z",
         "slug": "travel-gurus",
         "type": "professional",
         "publicationStatus": "published",
