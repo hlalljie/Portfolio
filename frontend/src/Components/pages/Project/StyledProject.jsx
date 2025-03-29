@@ -90,6 +90,7 @@ const StyledProject = styled.div`
     /* Media Queries */
     // Tablet
     ${tablet(css`
+      background-size: ${$backgroundPattern['size'] * 2 + '%'};
       .projectIntro {
         display: flex;
         flex-direction: column;
@@ -114,6 +115,7 @@ const StyledProject = styled.div`
 
     // Mobile
     ${mobile(css`
+      background-size: ${$backgroundPattern['size'] * 3 + '%'};
       .projectIntro {
         .featuredImageContainer {
           padding: 0px;

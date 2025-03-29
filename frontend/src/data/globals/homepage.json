@@ -440,8 +440,20 @@
             "id": "67e5d40ac1a8ca689fd7e435"
           },
           "backgroundPattern": {
-            "size": 10,
-            "backgroundOpacity": 0.97
+            "svg": {
+              "filename": "flipped-diamonds.svg",
+              "mimeType": "image/svg+xml",
+              "filesize": 789,
+              "width": 16,
+              "height": 20,
+              "createdAt": "2025-03-27T06:18:48.101Z",
+              "updatedAt": "2025-03-27T06:18:48.101Z",
+              "id": "67e4edc8e29ab24815bc0dc6",
+              "url": "/api/patterns/file/flipped-diamonds.svg",
+              "thumbnailURL": null
+            },
+            "size": 50,
+            "backgroundOpacity": 0.985
           },
           "intro": {
             "root": {
@@ -554,7 +566,7 @@
           ]
         },
         "createdAt": "2025-03-14T06:51:14.689Z",
-        "updatedAt": "2025-03-27T22:51:24.174Z",
+        "updatedAt": "2025-03-28T23:17:08.611Z",
         "url": "https://www.platinumadvisors.com",
         "year": "2023",
         "slug": "platinum-advisors",
@@ -627,7 +639,7 @@
           "Designer",
           "Developer"
         ],
-        "excerpt": "Travel Gurus reached out for their first website looking to inspire their customers to travel to new places.",
+        "excerpt": "A captivating design inspiring clients to travel to new destinations",
         "technologies": [
           "Squarespace",
           "Javascript",
@@ -636,108 +648,102 @@
         "year": "2022",
         "url": "https://www.travelgurusgroup.com",
         "pageContent": {
-          "content": [
-            {
-              "blockType": "textBlock",
-              "content": {
-                "root": {
+          "featuredImage": {
+            "name": "Screenshot of the Travel Gurus Group homepage",
+            "filename": "travel-gurus-homepage.webp",
+            "mimeType": "image/webp",
+            "filesize": 941080,
+            "width": 1920,
+            "height": 6312,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "width": 400,
+                "height": 1315,
+                "mimeType": "image/webp",
+                "filesize": 100134,
+                "filename": "travel-gurus-homepage-400x1315.webp",
+                "url": "/api/media/file/travel-gurus-homepage-400x1315.webp"
+              },
+              "small": {
+                "width": 768,
+                "height": 2525,
+                "mimeType": "image/webp",
+                "filesize": 233200,
+                "filename": "travel-gurus-homepage-768x2525.webp",
+                "url": "/api/media/file/travel-gurus-homepage-768x2525.webp"
+              },
+              "medium": {
+                "width": 1200,
+                "height": 3945,
+                "mimeType": "image/webp",
+                "filesize": 391956,
+                "filename": "travel-gurus-homepage-1200x3945.webp",
+                "url": "/api/media/file/travel-gurus-homepage-1200x3945.webp"
+              },
+              "large": {
+                "width": 1800,
+                "height": 5918,
+                "mimeType": "image/webp",
+                "filesize": 711432,
+                "filename": "travel-gurus-homepage-1800x5918.webp",
+                "url": "/api/media/file/travel-gurus-homepage-1800x5918.webp"
+              },
+              "hero": {
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null,
+                "url": null
+              }
+            },
+            "createdAt": "2025-03-29T00:09:51.997Z",
+            "updatedAt": "2025-03-29T00:09:51.997Z",
+            "id": "67e73a4f3134d0caffa1fdd4",
+            "url": "/api/media/file/travel-gurus-homepage.webp",
+            "thumbnailURL": null
+          },
+          "backgroundPattern": {
+            "size": 10,
+            "backgroundOpacity": 0.97
+          },
+          "intro": {
+            "root": {
+              "children": [
+                {
                   "children": [
                     {
-                      "children": [
-                        {
-                          "detail": 0,
-                          "format": 0,
-                          "mode": "normal",
-                          "style": "",
-                          "text": "Travel Gurus reached out for their first website looking to inspire their customers to travel to new places.",
-                          "type": "text",
-                          "version": 1
-                        }
-                      ],
-                      "direction": "ltr",
-                      "format": "",
-                      "indent": 0,
-                      "type": "paragraph",
-                      "version": 1,
-                      "textFormat": 0,
-                      "textStyle": ""
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": "Travel Gurus Group is a premier travel agency focused on providing VIP level travel experiences. The goal of the website was to communicate the luxury and attention to detail of the experiences being offered while showing clients what experience waited for them through captivating imagery.",
+                      "type": "text",
+                      "version": 1
                     }
                   ],
                   "direction": "ltr",
                   "format": "",
                   "indent": 0,
-                  "type": "root",
-                  "version": 1
+                  "type": "paragraph",
+                  "version": 1,
+                  "textFormat": 0,
+                  "textStyle": ""
                 }
-              },
-              "id": "67d4615128c99d47346dc87a"
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "root",
+              "version": 1
             }
-          ],
-          "featuredImage": {
-            "alt": "Travel Gurus website homepage screenshot",
-            "filename": "travelGurusThumbnail2400w.webp",
-            "mimeType": "image/webp",
-            "filesize": 90936,
-            "width": 1898,
-            "height": 722,
-            "focalX": 50,
-            "focalY": 24,
-            "sizes": {
-              "thumbnail": {
-                "url": "/api/media/file/travelGurusThumbnail2400w-400x152.webp",
-                "width": 400,
-                "height": 152,
-                "mimeType": "image/webp",
-                "filesize": 12980,
-                "filename": "travelGurusThumbnail2400w-400x152.webp"
-              },
-              "small": {
-                "url": "/api/media/file/travelGurusThumbnail2400w-768x292.webp",
-                "width": 768,
-                "height": 292,
-                "mimeType": "image/webp",
-                "filesize": 28294,
-                "filename": "travelGurusThumbnail2400w-768x292.webp"
-              },
-              "medium": {
-                "url": "/api/media/file/travelGurusThumbnail2400w-1200x456.webp",
-                "width": 1200,
-                "height": 456,
-                "mimeType": "image/webp",
-                "filesize": 42524,
-                "filename": "travelGurusThumbnail2400w-1200x456.webp"
-              },
-              "large": {
-                "url": "/api/media/file/travelGurusThumbnail2400w-1800x685.webp",
-                "width": 1800,
-                "height": 685,
-                "mimeType": "image/webp",
-                "filesize": 68852,
-                "filename": "travelGurusThumbnail2400w-1800x685.webp"
-              },
-              "hero": {
-                "url": null,
-                "width": null,
-                "height": null,
-                "mimeType": null,
-                "filesize": null,
-                "filename": null
-              }
-            },
-            "createdAt": "2025-03-14T16:59:10.508Z",
-            "updatedAt": "2025-03-14T17:09:28.395Z",
-            "thumbnailURL": null,
-            "url": "/api/media/file/travelGurusThumbnail2400w.webp",
-            "name": "Travel Gurus Banner",
-            "id": "67d4605e95ccfa757ba899f0"
           },
-          "backgroundPattern": {
-            "size": 10,
-            "backgroundOpacity": 0.97
-          }
+          "content": []
         },
         "createdAt": "2025-03-14T17:00:55.727Z",
-        "updatedAt": "2025-03-20T19:31:38.406Z",
+        "updatedAt": "2025-03-29T00:09:57.554Z",
         "slug": "travel-gurus",
         "type": "professional",
         "publicationStatus": "published",
@@ -809,7 +815,7 @@
           "Designer",
           "Developer"
         ],
-        "excerpt": "A rebranding and website refresh to better guide students and better market the brand for the Bay Area Teacher Training Institute.",
+        "excerpt": "An intuitive refresh for a teacher training institute.",
         "technologies": [
           "Squarespace",
           "Less",
@@ -818,108 +824,114 @@
         "year": "2022",
         "url": "https://www.ba-tti.org",
         "pageContent": {
-          "content": [
-            {
-              "blockType": "textBlock",
-              "content": {
-                "root": {
+          "featuredImage": {
+            "alt": "Screenshot of Bay Area Teacher Training Institute's homepage",
+            "filename": "batti-homepage.webp",
+            "mimeType": "image/webp",
+            "filesize": 630620,
+            "width": 2500,
+            "height": 8624,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "width": 400,
+                "height": 1380,
+                "mimeType": "image/webp",
+                "filesize": 73256,
+                "filename": "batti-homepage-400x1380.webp",
+                "url": "/api/media/file/batti-homepage-400x1380.webp"
+              },
+              "small": {
+                "width": 768,
+                "height": 2649,
+                "mimeType": "image/webp",
+                "filesize": 155130,
+                "filename": "batti-homepage-768x2649.webp",
+                "url": "/api/media/file/batti-homepage-768x2649.webp"
+              },
+              "medium": {
+                "width": 1200,
+                "height": 4140,
+                "mimeType": "image/webp",
+                "filesize": 231964,
+                "filename": "batti-homepage-1200x4140.webp",
+                "url": "/api/media/file/batti-homepage-1200x4140.webp"
+              },
+              "large": {
+                "width": 1800,
+                "height": 6209,
+                "mimeType": "image/webp",
+                "filesize": 373064,
+                "filename": "batti-homepage-1800x6209.webp",
+                "url": "/api/media/file/batti-homepage-1800x6209.webp"
+              },
+              "hero": {
+                "width": 2500,
+                "height": 8624,
+                "mimeType": "image/webp",
+                "filesize": 527356,
+                "filename": "batti-homepage-2500x8624.webp",
+                "url": "/api/media/file/batti-homepage-2500x8624.webp"
+              }
+            },
+            "createdAt": "2025-03-28T23:43:14.993Z",
+            "updatedAt": "2025-03-28T23:43:14.993Z",
+            "id": "67e734123134d0caffa1eb3c",
+            "url": "/api/media/file/batti-homepage.webp",
+            "thumbnailURL": null
+          },
+          "backgroundPattern": {
+            "svg": {
+              "filename": "bamboo.svg",
+              "mimeType": "image/svg+xml",
+              "filesize": 389,
+              "width": 16,
+              "height": 32,
+              "createdAt": "2025-03-28T23:05:01.053Z",
+              "updatedAt": "2025-03-28T23:05:01.053Z",
+              "id": "67e72b1d3134d0caffa1b7f6",
+              "url": "/api/patterns/file/bamboo.svg",
+              "thumbnailURL": null
+            },
+            "size": 30,
+            "backgroundOpacity": 0.99
+          },
+          "intro": {
+            "root": {
+              "children": [
+                {
                   "children": [
                     {
-                      "children": [
-                        {
-                          "detail": 0,
-                          "format": 0,
-                          "mode": "normal",
-                          "style": "",
-                          "text": "A rebranding and website refresh to better guide students and better market the brand for the Bay Area Teacher Training Institute.",
-                          "type": "text",
-                          "version": 1
-                        }
-                      ],
-                      "direction": "ltr",
-                      "format": "",
-                      "indent": 0,
-                      "type": "paragraph",
-                      "version": 1,
-                      "textFormat": 0,
-                      "textStyle": ""
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": "The Bay Area Teacher Training Institute is an impactful education institution offering credentials, and masters in teaching degrees. The goal was to create a professional, and easy to navigate website for both prospective students and student needing information in a variety of different stages and programs.",
+                      "type": "text",
+                      "version": 1
                     }
                   ],
                   "direction": "ltr",
                   "format": "",
                   "indent": 0,
-                  "type": "root",
-                  "version": 1
+                  "type": "paragraph",
+                  "version": 1,
+                  "textFormat": 0,
+                  "textStyle": ""
                 }
-              },
-              "id": "67d45f2a28c99d47346dc878"
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "root",
+              "version": 1
             }
-          ],
-          "featuredImage": {
-            "updatedAt": "2025-03-14T17:12:05.466Z",
-            "alt": "BA-TTI website homepage screenshot",
-            "url": "/api/media/file/battiThumbnail2400w-1.webp",
-            "thumbnailURL": null,
-            "filename": "battiThumbnail2400w-1.webp",
-            "mimeType": "image/webp",
-            "filesize": 98248,
-            "width": 2400,
-            "height": 1050,
-            "focalX": 50,
-            "focalY": 50,
-            "sizes": {
-              "thumbnail": {
-                "url": "/api/media/file/battiThumbnail2400w-1-400x175.webp",
-                "width": 400,
-                "height": 175,
-                "mimeType": "image/webp",
-                "filesize": 17512,
-                "filename": "battiThumbnail2400w-1-400x175.webp"
-              },
-              "small": {
-                "url": "/api/media/file/battiThumbnail2400w-1-768x336.webp",
-                "width": 768,
-                "height": 336,
-                "mimeType": "image/webp",
-                "filesize": 31904,
-                "filename": "battiThumbnail2400w-1-768x336.webp"
-              },
-              "medium": {
-                "url": "/api/media/file/battiThumbnail2400w-1-1200x525.webp",
-                "width": 1200,
-                "height": 525,
-                "mimeType": "image/webp",
-                "filesize": 45522,
-                "filename": "battiThumbnail2400w-1-1200x525.webp"
-              },
-              "large": {
-                "url": "/api/media/file/battiThumbnail2400w-1-1800x788.webp",
-                "width": 1800,
-                "height": 788,
-                "mimeType": "image/webp",
-                "filesize": 67482,
-                "filename": "battiThumbnail2400w-1-1800x788.webp"
-              },
-              "hero": {
-                "url": null,
-                "width": null,
-                "height": null,
-                "mimeType": null,
-                "filesize": null,
-                "filename": null
-              }
-            },
-            "createdAt": "2025-03-14T17:11:23.630Z",
-            "name": "BA-TTI Banner",
-            "id": "67d4633b95ccfa757ba89b13"
           },
-          "backgroundPattern": {
-            "size": 10,
-            "backgroundOpacity": 0.97
-          }
+          "content": []
         },
         "createdAt": "2025-03-14T16:54:22.350Z",
-        "updatedAt": "2025-03-20T19:31:38.382Z",
+        "updatedAt": "2025-03-28T23:45:19.281Z",
         "slug": "ba-tti",
         "type": "professional",
         "publicationStatus": "published",
