@@ -65,6 +65,10 @@ const Project = () => {
   const backgroundOpacity = project['pageContent']['backgroundPattern']['svg']
     ? project['pageContent']['backgroundPattern']['backgroundOpacity']
     : 1;
+
+  const hasContent =
+    project['pageContent']['content'] &&
+    project['pageContent']['content'].length > 0;
   return (
     <StyledProject
       $bgcolor={
@@ -77,11 +81,13 @@ const Project = () => {
     >
       <Header variant="light" overlapTopSection={true} animate={false} />
       <ProjectIntro project={project} backgroundOpacity={backgroundOpacity} />
-      <ProjectContent
-        content={project['pageContent']['content']}
-        backgroundOpacity={backgroundOpacity}
-      />
-      <Footer variant="light" />
+      {hasContent && (
+        <ProjectContent
+          content={project['pageContent']['content']}
+          backgroundOpacity={backgroundOpacity}
+        />
+      )}
+      <Footer variant={hasContent ? 'light' : 'dark'} />
     </StyledProject>
   );
 };
