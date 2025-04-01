@@ -4,6 +4,7 @@ import type { CollectionConfig } from 'payload'
 // Internal imports
 // Blocks
 import { TextBlock } from '../blocks/TextBlock'
+import { ImageBlock } from '../blocks/ImageBlock'
 // Utils
 import slugify from '../app/utils/slugify'
 import triggerRebuild from '../app/utils/triggerRebuild'
@@ -161,7 +162,7 @@ export const Projects: CollectionConfig = {
         {
           name: 'content',
           type: 'blocks',
-          blocks: [TextBlock],
+          blocks: [TextBlock, ImageBlock],
         },
       ],
     },

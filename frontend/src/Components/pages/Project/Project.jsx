@@ -216,6 +216,8 @@ const ProjectContent = ({ content, backgroundOpacity = 1 }) => {
           {content.map((block, index) => {
             if (block['blockType'] === 'textBlock') {
               return <TextBlock key={index} block={block} />;
+            } else if (block['blockType'] === 'imageBlock') {
+              return <ImageBlock key={index} block={block} />;
             }
             return null;
           })}
@@ -233,6 +235,18 @@ const ProjectContent = ({ content, backgroundOpacity = 1 }) => {
  */
 const TextBlock = ({ block }) => {
   return <RichText content={block['content']} />;
+};
+
+const ImageBlock = ({ block }) => {
+  return (
+    <div className="imageBlockContainer">
+      <AdaptiveImage
+        className="imageBlock"
+        imageData={block['image']}
+        sizes={`(max-width: ${breakpoints.tablet}px) 98vw, 74vw`}
+      />
+    </div>
+  );
 };
 
 export default Project;

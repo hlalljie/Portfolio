@@ -97,6 +97,12 @@ const StyledProject = styled.div`
           )}
           1%
       );
+      .imageBlockContainer {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
     }
 
     /* Media Queries */

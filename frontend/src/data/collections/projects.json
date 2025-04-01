@@ -1,7 +1,7 @@
 {
   "docs": [
     {
-      "updatedAt": "2025-03-28T23:32:49.919Z",
+      "updatedAt": "2025-04-01T19:50:53.642Z",
       "title": "Royal Thai",
       "publicationStatus": "published",
       "type": "professional",
@@ -184,7 +184,69 @@
             "version": 1
           }
         },
-        "content": []
+        "content": [
+          {
+            "blockType": "imageBlock",
+            "image": {
+              "alt": "Screenshot of Royal Thai's project page",
+              "filename": "royal-thai-projects.webp",
+              "mimeType": "image/webp",
+              "filesize": 1609678,
+              "width": 2880,
+              "height": 6856,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "width": 400,
+                  "height": 952,
+                  "mimeType": "image/webp",
+                  "filesize": 74690,
+                  "filename": "royal-thai-projects-400x952.webp",
+                  "url": "/api/media/file/royal-thai-projects-400x952.webp"
+                },
+                "small": {
+                  "width": 768,
+                  "height": 1828,
+                  "mimeType": "image/webp",
+                  "filesize": 178672,
+                  "filename": "royal-thai-projects-768x1828.webp",
+                  "url": "/api/media/file/royal-thai-projects-768x1828.webp"
+                },
+                "medium": {
+                  "width": 1200,
+                  "height": 2857,
+                  "mimeType": "image/webp",
+                  "filesize": 311170,
+                  "filename": "royal-thai-projects-1200x2857.webp",
+                  "url": "/api/media/file/royal-thai-projects-1200x2857.webp"
+                },
+                "large": {
+                  "width": 1800,
+                  "height": 4285,
+                  "mimeType": "image/webp",
+                  "filesize": 595064,
+                  "filename": "royal-thai-projects-1800x4285.webp",
+                  "url": "/api/media/file/royal-thai-projects-1800x4285.webp"
+                },
+                "hero": {
+                  "width": 2500,
+                  "height": 5951,
+                  "mimeType": "image/webp",
+                  "filesize": 1018564,
+                  "filename": "royal-thai-projects-2500x5951.webp",
+                  "url": "/api/media/file/royal-thai-projects-2500x5951.webp"
+                }
+              },
+              "createdAt": "2025-04-01T19:37:42.195Z",
+              "updatedAt": "2025-04-01T19:37:42.195Z",
+              "id": "67ec4086a17a28238f7296f8",
+              "url": "/api/media/file/royal-thai-projects.webp",
+              "thumbnailURL": null
+            },
+            "id": "67ec3f8c984bce41fec97738"
+          }
+        ]
       },
       "createdAt": "2025-03-20T23:53:56.358Z",
       "company": "Nav Creative",

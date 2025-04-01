@@ -293,26 +293,34 @@ export interface Project {
       [k: string]: unknown;
     } | null;
     content?:
-      | {
-          content?: {
-            root: {
-              type: string;
-              children: {
-                type: string;
-                version: number;
+      | (
+          | {
+              content?: {
+                root: {
+                  type: string;
+                  children: {
+                    type: string;
+                    version: number;
+                    [k: string]: unknown;
+                  }[];
+                  direction: ('ltr' | 'rtl') | null;
+                  format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                  indent: number;
+                  version: number;
+                };
                 [k: string]: unknown;
-              }[];
-              direction: ('ltr' | 'rtl') | null;
-              format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-              indent: number;
-              version: number;
-            };
-            [k: string]: unknown;
-          } | null;
-          id?: string | null;
-          blockName?: string | null;
-          blockType: 'textBlock';
-        }[]
+              } | null;
+              id?: string | null;
+              blockName?: string | null;
+              blockType: 'textBlock';
+            }
+          | {
+              image: string | Media;
+              id?: string | null;
+              blockName?: string | null;
+              blockType: 'imageBlock';
+            }
+        )[]
       | null;
   };
   updatedAt: string;
@@ -550,6 +558,13 @@ export interface ProjectsSelect<T extends boolean = true> {
                 | T
                 | {
                     content?: T;
+                    id?: T;
+                    blockName?: T;
+                  };
+              imageBlock?:
+                | T
+                | {
+                    image?: T;
                     id?: T;
                     blockName?: T;
                   };
