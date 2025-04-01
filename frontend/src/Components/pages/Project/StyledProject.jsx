@@ -84,7 +84,19 @@ const StyledProject = styled.div`
       padding-block: 50px;
       position: relative;
       z-index: 2;
-      box-shadow: 0 0 50px 70px ${theme.colors.white};
+      background: linear-gradient(
+        180deg,
+        ${theme.withCorrectedOpacity(
+            theme.colors.black,
+            $backgroundPattern['backgroundOpacity']
+          )}
+          0%,
+        ${theme.withCorrectedOpacity(
+            theme.colors.white,
+            $backgroundPattern['backgroundOpacity']
+          )}
+          1%
+      );
     }
 
     /* Media Queries */

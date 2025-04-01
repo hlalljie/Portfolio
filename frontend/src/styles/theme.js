@@ -11,6 +11,7 @@ const theme = {
     dark: '#745d57',
     darkAccent: '#445835',
     white: '#f5f5f5',
+    grey: '#d6d6d6',
     fog: '#d6d6d6cc',
   },
   colorInverses: {
