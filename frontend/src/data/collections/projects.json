@@ -1,7 +1,7 @@
 {
   "docs": [
     {
-      "updatedAt": "2025-03-28T23:32:49.919Z",
+      "updatedAt": "2025-04-02T07:32:40.964Z",
       "title": "Royal Thai",
       "publicationStatus": "published",
       "type": "professional",
@@ -184,7 +184,392 @@
             "version": 1
           }
         },
-        "content": []
+        "content": [
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "I picked up this project in the beginning stages when it was falling behind schedule. I started work on organizing the content from the client and working together with our designer to build out page layouts based on the content we had while the client gathered everything else from corporate.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67ece165830082462114ad18"
+          },
+          {
+            "blockType": "imageBlock",
+            "image": {
+              "alt": "Screenshot of the Hand Tufted page from Royal Thai's website",
+              "filename": "royal-thai-hand-tufted.webp",
+              "mimeType": "image/webp",
+              "filesize": 486038,
+              "width": 2849,
+              "height": 3840,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "url": "/api/media/file/royal-thai-hand-tufted-400x539.webp",
+                  "width": 400,
+                  "height": 539,
+                  "mimeType": "image/webp",
+                  "filesize": 44164,
+                  "filename": "royal-thai-hand-tufted-400x539.webp"
+                },
+                "small": {
+                  "url": "/api/media/file/royal-thai-hand-tufted-768x1035.webp",
+                  "width": 768,
+                  "height": 1035,
+                  "mimeType": "image/webp",
+                  "filesize": 98482,
+                  "filename": "royal-thai-hand-tufted-768x1035.webp"
+                },
+                "medium": {
+                  "url": "/api/media/file/royal-thai-hand-tufted-1200x1617.webp",
+                  "width": 1200,
+                  "height": 1617,
+                  "mimeType": "image/webp",
+                  "filesize": 157698,
+                  "filename": "royal-thai-hand-tufted-1200x1617.webp"
+                },
+                "large": {
+                  "url": "/api/media/file/royal-thai-hand-tufted-1800x2426.webp",
+                  "width": 1800,
+                  "height": 2426,
+                  "mimeType": "image/webp",
+                  "filesize": 257130,
+                  "filename": "royal-thai-hand-tufted-1800x2426.webp"
+                },
+                "hero": {
+                  "url": "/api/media/file/royal-thai-hand-tufted-2500x3370.webp",
+                  "width": 2500,
+                  "height": 3370,
+                  "mimeType": "image/webp",
+                  "filesize": 377396,
+                  "filename": "royal-thai-hand-tufted-2500x3370.webp"
+                }
+              },
+              "createdAt": "2025-04-02T07:07:49.890Z",
+              "updatedAt": "2025-04-02T07:30:34.835Z",
+              "thumbnailURL": null,
+              "url": "/api/media/file/royal-thai-hand-tufted.webp",
+              "id": "67ece245b28c23d7f325f2f2"
+            },
+            "id": "67ece21b830082462114ad1a"
+          },
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "The site had a large amount of information and images and our main goal was to organize all of this content in a way that felt cohesive and more importantly was useful for Royal Thai's clients.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67ece2ba830082462114ad1c"
+          },
+          {
+            "blockType": "imageBlock",
+            "image": {
+              "alt": "Screenshot of Royal Thai's project page",
+              "filename": "royal-thai-projects.webp",
+              "mimeType": "image/webp",
+              "filesize": 1316210,
+              "width": 2855,
+              "height": 6856,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "url": "/api/media/file/royal-thai-projects-400x961.webp",
+                  "width": 400,
+                  "height": 961,
+                  "mimeType": "image/webp",
+                  "filesize": 73468,
+                  "filename": "royal-thai-projects-400x961.webp"
+                },
+                "small": {
+                  "url": "/api/media/file/royal-thai-projects-768x1844.webp",
+                  "width": 768,
+                  "height": 1844,
+                  "mimeType": "image/webp",
+                  "filesize": 175124,
+                  "filename": "royal-thai-projects-768x1844.webp"
+                },
+                "medium": {
+                  "url": "/api/media/file/royal-thai-projects-1200x2882.webp",
+                  "width": 1200,
+                  "height": 2882,
+                  "mimeType": "image/webp",
+                  "filesize": 297002,
+                  "filename": "royal-thai-projects-1200x2882.webp"
+                },
+                "large": {
+                  "url": "/api/media/file/royal-thai-projects-1800x4323.webp",
+                  "width": 1800,
+                  "height": 4323,
+                  "mimeType": "image/webp",
+                  "filesize": 544264,
+                  "filename": "royal-thai-projects-1800x4323.webp"
+                },
+                "hero": {
+                  "url": "/api/media/file/royal-thai-projects-2500x6004.webp",
+                  "width": 2500,
+                  "height": 6004,
+                  "mimeType": "image/webp",
+                  "filesize": 883778,
+                  "filename": "royal-thai-projects-2500x6004.webp"
+                }
+              },
+              "createdAt": "2025-04-01T19:37:42.195Z",
+              "updatedAt": "2025-04-02T07:31:01.443Z",
+              "thumbnailURL": null,
+              "url": "/api/media/file/royal-thai-projects.webp",
+              "id": "67ec4086a17a28238f7296f8"
+            },
+            "id": "67ec3f8c984bce41fec97738"
+          },
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "We found that in addition to the header navigation, we left threads going to different related parts of the website nested within individual pages. On the Expertise page we showed a list of related projects for each expertise so that users interested in a certain area could continue to browse. While working on the website we found the carpets to be very visually interesting and that this imagery was a great way to lead users through the website, increasing their interest in Royal Thai along the way.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67ece35d830082462114ad20"
+          },
+          {
+            "blockType": "imageBlock",
+            "image": {
+              "alt": "Screenshot of the Royal Thai hotels page",
+              "filename": "royal-thai-hotels.webp",
+              "mimeType": "image/webp",
+              "filesize": 451722,
+              "width": 3012,
+              "height": 4194,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "url": "/api/media/file/royal-thai-hotels-400x557.webp",
+                  "width": 400,
+                  "height": 557,
+                  "mimeType": "image/webp",
+                  "filesize": 31724,
+                  "filename": "royal-thai-hotels-400x557.webp"
+                },
+                "small": {
+                  "url": "/api/media/file/royal-thai-hotels-768x1069.webp",
+                  "width": 768,
+                  "height": 1069,
+                  "mimeType": "image/webp",
+                  "filesize": 71598,
+                  "filename": "royal-thai-hotels-768x1069.webp"
+                },
+                "medium": {
+                  "url": "/api/media/file/royal-thai-hotels-1200x1671.webp",
+                  "width": 1200,
+                  "height": 1671,
+                  "mimeType": "image/webp",
+                  "filesize": 115130,
+                  "filename": "royal-thai-hotels-1200x1671.webp"
+                },
+                "large": {
+                  "url": "/api/media/file/royal-thai-hotels-1800x2506.webp",
+                  "width": 1800,
+                  "height": 2506,
+                  "mimeType": "image/webp",
+                  "filesize": 201712,
+                  "filename": "royal-thai-hotels-1800x2506.webp"
+                },
+                "hero": {
+                  "url": "/api/media/file/royal-thai-hotels-2500x3481.webp",
+                  "width": 2500,
+                  "height": 3481,
+                  "mimeType": "image/webp",
+                  "filesize": 301138,
+                  "filename": "royal-thai-hotels-2500x3481.webp"
+                }
+              },
+              "createdAt": "2025-04-02T07:11:59.501Z",
+              "updatedAt": "2025-04-02T07:31:24.972Z",
+              "thumbnailURL": null,
+              "url": "/api/media/file/royal-thai-hotels.webp",
+              "id": "67ece33fb28c23d7f325f862"
+            },
+            "id": "67ece31a830082462114ad1e"
+          },
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "In the end with help from the provided amazing imagery from the carpets, we were able to create an immersive digital showroom for customers to browse different carpet categories and learn about the story, mission, and capabilities of Royal Thai.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67ece49a830082462114ad24"
+          },
+          {
+            "blockType": "imageBlock",
+            "image": {
+              "filename": "royal-thai-sustainability.webp",
+              "mimeType": "image/webp",
+              "filesize": 1405606,
+              "width": 2842,
+              "height": 8514,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "url": "/api/media/file/royal-thai-sustainability-400x1198.webp",
+                  "width": 400,
+                  "height": 1198,
+                  "mimeType": "image/webp",
+                  "filesize": 86394,
+                  "filename": "royal-thai-sustainability-400x1198.webp"
+                },
+                "small": {
+                  "url": "/api/media/file/royal-thai-sustainability-768x2301.webp",
+                  "width": 768,
+                  "height": 2301,
+                  "mimeType": "image/webp",
+                  "filesize": 208872,
+                  "filename": "royal-thai-sustainability-768x2301.webp"
+                },
+                "medium": {
+                  "url": "/api/media/file/royal-thai-sustainability-1200x3595.webp",
+                  "width": 1200,
+                  "height": 3595,
+                  "mimeType": "image/webp",
+                  "filesize": 349206,
+                  "filename": "royal-thai-sustainability-1200x3595.webp"
+                },
+                "large": {
+                  "url": "/api/media/file/royal-thai-sustainability-1800x5392.webp",
+                  "width": 1800,
+                  "height": 5392,
+                  "mimeType": "image/webp",
+                  "filesize": 619934,
+                  "filename": "royal-thai-sustainability-1800x5392.webp"
+                },
+                "hero": {
+                  "url": "/api/media/file/royal-thai-sustainability-2500x7489.webp",
+                  "width": 2500,
+                  "height": 7489,
+                  "mimeType": "image/webp",
+                  "filesize": 957138,
+                  "filename": "royal-thai-sustainability-2500x7489.webp"
+                }
+              },
+              "createdAt": "2025-04-02T07:16:58.187Z",
+              "updatedAt": "2025-04-02T07:32:16.285Z",
+              "thumbnailURL": null,
+              "url": "/api/media/file/royal-thai-sustainability.webp",
+              "alt": "Royal Thai Sustainability page Screenshot",
+              "id": "67ece46ab28c23d7f325ffa0"
+            },
+            "id": "67ece453830082462114ad22"
+          }
+        ]
       },
       "createdAt": "2025-03-20T23:53:56.358Z",
       "company": "Nav Creative",
@@ -395,7 +780,83 @@
                     "version": 1,
                     "textFormat": 0,
                     "textStyle": ""
-                  },
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67d7923c536928fe1b6399d7"
+          },
+          {
+            "blockType": "imageBlock",
+            "image": {
+              "alt": "Screenshot of Don't Get Swatted's Twine Storyboard",
+              "filename": "dont-get-swatted-twine.webp",
+              "mimeType": "image/webp",
+              "filesize": 194704,
+              "width": 2740,
+              "height": 1364,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "width": 400,
+                  "height": 199,
+                  "mimeType": "image/webp",
+                  "filesize": 13998,
+                  "filename": "dont-get-swatted-twine-400x199.webp",
+                  "url": "/api/media/file/dont-get-swatted-twine-400x199.webp"
+                },
+                "small": {
+                  "width": 768,
+                  "height": 382,
+                  "mimeType": "image/webp",
+                  "filesize": 33418,
+                  "filename": "dont-get-swatted-twine-768x382.webp",
+                  "url": "/api/media/file/dont-get-swatted-twine-768x382.webp"
+                },
+                "medium": {
+                  "width": 1200,
+                  "height": 597,
+                  "mimeType": "image/webp",
+                  "filesize": 58522,
+                  "filename": "dont-get-swatted-twine-1200x597.webp",
+                  "url": "/api/media/file/dont-get-swatted-twine-1200x597.webp"
+                },
+                "large": {
+                  "width": 1800,
+                  "height": 896,
+                  "mimeType": "image/webp",
+                  "filesize": 101172,
+                  "filename": "dont-get-swatted-twine-1800x896.webp",
+                  "url": "/api/media/file/dont-get-swatted-twine-1800x896.webp"
+                },
+                "hero": {
+                  "width": 2500,
+                  "height": 1245,
+                  "mimeType": "image/webp",
+                  "filesize": 150804,
+                  "filename": "dont-get-swatted-twine-2500x1245.webp",
+                  "url": "/api/media/file/dont-get-swatted-twine-2500x1245.webp"
+                }
+              },
+              "createdAt": "2025-04-02T06:43:33.850Z",
+              "updatedAt": "2025-04-02T06:43:33.850Z",
+              "id": "67ecdc95b28c23d7f325d71c",
+              "url": "/api/media/file/dont-get-swatted-twine.webp",
+              "thumbnailURL": null
+            },
+            "id": "67ecdc07830082462114ad02"
+          },
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
                   {
                     "children": [
                       {
@@ -403,67 +864,7 @@
                         "format": 0,
                         "mode": "normal",
                         "style": "",
-                        "text": "      ",
-                        "type": "text",
-                        "version": 1
-                      }
-                    ],
-                    "direction": null,
-                    "format": "",
-                    "indent": 0,
-                    "type": "paragraph",
-                    "version": 1,
-                    "textFormat": 0,
-                    "textStyle": ""
-                  },
-                  {
-                    "children": [
-                      {
-                        "detail": 0,
-                        "format": 0,
-                        "mode": "normal",
-                        "style": "",
-                        "text": "After we knew our initial requirement the other developer got to work on the base game and I looked at what future problems we would need to solve. I found a software our writer could use to create and visualize branching story paths, trained them how to use it, and integrated it with the game for easy updates in the future. Then I listened to the artist's vision and found a way to implement their visual ideas into the game. In between I setup a Github action to deploy our game to itch.io whenever we pushed to the main branch, saving us time and coming in handy when itch.io went down shortly before the deadline as we already had most of our changes pushed and could easily retry the deployment.",
-                        "type": "text",
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr",
-                    "format": "",
-                    "indent": 0,
-                    "type": "paragraph",
-                    "version": 1,
-                    "textFormat": 0,
-                    "textStyle": ""
-                  },
-                  {
-                    "children": [
-                      {
-                        "detail": 0,
-                        "format": 0,
-                        "mode": "normal",
-                        "style": "",
-                        "text": "      ",
-                        "type": "text",
-                        "version": 1
-                      }
-                    ],
-                    "direction": null,
-                    "format": "",
-                    "indent": 0,
-                    "type": "paragraph",
-                    "version": 1,
-                    "textFormat": 0,
-                    "textStyle": ""
-                  },
-                  {
-                    "children": [
-                      {
-                        "detail": 0,
-                        "format": 0,
-                        "mode": "normal",
-                        "style": "",
-                        "text": "Then I moved to other issues such as tweaking the frontend, adding a tracker for ending the player had found, making a last minute music addition and many other changes to get the game to it's destination. The game was was released in time and received positive feedback from the jam host and other jammers. It ended up being a great learning experience in how to execute on a tight deadline and coordinate with others for an awesome outcome that players got to enjoy.",
+                        "text": "As development of the base game was underway I looked into future development challenges. I found a Storyboarding software called Twine that our write could use to map out the branching story paths and would I could plug into our base game as a JSON. ",
                         "type": "text",
                         "version": 1
                       }
@@ -484,12 +885,456 @@
                 "version": 1
               }
             },
-            "id": "67d7923c536928fe1b6399d7"
+            "id": "67ecdc11830082462114ad04"
+          },
+          {
+            "blockType": "imageBlock",
+            "image": {
+              "alt": "Bad ending 2 from Don't Get Swatted the game",
+              "filename": "bad_end_2.webp",
+              "mimeType": "image/webp",
+              "filesize": 57992,
+              "width": 1804,
+              "height": 1012,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "width": 400,
+                  "height": 224,
+                  "mimeType": "image/webp",
+                  "filesize": 12808,
+                  "filename": "bad_end_2-400x224.webp",
+                  "url": "/api/media/file/bad_end_2-400x224.webp"
+                },
+                "small": {
+                  "width": 768,
+                  "height": 431,
+                  "mimeType": "image/webp",
+                  "filesize": 22384,
+                  "filename": "bad_end_2-768x431.webp",
+                  "url": "/api/media/file/bad_end_2-768x431.webp"
+                },
+                "medium": {
+                  "width": 1200,
+                  "height": 673,
+                  "mimeType": "image/webp",
+                  "filesize": 31314,
+                  "filename": "bad_end_2-1200x673.webp",
+                  "url": "/api/media/file/bad_end_2-1200x673.webp"
+                },
+                "large": {
+                  "width": 1800,
+                  "height": 1010,
+                  "mimeType": "image/webp",
+                  "filesize": 48528,
+                  "filename": "bad_end_2-1800x1010.webp",
+                  "url": "/api/media/file/bad_end_2-1800x1010.webp"
+                },
+                "hero": {
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null,
+                  "url": null
+                }
+              },
+              "createdAt": "2025-04-02T06:57:13.391Z",
+              "updatedAt": "2025-04-02T06:57:13.391Z",
+              "id": "67ecdfc9b28c23d7f325e6e0",
+              "url": "/api/media/file/bad_end_2.webp",
+              "thumbnailURL": null
+            },
+            "id": "67ecdf57830082462114ad12"
+          },
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Listening to the artist's vision I worked on adding their visuals to the game, writing code to plug in the different image variants based on the endings.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67ecdd57830082462114ad06"
+          },
+          {
+            "blockType": "imageBlock",
+            "image": {
+              "filename": "fireBackground.webp",
+              "mimeType": "image/webp",
+              "filesize": 10714,
+              "width": 456,
+              "height": 256,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "width": 400,
+                  "height": 225,
+                  "mimeType": "image/webp",
+                  "filesize": 11508,
+                  "filename": "fireBackground-400x225.webp",
+                  "url": "/api/media/file/fireBackground-400x225.webp"
+                },
+                "small": {
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null,
+                  "url": null
+                },
+                "medium": {
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null,
+                  "url": null
+                },
+                "large": {
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null,
+                  "url": null
+                },
+                "hero": {
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null,
+                  "url": null
+                }
+              },
+              "createdAt": "2025-04-02T06:55:40.559Z",
+              "updatedAt": "2025-04-02T06:55:40.559Z",
+              "id": "67ecdf6cb28c23d7f325e523",
+              "url": "/api/media/file/fireBackground.webp",
+              "thumbnailURL": null
+            },
+            "id": "67ecdec6830082462114ad0c"
+          },
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "In between I setup a Github action to deploy our game to itch.io whenever we pushed to the main branch, saving us time on deployment. This also came in clutch when itch.io went down shortly before the deadline as we already had most of our changes pushed and could easily retry the deployment.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67ecdecd830082462114ad0e"
+          },
+          {
+            "blockType": "imageBlock",
+            "image": {
+              "alt": "Don't Get Swatted Found Endings Page",
+              "filename": "dont-get-swatted-endings.webp",
+              "mimeType": "image/webp",
+              "filesize": 87664,
+              "width": 2872,
+              "height": 1620,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "url": "/api/media/file/dont-get-swatted-endings-400x226.webp",
+                  "width": 400,
+                  "height": 226,
+                  "mimeType": "image/webp",
+                  "filesize": 8908,
+                  "filename": "dont-get-swatted-endings-400x226.webp"
+                },
+                "small": {
+                  "url": "/api/media/file/dont-get-swatted-endings-768x433.webp",
+                  "width": 768,
+                  "height": 433,
+                  "mimeType": "image/webp",
+                  "filesize": 18092,
+                  "filename": "dont-get-swatted-endings-768x433.webp"
+                },
+                "medium": {
+                  "url": "/api/media/file/dont-get-swatted-endings-1200x677.webp",
+                  "width": 1200,
+                  "height": 677,
+                  "mimeType": "image/webp",
+                  "filesize": 28072,
+                  "filename": "dont-get-swatted-endings-1200x677.webp"
+                },
+                "large": {
+                  "url": "/api/media/file/dont-get-swatted-endings-1800x1015.webp",
+                  "width": 1800,
+                  "height": 1015,
+                  "mimeType": "image/webp",
+                  "filesize": 45932,
+                  "filename": "dont-get-swatted-endings-1800x1015.webp"
+                },
+                "hero": {
+                  "url": "/api/media/file/dont-get-swatted-endings-2500x1410.webp",
+                  "width": 2500,
+                  "height": 1410,
+                  "mimeType": "image/webp",
+                  "filesize": 65746,
+                  "filename": "dont-get-swatted-endings-2500x1410.webp"
+                }
+              },
+              "createdAt": "2025-04-02T06:59:36.866Z",
+              "updatedAt": "2025-04-02T07:02:07.576Z",
+              "thumbnailURL": null,
+              "url": "/api/media/file/dont-get-swatted-endings.webp",
+              "id": "67ece058b28c23d7f325e87a"
+            },
+            "id": "67ecdf72830082462114ad16"
+          },
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Towards the end I moved to other issues such as tweaking the frontend, adding an ending tracker for progress, making a last minute music addition, and other final changes and polishes.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67ecdf06830082462114ad10"
+          },
+          {
+            "blockType": "imageBlock",
+            "image": {
+              "alt": "Picture from the camp end of Don't Get Swatted",
+              "filename": "camp_end.webp",
+              "mimeType": "image/webp",
+              "filesize": 25880,
+              "width": 1792,
+              "height": 1012,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "width": 400,
+                  "height": 226,
+                  "mimeType": "image/webp",
+                  "filesize": 6450,
+                  "filename": "camp_end-400x226.webp",
+                  "url": "/api/media/file/camp_end-400x226.webp"
+                },
+                "small": {
+                  "width": 768,
+                  "height": 434,
+                  "mimeType": "image/webp",
+                  "filesize": 9858,
+                  "filename": "camp_end-768x434.webp",
+                  "url": "/api/media/file/camp_end-768x434.webp"
+                },
+                "medium": {
+                  "width": 1200,
+                  "height": 678,
+                  "mimeType": "image/webp",
+                  "filesize": 13816,
+                  "filename": "camp_end-1200x678.webp",
+                  "url": "/api/media/file/camp_end-1200x678.webp"
+                },
+                "large": {
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null,
+                  "url": null
+                },
+                "hero": {
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null,
+                  "url": null
+                }
+              },
+              "createdAt": "2025-04-02T06:49:20.181Z",
+              "updatedAt": "2025-04-02T06:49:20.181Z",
+              "id": "67ecddf0b28c23d7f325ddb2",
+              "url": "/api/media/file/camp_end.webp",
+              "thumbnailURL": null
+            },
+            "id": "67ecdd5d830082462114ad08"
+          },
+          {
+            "blockType": "textBlock",
+            "content": {
+              "root": {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "The game was was released in time and received positive feedback from the jam host and other jammers. It ended up being a great learning experience in how to execute on a tight deadline and coordinate with others for an awesome outcome that players got to enjoy.",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "type": "paragraph",
+                    "version": 1,
+                    "textFormat": 0,
+                    "textStyle": ""
+                  }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+              }
+            },
+            "id": "67ecdf5c830082462114ad14"
+          },
+          {
+            "blockType": "imageBlock",
+            "image": {
+              "alt": "Screenshot of the alternate paty background from Don't Get Swatted",
+              "filename": "partyBackground.webp",
+              "mimeType": "image/webp",
+              "filesize": 10978,
+              "width": 454,
+              "height": 255,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "width": 400,
+                  "height": 225,
+                  "mimeType": "image/webp",
+                  "filesize": 12208,
+                  "filename": "partyBackground-400x225.webp",
+                  "url": "/api/media/file/partyBackground-400x225.webp"
+                },
+                "small": {
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null,
+                  "url": null
+                },
+                "medium": {
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null,
+                  "url": null
+                },
+                "large": {
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null,
+                  "url": null
+                },
+                "hero": {
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null,
+                  "url": null
+                }
+              },
+              "createdAt": "2025-04-02T06:51:51.458Z",
+              "updatedAt": "2025-04-02T06:51:51.458Z",
+              "id": "67ecde87b28c23d7f325e05e",
+              "url": "/api/media/file/partyBackground.webp",
+              "thumbnailURL": null
+            },
+            "id": "67ecde60830082462114ad0a"
           }
         ]
       },
       "createdAt": "2025-03-17T03:11:26.453Z",
-      "updatedAt": "2025-03-29T02:36:59.468Z",
+      "updatedAt": "2025-04-02T06:59:46.026Z",
       "itchio": "https://haydondo.itch.io/dont-get-swatted",
       "publicationStatus": "published",
       "id": "67d792de2c31a9c4c483698d"
