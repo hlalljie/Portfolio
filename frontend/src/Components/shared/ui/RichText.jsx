@@ -6,9 +6,11 @@ import React from 'react';
  * @param {object} props.content - The rich text content to be rendered
  * @returns {JSX.Element} - The rendered rich text content
  */
-const RichText = ({ content }) => {
+const RichText = ({ content, className = '' }) => {
   if (!content) return null;
-  return <div className="rich-text">{serializeLexical(content)}</div>;
+  return (
+    <div className={`rich-text ${className}`}>{serializeLexical(content)}</div>
+  );
 };
 
 /**

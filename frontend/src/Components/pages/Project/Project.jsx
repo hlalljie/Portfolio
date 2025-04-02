@@ -234,14 +234,20 @@ const ProjectContent = ({ content, backgroundOpacity = 1 }) => {
  * @returns {JSX.Element} The rendered rich text content
  */
 const TextBlock = ({ block }) => {
-  return <RichText content={block['content']} />;
+  return <RichText content={block['content']} className="textBlock block" />;
 };
 
+/**
+ * ImageBlock - Renders an image from the Payload image block to a React component
+ * @param {object} props - The props passed to the component
+ * @param {object} props.block - The image block object containing image data
+ * @returns {JSX.Element} The rendered image block
+ */
 const ImageBlock = ({ block }) => {
   return (
-    <div className="imageBlockContainer">
+    <div className="block imageBlock">
       <AdaptiveImage
-        className="imageBlock"
+        className="imageBlockImage"
         imageData={block['image']}
         sizes={`(max-width: ${breakpoints.tablet}px) 98vw, 74vw`}
       />
