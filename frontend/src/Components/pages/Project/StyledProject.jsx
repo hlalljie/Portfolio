@@ -84,19 +84,21 @@ const StyledProject = styled.div`
       padding-block: 50px;
       position: relative;
       z-index: 2;
-      background: linear-gradient(
+      /* background: linear-gradient(
         180deg,
         ${theme.withCorrectedOpacity(
-            theme.colors.black,
-            $backgroundPattern['backgroundOpacity']
-          )}
+        theme.colors.black,
+        $backgroundPattern['backgroundOpacity']
+      )}
           0%,
         ${theme.withCorrectedOpacity(
-            theme.colors.white,
-            $backgroundPattern['backgroundOpacity']
-          )}
+        theme.colors.white,
+        $backgroundPattern['backgroundOpacity']
+      )}
           1%
-      );
+      ); */
+      border-top: 4px solid ${theme.colors.grey};
+      box-shadow: 0px 0 50px 50px ${theme.colors.black};
       .imageBlockContainer {
         width: 100%;
         img {
