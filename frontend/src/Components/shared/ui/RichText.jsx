@@ -4,6 +4,7 @@ import React from 'react';
  * RichText: Renders rich text content from Payload to a React component
  * @param {object} props - The props passed to the component
  * @param {object} props.content - The rich text content to be rendered
+ * @param {string} props.className - The className for the rich text container
  * @returns {JSX.Element} - The rendered rich text content
  */
 const RichText = ({ content, className = '' }) => {
@@ -51,7 +52,11 @@ const serializeLexical = (content) => {
       <React.Fragment key={i}>{renderNode(child)}</React.Fragment>
     ));
 
-    // Apply formatting to container elements (paragraphs, headings)
+    /**
+     * applyFormatting: Apply formatting to container elements (paragraphs, headings)
+     * @param {JSX.Element} element - The element to apply formatting to
+     * @returns {JSX.Element} - The formatted element
+     */
     const applyFormatting = (element) => {
       // Handle block-level formatting like alignment
       if (node.format === 'center') {

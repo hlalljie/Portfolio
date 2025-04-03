@@ -20,6 +20,8 @@ import LoadingScreen from '@/Components/shared/ui/LoadingScreen';
 import StyledProject from './StyledProject';
 import { LinkIcons } from '@/Components/shared/ui/LinkIcons';
 import { breakpoints } from '@/styles/mediaQueries';
+// Blocks
+import { TextBlock, ImageBlock } from './ContentBlocks';
 
 /**
  * A Basic Case Study Layout including a summary and image
@@ -224,34 +226,6 @@ const ProjectContent = ({ content, backgroundOpacity = 1 }) => {
         </>
       )}
     </ThemedSection>
-  );
-};
-
-/**
- * TextBlock - Renders rich text content from the Payload text block to a React component
- * @param {object} props - The props passed to the component
- * @param {object} props.block - The text block object containing rich text content
- * @returns {JSX.Element} The rendered rich text content
- */
-const TextBlock = ({ block }) => {
-  return <RichText content={block['content']} className="textBlock block" />;
-};
-
-/**
- * ImageBlock - Renders an image from the Payload image block to a React component
- * @param {object} props - The props passed to the component
- * @param {object} props.block - The image block object containing image data
- * @returns {JSX.Element} The rendered image block
- */
-const ImageBlock = ({ block }) => {
-  return (
-    <div className="block imageBlock">
-      <AdaptiveImage
-        className="imageBlockImage"
-        imageData={block['image']}
-        sizes={`(max-width: ${breakpoints.tablet}px) 98vw, 74vw`}
-      />
-    </div>
   );
 };
 
