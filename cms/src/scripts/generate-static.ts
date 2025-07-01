@@ -29,6 +29,7 @@ const generateStatic = async () => {
 
   // Save project data
   await saveCollectionData('projects', payload)
+  await saveCollectionData('testimonials', payload)
 
   // Copy media files
   await copyFiles('media', mediaOutputDir)

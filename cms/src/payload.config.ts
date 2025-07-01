@@ -20,6 +20,7 @@ import { Media } from './collections/Media'
 import { Patterns } from './collections/Patterns'
 import { ExperienceItems } from './collections/ExperienceItems'
 import { Projects } from './collections/Projects'
+import { Testimonials } from './collections/Testimonials'
 // Endpoints
 import { batchEndpoint } from './endpoints/batchEndpoint'
 
@@ -34,7 +35,7 @@ export default buildConfig({
     },
   },
   globals: [Homepage, ProjectsPage, PortfolioPage],
-  collections: [Users, Media, Patterns, ExperienceItems, Projects],
+  collections: [Users, Media, Patterns, ExperienceItems, Projects, Testimonials],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
