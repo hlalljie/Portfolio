@@ -41,6 +41,16 @@ const StyledNav = styled.div`
         align-items: center;
         justify-content: center;
         background-color: ${theme.colors.white};
+        &::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background-image: url('/media/mountain_pattern.png');
+          background-repeat: repeat;
+          background-size: 1000px;
+          opacity: 0.06;
+          pointer-events: none;
+        }
         .navItem {
           margin: 10px 0;
           a {
