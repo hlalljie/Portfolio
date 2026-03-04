@@ -1,0 +1,182 @@
+{
+  "globalType": "services",
+  "servicesHero": {
+    "headline": "Your technical partner for solutions built around your needs",
+    "paragraph": "I can help you make smart technical decisions and then execute them. Whether it's bringing an idea to life or improving existing systems, I cut through the noise and focus on what actually matters to your business."
+  },
+  "servicesList": {
+    "services": [
+      {
+        "id": "ai-ml",
+        "title": "AI & Machine Learning Solutions",
+        "description": "Turn AI ideas into working solutions. I help businesses identify where AI can make an impact, then design and deploy custom models, chatbots, and intelligent systems that integrate with your operations and deliver real value.",
+        "icon": {
+          "src": "/media/ai-ml.svg",
+          "alt": "AI and machine learning icon"
+        },
+        "cta": {
+          "label": "Schedule a Conversation",
+          "href": "/home#contact"
+        }
+      },
+      {
+        "id": "software-dev",
+        "title": "Software Development & Solutions Architecture",
+        "description": "Your business needs software that works with your existing systems, not against them. I build modern web applications and create integrations that solve real problems. By choosing the right mix of custom development and proven tools, you get solutions that fit your workflow and budget.",
+        "icon": {
+          "src": "/media/software-dev.svg",
+          "alt": "Software development and architecture icon"
+        },
+        "cta": {
+          "label": "Schedule a Conversation",
+          "href": "/home#contact"
+        }
+      },
+      {
+        "id": "training",
+        "title": "Technical Training & Professional Development",
+        "description": "Build technical capabilities through training and hands-on guidance. I've helped hundreds of students develop skills in a multitude of technical topics including AI, full-stack development, and cloud computing. Give your team practical knowledge in group sessions or receive individual mentoring that expands your own capabilities.",
+        "icon": {
+          "src": "/media/training.svg",
+          "alt": "Technical training and professional development icon"
+        },
+        "cta": {
+          "label": "Schedule a Conversation",
+          "href": "/home#contact"
+        }
+      },
+      {
+        "id": "web-design",
+        "title": "Website Design & Development",
+        "description": "I create designs focused on your business outcomes. With experience building websites for more than 200 businesses, I design sites that are clean and functional while understanding your goals. Whether you need custom development, hourly support, or a standard build, you get someone who cares about what your website needs to accomplish.",
+        "icon": {
+          "src": "/media/web-design.svg",
+          "alt": "Website design and development icon"
+        },
+        "cta": {
+          "label": "Schedule a Conversation",
+          "href": "/home#contact"
+        }
+      }
+    ]
+  },
+  "servicesContact": {
+    "title": "Let's talk about your project",
+    "cta": {
+      "label": "Schedule a Conversation",
+      "href": "/home#contact"
+    }
+  },
+  "sharedImages": {
+    "heroImage": {
+      "alt": "Fog over trees in a mountainous forest",
+      "name": "Home Hero Background",
+      "credit": "https://unsplash.com/photos/cloud-covered-mountains-NO-FxxCE67Y",
+      "filename": "homeHeroBanner.webp",
+      "mimeType": "image/webp",
+      "filesize": 874658,
+      "width": 3751,
+      "height": 5251,
+      "focalX": 50,
+      "focalY": 50,
+      "sizes": {
+        "thumbnail": {
+          "url": "/api/media/file/homeHeroBanner-400x560.webp",
+          "width": 400,
+          "height": 560,
+          "mimeType": "image/webp",
+          "filesize": 32698,
+          "filename": "homeHeroBanner-400x560.webp"
+        },
+        "small": {
+          "url": "/api/media/file/homeHeroBanner-768x1075.webp",
+          "width": 768,
+          "height": 1075,
+          "mimeType": "image/webp",
+          "filesize": 75980,
+          "filename": "homeHeroBanner-768x1075.webp"
+        },
+        "medium": {
+          "url": "/api/media/file/homeHeroBanner-1200x1680.webp",
+          "width": 1200,
+          "height": 1680,
+          "mimeType": "image/webp",
+          "filesize": 129062,
+          "filename": "homeHeroBanner-1200x1680.webp"
+        },
+        "large": {
+          "url": "/api/media/file/homeHeroBanner-1800x2520.webp",
+          "width": 1800,
+          "height": 2520,
+          "mimeType": "image/webp",
+          "filesize": 255120,
+          "filename": "homeHeroBanner-1800x2520.webp"
+        },
+        "hero": {
+          "url": "/api/media/file/homeHeroBanner-2500x3500.webp",
+          "width": 2500,
+          "height": 3500,
+          "mimeType": "image/webp",
+          "filesize": 412728,
+          "filename": "homeHeroBanner-2500x3500.webp"
+        }
+      },
+      "url": "/api/media/file/homeHeroBanner.webp"
+    },
+    "bottomImage": {
+      "alt": "Forest lake under a mountain",
+      "name": "Home Bottom Background",
+      "credit": "https://unsplash.com/photos/grey-calm-body-of-water-near-green-leaf-trees-at-daytime-choc7LYd98I",
+      "filename": "homeBottomBackground.webp",
+      "mimeType": "image/webp",
+      "filesize": 4868702,
+      "width": 4912,
+      "height": 7360,
+      "focalX": 50,
+      "focalY": 50,
+      "sizes": {
+        "thumbnail": {
+          "url": "/api/media/file/homeBottomBackground-400x599.webp",
+          "width": 400,
+          "height": 599,
+          "mimeType": "image/webp",
+          "filesize": 78270,
+          "filename": "homeBottomBackground-400x599.webp"
+        },
+        "small": {
+          "url": "/api/media/file/homeBottomBackground-768x1151.webp",
+          "width": 768,
+          "height": 1151,
+          "mimeType": "image/webp",
+          "filesize": 202128,
+          "filename": "homeBottomBackground-768x1151.webp"
+        },
+        "medium": {
+          "url": "/api/media/file/homeBottomBackground-1200x1798.webp",
+          "width": 1200,
+          "height": 1798,
+          "mimeType": "image/webp",
+          "filesize": 360316,
+          "filename": "homeBottomBackground-1200x1798.webp"
+        },
+        "large": {
+          "url": "/api/media/file/homeBottomBackground-1800x2697.webp",
+          "width": 1800,
+          "height": 2697,
+          "mimeType": "image/webp",
+          "filesize": 699112,
+          "filename": "homeBottomBackground-1800x2697.webp"
+        },
+        "hero": {
+          "url": "/api/media/file/homeBottomBackground-2500x3746.webp",
+          "width": 2500,
+          "height": 3746,
+          "mimeType": "image/webp",
+          "filesize": 1217280,
+          "filename": "homeBottomBackground-2500x3746.webp"
+        }
+      },
+      "url": "/api/media/file/homeBottomBackground.webp"
+    }
+  }
+}

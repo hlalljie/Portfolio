@@ -71,13 +71,10 @@ function Nav({ variant = 'dark', className = '', onClick = () => {} }) {
       onClick={onClick}
     >
       <span className="navItem">
-        <Link to="/home#experience">Experience</Link>
+        <Link to="/services">Services</Link>
       </span>
       <span className="navItem">
         <Link to="/portfolio">Portfolio</Link>
-      </span>
-      <span className="navItem">
-        <Link to="/Projects">Projects</Link>
       </span>
       <span className="navItem">
         <Link to="/home#about">About</Link>

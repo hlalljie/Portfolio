@@ -6,6 +6,7 @@ import { Analytics } from '@vercel/analytics/react';
 // Internal Imports
 // Pages
 import Home from '@/Components/pages/Home/Home';
+import Services from '@/Components/pages/Services/Services';
 import Portfolio from '@/Components/pages/Portfolio/Portfolio';
 import Projects from '@/Components/pages/Projects/Projects';
 import Project from '@/Components/pages/Project/Project';
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
   {
     path: '/home',
     element: <Home />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/services',
+    element: <Services />,
     errorElement: <ErrorPage />,
   },
   {
