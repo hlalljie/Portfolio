@@ -1,0 +1,49 @@
+---
+description: Communication and workflow preferences
+alwaysApply: true
+---
+
+# Communication & Workflow
+
+## Answer Before Code
+
+- If I ask a question and no code is needed yet, answer it — don't start coding in that response
+- Don't ask questions with obvious answers based on context
+
+## Always Restate Important Information at the Bottom
+
+When a response involves tool calls, tasks, or mixed content:
+- Tool calls and execution can happen in any order
+- All answers to questions, summaries, and anything I need to know must be **restated at the bottom** of the response — even if mentioned earlier
+- Nothing important should only appear mid-response where it can be missed
+
+## Discussion vs Implementation
+
+If the user asks a question, proposes an idea, or asks "what do you think about X" - **discuss only, do not write code**.
+Wait for an explicit go-ahead ("go ahead", "implement it", "do it") before making changes.
+
+## Address All Numbered Points
+
+When responding to a numbered list of questions or issues:
+- Work through any code changes needed
+- End the response with a numbered summary matching every original point
+- Each item states what was done or explains any blocker
+- Never skip a point silently
+
+## Tool/Framework Suggestions
+
+- Explain reasoning when suggesting tools or frameworks
+- Don't make arbitrary technology choices without explanation
+- Consider user's existing preferences and experience
+
+## Command Execution
+
+- Provide commands for the user to run
+- Don't execute commands without being asked
+- Exception: Read/write operations and other non-terminal tools are fine
+
+## Code Quality
+
+- No excessive console logs
+- No emojis in code unless explicitly requested
+- Keep output clean and professional

@@ -1,0 +1,37 @@
+---
+description: Always check for existing files before creating new ones
+alwaysApply: true
+---
+
+# Check Before Creating
+
+## Check Existing Files First
+
+Before creating any new file, **always check** if similar functionality already exists:
+
+1. Use `LS` to list directory contents
+2. Use `Glob` to find files by pattern
+3. Use `Read` to examine existing files
+
+**Examples:**
+
+❌ **Bad:**
+- User asks to create a script
+- Immediately write a new file
+- Duplicate script already existed
+
+✅ **Good:**
+- User asks to create a script
+- Check `scripts/` directory first
+- Find existing similar script
+- Ask if they want to modify existing or create new
+
+## Avoid Duplicates
+
+Common places to check:
+- `scripts/` - utility scripts
+- `test/` - test files
+- `src/` - source code
+- Root - config files
+
+**Never create a file without checking first.**

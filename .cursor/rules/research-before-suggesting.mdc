@@ -1,0 +1,59 @@
+---
+description: Never make up library features or API capabilities
+alwaysApply: true
+---
+
+# Research Before Suggesting
+
+## Never Make Up Features
+
+**Do not** invent or assume features, flags, or APIs exist without verification:
+
+- ❌ Don't guess what command-line flags do
+- ❌ Don't assume libraries have certain methods
+- ❌ Don't make up configuration options
+- ❌ Don't claim features exist based on "what makes sense"
+
+## Always Research First
+
+When suggesting technical solutions involving:
+- Library APIs (Vitest, Jest, etc.)
+- Command-line tools and flags
+- Framework features
+- Third-party packages
+
+**Required steps:**
+1. Search documentation or use WebSearch to verify the feature exists
+2. Confirm the exact syntax and behavior
+3. Only then suggest it to the user
+
+## Verify Library Exports Before Use
+
+Before using any function from a library:
+```bash
+npx tsx -e "import pkg from 'lib'; console.log(typeof pkg, Object.keys(pkg || {}))"
+```
+Don't assume docs are correct - the export may not exist or may be named differently.
+
+## Examples
+
+**Bad:**
+- Suggesting `--reporter=verbose` shows console.log output (made up)
+- Claiming a library has a method without checking docs
+- Inventing configuration options that sound right
+- Installing a library and using a function without verifying the export works
+
+**Good:**
+- Research Vitest docs → find console output is always shown by default
+- Check Gmail API docs → use actual Schema types from googleapis
+- Verify flag behavior before suggesting it
+- Test library export before writing code that depends on it
+
+## Why This Matters
+
+Making up features wastes the user's time:
+- They implement something that doesn't work
+- They have to debug non-existent functionality
+- Trust is eroded when suggestions are incorrect
+
+**When uncertain, research first or say "I need to research this."**

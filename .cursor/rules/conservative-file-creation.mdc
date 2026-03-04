@@ -1,0 +1,64 @@
+---
+description: Be conservative and thoughtful about creating new files
+alwaysApply: true
+---
+
+# Conservative File Creation
+
+## Think Like a Professional
+
+Professionals don't create files carelessly. Be conservative and organized.
+
+## Before Creating ANY File, Ask:
+
+1. **Does this already exist?** (Check first - see check-before-creating rule)
+2. **Can I use an existing file instead?**
+3. **Is this actually necessary?**
+4. **Will this file still be useful in 6 months?**
+
+## What NOT to Create
+
+❌ **Don't create these without explicit request:**
+- Random scripts for one-time tasks
+- Markdown documentation files
+- Helper utilities that could be inline
+- Config files for tools not being used
+- Debug/temporary files
+
+❌ **Don't add to package.json without being asked:**
+- New npm scripts
+- New dependencies
+- Configuration changes
+
+## What TO Create
+
+✅ **Only create when:**
+- Explicitly requested by user
+- Required for a task in the task list
+- Part of established project structure (e.g., test files alongside features)
+- Following a clear pattern already in the codebase
+
+## Coding Principles
+
+**Prefer less code:**
+- Less code is usually better code
+- Don't create abstractions before they're needed
+- Don't create files "for future use"
+- Look for opportunities to refactor and consolidate
+
+**Before writing new code:**
+1. Check what functionality already exists
+2. Consider if existing code can be reused
+3. Look for refactoring opportunities
+4. Think about whether code can be shared
+
+**Balance:**
+- Sometimes multiple small files are better than one large file
+- Sometimes one file is better than many small files
+- Let the actual situation guide the decision, not rules of thumb
+
+## The Rule
+
+**When in doubt, don't create it.** Ask first or use existing files.
+
+Write less code. Reuse more. Refactor when you see duplication.

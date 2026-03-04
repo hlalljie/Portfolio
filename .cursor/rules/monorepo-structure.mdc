@@ -1,0 +1,41 @@
+---
+description: Project structure — two workspaces, their tools, and how to work in each
+alwaysApply: true
+---
+
+# Monorepo Structure
+
+## Workspaces
+
+This repo has two independent packages:
+
+| Workspace | Path | Framework | Package Manager | Dev Server |
+|-----------|------|-----------|-----------------|------------|
+| CMS | `cms/` | PayloadCMS (Next.js) | `pnpm` | `pnpm dev` |
+| Frontend | `frontend/` | React + Vite | `npm` | `npm run dev` |
+
+## Rules
+
+- **Always use the correct package manager for the workspace** — never run `npm install` in `cms/` or `pnpm add` in `frontend/`
+- **Run commands from within the workspace directory**, not the repo root
+- **Tests, linting, and builds are per-workspace** — there is no root-level `npm test`
+- The CMS is the content source of truth; the frontend fetches from it
+
+## Key Scripts
+
+**CMS (`cms/`)**
+- `pnpm dev` — start dev server (Next.js + Payload)
+- `pnpm generate:types` — regenerate `src/payload-types.ts` after schema changes
+- `pnpm lint` — lint via Next.js ESLint config
+
+**Frontend (`frontend/`)**
+- `npm run dev` — starts Vite dev server (also checks CMS is reachable first)
+- `npm run build` — production build
+- `npm run lint` — ESLint
+
+## Schema Changes
+
+When modifying Payload collections or globals in `cms/`:
+1. Make the schema change
+2. Run `pnpm generate:types` to regenerate `src/payload-types.ts`
+3. Update any frontend code that consumes the changed shape

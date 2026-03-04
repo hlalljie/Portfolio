@@ -1,0 +1,26 @@
+---
+description: Engineering quality standards — security defaults, senior-level thinking, when to show options
+alwaysApply: true
+---
+
+# Engineering Standards
+
+## Planning vs. Implementation
+
+**When discussing or planning:** Present all viable options with trade-offs. Don't collapse to one answer when multiple good approaches exist.
+
+**When implementing:** Apply the right approach for the context. If I ask for something exploratory or throwaway, confirm the trade-offs and proceed without pushback.
+
+## Security Defaults (for committed/production code)
+
+- Secrets belong in the platform's secret manager — not in CLI args, command strings, or committed files
+- Authenticated endpoints by default
+- IAM follows least-privilege
+
+If I explicitly want a shortcut for local dev or a throwaway script, confirm the context and proceed.
+
+## Think It Through First
+
+- Consider failure modes, rollback, and cost before suggesting
+- If a previous suggestion was wrong, say so and correct it directly
+- If something feels like a shortcut that creates future problems, flag it

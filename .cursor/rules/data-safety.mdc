@@ -1,0 +1,30 @@
+---
+description: Never modify real user data without permission
+alwaysApply: true
+---
+
+# Data Safety
+
+## Never Modify Real Data Without Consent
+
+**Do not** write tests or code that modifies real data without explicit permission:
+
+- ❌ Don't modify, delete, or publish real content records
+- ❌ Don't modify database records
+- ❌ Don't send real emails or notifications
+- ❌ Don't mutate any external service data (CMS, APIs, etc.)
+
+## Ask Before Testing With Real Data
+
+When writing integration tests that could modify data:
+
+1. Ask user how they want to handle test data
+2. Suggest safe alternatives (test labels, env vars, separate test account)
+3. Only proceed after getting explicit approval
+
+## Use Test Data
+
+- Use dedicated test messages/records
+- Store test IDs in env vars or config
+- Create special labels/filters to identify test data
+- Never assume any real data is safe to modify
