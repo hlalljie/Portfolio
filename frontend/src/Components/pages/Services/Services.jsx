@@ -1,6 +1,7 @@
 // External Imports
 import { useMemo } from 'react';
-import styled, { css } from 'styled-components';
+import { Helmet } from 'react-helmet-async';
+import styled from 'styled-components';
 
 // Internal Imports
 // Hooks
@@ -84,6 +85,19 @@ function Services() {
 
   return (
     <StyledServices>
+      <Helmet>
+        <title>Services | Hayden Lalljie</title>
+        <meta
+          name="description"
+          content="Technical services offered by Hayden Lalljie including AI & machine learning solutions, software development, technical training, and website design & development."
+        />
+        <meta property="og:title" content="Services | Hayden Lalljie" />
+        <meta
+          property="og:description"
+          content="Technical services offered by Hayden Lalljie including AI & machine learning solutions, software development, technical training, and website design & development."
+        />
+        <meta property="og:url" content="https://haydenlalljie.com/services" />
+      </Helmet>
       <SharedBackground
         backgroundImageData={servicesData['sharedImages']['heroImage']}
         className="topBackground"
