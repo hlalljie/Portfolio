@@ -1,4 +1,5 @@
 // External Imports
+import { useState, useEffect, useRef } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { styled, css } from 'styled-components';
 
@@ -12,6 +13,10 @@ const StyledNav = styled.div`
     font-size: 1.3rem;
 
     margin-left: auto;
+
+    .patternImage {
+      display: none;
+    }
 
     a {
       text-decoration: none;
@@ -29,6 +34,10 @@ const StyledNav = styled.div`
       &.closed {
         display: none;
       }
+      @keyframes menuFadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
       &.open {
         position: fixed;
         z-index: 10;
@@ -41,15 +50,21 @@ const StyledNav = styled.div`
         align-items: center;
         justify-content: center;
         background-color: ${theme.colors.white};
-        &::before {
-          content: '';
+        animation: menuFadeIn 0.4s ease-in-out;
+        .patternImage {
+          display: block;
           position: absolute;
           inset: 0;
-          background-image: url('/media/mountain_pattern.png');
-          background-repeat: repeat;
-          background-size: 1000px;
-          opacity: 0.06;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top left;
+          opacity: 0;
+          transition: opacity 0.6s ease-in-out;
           pointer-events: none;
+          &.loaded {
+            opacity: 0.06;
+          }
         }
         .navItem {
           margin: 10px 0;
@@ -73,6 +88,24 @@ const StyledNav = styled.div`
  * @returns {JSX.Element}
  */
 function Nav({ variant = 'dark', className = '', onClick = () => {} }) {
+  const [patternLoaded, setPatternLoaded] = useState(false);
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    if (className.includes('open')) {
+      setPatternLoaded(false);
+      // Double rAF ensures opacity:0 is painted before transitioning in,
+      // whether the image is freshly loaded or already cached.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          if (imgRef.current?.complete) {
+            setPatternLoaded(true);
+          }
+        });
+      });
+    }
+  }, [className]);
+
   return (
     <StyledNav
       role="presentation"
@@ -80,6 +113,14 @@ function Nav({ variant = 'dark', className = '', onClick = () => {} }) {
       className={'nav ' + className}
       onClick={onClick}
     >
+      <img
+        ref={imgRef}
+        src="/media/mountain_pattern.png"
+        alt=""
+        aria-hidden="true"
+        className={`patternImage${patternLoaded ? ' loaded' : ''}`}
+        onLoad={() => setPatternLoaded(true)}
+      />
       <span className="navItem">
         <Link to="/services">Services</Link>
       </span>
