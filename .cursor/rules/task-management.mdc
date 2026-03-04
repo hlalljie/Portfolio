@@ -1,0 +1,32 @@
+---
+description: Task execution and scope management
+alwaysApply: true
+---
+
+# Task Management
+
+## Follow Task List Strictly
+
+- Complete tasks exactly as specified in task list
+- Don't over-implement or add extra features
+- Don't add structure before it's needed
+
+## One Task at a Time
+
+- Focus on the current task only
+- Don't anticipate future needs with extra scaffolding
+- Move to next task only when current is complete
+
+## Renaming Exported Symbols
+
+When renaming any exported symbol (function, variable, type, config):
+
+- Grep the full codebase for all usages before declaring done
+- Respect `.cursorignore` — exclude any files and folders listed there
+- Use: `rg "oldName" --type ts`
+
+## Examples Over Premature Abstraction
+
+- Don't use the project to illustrate examples
+- Ask clarifying questions for future planning without implementing
+- Keep it simple until complexity is actually needed

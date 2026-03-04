@@ -1,0 +1,33 @@
+---
+description: Rules for installing npm packages
+alwaysApply: true
+---
+
+# Library Installation
+
+## Always Get Approval Before Installing
+
+**Never run `npm install` or `pnpm add` without explicit user approval.**
+
+Use the correct package manager for each workspace:
+- `cms/` → `pnpm`
+- `frontend/` → `npm`
+
+Before proposing a library:
+1. Research that it actually works and is maintained
+2. Verify it exports the specific function/API you need:
+   ```bash
+   npx tsx -e "import pkg from 'lib-name'; console.log(typeof pkg, Object.keys(pkg || {}))"
+   ```
+3. Confirm compatibility with the project's Node version
+4. Propose the library to the user with findings, then wait for approval
+
+## When Researching Libraries
+
+- Check npm download counts and last publish date
+- Read the actual source or exports to verify APIs exist
+- Don't assume docs are accurate - test the import
+- If multiple libraries seem equivalent, list them and let the user decide
+
+❌ Installing multiple libraries in a row because one didn't work  
+✅ Researching thoroughly first, proposing one verified option

@@ -1,0 +1,48 @@
+---
+description: Commit workflow — how to prepare and propose commits
+alwaysApply: true
+---
+
+# Commit Workflow
+
+## Never commit unless explicitly asked
+
+Only create a commit when the user explicitly requests it.
+
+## Before proposing a commit message
+
+1. **Security review** — check that no secrets, credentials, or env files are staged. Watch for `.env`, `.env.*`, `credentials/`, API keys in code.
+2. **Ignore file check** — verify sensitive files are covered by `.gitignore` and `.cursorignore`.
+3. **Loose ends** — flag anything incomplete or that needs follow-up before or after the commit.
+
+## Commit message format
+
+Concise subject line (50 chars max), bullet points for what changed, and a `chat:` trailer with the current conversation UUID so the commit can be traced back to the chat where it was made:
+
+```
+Short description of what and why
+
+- Specific change 1
+- Specific change 2
+- Specific change 3
+
+chat: <uuid-of-current-conversation>
+```
+
+To find the current conversation UUID, run:
+```bash
+ls -t /Users/hayden/.cursor/projects/Users-hayden-Projects-Business-Development-Portfolio/agent-transcripts/ | head -1
+```
+
+## Get approval before committing
+
+Always propose the message and **stop**. Do NOT run `git commit` in the same response.
+
+Wait for the user to reply with explicit approval (e.g. "looks good", "go ahead", "lgtm") before running `git commit` in a follow-up response.
+
+This applies regardless of how the user phrases the request:
+- ❌ "create a commit" → propose only, do not commit
+- ❌ "add a commit" → propose only, do not commit
+- ❌ "prepare a commit" → propose only, do not commit
+- ❌ "commit this" → propose only, do not commit
+- ✅ Only commit after the user has seen the proposed message and replied with approval

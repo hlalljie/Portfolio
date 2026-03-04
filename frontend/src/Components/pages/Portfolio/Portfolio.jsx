@@ -1,5 +1,6 @@
 // External Imports
 import { useContext, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { styled, css } from 'styled-components';
 
 // Internal Imports
@@ -48,6 +49,19 @@ const StyledPortfolio = styled.div`
       color: ${theme.colors.white};
       text-align: center;
       padding-top: 60px;
+    }
+    .personalProjectsLink {
+      display: flex;
+      justify-content: center;
+      padding: 60px ${theme.padding.largeSection};
+      a {
+        color: ${theme.colors.white};
+        font-size: 1.6rem;
+        text-decoration: none;
+        &:hover {
+          color: ${theme.colors.fog};
+        }
+      }
     }
   `}
 `;
@@ -110,6 +124,9 @@ function Portfolio() {
         variant={'light'}
         hideLinks
       />
+      <div className="personalProjectsLink">
+        <Link to="/projects">Take a look at my personal projects →</Link>
+      </div>
     </StyledPortfolio>
   );
 }

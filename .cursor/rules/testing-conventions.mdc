@@ -1,0 +1,41 @@
+---
+description: Testing workflow and conventions
+alwaysApply: true
+---
+
+# Testing
+
+## Always Write and Run Tests
+
+**For new features**, automatically in the same response:
+
+1. Implement the feature
+2. Write a test file (`*.test.ts` or `*.spec.ts`)
+3. Check for linter errors in both code and tests
+4. Run `npm test` to validate
+5. Fix issues until tests pass and have no linter errors
+6. Provide concise breakdown of what's being tested (bullet list)
+7. Only then consider the task complete
+
+**For modifications to existing code:**
+- ALWAYS run `npm test` after ANY TypeScript/JavaScript code change
+- This includes bug fixes, refactors, optimizations, etc.
+- Check linter errors after edits
+- Fix any failing tests or linter errors before moving on
+- If you change a function's behavior, update or add tests
+
+**Do NOT run `npm test` after:**
+- Editing markdown files (`.md`, `.mdc`)
+- Editing JSON config/data files with no associated tests
+
+**Do this without being asked.** Don't wait for user to say "now test it."
+
+Testing modifications is just as critical as testing new code.
+
+❌ **Don't create debug/console log scripts instead of tests**
+✅ **Write proper test files with assertions**
+
+## Test Files
+
+- Must match pattern: `*.test.ts` or `*.spec.ts`
+- Organize by feature in `test/unit/` or `test/integration/{feature}/`
