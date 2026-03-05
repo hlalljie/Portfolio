@@ -24,3 +24,14 @@ If I explicitly want a shortcut for local dev or a throwaway script, confirm the
 - Consider failure modes, rollback, and cost before suggesting
 - If a previous suggestion was wrong, say so and correct it directly
 - If something feels like a shortcut that creates future problems, flag it
+
+## CSS Specificity
+
+Media queries do not increase specificity. A class like `.foo.bar` (0,2,0) will beat a media query rule targeting `.foo` (0,1,0) even if the media query is declared later. When overriding a modifier class inside a media query, repeat it explicitly:
+
+```css
+/* ✅ Same specificity (0,2,0), declared later = wins */
+@media (max-width: 1024px) {
+  .foo.bar { flex-direction: column; }
+}
+```
