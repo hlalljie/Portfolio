@@ -46,3 +46,26 @@ This applies regardless of how the user phrases the request:
 - ❌ "prepare a commit" → propose only, do not commit
 - ❌ "commit this" → propose only, do not commit
 - ✅ Only commit after the user has seen the proposed message and replied with approval
+
+## Pull Requests — same workflow
+
+Never open a PR without explicit approval first.
+
+1. Find the last merge commit on the branch: `git log --oneline | grep "Merge pull request"`
+2. Get only the commits being merged: `git log <last-merge-sha>..HEAD --oneline`
+3. Base the PR title and body **only** on those commits — do not include work from previous PRs
+4. Propose the PR title and body (see format below)
+5. Stop and wait for approval
+6. Only run `gh pr create` after the user replies with explicit approval
+
+**PR body format** (use `## Summary` and `## Test plan` sections — user prefers this structure):
+
+```
+## Summary
+- Bullet point of what changed
+- Bullet point of what changed
+
+## Test plan
+- [ ] Manual check or verification step
+- [ ] Manual check or verification step
+```
