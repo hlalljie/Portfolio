@@ -3,6 +3,7 @@
 **Goal:** Get the site ready to run Google Ads and show up in AI-generated search results (Google AI Overviews / SGE).
 
 **Context snapshot (as of March 2026):**
+
 - React 18 SPA, Vite, hosted on Vercel
 - SEO only partially set up (global tags + Services page override only)
 - No forms, no scheduler — contact is a mailto link
@@ -18,8 +19,8 @@ These are blockers or near-blockers for running ads effectively. Ads without con
 
 ### Task 1.1: Add Google Tag Manager (GTM)
 
-- [ ] Add GTM container snippet to `index.html` (head + body)
-- [ ] Route all future tracking tags through GTM — avoids code deploys for tracking changes
+- [x] Add GTM container snippet to `index.html` (head + body)
+- [x] Route all future tracking tags through GTM — avoids code deploys for tracking changes
 
 ### Task 1.2: Add Google Analytics 4 (GA4)
 
