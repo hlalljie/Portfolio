@@ -1,5 +1,5 @@
 ---
-description: Task execution and scope management
+description: Task execution, scope management, and task file conventions
 alwaysApply: true
 ---
 
@@ -30,3 +30,27 @@ When renaming any exported symbol (function, variable, type, config):
 - Don't use the project to illustrate examples
 - Ask clarifying questions for future planning without implementing
 - Keep it simple until complexity is actually needed
+
+## Task File Conventions
+
+Task files live in `tasks/` at the repo root — one file per initiative (e.g., `tasks/google-ads-launch.md`).
+
+**Format:** Phase sections → named tasks → checkbox action items:
+
+```markdown
+## Phase 1 — Phase Name
+
+Brief description of why this phase matters.
+
+### Task 1.1: Task name
+
+- [ ] Action item
+- [ ] Action item
+
+### Task 1.2: Task name
+
+- [ ] Action item
+```
+
+- Never nest `- [ ]` items — flat list only, hierarchy implied by `Task N.N` numbering
+- Nested markdown lists render inconsistently across editors

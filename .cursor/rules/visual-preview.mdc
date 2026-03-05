@@ -1,0 +1,31 @@
+---
+description: Take browser screenshots to verify visual changes before declaring done
+globs: frontend/**/*.{jsx,js,css}
+alwaysApply: false
+---
+
+# Visual Verification
+
+## Always Screenshot After Layout or Sizing Changes
+
+After any change involving layout, spacing, sizing, or responsive behavior, take a screenshot at **both mobile and desktop** before calling it done. Do not rely on reading code alone — broken layouts are obvious visually and not always obvious in code.
+
+Use the browser tool:
+1. Navigate to the affected page
+2. Take a screenshot at desktop width (1440px)
+3. Resize to mobile (600px) and take another screenshot
+4. Fix any obvious issues before responding to the user
+
+## When This Applies
+
+- Any change to `flex`, `grid`, `width`, `height`, `padding`, `margin`, `gap`
+- Any new responsive breakpoint or media query
+- Any change to image sizing or positioning
+- Any new component with layout styles
+
+## What to Look For
+
+- Text touching viewport edges (missing padding)
+- Images overflowing their containers
+- Elements stacking incorrectly at mobile
+- Sections bleeding into each other visually

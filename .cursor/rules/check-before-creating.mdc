@@ -35,3 +35,13 @@ Common places to check:
 - Root - config files
 
 **Never create a file without checking first.**
+
+## Check for Existing Patterns Before Writing New Styles
+
+Before writing new CSS for common UI elements (buttons, cards, links, inputs), grep for how they're already done:
+
+```bash
+rg "button" frontend/src/Components --type jsx -l
+```
+
+Find a real usage, read it, and follow the same pattern. Do not invent new styles for elements that already have an established look.

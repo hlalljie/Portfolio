@@ -1,0 +1,72 @@
+---
+description: Frontend component system conventions — SharedBackground, ThemedSection, responsive padding, and button patterns
+globs: frontend/src/**/*.{jsx,js}
+alwaysApply: false
+---
+
+# Frontend Component Conventions
+
+## SharedBackground + ThemedSection
+
+`SharedBackground` wraps children in `<div className="overlay">` and applies:
+```css
+section:not(.overlay) { background: transparent; }
+```
+This means any `ThemedSection` inside a `SharedBackground` is **automatically transparent** — its background color is overridden. To keep a section's background, pass `className="overlay"` to `ThemedSection`.
+
+## ThemedSection Padding
+
+`ThemedSection` applies padding via the `width` prop:
+- `width="large"` → `padding: 7%` desktop, `padding: 20px` tablet
+- `width="medium"` → `padding: 13%` desktop, `padding: 20px` tablet
+
+**The tablet reset (`20px`) lives inside `StyledSection`, but `additionalStyles` is injected AFTER it — so any `padding` in `additionalStyles` overrides the tablet reset.**
+
+✅ Safe — doesn't fight tablet reset:
+```js
+// Override only top/bottom inside a tablet() block in additionalStyles
+${tablet(css`
+  padding-top: 60px;
+  padding-bottom: 60px;
+`)}
+```
+
+❌ Dangerous — kills tablet reset:
+```js
+// Flat padding in additionalStyles overrides the tablet 20px
+padding: 60px 13%;
+```
+
+## CSS Specificity in Media Queries
+
+Media queries do not increase specificity. A modifier class like `.reversed` (0,2,0) will beat a media query rule targeting the base class (0,1,0) even if the media query comes later.
+
+✅ Fix: repeat the modifier inside the media query:
+```css
+${tablet(css`
+  flex-direction: column;
+  &.reversed {
+    flex-direction: column; /* same specificity, declared later = wins */
+  }
+`)}
+```
+
+## Button Pattern
+
+There is no standalone Button component. Use a plain `<button>` styled in the section's `additionalStyles`, following the `HomeFeaturedProjects` pattern:
+
+```css
+button {
+  border-color: transparent;
+  background-color: ${theme.colors.white};
+  padding: 4px 16px;
+  cursor: pointer;
+  a { font-size: 1.4rem; color: ${theme.colors.darkAccent}; }
+}
+button:hover {
+  background-color: ${theme.colors.darkAccent};
+  a { color: ${theme.colors.white}; }
+}
+```
+
+Before writing new button styles, grep for existing usage: `rg "button" src/Components --type jsx`
