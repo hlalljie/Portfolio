@@ -24,11 +24,13 @@ These are blockers or near-blockers for running ads effectively. Ads without con
 
 ### Task 1.2: Add Google Analytics 4 (GA4)
 
-- [ ] Install via GTM (preferred) rather than direct `gtag.js`
-- [ ] Configure key conversion events: `form_submit`, `schedule_click`, `contact_click`
-- [ ] Link GA4 property to Google Ads account when ready
+- [x] Install via GTM (preferred) rather than direct `gtag.js`
+- [ ] Configure key conversion events: `form_submit`, `schedule_click`, `contact_click` _(blocked: depends on form/calendar setup)_
+- [ ] Link GA4 property to Google Ads account when ready _(blocked: depends on form/calendar setup)_
 
 ### Task 1.3: Set up Google Ads conversion tracking
+
+> Blocked: depends on form/calendar setup (contact form and scheduler not yet built)
 
 - [ ] Create a conversion action in Google Ads for form submissions
 - [ ] Create a conversion action for calendar bookings
