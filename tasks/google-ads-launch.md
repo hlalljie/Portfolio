@@ -24,11 +24,13 @@ These are blockers or near-blockers for running ads effectively. Ads without con
 
 ### Task 1.2: Add Google Analytics 4 (GA4)
 
-- [ ] Install via GTM (preferred) rather than direct `gtag.js`
-- [ ] Configure key conversion events: `form_submit`, `schedule_click`, `contact_click`
-- [ ] Link GA4 property to Google Ads account when ready
+- [x] Install via GTM (preferred) rather than direct `gtag.js`
+- [ ] Configure key conversion events: `form_submit`, `schedule_click`, `contact_click` _(blocked: depends on form/calendar setup)_
+- [ ] Link GA4 property to Google Ads account when ready _(blocked: depends on form/calendar setup)_
 
 ### Task 1.3: Set up Google Ads conversion tracking
+
+> Blocked: depends on form/calendar setup (contact form and scheduler not yet built)
 
 - [ ] Create a conversion action in Google Ads for form submissions
 - [ ] Create a conversion action for calendar bookings
@@ -36,18 +38,18 @@ These are blockers or near-blockers for running ads effectively. Ads without con
 
 ### Task 1.4: Mount Vercel Speed Insights
 
-- [ ] `@vercel/speed-insights` is already installed but not rendered — add `<SpeedInsights />` to `App.jsx`
+- [x] `@vercel/speed-insights` is already installed but not rendered — add `<SpeedInsights />` to `App.jsx`
 
 ### Task 1.5: Create `robots.txt`
 
-- [ ] Place in `frontend/public/robots.txt`
-- [ ] Allow all crawlers, reference sitemap URL
+- [x] Place in `frontend/public/robots.txt`
+- [x] Allow all crawlers, reference sitemap URL
 
 ### Task 1.6: Generate `sitemap.xml`
 
-- [ ] Cover all routes: `/`, `/services`, `/portfolio`, `/projects`, and each project slug page
-- [ ] Place in `frontend/public/sitemap.xml`
-- [ ] Update whenever a new project is added
+- [x] Cover all routes: `/`, `/services`, `/portfolio`, `/projects`, and each project slug page
+- [x] Place in `frontend/public/sitemap.xml`
+- [x] Update whenever a new project is added
 
 ### Task 1.7: Submit to Google Search Console
 
@@ -74,7 +76,7 @@ Align site branding with the HL Solutions business identity before ads go live s
 - [ ] Point `hlsoftwaresolutions.com` to Vercel — add domain in Vercel project settings and update DNS A/CNAME records at registrar
 - [ ] Set `hl-software-solutions.com` as a 301 redirect to `hlsoftwaresolutions.com` in Vercel
 - [ ] Keep `haydenlalljie.com` as a permanent 301 redirect to `hlsoftwaresolutions.com` — passes any existing link equity and catches anyone with the old URL bookmarked
-- [ ] Update `og:url` and sitemap to reflect `hlsoftwaresolutions.com`
+- [ ] Update `og:url`, `sitemap.xml` (all `<loc>` URLs), and `robots.txt` (`Sitemap:` line) to reflect `hlsoftwaresolutions.com`
 - [ ] Update Google Search Console — add `hlsoftwaresolutions.com` as a new property and re-submit sitemap
 - [ ] Update any hardcoded `haydenlalljie.com` references in the codebase
 
@@ -256,6 +258,11 @@ Do this once Phases 1–5 are in place.
 ## Backlog
 
 Not blocking ads launch — revisit once traffic is flowing.
+
+### Task 8.0: Add git-based `lastmod` to static pages in sitemap
+
+- [ ] Update `scripts/generate-sitemap.js` to run `git log -1 --format=%ci -- <page-source-files>` for each static route
+- [ ] Use the resulting date as the `<lastmod>` value for `/`, `/services`, `/portfolio`, `/projects`
 
 ### Task 8.1: SSR migration
 
