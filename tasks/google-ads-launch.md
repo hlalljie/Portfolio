@@ -38,18 +38,18 @@ These are blockers or near-blockers for running ads effectively. Ads without con
 
 ### Task 1.4: Mount Vercel Speed Insights
 
-- [ ] `@vercel/speed-insights` is already installed but not rendered — add `<SpeedInsights />` to `App.jsx`
+- [x] `@vercel/speed-insights` is already installed but not rendered — add `<SpeedInsights />` to `App.jsx`
 
 ### Task 1.5: Create `robots.txt`
 
-- [ ] Place in `frontend/public/robots.txt`
-- [ ] Allow all crawlers, reference sitemap URL
+- [x] Place in `frontend/public/robots.txt`
+- [x] Allow all crawlers, reference sitemap URL
 
 ### Task 1.6: Generate `sitemap.xml`
 
-- [ ] Cover all routes: `/`, `/services`, `/portfolio`, `/projects`, and each project slug page
-- [ ] Place in `frontend/public/sitemap.xml`
-- [ ] Update whenever a new project is added
+- [x] Cover all routes: `/`, `/services`, `/portfolio`, `/projects`, and each project slug page
+- [x] Place in `frontend/public/sitemap.xml`
+- [x] Update whenever a new project is added
 
 ### Task 1.7: Submit to Google Search Console
 
