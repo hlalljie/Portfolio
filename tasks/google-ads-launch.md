@@ -76,7 +76,7 @@ Align site branding with the HL Solutions business identity before ads go live s
 - [ ] Point `hlsoftwaresolutions.com` to Vercel — add domain in Vercel project settings and update DNS A/CNAME records at registrar
 - [ ] Set `hl-software-solutions.com` as a 301 redirect to `hlsoftwaresolutions.com` in Vercel
 - [ ] Keep `haydenlalljie.com` as a permanent 301 redirect to `hlsoftwaresolutions.com` — passes any existing link equity and catches anyone with the old URL bookmarked
-- [ ] Update `og:url` and sitemap to reflect `hlsoftwaresolutions.com`
+- [ ] Update `og:url`, `sitemap.xml` (all `<loc>` URLs), and `robots.txt` (`Sitemap:` line) to reflect `hlsoftwaresolutions.com`
 - [ ] Update Google Search Console — add `hlsoftwaresolutions.com` as a new property and re-submit sitemap
 - [ ] Update any hardcoded `haydenlalljie.com` references in the codebase
 
@@ -258,6 +258,11 @@ Do this once Phases 1–5 are in place.
 ## Backlog
 
 Not blocking ads launch — revisit once traffic is flowing.
+
+### Task 8.0: Add git-based `lastmod` to static pages in sitemap
+
+- [ ] Update `scripts/generate-sitemap.js` to run `git log -1 --format=%ci -- <page-source-files>` for each static route
+- [ ] Use the resulting date as the `<lastmod>` value for `/`, `/services`, `/portfolio`, `/projects`
 
 ### Task 8.1: SSR migration
 
