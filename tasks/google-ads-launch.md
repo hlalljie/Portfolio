@@ -53,9 +53,9 @@ These are blockers or near-blockers for running ads effectively. Ads without con
 
 ### Task 1.7: Submit to Google Search Console
 
-- [ ] Verify ownership via DNS TXT record (preferred on Vercel)
-- [ ] Submit sitemap
-- [ ] Review crawl errors, Core Web Vitals report, and indexing status
+- [x] Verify ownership via DNS TXT record (preferred on Vercel)
+- [x] Submit sitemap
+- [ ] Review crawl errors, Core Web Vitals report, and indexing status _(waiting 24-48 hours, check by March 7th 2026)_
 
 ---
 
