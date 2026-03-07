@@ -11,6 +11,7 @@ import Services from '@/Components/pages/Services/Services';
 import Portfolio from '@/Components/pages/Portfolio/Portfolio';
 import Projects from '@/Components/pages/Projects/Projects';
 import Project from '@/Components/pages/Project/Project';
+import About from '@/Components/pages/About/About';
 import ErrorPage from '@/Components/pages/ErrorPage/ErrorPage';
 // Styles
 import GlobalStyle from './GlobalStyles';
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
   {
     path: '/services',
     element: <Services />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/about',
+    element: <About />,
     errorElement: <ErrorPage />,
   },
   {
